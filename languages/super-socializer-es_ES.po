@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Super Socializer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-25 10:47+0530\n"
-"PO-Revision-Date: 2019-06-25 10:47+0530\n"
+"POT-Creation-Date: 2019-06-25 11:53+0530\n"
+"PO-Revision-Date: 2019-06-25 11:53+0530\n"
 "Last-Translator: Heateor <hello@heateor.com>\n"
 "Language-Team: Heateor <hello@heateor.com>\n"
 "Language: es\n"
@@ -2285,7 +2285,7 @@ msgstr ""
 "Texto para mostrar sobre la interfaz del Ingreso a través de redes sociales"
 
 #: ../admin/social_login.php:551
-msgid "Tigger social login in the same browser tab"
+msgid "Trigger social login in the same browser tab"
 msgstr ""
 
 #: ../admin/social_login.php:561

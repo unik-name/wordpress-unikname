@@ -548,7 +548,7 @@
 						<tr>
 							<th>
 							<img id="the_champ_sl_same_tab_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_same_tab"><?php _e("Tigger social login in the same browser tab", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_same_tab"><?php _e("Trigger social login in the same browser tab", 'super-socializer'); ?></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_same_tab" name="the_champ_login[same_tab_login]" type="checkbox" <?php echo isset($theChampLoginOptions['same_tab_login']) ? 'checked = "checked"' : '';?> value="1" />
