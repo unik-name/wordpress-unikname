@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login, Twitch login
 Requires at least: 2.5.0
 Tested up to: 5.2.2
-Stable tag: 7.12.30
+Stable tag: 7.12.31
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -210,6 +210,11 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.31 [3 August 2019] =
+* [Bugfix] Google login was not saving first name and last name in user profile
+* [Bugfix] Google login was creating username from the email instead of first and last name
+* [Bugfix] Updated the background color for Reddit share icon for AMP according to the Reddit branding guidelines
+
 = 7.12.30 [25 June 2019] =
 * [Bugfix] Previous update was breaking social sharing
 
@@ -1903,3 +1908,8 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 
 = 7.12.30 [25 June 2019] =
 * [Bugfix] Previous update was breaking social sharing
+
+= 7.12.31 [3 August 2019] =
+* [Bugfix] Google login was not saving first name and last name in user profile
+* [Bugfix] Google login was creating username from the email instead of first and last name
+* [Bugfix] Updated the background color for Reddit share icon for AMP according to the Reddit branding guidelines

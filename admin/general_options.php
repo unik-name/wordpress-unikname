@@ -138,7 +138,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 				</div>
 				</div>
 			</div>
-
+			<a href="https://easy.roihunter.com/?referralCode=KWna_YiwQ_Iic4_y1u2" target="_blank"><img style="width:800px" src="<?php echo plugins_url('../images/roihunter.png', __FILE__) ?>" /></a>
 			</div>
 			<?php include 'help.php'; ?>
 	</form>

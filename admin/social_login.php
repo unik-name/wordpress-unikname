@@ -1281,6 +1281,7 @@
 			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 			?>
 		</p>
+		<a href="https://easy.roihunter.com/?referralCode=KWna_YiwQ_Iic4_y1u2" target="_blank"><img style="width:800px;margin-top:7px;" src="<?php echo plugins_url('../images/roihunter.png', __FILE__) ?>" /></a>
 		</form>
 		<div class="clear"></div>
 		<div class="stuffbox">
