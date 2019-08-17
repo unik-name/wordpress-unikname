@@ -1131,6 +1131,42 @@
 
 							<tr>
 								<th>
+									<img id="the_champ_tc_placeholder_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
+									<label><?php _e("Text to link to Terms-Conditions page", 'super-socializer'); ?></label>
+								</th>
+								<td>
+									<input id="the_champ_tc_placeholder" name="the_champ_login[tc_placeholder]" type="text" value="<?php echo $theChampLoginOptions['tc_placeholder'] ?>" />
+								</td>
+							</tr>
+
+							<tr class="the_champ_help_content" id="the_champ_tc_placeholder_help_cont">
+								<td colspan="2">
+								<div>
+								<?php _e('Word(s) in the opt-in text to be linked to terms-conditions page', 'super-socializer') ?>
+								</div>
+								</td>
+							</tr>
+
+							<tr>
+								<th>
+									<img id="the_champ_tc_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
+									<label><?php _e("Terms-Conditions Url", 'super-socializer'); ?></label>
+								</th>
+								<td>
+									<input id="the_champ_tc_url" name="the_champ_login[tc_url]" type="text" value="<?php echo $theChampLoginOptions['tc_url'] ?>" />
+								</td>
+							</tr>
+
+							<tr class="the_champ_help_content" id="the_champ_tc_url_help_cont">
+								<td colspan="2">
+								<div>
+								<?php _e('Url of the terms-conditions page of your website', 'super-socializer') ?>
+								</div>
+								</td>
+							</tr>
+
+							<tr>
+								<th>
 									<img id="the_champ_privacy_ppu_placeholder_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
 									<label><?php _e("Text to link to Privacy Policy page", 'super-socializer'); ?></label>
 								</th>

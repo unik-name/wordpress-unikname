@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.31
+Version: 7.12.32
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.31');
+define('THE_CHAMP_SS_VERSION', '7.12.32');
 
 require 'helper.php';
 
@@ -67,17 +67,12 @@ function the_champ_init(){
 	if(heateor_ss_is_plugin_active('woocommerce/woocommerce.php')){
 		add_action('the_champ_user_successfully_created', 'the_champ_sync_woocom_profile', 10, 3);
 	}
-	if(isset($theChampSharingOptions['amp_enable'])){
-		$ampOptions = array();
-		if(class_exists('AMP_Options_Manager') && null !== AMP_Options_Manager::OPTION_NAME){
-			$ampOptions = get_option(AMP_Options_Manager::OPTION_NAME);
-			if(isset($ampOptions['theme_support']) && ($ampOptions['theme_support'] == 'paired' || $ampOptions['theme_support'] == 'native')){
-				add_action('wp_print_styles', 'the_champ_frontend_amp_css');
-			}else{
-				// stylesheet files for AMP pages
-				add_action('amp_post_template_css', 'the_champ_frontend_amp_css');
-			}
-		}
+	if(isset($theChampSharingOptions['amp_enable']) && function_exists('is_amp_endpoint')){
+		// Standard and Transitional modes
+		add_action('wp_print_styles', 'the_champ_frontend_amp_css');
+
+		//  Reader mode
+		add_action('amp_post_template_css', 'the_champ_frontend_amp_css');
 	}
 }
 add_action('init', 'the_champ_init');
@@ -641,7 +636,6 @@ function the_champ_connect(){
 					<?php echo esc_url(home_url()); ?>
 					</li>
 					<li><?php _e('Make sure cURL is enabled at your website server. You may need to contact the server administrator of your website to verify this', 'super-socializer') ?></li>
-					<li><?php echo sprintf(__('Make sure that "Enable Callback Locking" option is disabled. See step 4 %s', 'super-socializer'), '<a target="_blank" href="http://support.heateor.com/how-to-get-twitter-api-key-and-secret">here</a>') ?></li>
 					</ol>
 				</div>
 				<?php
@@ -874,7 +868,7 @@ function the_champ_frontend_scripts(){
 	$inFooter = isset($theChampGeneralOptions['footer_script']) ? true : false;
 	$combinedScript = isset($theChampGeneralOptions['combined_script']) ? true : false;
 	?>
-	<script type="text/javascript">var theChampDefaultLang = '<?php echo get_locale(); ?>', theChampCloseIconPath = '<?php echo plugins_url('images/close.png', __FILE__) ?>';<?php if(isset($theChampGeneralOptions["browser_msg_enable"]) && $theChampGeneralOptions["browser_msg"] != ""){ ?>var heateorSsSDKBlockedMsg = `<?php echo str_replace("{support_url}", "<a href=\'http://support.heateor.com/browser-blocking-social-features/\' target=\'_blank\' style=\'color:#33a9d8\'>http://support.heateor.com/browser-blocking-social-features/</a>", nl2br(htmlspecialchars($theChampGeneralOptions["browser_msg"], ENT_QUOTES))); ?>`<?php } ?></script>
+	<script type="text/javascript">var theChampDefaultLang = '<?php echo get_locale(); ?>', theChampCloseIconPath = '<?php echo plugins_url('images/close.png', __FILE__) ?>';</script>
 	<?php
 	if(!$combinedScript){
 		wp_enqueue_script('the_champ_ss_general_scripts', plugins_url('js/front/social_login/general.js', __FILE__), false, THE_CHAMP_SS_VERSION, $inFooter);
@@ -1421,8 +1415,6 @@ function the_champ_save_default_options(){
 	add_option('the_champ_general', array(
 	   'footer_script' => '1',
 	   'delete_options' => '1',
-	   'browser_msg_enable' => '1',
-	   'browser_msg' => __('Your browser is blocking some features of this website. Please follow the instructions at {support_url} to unblock these.', 'super-socializer'),
 	   'custom_css' => '',
 	));
 
@@ -1442,8 +1434,10 @@ function the_champ_save_default_options(){
 	   'link_account' => 1,
 	   'gdpr_placement' => 'above',
 	   'privacy_policy_url' => '',
-	   'privacy_policy_optin_text' => 'I agree to my personal data being stored and used as per Privacy Policy',
-	   'ppu_placeholder' => 'Privacy Policy'
+	   'privacy_policy_optin_text' => 'I have read and agree to Terms and Conditions of website and agree to my personal data being stored and used as per Privacy Policy',
+	   'ppu_placeholder' => 'Privacy Policy',
+	   'tc_placeholder' => 'Terms and Conditions',
+	   'tc_url' => ''
 	));
 	
 	// social commenting options
@@ -2046,6 +2040,13 @@ function the_champ_update_db_check(){
 	$currentVersion = get_option('the_champ_ss_version');
 
 	if($currentVersion && $currentVersion != THE_CHAMP_SS_VERSION){
+		if(version_compare("7.12.32", $currentVersion) > 0){
+			global $theChampLoginOptions;
+			$theChampLoginOptions['tc_placeholder'] = 'Terms and Conditions';
+			$theChampLoginOptions['tc_url'] = '';
+			update_option('the_champ_login', $theChampLoginOptions);
+		}
+
 		if(version_compare("7.12.25", $currentVersion) > 0){
 			global $theChampSharingOptions;
 			if(!$theChampSharingOptions['fb_key'] && !$theChampSharingOptions['fb_secret'] && $theChampSharingOptions['vertical_fb_key'] && $theChampSharingOptions['vertical_fb_secret']){
@@ -2384,6 +2385,10 @@ function the_champ_update_svg_css($colorToBeReplaced, $cssFile){
  * CSS to load at front end for AMP
  */
 function the_champ_frontend_amp_css(){
+	if(!is_amp_endpoint()){
+		return;
+	}
+
 	global $theChampSharingOptions;
 	
 	$css = '';

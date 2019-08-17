@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login, Twitch login
 Requires at least: 2.5.0
 Tested up to: 5.2.2
-Stable tag: 7.12.31
+Stable tag: 7.12.32
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -210,6 +210,13 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.32 [17 August 2019] =
+* [Improvement] Removed the popup notification message being shown to website visitors when tracking protection enabled in browser
+* [Improvement] Email share is being triggered in the new browser tab instead of the same tab
+* [Bugfix] Fixed a PHP warning appearing at social sharing options page in some cases
+* [Bugfix] Social share icons were not working with standard and transitional AMP modes
+* [New] Added option to specify link to terms-conditions page in the GDPR opt-in text for social login
+
 = 7.12.31 [3 August 2019] =
 * [Bugfix] Google login was not saving first name and last name in user profile
 * [Bugfix] Google login was creating username from the email instead of first and last name
@@ -1913,3 +1920,10 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Google login was not saving first name and last name in user profile
 * [Bugfix] Google login was creating username from the email instead of first and last name
 * [Bugfix] Updated the background color for Reddit share icon for AMP according to the Reddit branding guidelines
+
+= 7.12.32 [17 August 2019] =
+* [Improvement] Removed the popup notification message being shown to website visitors when tracking protection enabled in browser
+* [Improvement] Email share is being triggered in the new browser tab instead of the same tab
+* [Bugfix] Fixed a PHP warning appearing at social sharing options page in some cases
+* [Bugfix] Social share icons were not working with standard and transitional AMP modes
+* [New] Added option to specify link to terms-conditions page in the GDPR opt-in text for social login

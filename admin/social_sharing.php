@@ -37,7 +37,14 @@
 		<a href="https://www.heateor.com/recover-social-share-counts" target="_blank"><input type="button" value="<?php _e('Recover Social Share Counts Lost After Moving to SSL/Https', 'super-socializer') ?> >>>" class="ss_demo" style="width:55%" /></a>
 		</div>
 		<div style="clear:both"></div>
-		
+		<?php
+		if(!isset($theChampSharingOptions['horizontal_re_providers'])){
+			$theChampSharingOptions['horizontal_re_providers'] = array();
+		}
+		if(!isset($theChampSharingOptions['vertical_re_providers'])){
+			$theChampSharingOptions['vertical_re_providers'] = array();
+		}
+		?>
 		<div id="setting-error-settings_updated" class="error settings-error notice is-dismissible below-h2" <?php echo !(isset($theChampLoginOptions['enable']) && $theChampLoginOptions['fb_key'] && $theChampLoginOptions['fb_secret'] && in_array('facebook', $theChampLoginOptions['providers'])) && (((in_array('facebook', $theChampSharingOptions['vertical_re_providers']) && (isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']))) || (in_array('facebook', $theChampSharingOptions['horizontal_re_providers']) && (isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares'])))) && (!$theChampSharingOptions['fb_key'] || !$theChampSharingOptions['fb_secret'])) ? '' : 'style = "display: none"';?>> 
 			<?php echo '<p><strong>' . __('Save Facebook App Id and Secret in the "Miscellaneous" section for Facebook share count to work', 'super-socializer') . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __('Dismiss this notice', 'super-socializer') . '</span></button>'; ?>
 		</div>
