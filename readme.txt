@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login, Twitch login
 Requires at least: 2.5.0
 Tested up to: 5.2.2
-Stable tag: 7.12.32
+Stable tag: 7.12.33
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -210,6 +210,14 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.33 [24 August 2019] =
+* [Bugfix] "Trigger social login in the same browser tab" option was not working when "Load all Javascript files in single file" was enabled at General Options page
+* [Improvement] Email share is being triggered in the new browser tab instead of the same tab
+* [Improvement] New user notification email is using WooCommerce new user email template instead of the default new user email template of WordPress, if WooCommerce is active
+* [Improvement] Columns added by S2Member in Users table went blank when Super Socializer was active
+* [Improvement] Updated background of Instagram button to the multicolored one
+* [Improvement] Admin UI improvement
+
 = 7.12.32 [17 August 2019] =
 * [Improvement] Removed the popup notification message being shown to website visitors when tracking protection enabled in browser
 * [Improvement] Email share is being triggered in the new browser tab instead of the same tab
@@ -1927,3 +1935,11 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Fixed a PHP warning appearing at social sharing options page in some cases
 * [Bugfix] Social share icons were not working with standard and transitional AMP modes
 * [New] Added option to specify link to terms-conditions page in the GDPR opt-in text for social login
+
+= 7.12.33 [24 August 2019] =
+* [Bugfix] "Trigger social login in the same browser tab" option was not working when "Load all Javascript files in single file" was enabled at General Options page
+* [Improvement] Email share is being triggered in the new browser tab instead of the same tab
+* [Improvement] New user notification email is using WooCommerce new user email template instead of the default new user email template of WordPress, if WooCommerce is active
+* [Improvement] Columns added by S2Member in Users table went blank when Super Socializer was active
+* [Improvement] Updated background of Instagram button to the multicolored one
+* [Improvement] Admin UI improvement

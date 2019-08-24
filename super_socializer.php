@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.32
+Version: 7.12.33
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.32');
+define('THE_CHAMP_SS_VERSION', '7.12.33');
 
 require 'helper.php';
 
@@ -1097,7 +1097,7 @@ function the_champ_frontend_styles(){
 	?>
 	<style type="text/css">.the_champ_horizontal_sharing .theChampSharing{
 		<?php if ( $theChampSharingOptions['horizontal_bg_color_default'] != '' ) { ?>
-			background-color: <?php echo $theChampSharingOptions['horizontal_bg_color_default'] ?>;
+			background-color:<?php echo $theChampSharingOptions['horizontal_bg_color_default'] ?>;background:<?php echo $theChampSharingOptions['horizontal_bg_color_default'] ?>;
 		<?php  } ?>
 			color: <?php echo $theChampSharingOptions['horizontal_font_color_default'] ? $theChampSharingOptions['horizontal_font_color_default'] : '#fff' ?>;
 		<?php
@@ -1119,7 +1119,7 @@ function the_champ_frontend_styles(){
 	<?php } ?>
 	.the_champ_horizontal_sharing .theChampSharing:hover{
 		<?php if ( $theChampSharingOptions['horizontal_bg_color_hover'] != '' ) { ?>
-			background-color: <?php echo $theChampSharingOptions['horizontal_bg_color_hover'] ?>;
+			background-color:<?php echo $theChampSharingOptions['horizontal_bg_color_hover'] ?>;background:<?php echo $theChampSharingOptions['horizontal_bg_color_hover'] ?>;
 		<?php }
 		if ( $theChampSharingOptions['horizontal_font_color_hover'] != '' ) { ?>
 			color: <?php echo $theChampSharingOptions['horizontal_font_color_hover'] ?>;
@@ -1128,7 +1128,7 @@ function the_champ_frontend_styles(){
 	}
 	.the_champ_vertical_sharing .theChampSharing{
 		<?php if ( $theChampSharingOptions['vertical_bg_color_default'] != '' ) { ?>
-			background-color: <?php echo $theChampSharingOptions['vertical_bg_color_default'] ?>;
+			background-color: <?php echo $theChampSharingOptions['vertical_bg_color_default'] ?>;background:<?php echo $theChampSharingOptions['vertical_bg_color_default'] ?>;
 		<?php } ?>
 			color: <?php echo $theChampSharingOptions['vertical_font_color_default'] ? $theChampSharingOptions['vertical_font_color_default'] : '#fff' ?>;
 		<?php
@@ -1150,7 +1150,7 @@ function the_champ_frontend_styles(){
 	<?php } ?>
 	.the_champ_vertical_sharing .theChampSharing:hover{
 		<?php if ( $theChampSharingOptions['vertical_bg_color_hover'] != '' ) { ?>
-			background-color: <?php echo $theChampSharingOptions['vertical_bg_color_hover'] ?>;
+			background-color: <?php echo $theChampSharingOptions['vertical_bg_color_hover'] ?>;background:<?php echo $theChampSharingOptions['vertical_bg_color_hover'] ?>;
 		<?php }
 		if ( $theChampSharingOptions['vertical_font_color_hover'] != '' ) { ?>
 			color: <?php echo $theChampSharingOptions['vertical_font_color_hover'] ?>;

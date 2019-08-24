@@ -1014,7 +1014,7 @@ function heateor_ss_delete_profile_column($value, $columnName, $userId){
 		}
 	}
 }
-add_action('manage_users_custom_column', 'heateor_ss_delete_profile_column', 10, 3);
+add_action('manage_users_custom_column', 'heateor_ss_delete_profile_column', 1, 3);
 
 /**
  * Include thickbox js and css

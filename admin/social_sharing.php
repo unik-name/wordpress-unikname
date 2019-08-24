@@ -157,8 +157,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_icon_shape_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Shape", 'super-socializer' ); ?></label>
+										<label><?php _e("Shape", 'super-socializer' ); ?><img id="the_champ_icon_shape_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<input id="the_champ_icon_round" onclick="tempHorShape = 'round';theChampSharingHorizontalPreview()" name="the_champ_sharing[horizontal_sharing_shape]" type="radio" <?php echo $sharing_shape == 'round' ? 'checked = "checked"' : '';?> value="round" />
@@ -181,8 +180,7 @@
 								<tbody id="the_champ_size_options" <?php echo ! isset( $theChampSharingOptions['horizontal_sharing_shape'] ) || $theChampSharingOptions['horizontal_sharing_shape'] != 'rectangle' ? '' : 'style="display: none"'; ?>>	
 									<tr>
 										<th>
-											<img id="the_champ_icon_size_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Size (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Size (in pixels)", 'super-socializer' ); ?><img id="the_champ_icon_size_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_icon_size" name="the_champ_sharing[horizontal_sharing_size]" type="text" value="<?php echo $sharing_size; ?>" />
@@ -207,8 +205,7 @@
 								<tbody id="the_champ_rectangle_options" <?php echo isset( $theChampSharingOptions['horizontal_sharing_shape'] ) && $theChampSharingOptions['horizontal_sharing_shape'] == 'rectangle' ? '' : 'style="display: none"'; ?>>
 									<tr>
 										<th>
-											<img id="the_champ_icon_width_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Width (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Width (in pixels)", 'super-socializer' ); ?><img id="the_champ_icon_width_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_icon_width" name="the_champ_sharing[horizontal_sharing_width]" type="text" value="<?php echo $sharing_width; ?>" />
@@ -231,8 +228,7 @@
 
 									<tr>
 										<th>
-											<img id="the_champ_icon_height_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Height (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Height (in pixels)", 'super-socializer' ); ?><img id="the_champ_icon_height_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_icon_height" name="the_champ_sharing[horizontal_sharing_height]" type="text" value="<?php echo $sharing_height; ?>" />
@@ -257,8 +253,7 @@
 								<tbody id="the_champ_border_radius_options" <?php echo isset( $theChampSharingOptions['horizontal_sharing_shape'] ) && $theChampSharingOptions['horizontal_sharing_shape'] != 'round' ? '' : 'style="display: none"'; ?>>
 									<tr>
 										<th>
-											<img id="the_champ_icon_border_radius_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Border radius (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Border radius (in pixels)", 'super-socializer' ); ?><img id="the_champ_icon_border_radius_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_icon_border_radius" name="the_champ_sharing[horizontal_border_radius]" type="text" value="<?php echo $sharing_border_radius; ?>" onkeyup="theChampSharingBorderRadius = this.value.trim() ? this.value.trim() + 'px' : '0px';theChampUpdateSharingPreview(theChampSharingBorderRadius, 'borderRadius', '0px', 'the_champ_preview')" />
@@ -276,8 +271,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_font_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Logo Color", 'super-socializer' ); ?></label>
+										<label><?php _e("Logo Color", 'super-socializer' ); ?><img id="the_champ_font_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<script type="text/javascript">var theChampSharingTempColor = '<?php echo $sharing_color ? $sharing_color : "#fff" ?>';</script>
@@ -298,8 +292,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Background Color", 'super-socializer' ); ?></label>
+										<label><?php _e("Background Color", 'super-socializer' ); ?><img id="the_champ_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<label for="the_champ_bg_color_default"><?php _e("Default", 'super-socializer' ); ?></label><input style="width: 100px" id="the_champ_bg_color_default" name="the_champ_sharing[horizontal_bg_color_default]" type="text" onkeyup="theChampSharingBg = this.value.trim() ? this.value.trim() : '#3C589A'; theChampUpdateSharingPreview(this.value.trim(), 'backgroundColor', '#3C589A', 'the_champ_preview')" value="<?php echo $horizontal_bg ?>" />
@@ -317,8 +310,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_border_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Border", 'super-socializer' ); ?></label>
+										<label><?php _e("Border", 'super-socializer' ); ?><img id="the_champ_border_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<script type="text/javascript">var theChampBorderWidthHover = '<?php echo $border_width_hover = isset( $theChampSharingOptions['horizontal_border_width_hover'] ) ? $theChampSharingOptions['horizontal_border_width_hover'] : ''; ?>', theChampBorderColorHover = '<?php echo $border_color_hover = isset( $theChampSharingOptions['horizontal_border_color_hover'] ) ? $theChampSharingOptions['horizontal_border_color_hover'] : ''; ?>'</script>
@@ -344,8 +336,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_counter_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Counter Position", 'super-socializer' ); ?><br/><?php _e("(applies, if counter enabled)", 'super-socializer' ); ?></label>
+										<label><?php _e("Counter Position", 'super-socializer' ); ?><br/><?php _e("(applies, if counter enabled)", 'super-socializer' ); ?><img id="the_champ_counter_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<input id="the_champ_counter_left" name="the_champ_sharing[horizontal_counter_position]" onclick="theChampCounterPreview(this.value.trim())" type="radio" <?php echo $counter_position == 'left' ? 'checked = "checked"' : '';?> value="left" />
@@ -465,8 +456,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_vertical_sharing_icon_shape_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Shape", 'super-socializer' ); ?></label>
+										<label><?php _e("Shape", 'super-socializer' ); ?><img id="the_champ_vertical_sharing_icon_shape_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<input id="the_champ_vertical_icon_round" onclick="tempVerticalShape = 'round';theChampSharingVerticalPreview()" name="the_champ_sharing[vertical_sharing_shape]" type="radio" <?php echo $vertical_sharing_shape == 'round' ? 'checked = "checked"' : '';?> value="round" />
@@ -489,8 +479,7 @@
 								<tbody id="the_champ_vertical_size_options" <?php echo ! isset( $theChampSharingOptions['vertical_sharing_shape'] ) || $theChampSharingOptions['vertical_sharing_shape'] != 'rectangle' ? '' : 'style="display: none"'; ?>>	
 									<tr>
 										<th>
-											<img id="the_champ_vertical_sharing_icon_size_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Size (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Size (in pixels)", 'super-socializer' ); ?><img id="the_champ_vertical_sharing_icon_size_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_vertical_sharing_icon_size" name="the_champ_sharing[vertical_sharing_size]" type="text" value="<?php echo $vertical_sharing_size; ?>" />
@@ -515,8 +504,7 @@
 								<tbody id="the_champ_vertical_rectangle_options" <?php echo isset( $theChampSharingOptions['vertical_sharing_shape'] ) && $theChampSharingOptions['vertical_sharing_shape'] == 'rectangle' ? '' : 'style="display: none"'; ?>>
 									<tr>
 										<th>
-											<img id="the_champ_vertical_icon_width_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Width (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Width (in pixels)", 'super-socializer' ); ?><img id="the_champ_vertical_icon_width_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_vertical_icon_width" name="the_champ_sharing[vertical_sharing_width]" type="text" value="<?php echo $vertical_sharing_width; ?>" />
@@ -539,8 +527,7 @@
 
 									<tr>
 										<th>
-											<img id="the_champ_vertical_icon_height_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Height (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Height (in pixels)", 'super-socializer' ); ?><img id="the_champ_vertical_icon_height_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_vertical_icon_height" name="the_champ_sharing[vertical_sharing_height]" type="text" value="<?php echo $vertical_sharing_height; ?>" />
@@ -565,8 +552,7 @@
 								<tbody id="the_champ_vertical_border_radius_options" <?php echo isset( $theChampSharingOptions['vertical_sharing_shape'] ) && $theChampSharingOptions['vertical_sharing_shape'] != 'round' ? '' : 'style="display: none"'; ?>>
 									<tr>
 										<th>
-											<img id="the_champ_vertical_icon_border_radius_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-											<label><?php _e("Border radius (in pixels)", 'super-socializer' ); ?></label>
+											<label><?php _e("Border radius (in pixels)", 'super-socializer' ); ?><img id="the_champ_vertical_icon_border_radius_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 											<input style="width:50px" id="the_champ_vertical_icon_border_radius" name="the_champ_sharing[vertical_border_radius]" type="text" value="<?php echo $vertical_sharing_border_radius; ?>" onkeyup="theChampVerticalBorderRadius = this.value.trim() ? this.value.trim() + 'px' : '0px';theChampUpdateSharingPreview(theChampVerticalBorderRadius, 'borderRadius', '0px', 'the_champ_vertical_preview')" />
@@ -584,8 +570,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_vertical_font_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Logo Color", 'super-socializer' ); ?></label>
+										<label><?php _e("Logo Color", 'super-socializer' ); ?><img id="the_champ_vertical_font_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<script type="text/javascript">var theChampVerticalSharingTempColor = '<?php echo $vertical_sharing_color ? $vertical_sharing_color : "#fff" ?>';</script>
@@ -606,8 +591,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_vertical_icon_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Background Color", 'super-socializer' ); ?></label>
+										<label><?php _e("Background Color", 'super-socializer' ); ?><img id="the_champ_vertical_icon_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<label for="the_champ_vertical_icon_bg_color_default"><?php _e("Default", 'super-socializer' ); ?></label><input style="width: 100px" id="the_champ_vertical_icon_bg_color_default" name="the_champ_sharing[vertical_bg_color_default]" type="text" onkeyup="theChampVerticalSharingBg = this.value.trim() ? this.value.trim() : '#3C589A'; theChampUpdateSharingPreview(this.value.trim(), 'backgroundColor', '#3C589A', 'the_champ_vertical_preview')" value="<?php echo $vertical_bg ?>" />
@@ -625,8 +609,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_vertical_border_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Border", 'super-socializer' ); ?></label>
+										<label><?php _e("Border", 'super-socializer' ); ?><img id="the_champ_vertical_border_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<label><strong><?php _e("Default", 'super-socializer' ); ?></strong></label>
@@ -651,8 +634,7 @@
 
 								<tr>
 									<th>
-										<img id="the_champ_vertical_counter_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Counter Position", 'super-socializer' ); ?><br/><?php _e("(applies, if counter enabled)", 'super-socializer' ); ?></label>
+										<label><?php _e("Counter Position", 'super-socializer' ); ?><br/><?php _e("(applies, if counter enabled)", 'super-socializer' ); ?><img id="the_champ_vertical_counter_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 										<input id="the_champ_vertical_counter_left" name="the_champ_sharing[vertical_counter_position]" onclick="theChampVerticalCounterPreview(this.value.trim())" type="radio" <?php echo $vertical_counter_position == 'left' ? 'checked = "checked"' : '';?> value="left" />
@@ -699,8 +681,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_horizontal_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_horizontal_enable"><?php _e("Enable Standard sharing interface", 'super-socializer' ); ?></label>
+							<label for="the_champ_horizontal_enable"><?php _e("Enable Standard sharing interface", 'super-socializer' ); ?><img id="the_champ_horizontal_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_horizontal_enable" onclick="theChampHorizontalSharingOptionsToggle(this)" name="the_champ_sharing[hor_enable]" type="checkbox" <?php echo isset( $theChampSharingOptions['hor_enable'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -719,8 +700,7 @@
 						<tbody id="the_champ_horizontal_sharing_options" <?php echo isset( $theChampSharingOptions['hor_enable'] ) ? '' : 'style="display: none"'; ?>>
 						<tr>
 							<th>
-							<img id="the_champ_horizontal_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_horizontal_target_url"><?php _e("Target Url", 'super-socializer' ); ?></label>
+							<label for="the_champ_horizontal_target_url"><?php _e("Target Url", 'super-socializer' ); ?><img id="the_champ_horizontal_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td id="the_champ_target_url_column">
 							<input id="the_champ_target_url_default" name="the_champ_sharing[horizontal_target_url]" type="radio" <?php echo !isset( $theChampSharingOptions['horizontal_target_url'] ) || $theChampSharingOptions['horizontal_target_url'] == 'default' ? 'checked = "checked"' : '';?> value="default" />
@@ -742,8 +722,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_title"><?php _e("Title", 'super-socializer' ); ?></label>
+							<label for="the_champ_fblogin_title"><?php _e("Title", 'super-socializer' ); ?><img id="the_champ_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_title" name="the_champ_sharing[title]" type="text" value="<?php echo isset( $theChampSharingOptions['title'] ) ? $theChampSharingOptions['title'] : '' ?>" />
@@ -777,8 +756,7 @@
 						<tbody id="the_champ_instagram_options" <?php echo !isset($theChampSharingOptions['horizontal_re_providers']) || !in_array('instagram', $theChampSharingOptions['horizontal_re_providers']) ? 'style = "display: none"' : '';?> >
 							<tr>
 								<th>
-								<img id="the_champ_instagram_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_instagram_username"><?php _e("Instagram username", 'super-socializer' ); ?></label>
+								<label for="the_champ_instagram_username"><?php _e("Instagram username", 'super-socializer' ); ?><img id="the_champ_instagram_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_instagram_username" name="the_champ_sharing[instagram_username]" type="text" value="<?php echo $instagramUsername ?>" />
@@ -797,8 +775,7 @@
 						<tbody id="the_champ_comment_options" <?php echo !isset($theChampSharingOptions['horizontal_re_providers']) || ! in_array( 'Comment', $theChampSharingOptions['horizontal_re_providers'] ) ? 'style = "display: none"' : '';?> >
 							<tr>
 								<th>
-								<img id="the_champ_comment_container_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
-								<label for="the_champ_comment_container_id"><?php _e( "HTML ID of container element of comment form", 'super-socializer' ); ?></label>
+								<label for="the_champ_comment_container_id"><?php _e( "HTML ID of container element of comment form", 'super-socializer' ); ?><img id="the_champ_comment_container_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_comment_container_id" name="the_champ_sharing[comment_container_id]" type="text" value="<?php echo $commentFormContainerId ?>" />
@@ -821,8 +798,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_ss_rearrange_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Rearrange icons", 'super-socializer'); ?></label>
+							<label><?php _e("Rearrange icons", 'super-socializer'); ?><img id="the_champ_ss_rearrange_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 						</tr>
 
@@ -846,7 +822,7 @@
 							<style type="text/css">
 							.theChampSharingBackground{
 								<?php if($horizontal_bg){ ?>
-								background-color: <?php echo $horizontal_bg ?>;
+								background-color: <?php echo $horizontal_bg ?>;background:<?php echo $horizontal_bg ?>;
 								<?php }if($border_width){ ?>
 								border-width: <?php echo $border_width ?>px;
 								border-style: solid;
@@ -855,7 +831,7 @@
 							}
 							.theChampSharingBackground:hover{
 								<?php if($horizontal_bg_hover){ ?>
-								background-color: <?php echo $horizontal_bg_hover ?>;
+								background-color: <?php echo $horizontal_bg_hover ?>;background:<?php echo $horizontal_bg_hover ?>;
 								<?php }if($border_width_hover){ ?>
 								border-width: <?php echo $border_width_hover ?>px;
 								border-style: solid;
@@ -890,8 +866,7 @@
 
 						<tr>
 							<th colspan="2">
-							<img id="the_champ_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Select Sharing Services", 'super-socializer' ); ?></label>
+							<label><?php _e("Select Sharing Services", 'super-socializer' ); ?><img id="the_champ_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 						</tr>
 
@@ -934,8 +909,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_hor_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_hor_alignment"><?php _e("Horizontal alignment", 'super-socializer' ); ?></label>
+							<label for="the_champ_hor_alignment"><?php _e("Horizontal alignment", 'super-socializer' ); ?><img id="the_champ_hor_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<select id="the_champ_hor_alignment" name="the_champ_sharing[hor_sharing_alignment]">
@@ -956,8 +930,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_position_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Position with respect to content", 'super-socializer' ); ?></label>
+							<label><?php _e("Position with respect to content", 'super-socializer' ); ?><img id="the_champ_position_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_top" name="the_champ_sharing[top]" type="checkbox" <?php echo isset( $theChampSharingOptions['top'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -977,8 +950,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Placement", 'super-socializer' ); ?></label>
+							<label><?php _e("Placement", 'super-socializer' ); ?><img id="the_champ_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_home" name="the_champ_sharing[home]" type="checkbox" <?php echo isset( $theChampSharingOptions['home'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1053,8 +1025,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_count_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_counts"><?php _e("Show share counts", 'super-socializer'); ?></label>
+							<label for="the_champ_counts"><?php _e("Show share counts", 'super-socializer'); ?><img id="the_champ_count_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_counts" name="the_champ_sharing[horizontal_counts]" type="checkbox" <?php echo isset( $theChampSharingOptions['horizontal_counts'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1075,8 +1046,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_total_hor_shares_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_total_hor_shares"><?php _e("Show total shares", 'super-socializer' ); ?></label>
+							<label for="the_champ_total_hor_shares"><?php _e("Show total shares", 'super-socializer' ); ?><img id="the_champ_total_hor_shares_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_total_hor_shares" name="the_champ_sharing[horizontal_total_shares]" type="checkbox" <?php echo isset( $theChampSharingOptions['horizontal_total_shares'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1094,8 +1064,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_hmore_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_hmore"><?php _e("Enable 'More' icon", 'super-socializer' ); ?></label>
+							<label for="the_champ_hmore"><?php _e("Enable 'More' icon", 'super-socializer' ); ?><img id="the_champ_hmore_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_hmore" name="the_champ_sharing[horizontal_more]" type="checkbox" <?php echo isset($theChampSharingOptions['horizontal_more']) ? 'checked = "checked"' : '';?> value="1" />
@@ -1127,8 +1096,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_vertical_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_vertical_enable"><?php _e("Enable Floating sharing interface", 'super-socializer' ); ?></label>
+							<label for="the_champ_vertical_enable"><?php _e("Enable Floating sharing interface", 'super-socializer' ); ?><img id="the_champ_vertical_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_vertical_enable" onclick="theChampVerticalSharingOptionsToggle(this)" name="the_champ_sharing[vertical_enable]" type="checkbox" <?php echo isset( $theChampSharingOptions['vertical_enable'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1147,8 +1115,7 @@
 						<tbody id="the_champ_vertical_sharing_options" <?php echo isset( $theChampSharingOptions['vertical_enable'] ) ? '' : 'style="display: none"'; ?>>
 						<tr>
 							<th>
-							<img id="the_champ_vertical_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_vertical_target_url"><?php _e("Target Url", 'super-socializer' ); ?></label>
+							<label for="the_champ_vertical_target_url"><?php _e("Target Url", 'super-socializer' ); ?><img id="the_champ_vertical_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td id="the_champ_vertical_target_url_column">
 							<input id="the_champ_vertical_target_url_default" name="the_champ_sharing[vertical_target_url]" type="radio" <?php echo !isset( $theChampSharingOptions['vertical_target_url'] ) || $theChampSharingOptions['vertical_target_url'] == 'default' ? 'checked = "checked"' : '';?> value="default" />
@@ -1171,8 +1138,7 @@
 						<tbody id="the_champ_vertical_instagram_options" <?php echo !isset($theChampSharingOptions['vertical_re_providers']) || !in_array('instagram', $theChampSharingOptions['vertical_re_providers']) ? 'style = "display: none"' : '';?> >
 							<tr>
 								<th>
-								<img id="the_champ_vertical_instagram_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_vertical_instagram_username"><?php _e("Instagram username", 'super-socializer' ); ?></label>
+								<label for="the_champ_vertical_instagram_username"><?php _e("Instagram username", 'super-socializer' ); ?><img id="the_champ_vertical_instagram_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_vertical_instagram_username" name="the_champ_sharing[vertical_instagram_username]" type="text" value="<?php echo $instagramUsername ?>" />
@@ -1191,8 +1157,7 @@
 						<tbody id="the_champ_vertical_comment_options" <?php echo !isset($theChampSharingOptions['vertical_re_providers']) || !in_array('Comment', $theChampSharingOptions['vertical_re_providers']) ? 'style = "display: none"' : '';?> >
 							<tr>
 								<th>
-								<img id="the_champ_vertical_comment_container_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
-								<label for="the_champ_vertical_comment_container_id"><?php _e( "HTML ID of container element of comment form", 'super-socializer' ); ?></label>
+								<label for="the_champ_vertical_comment_container_id"><?php _e( "HTML ID of container element of comment form", 'super-socializer' ); ?><img id="the_champ_vertical_comment_container_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_vertical_comment_container_id" name="the_champ_sharing[vertical_comment_container_id]" type="text" value="<?php echo $commentFormContainerId ?>" />
@@ -1210,8 +1175,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_ss_vertical_rearrange_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Rearrange icons", 'super-socializer' ); ?></label>
+							<label><?php _e("Rearrange icons", 'super-socializer' ); ?><img id="the_champ_ss_vertical_rearrange_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 						</tr>
 						
@@ -1233,7 +1197,7 @@
 							<style type="text/css">
 							.theChampVerticalSharingBackground{
 								<?php if($vertical_bg){ ?>
-								background-color: <?php echo $vertical_bg ?>;
+								background-color: <?php echo $vertical_bg ?>;background:<?php echo $vertical_bg ?>;
 								<?php }if($vertical_border_width){ ?>
 								border-width: <?php echo $vertical_border_width ?>px;
 								border-style: solid;
@@ -1242,7 +1206,7 @@
 							}
 							.theChampVerticalSharingBackground:hover{
 								<?php if($vertical_bg_hover){ ?>
-								background-color: <?php echo $vertical_bg_hover ?>;
+								background-color: <?php echo $vertical_bg_hover ?>;background:<?php echo $vertical_bg_hover ?>;
 								<?php }if($vertical_border_width_hover){ ?>
 								border-width: <?php echo $vertical_border_width_hover ?>px;
 								border-style: solid;
@@ -1277,8 +1241,7 @@
 
 						<tr>
 							<th colspan="2">
-							<img id="the_champ_vertical_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Select Sharing Services", 'super-socializer' ); ?></label>
+							<label><?php _e("Select Sharing Services", 'super-socializer' ); ?><img id="the_champ_vertical_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 						</tr>
 
@@ -1321,8 +1284,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_vertical_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Background Color", 'super-socializer' ); ?></label>
+							<label><?php _e("Background Color", 'super-socializer' ); ?><img id="the_champ_vertical_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" name="the_champ_sharing[vertical_bg]" type="text" value="<?php echo isset( $theChampSharingOptions['vertical_bg'] ) ? $theChampSharingOptions['vertical_bg'] : '' ?>" />
@@ -1339,8 +1301,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_alignment"><?php _e("Horizontal alignment", 'super-socializer' ); ?></label>
+							<label for="the_champ_alignment"><?php _e("Horizontal alignment", 'super-socializer' ); ?><img id="the_champ_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<select onchange="theChampToggleOffset(this.value)" id="the_champ_alignment" name="the_champ_sharing[alignment]">
@@ -1361,8 +1322,7 @@
 						<tbody id="the_champ_left_offset_rows" <?php echo (isset( $theChampSharingOptions['alignment'] ) && $theChampSharingOptions['alignment'] == 'left') ? '' : 'style="display: none"' ?>>
 						<tr>
 							<th>
-							<img id="the_champ_left_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_left_offset"><?php _e("Left offset", 'super-socializer' ); ?></label>
+							<label for="the_champ_left_offset"><?php _e("Left offset", 'super-socializer' ); ?><img id="the_champ_left_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" id="the_champ_left_offset" name="the_champ_sharing[left_offset]" type="text" value="<?php echo isset( $theChampSharingOptions['left_offset'] ) ? $theChampSharingOptions['left_offset'] : '' ?>" />px
@@ -1381,8 +1341,7 @@
 						<tbody id="the_champ_right_offset_rows" <?php echo (isset( $theChampSharingOptions['alignment'] ) && $theChampSharingOptions['alignment'] == 'right') ? '' : 'style="display: none"' ?>>
 						<tr>
 							<th>
-							<img id="the_champ_right_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_right_offset"><?php _e("Right offset", 'super-socializer' ); ?></label>
+							<label for="the_champ_right_offset"><?php _e("Right offset", 'super-socializer' ); ?><img id="the_champ_right_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" id="the_champ_right_offset" name="the_champ_sharing[right_offset]" type="text" value="<?php echo isset( $theChampSharingOptions['right_offset'] ) ? $theChampSharingOptions['right_offset'] : '' ?>" />px
@@ -1400,8 +1359,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_top_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_top_offset"><?php _e("Top offset", 'super-socializer' ); ?></label>
+							<label for="the_champ_top_offset"><?php _e("Top offset", 'super-socializer' ); ?><img id="the_champ_top_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" id="the_champ_top_offset" name="the_champ_sharing[top_offset]" type="text" value="<?php echo isset( $theChampSharingOptions['top_offset'] ) ? $theChampSharingOptions['top_offset'] : '' ?>" />px
@@ -1418,8 +1376,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_vertical_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Placement", 'super-socializer' ); ?></label>
+							<label><?php _e("Placement", 'super-socializer' ); ?><img id="the_champ_vertical_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_vertical_home" name="the_champ_sharing[vertical_home]" type="checkbox" <?php echo isset( $theChampSharingOptions['vertical_home'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1475,8 +1432,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_vertical_count_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_vertical_counts"><?php _e("Show share counts", 'super-socializer' ); ?></label>
+							<label for="the_champ_vertical_counts"><?php _e("Show share counts", 'super-socializer' ); ?><img id="the_champ_vertical_count_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_vertical_counts" name="the_champ_sharing[vertical_counts]" type="checkbox" <?php echo isset( $theChampSharingOptions['vertical_counts'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1497,8 +1453,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_total_vertical_shares_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_total_vertical_shares"><?php _e("Show total shares", 'super-socializer'); ?></label>
+							<label for="the_champ_total_vertical_shares"><?php _e("Show total shares", 'super-socializer'); ?><img id="the_champ_total_vertical_shares_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_total_vertical_shares" name="the_champ_sharing[vertical_total_shares]" type="checkbox" <?php echo isset( $theChampSharingOptions['vertical_total_shares'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1516,8 +1471,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_vmore_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_vmore"><?php _e("Enable 'More' icon", 'super-socializer' ); ?></label>
+							<label for="the_champ_vmore"><?php _e("Enable 'More' icon", 'super-socializer' ); ?><img id="the_champ_vmore_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_vmore" name="the_champ_sharing[vertical_more]" type="checkbox" <?php echo isset($theChampSharingOptions['vertical_more']) ? 'checked = "checked"' : '';?> value="1" />
@@ -1534,8 +1488,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_hslider_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_hslider"><?php _e("Hide floating slider", 'super-socializer'); ?></label>
+							<label for="the_champ_hslider"><?php _e("Hide floating slider", 'super-socializer'); ?><img id="the_champ_hslider_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_hslider" name="the_champ_sharing[hide_slider]" type="checkbox" <?php echo isset($theChampSharingOptions['hide_slider']) ? 'checked = "checked"' : '';?> value="1" />
@@ -1552,8 +1505,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_mobile_sharing_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_mobile_sharing"><?php _e("Vertical floating bar responsiveness", 'super-socializer' ); ?></label>
+							<label for="the_champ_mobile_sharing"><?php _e("Vertical floating bar responsiveness", 'super-socializer' ); ?><img id="the_champ_mobile_sharing_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_mobile_sharing" name="the_champ_sharing[hide_mobile_sharing]" type="checkbox" <?php echo isset( $theChampSharingOptions['hide_mobile_sharing'] ) ? 'checked = "checked"' : '';?> value="1" /><label><?php echo sprintf( __( 'Display vertical interface only when screen is wider than %s pixels', 'super-socializer' ), '<input style="width:46px" name="the_champ_sharing[vertical_screen_width]" type="text" value="' . ( isset( $theChampSharingOptions['vertical_screen_width'] ) ? $theChampSharingOptions['vertical_screen_width'] : '' ) . '" />' ) ?></label>
@@ -1570,8 +1522,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_mobile_sharing_bottom_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_mobile_sharing_bottom"><?php _e("Horizontal floating bar responsiveness", 'super-socializer' ); ?></label>
+							<label for="the_champ_mobile_sharing_bottom"><?php _e("Horizontal floating bar responsiveness", 'super-socializer' ); ?><img id="the_champ_mobile_sharing_bottom_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_mobile_sharing_bottom" name="the_champ_sharing[bottom_mobile_sharing]" type="checkbox" <?php echo isset( $theChampSharingOptions['bottom_mobile_sharing'] ) ? 'checked = "checked"' : '';?> value="1" /><label><?php echo sprintf( __( 'Stick vertical floating interface horizontally at bottom only when screen is narrower than %s pixels', 'super-socializer' ), '<input style="width:46px" name="the_champ_sharing[horizontal_screen_width]" type="text" value="' . ( isset( $theChampSharingOptions['horizontal_screen_width'] ) ? $theChampSharingOptions['horizontal_screen_width'] : '' ) . '" />' ) ?></label>
@@ -1590,8 +1541,7 @@
 						<tbody id="the_champ_bottom_sharing_options" <?php echo isset( $theChampSharingOptions['bottom_mobile_sharing'] ) ? '' : 'style="display: none"'; ?>>
 							<tr>
 								<th>
-								<img id="the_champ_mobile_sharing_position_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_mobile_sharing_position"><?php _e("Horizontal floating bar position", 'super-socializer'); ?></label>
+								<label for="the_champ_mobile_sharing_position"><?php _e("Horizontal floating bar position", 'super-socializer'); ?><img id="the_champ_mobile_sharing_position_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input type="radio" id="bottom_sharing_position_radio_nonresponsive" <?php echo $theChampSharingOptions['bottom_sharing_position_radio'] == 'nonresponsive' ? 'checked' : ''; ?> name="the_champ_sharing[bottom_sharing_position_radio]" value="nonresponsive" /><label for="bottom_sharing_position_radio_nonresponsive"><?php echo sprintf( __( '%s pixels from %s', 'super-socializer' ), '<input id="the_champ_mobile_sharing_position" style="width:46px" name="the_champ_sharing[bottom_sharing_position]" type="text" value="' . ( isset( $theChampSharingOptions['bottom_sharing_position'] ) ? $theChampSharingOptions['bottom_sharing_position'] : '' ) . '" />', '<select style="width:63px" name="the_champ_sharing[bottom_sharing_alignment]"><option value="right" ' . ( ! isset( $theChampSharingOptions['bottom_sharing_alignment'] ) || $theChampSharingOptions['bottom_sharing_alignment'] == 'right' ? 'selected' : '' ) . '>right</option><option value="left" ' . ( isset( $theChampSharingOptions['bottom_sharing_alignment'] ) && $theChampSharingOptions['bottom_sharing_alignment'] == 'left' ? 'selected' : '' ) . '>left</option></select>' ) ?></label><br/>
@@ -1631,8 +1581,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_fb_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fb_key"><?php _e("Facebook App ID", 'super-socializer'); ?></label>
+							<label for="the_champ_fb_key"><?php _e("Facebook App ID", 'super-socializer'); ?><img id="the_champ_fb_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fb_key" name="the_champ_sharing[fb_key]" type="text" value="<?php echo $theChampSharingOptions['fb_key'] ?>" />
@@ -1649,8 +1598,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_fb_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_secret"><?php _e("Facebook App Secret", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_secret"><?php _e("Facebook App Secret", 'super-socializer'); ?><img id="the_champ_fb_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_secret" name="the_champ_sharing[fb_secret]" type="text" value="<?php echo $theChampSharingOptions['fb_secret'] ?>" />
@@ -1674,8 +1622,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_surl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_surl_enable"><?php _e("Use shortlinks already installed", 'super-socializer'); ?></label>
+							<label for="the_champ_surl_enable"><?php _e("Use shortlinks already installed", 'super-socializer'); ?><img id="the_champ_surl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_surl_enable" name="the_champ_sharing[use_shortlinks]" type="checkbox" <?php echo isset( $theChampSharingOptions['use_shortlinks'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1692,8 +1639,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_bitly_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_bitly_enable"><?php _e("Enable bit.ly url shortener for sharing", 'super-socializer' ); ?></label>
+							<label for="the_champ_bitly_enable"><?php _e("Enable bit.ly url shortener for sharing", 'super-socializer' ); ?><img id="the_champ_bitly_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_bitly_enable" name="the_champ_sharing[bitly_enable]" type="checkbox" <?php echo isset( $theChampSharingOptions['bitly_enable'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1710,8 +1656,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_bitly_login_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_bitly_login"><?php _e("bit.ly Login", 'super-socializer' ); ?></label>
+							<label for="the_champ_bitly_login"><?php _e("bit.ly Login", 'super-socializer' ); ?><img id="the_champ_bitly_login_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_bitly_login" name="the_champ_sharing[bitly_username]" type="text" value="<?php echo isset( $theChampSharingOptions['bitly_username'] ) ? $theChampSharingOptions['bitly_username'] : '' ?>" />
@@ -1729,8 +1674,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_bitly_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_bitly_key"><?php _e("bit.ly API Key", 'super-socializer' ); ?></label>
+							<label for="the_champ_bitly_key"><?php _e("bit.ly API Key", 'super-socializer' ); ?><img id="the_champ_bitly_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_bitly_key" name="the_champ_sharing[bitly_key]" type="text" value="<?php echo isset( $theChampSharingOptions['bitly_key'] ) ? $theChampSharingOptions['bitly_key'] : '' ?>" />
@@ -1748,8 +1692,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_clear_shorturl_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<input type="button" class="button-primary" value="<?php _e('Clear Bitly Cache', 'super-socializer') ?>" onclick="theChampClearShorturlCache()" />
+							<input type="button" class="button-primary" value="<?php _e('Clear Bitly Cache', 'super-socializer') ?>" onclick="theChampClearShorturlCache()" /><img id="the_champ_clear_shorturl_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
 							</th>
 							<td>
 							<img src="<?php echo plugins_url('../images/ajax_loader.gif', __FILE__) ?>" id="shorturl_cache_loading" style="display:none" />
@@ -1774,8 +1717,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_share_count_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
-							<label for="the_champ_share_count_cache"><?php _e( "Refresh Share Count cache every", 'super-socializer' ) ?></label>
+							<label for="the_champ_share_count_cache"><?php _e( "Refresh Share Count cache every", 'super-socializer' ) ?><img id="the_champ_share_count_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 50px;" id="the_champ_share_count_cache" name="the_champ_sharing[share_count_cache_refresh_count]" type="text" value="<?php echo $theChampSharingOptions['share_count_cache_refresh_count']; ?>" />
@@ -1798,8 +1740,7 @@
 
 						<tr>
 							<th style="width:215px">
-							<img id="the_champ_clear_share_count_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<input type="button" class="button-primary" value="<?php _e( 'Clear Share Counts Cache', 'super-socializer') ?>" onclick="heateorSsClearShareCountCache()" />
+							<input type="button" class="button-primary" value="<?php _e( 'Clear Share Counts Cache', 'super-socializer') ?>" onclick="heateorSsClearShareCountCache()" /><img id="the_champ_clear_share_count_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
 							</th>
 							<td>
 							<img src="<?php echo plugins_url('../images/ajax_loader.gif', __FILE__) ?>" id="share_count_cache_loading" style="display:none" />
@@ -1824,8 +1765,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_sc_language_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_language"><?php _e("Language", 'super-socializer' ); ?></label>
+							<label for="the_champ_sc_language"><?php _e("Language", 'super-socializer' ); ?><img id="the_champ_sc_language_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_language" name="the_champ_sharing[language]" type="text" value="<?php echo $theChampSharingOptions['language'] ? $theChampSharingOptions['language'] : '' ?>" />
@@ -1849,8 +1789,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_twitter_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_twitter_username"><?php _e("Twitter username (without @)", 'super-socializer' ); ?></label>
+							<label for="the_champ_twitter_username"><?php _e("Twitter username (without @)", 'super-socializer' ); ?><img id="the_champ_twitter_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_twitter_username" name="the_champ_sharing[twitter_username]" type="text" value="<?php echo isset( $theChampSharingOptions['twitter_username'] ) ? $theChampSharingOptions['twitter_username'] : '' ?>" />
@@ -1868,8 +1807,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_buffer_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_buffer_username"><?php _e("Buffer username (without @)", 'super-socializer' ); ?></label>
+							<label for="the_champ_buffer_username"><?php _e("Buffer username (without @)", 'super-socializer' ); ?><img id="the_champ_buffer_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_buffer_username" name="the_champ_sharing[buffer_username]" type="text" value="<?php echo isset( $theChampSharingOptions['buffer_username'] ) ? $theChampSharingOptions['buffer_username'] : '' ?>" />
@@ -1893,8 +1831,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_amp_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
-							<label for="the_champ_amp_enable"><?php _e("Enable sharing on AMP pages", 'super-socializer'); ?></label>
+							<label for="the_champ_amp_enable"><?php _e("Enable sharing on AMP pages", 'super-socializer'); ?><img id="the_champ_amp_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_amp_enable" name="the_champ_sharing[amp_enable]" type="checkbox" <?php echo isset( $theChampSharingOptions['amp_enable'] ) ? 'checked = "checked"' : '';?> value="1" />
@@ -1928,8 +1865,7 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 							<tr>
 								<th>
-								<img id="the_champ_mycred_referral_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
-								<label for="the_champ_mycred_referral_id"><?php _e("Append myCRED referral ID to the urls being shared", 'super-socializer'); ?></label>
+								<label for="the_champ_mycred_referral_id"><?php _e("Append myCRED referral ID to the urls being shared", 'super-socializer'); ?></label><img id="the_champ_mycred_referral_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
 								</th>
 								<td>
 								<input id="the_champ_mycred_referral_id" name="the_champ_sharing[mycred_referral]" type="checkbox" <?php echo isset($theChampSharingOptions['mycred_referral']) ? 'checked = "checked"' : '';?> value="1" />

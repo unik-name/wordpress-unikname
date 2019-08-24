@@ -832,6 +832,11 @@ function heateor_ss_new_user_notification($userId){
 		$notificationType = 'admin';
 	}
 	if($notificationType){
-		wp_new_user_notification($userId, null, $notificationType);
+		if(class_exists('WC_Emails')){
+			$wc_emails = WC_Emails::instance();
+			$wc_emails->customer_new_account($userId);
+		}else{
+			wp_new_user_notification($userId, null, $notificationType);	
+		}
 	}
 }
