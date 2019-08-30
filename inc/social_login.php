@@ -437,7 +437,7 @@ function the_champ_sanitize_profile_data($profileData, $provider){
 		$temp['large_avatar'] = isset($profileData->avatarfull) && heateor_ss_validate_url($profileData->avatarfull) !== false ? $profileData->avatarfull : '';
 	}elseif($provider == 'twitch'){
 		$temp['id'] = isset($profileData['_id']) ? sanitize_text_field($profileData['_id']) : '';
-	 	$temp['email'] = '';
+	 	$temp['email'] = isset($profileData['email']) ? sanitize_text_field($profileData['email']) : '';
 		$temp['name'] = isset($profileData['name']) ? sanitize_text_field($profileData['name']) : '';
 		$temp['username'] = isset($profileData['display_name']) ? sanitize_text_field($profileData['display_name']) : '';
 		$temp['first_name'] = '';

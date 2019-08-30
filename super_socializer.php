@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.33
+Version: 7.12.34
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.33');
+define('THE_CHAMP_SS_VERSION', '7.12.34');
 
 require 'helper.php';
 
@@ -367,7 +367,7 @@ function the_champ_connect(){
 			$accessToken = $twitchAuth->get_access_token($_GET['code']);
 			$username = $twitchAuth->authenticated_user($accessToken);
 			if(isset($username)){
-			    $profileData = $twitchAuth->get_userid($username, true);
+			    $profileData = $twitchAuth->get_userid($username, true, $accessToken);
 			    if(is_array($profileData) && isset($profileData['_id'])){
 					$profileData = the_champ_sanitize_profile_data($profileData, 'twitch');
 					if(isset($_GET['heateorMSEnabled'])){

@@ -15,8 +15,7 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 					<tr>
 						<th>
-						<img id="the_champ_sl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-						<label for="the_champ_login_enable"><?php _e("Enable Social Login", 'super-socializer'); ?></label>
+						<label for="the_champ_login_enable"><?php _e("Enable Social Login", 'super-socializer'); ?><img id="the_champ_sl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 						</th>
 						<td>
 						<input id="the_champ_login_enable" name="the_champ_login[enable]" type="checkbox" <?php echo isset($theChampLoginOptions['enable']) ? 'checked = "checked"' : '';?> value="1" />
@@ -60,8 +59,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_disable_reg_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_disable_reg"><?php _e("Disable user registration via Social Login", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_disable_reg"><?php _e("Disable user registration via Social Login", 'super-socializer'); ?><img id="the_champ_sl_disable_reg_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_disable_reg" name="the_champ_login[disable_reg]" onclick="if(this.checked){jQuery('#the_champ_disable_reg_options').css('display', 'table-row-group')}else{ jQuery('#the_champ_disable_reg_options').css('display', 'none') }" type="checkbox" <?php echo isset($theChampLoginOptions['disable_reg']) ? 'checked = "checked"' : '';?> value="1" />
@@ -79,8 +77,7 @@
 						<tbody id="the_champ_disable_reg_options" <?php echo !isset($theChampLoginOptions['disable_reg']) ? 'style = "display: none"' : '';?> >
 						<tr>
 							<th>
-							<img id="the_champ_sl_disable_reg_redirect_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_disable_reg_redirect"><?php _e("Redirection url", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_disable_reg_redirect"><?php _e("Redirection url", 'super-socializer'); ?><img id="the_champ_sl_disable_reg_redirect_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_disable_reg_redirect" name="the_champ_login[disable_reg_redirect]" type="text" value="<?php echo isset($theChampLoginOptions['disable_reg_redirect']) ? $theChampLoginOptions['disable_reg_redirect'] : '' ?>" />
@@ -98,8 +95,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Select Social Networks", 'super-socializer'); ?></label>
+							<label><?php _e("Select Social Networks", 'super-socializer'); ?><img id="the_champ_sl_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<div class="theChampHorizontalSharingProviderContainer">
@@ -157,8 +153,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_slfb_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_key"><?php _e("Facebook App ID", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_key"><?php _e("Facebook App ID", 'super-socializer'); ?><img id="the_champ_slfb_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_key" name="the_champ_login[fb_key]" type="text" value="<?php echo isset($theChampLoginOptions['fb_key']) ? $theChampLoginOptions['fb_key'] : '' ?>" />
@@ -179,8 +174,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_slfb_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_secret"><?php _e("Facebook App Secret", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_secret"><?php _e("Facebook App Secret", 'super-socializer'); ?><img id="the_champ_slfb_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_secret" name="the_champ_login[fb_secret]" type="text" value="<?php echo isset($theChampLoginOptions['fb_secret']) ? $theChampLoginOptions['fb_secret'] : '' ?>" />
@@ -201,8 +195,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sltw_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_twlogin_key"><?php _e("Twitter API Key", 'super-socializer'); ?></label>
+							<label for="the_champ_twlogin_key"><?php _e("Twitter API Key", 'super-socializer'); ?><img id="the_champ_sltw_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_twlogin_key" name="the_champ_login[twitter_key]" type="text" value="<?php echo isset($theChampLoginOptions['twitter_key']) ? $theChampLoginOptions['twitter_key'] : '' ?>" />
@@ -227,8 +220,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sltw_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_twlogin_secret"><?php _e("Twitter API Secret", 'super-socializer'); ?></label>
+							<label for="the_champ_twlogin_secret"><?php _e("Twitter API Secret", 'super-socializer'); ?><img id="the_champ_sltw_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_twlogin_secret" name="the_champ_login[twitter_secret]" type="text" value="<?php echo isset($theChampLoginOptions['twitter_secret']) ? $theChampLoginOptions['twitter_secret'] : '' ?>" />
@@ -253,8 +245,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_slli_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_lilogin_key"><?php _e("LinkedIn Client ID", 'super-socializer'); ?></label>
+							<label for="the_champ_lilogin_key"><?php _e("LinkedIn Client ID", 'super-socializer'); ?><img id="the_champ_slli_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_lilogin_key" name="the_champ_login[li_key]" type="text" value="<?php echo isset($theChampLoginOptions['li_key']) ? $theChampLoginOptions['li_key'] : '' ?>" />
@@ -275,8 +266,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_slli_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_lilogin_secret"><?php _e("LinkedIn Client Secret ", 'super-socializer'); ?></label>
+							<label for="the_champ_lilogin_secret"><?php _e("LinkedIn Client Secret", 'super-socializer'); ?><img id="the_champ_slli_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_lilogin_secret" name="the_champ_login[li_secret]" type="text" value="<?php echo isset($theChampLoginOptions['li_secret']) ? $theChampLoginOptions['li_secret'] : '' ?>" />
@@ -297,8 +287,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_slgp_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_gplogin_key"><?php _e("Google Client ID", 'super-socializer'); ?></label>
+							<label for="the_champ_gplogin_key"><?php _e("Google Client ID", 'super-socializer'); ?><img id="the_champ_slgp_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_gplogin_key" name="the_champ_login[google_key]" type="text" value="<?php echo isset($theChampLoginOptions['google_key']) ? $theChampLoginOptions['google_key'] : '' ?>" />
@@ -319,8 +308,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_slgp_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_gplogin_secret"><?php _e("Google Client Secret", 'super-socializer'); ?></label>
+							<label for="the_champ_gplogin_secret"><?php _e("Google Client Secret", 'super-socializer'); ?><img id="the_champ_slgp_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_gplogin_secret" name="the_champ_login[google_secret]" type="text" value="<?php echo isset($theChampLoginOptions['google_secret']) ? $theChampLoginOptions['google_secret'] : '' ?>" />
@@ -341,8 +329,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_slvk_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_vklogin_key"><?php _e("Vkontakte Application ID", 'super-socializer'); ?></label>
+							<label for="the_champ_vklogin_key"><?php _e("Vkontakte Application ID", 'super-socializer'); ?><img id="the_champ_slvk_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_vklogin_key" name="the_champ_login[vk_key]" type="text" value="<?php echo isset($theChampLoginOptions['vk_key']) ? $theChampLoginOptions['vk_key'] : '' ?>" />
@@ -363,8 +350,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_slvk_secure_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_vklogin_secure_key"><?php _e("Vkontakte Secure key", 'super-socializer'); ?></label>
+							<label for="the_champ_vklogin_secure_key"><?php _e("Vkontakte Secure key", 'super-socializer'); ?><img id="the_champ_slvk_secure_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_vklogin_secure_key" name="the_champ_login[vk_secure_key]" type="text" value="<?php echo isset($theChampLoginOptions['vk_secure_key']) ? $theChampLoginOptions['vk_secure_key'] : '' ?>" />
@@ -385,8 +371,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_slinsta_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_insta_key"><?php _e("Instagram Client ID", 'super-socializer'); ?></label>
+							<label for="the_champ_insta_key"><?php _e("Instagram Client ID", 'super-socializer'); ?><img id="the_champ_slinsta_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_insta_key" name="the_champ_login[insta_id]" type="text" value="<?php echo isset($theChampLoginOptions['insta_id']) ? $theChampLoginOptions['insta_id'] : '' ?>" />
@@ -407,8 +392,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_slxing_ck_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_slxing_ck"><?php _e("Xing Consumer Key", 'super-socializer'); ?></label>
+							<label for="the_champ_slxing_ck"><?php _e("Xing Consumer Key", 'super-socializer'); ?><img id="the_champ_slxing_ck_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_slxing_ck" name="the_champ_login[xing_ck]" type="text" value="<?php echo isset($theChampLoginOptions['xing_ck']) ? $theChampLoginOptions['xing_ck'] : '' ?>" />
@@ -429,8 +413,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_slxing_cs_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_slxing_cs"><?php _e("Xing Consumer Secret", 'super-socializer'); ?></label>
+							<label for="the_champ_slxing_cs"><?php _e("Xing Consumer Secret", 'super-socializer'); ?><img id="the_champ_slxing_cs_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_slxing_cs" name="the_champ_login[xing_cs]" type="text" value="<?php echo isset($theChampLoginOptions['xing_cs']) ? $theChampLoginOptions['xing_cs'] : '' ?>" />
@@ -451,8 +434,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_steam_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_steam_key"><?php _e("Steam API Key", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_steam_key"><?php _e("Steam API Key", 'super-socializer'); ?><img id="the_champ_sl_steam_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_steam_key" name="the_champ_login[steam_api_key]" type="text" value="<?php echo isset($theChampLoginOptions['steam_api_key']) ? $theChampLoginOptions['steam_api_key'] : '' ?>" />
@@ -471,8 +453,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_twitch_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_twitch_id"><?php _e("Twitch Client ID", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_twitch_id"><?php _e("Twitch Client ID", 'super-socializer'); ?><img id="the_champ_sl_twitch_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_twitch_id" name="the_champ_login[twitch_client_id]" type="text" value="<?php echo isset($theChampLoginOptions['twitch_client_id']) ? $theChampLoginOptions['twitch_client_id'] : '' ?>" />
@@ -493,8 +474,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_twitch_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_twitch_secret"><?php _e("Twitch Client Secret", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_twitch_secret"><?php _e("Twitch Client Secret", 'super-socializer'); ?><img id="the_champ_sl_twitch_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_twitch_secret" name="the_champ_login[twitch_client_secret]" type="text" value="<?php echo isset($theChampLoginOptions['twitch_client_secret']) ? $theChampLoginOptions['twitch_client_secret'] : '' ?>" />
@@ -528,8 +508,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_sl_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_title"><?php _e("Title", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_title"><?php _e("Title", 'super-socializer'); ?><img id="the_champ_sl_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_title" name="the_champ_login[title]" type="text" value="<?php echo isset($theChampLoginOptions['title']) ? $theChampLoginOptions['title'] : '' ?>" />
@@ -547,8 +526,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_same_tab_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_same_tab"><?php _e("Trigger social login in the same browser tab", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_same_tab"><?php _e("Trigger social login in the same browser tab", 'super-socializer'); ?><img id="the_champ_sl_same_tab_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_same_tab" name="the_champ_login[same_tab_login]" type="checkbox" <?php echo isset($theChampLoginOptions['same_tab_login']) ? 'checked = "checked"' : '';?> value="1" />
@@ -565,8 +543,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_align_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_align"><?php _e("Center align icons", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_align"><?php _e("Center align icons", 'super-socializer'); ?><img id="the_champ_sl_align_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_align" name="the_champ_login[center_align]" type="checkbox" <?php echo isset($theChampLoginOptions['center_align']) ? 'checked = "checked"' : '';?> value="1" />
@@ -583,8 +560,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_loginpage_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_enableAtLogin"><?php _e("Enable at login page", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_enableAtLogin"><?php _e("Enable at login page", 'super-socializer'); ?><img id="the_champ_sl_loginpage_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_enableAtLogin" name="the_champ_login[enableAtLogin]" type="checkbox" <?php echo isset($theChampLoginOptions['enableAtLogin']) ? 'checked = "checked"' : '';?> value="1" />
@@ -601,8 +577,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_regpage_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_enableAtRegister"><?php _e("Enable at register page", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_enableAtRegister"><?php _e("Enable at register page", 'super-socializer'); ?><img id="the_champ_sl_regpage_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_enableAtRegister" name="the_champ_login[enableAtRegister]" type="checkbox" <?php echo isset($theChampLoginOptions['enableAtRegister']) ? 'checked = "checked"' : '';?> value="1" />
@@ -619,8 +594,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_cmntform_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_enableAtComment"><?php _e("Enable at comment form", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_enableAtComment"><?php _e("Enable at comment form", 'super-socializer'); ?><img id="the_champ_sl_cmntform_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_enableAtComment" name="the_champ_login[enableAtComment]" type="checkbox" <?php echo isset($theChampLoginOptions['enableAtComment']) ? 'checked = "checked"' : '';?> value="1" />
@@ -644,8 +618,7 @@
 						    ?>
 						    <tr>
 								<th>
-								<img id="the_champ_sl_wc_before_form_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_sl_wc_before_form"><?php _e("Enable before WooCommerce Customer Login Form", 'super-socializer'); ?></label>
+								<label for="the_champ_sl_wc_before_form"><?php _e("Enable before WooCommerce Customer Login Form", 'super-socializer'); ?><img id="the_champ_sl_wc_before_form_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_sl_wc_before_form" name="the_champ_login[enable_before_wc]" type="checkbox" <?php echo isset($theChampLoginOptions['enable_before_wc']) ? 'checked = "checked"' : '';?> value="1" />
@@ -662,8 +635,7 @@
 
 							<tr>
 								<th>
-								<img id="the_champ_sl_wc_after_form_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_sl_wc_after_form"><?php _e("Enable at WooCommerce Customer Login Form", 'super-socializer'); ?></label>
+								<label for="the_champ_sl_wc_after_form"><?php _e("Enable at WooCommerce Customer Login Form", 'super-socializer'); ?><img id="the_champ_sl_wc_after_form_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_sl_wc_after_form" name="the_champ_login[enable_after_wc]" type="checkbox" <?php echo isset($theChampLoginOptions['enable_after_wc']) ? 'checked = "checked"' : '';?> value="1" />
@@ -680,8 +652,7 @@
 
 							<tr>
 								<th>
-								<img id="the_champ_sl_wc_register_form_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_sl_wc_register_form"><?php _e("Enable at WooCommerce Customer Register Form", 'super-socializer'); ?></label>
+								<label for="the_champ_sl_wc_register_form"><?php _e("Enable at WooCommerce Customer Register Form", 'super-socializer'); ?><img id="the_champ_sl_wc_register_form_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_sl_wc_register_form" name="the_champ_login[enable_register_wc]" type="checkbox" <?php echo isset($theChampLoginOptions['enable_register_wc']) ? 'checked = "checked"' : '';?> value="1" />
@@ -698,8 +669,7 @@
 
 							<tr>
 								<th>
-								<img id="the_champ_sl_wc_checkout_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_sl_wc_checkout"><?php _e("Enable at WooCommerce checkout page", 'super-socializer'); ?></label>
+								<label for="the_champ_sl_wc_checkout"><?php _e("Enable at WooCommerce checkout page", 'super-socializer'); ?><img id="the_champ_sl_wc_checkout_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_sl_wc_checkout" name="the_champ_login[enable_wc_checkout]" type="checkbox" <?php echo isset($theChampLoginOptions['enable_wc_checkout']) ? 'checked = "checked"' : '';?> value="1" />
@@ -719,8 +689,7 @@
 							?>
 							<tr>
 								<th>
-								<img id="the_champ_approve_comment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_approve_comment"><?php _e("Auto-approve comments made by Social Login users", 'super-socializer'); ?></label>
+								<label for="the_champ_approve_comment"><?php _e("Auto-approve comments made by Social Login users", 'super-socializer'); ?><img id="the_champ_approve_comment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_approve_comment" name="the_champ_login[autoApproveComment]" type="checkbox" <?php echo isset($theChampLoginOptions['autoApproveComment']) ? 'checked = "checked"' : '';?> value="1" />
@@ -740,8 +709,7 @@
 						?>
 						<tr>
 							<th>
-							<img id="the_champ_sl_avatar_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_login_avatar"><?php _e("Enable social avatar", 'super-socializer'); ?></label>
+							<label for="the_champ_login_avatar"><?php _e("Enable social avatar", 'super-socializer'); ?><img id="the_champ_sl_avatar_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_login_avatar" onclick="if(this.checked){jQuery('#the_champ_avatar_options').css('display', 'table-row-group')}else{ jQuery('#the_champ_avatar_options').css('display', 'none') }" name="the_champ_login[avatar]" type="checkbox" <?php echo isset($theChampLoginOptions['avatar']) ? 'checked = "checked"' : '';?> value="1" />
@@ -760,8 +728,7 @@
 						<tbody id="the_champ_avatar_options" <?php echo !isset($theChampLoginOptions['avatar']) ? 'style = "display: none"' : '';?> >
 						<tr>
 							<th>
-							<img id="the_champ_sl_avatar_quality_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Avatar quality", 'super-socializer'); ?></label>
+							<label><?php _e("Avatar quality", 'super-socializer'); ?><img id="the_champ_sl_avatar_quality_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_login_average_avatar" name="the_champ_login[avatar_quality]" type="radio" <?php echo !isset($theChampLoginOptions['avatar_quality']) || $theChampLoginOptions['avatar_quality'] == 'average' ? 'checked = "checked"' : '';?> value="average" /> <label for="the_champ_login_average_avatar"><?php _e("Average", 'super-socializer'); ?></label><br/>
@@ -780,8 +747,7 @@
 						<?php if($theChampIsBpActive){ ?>
 						<tr>
 							<th>
-							<img id="the_champ_sl_avatar_options_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_avatar_options"><?php _e("Show option for users to update social avatar at BuddyPress profile page", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_avatar_options"><?php _e("Show option for users to update social avatar at BuddyPress profile page", 'super-socializer'); ?><img id="the_champ_sl_avatar_options_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_avatar_options" name="the_champ_login[avatar_options]" type="checkbox" <?php echo isset($theChampLoginOptions['avatar_options']) ? 'checked = "checked"' : '';?> value="1" />
@@ -801,8 +767,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_emailreq_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_login_email_required"><?php _e("Email required", 'super-socializer'); ?></label>
+							<label for="the_champ_login_email_required"><?php _e("Email required", 'super-socializer'); ?><img id="the_champ_sl_emailreq_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input onclick="theChampEmailPopupOptions(this)" id="the_champ_login_email_required" name="the_champ_login[email_required]" type="checkbox" <?php echo isset($theChampLoginOptions['email_required']) ? 'checked = "checked"' : '';?> value="1" />
@@ -820,8 +785,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_postreg_email_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_password_email"><?php _e("Send post-registration email to user to set account password", 'super-socializer'); ?></label>
+							<label for="the_champ_password_email"><?php _e("Send post-registration email to user to set account password", 'super-socializer'); ?><img id="the_champ_sl_postreg_email_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_password_email" name="the_champ_login[password_email]" type="checkbox" <?php echo isset($theChampLoginOptions['password_email']) ? 'checked = "checked"' : '';?> value="1" />
@@ -838,8 +802,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_postreg_admin_email_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_postreg_admin_email"><?php _e("Send new user registration notification email to admin", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_postreg_admin_email"><?php _e("Send new user registration notification email to admin", 'super-socializer'); ?><img id="the_champ_sl_postreg_admin_email_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_postreg_admin_email" name="the_champ_login[new_user_admin_email]" type="checkbox" <?php echo isset($theChampLoginOptions['new_user_admin_email']) ? 'checked = "checked"' : '';?> value="1" />
@@ -856,8 +819,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_loginredirect_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Login redirection", 'super-socializer'); ?></label>
+							<label><?php _e("Login redirection", 'super-socializer'); ?><img id="the_champ_sl_loginredirect_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td id="the_champ_login_redirection_column">
 							<input id="the_champ_login_redirection_same" name="the_champ_login[login_redirection]" type="radio" <?php echo !isset($theChampLoginOptions['login_redirection']) || $theChampLoginOptions['login_redirection'] == 'same' ? 'checked = "checked"' : '';?> value="same" />
@@ -886,8 +848,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_register_redirect_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Registration redirection", 'super-socializer'); ?></label>
+							<label><?php _e("Registration redirection", 'super-socializer'); ?><img id="the_champ_sl_register_redirect_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td id="the_champ_register_redirection_column">
 							<input id="the_champ_register_redirection_same" name="the_champ_login[register_redirection]" type="radio" <?php echo !isset($theChampLoginOptions['register_redirection']) || $theChampLoginOptions['register_redirection'] == 'same' ? 'checked = "checked"' : '';?> value="same" />
@@ -923,8 +884,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_scl_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_scl_title"><?php _e("Title", 'super-socializer'); ?></label>
+							<label for="the_champ_scl_title"><?php _e("Title", 'super-socializer'); ?><img id="the_champ_scl_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_scl_title" name="the_champ_login[scl_title]" type="text" value="<?php echo isset($theChampLoginOptions['scl_title']) ? $theChampLoginOptions['scl_title'] : '' ?>" />
@@ -941,8 +901,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sl_linking_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_linking"><?php _e("Link social account to already existing account, if email address matches", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_linking"><?php _e("Link social account to already existing account, if email address matches", 'super-socializer'); ?><img id="the_champ_sl_linking_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_linking" name="the_champ_login[link_account]" type="checkbox" <?php echo isset($theChampLoginOptions['link_account']) ? 'checked = "checked"' : '';?> value="1" />
@@ -960,8 +919,7 @@
 						<?php if($theChampIsBpActive){ ?>
 						<tr>
 							<th>
-							<img id="the_champ_sl_bp_linking_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sl_bp_linking"><?php _e("Enable social account linking at BuddyPress profile page", 'super-socializer'); ?></label>
+							<label for="the_champ_sl_bp_linking"><?php _e("Enable social account linking at BuddyPress profile page", 'super-socializer'); ?><img id="the_champ_sl_bp_linking_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_bp_linking" name="the_champ_login[bp_linking]" type="checkbox" <?php echo isset($theChampLoginOptions['bp_linking']) ? 'checked = "checked"' : '';?> value="1" />
@@ -987,8 +945,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_sl_emailreq_text_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_login_email_required_text"><?php _e("Text on 'Email required' popup", 'super-socializer'); ?></label>
+							<label for="the_champ_login_email_required_text"><?php _e("Text on 'Email required' popup", 'super-socializer'); ?><img id="the_champ_sl_emailreq_text_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<textarea rows="4" cols="40" id="the_champ_login_email_required_text" name="the_champ_login[email_popup_text]"><?php echo isset($theChampLoginOptions['email_popup_text']) ? $theChampLoginOptions['email_popup_text'] : '' ?></textarea>
@@ -1006,8 +963,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_emailreq_error_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_login_email_required_error"><?php _e("Error message for 'Email required' popup", 'super-socializer'); ?></label>
+							<label for="the_champ_login_email_required_error"><?php _e("Error message for 'Email required' popup", 'super-socializer'); ?><img id="the_champ_sl_emailreq_error_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<textarea rows="4" cols="40" id="the_champ_login_email_required_error" name="the_champ_login[email_error_message]"><?php echo isset($theChampLoginOptions['email_error_message']) ? $theChampLoginOptions['email_error_message'] : '' ?></textarea>
@@ -1025,8 +981,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_email_popup_height_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_email_popup_height"><?php _e("Email popup height", 'super-socializer'); ?></label>
+							<label for="the_champ_email_popup_height"><?php _e("Email popup height", 'super-socializer'); ?><img id="the_champ_email_popup_height_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" id="the_champ_email_popup_height" name="the_champ_login[popup_height]" type="text" value="<?php echo isset($theChampLoginOptions['popup_height']) ? $theChampLoginOptions['popup_height'] : '' ?>" />px
@@ -1043,8 +998,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sl_emailver_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_password_email_verification"><?php _e("Enable email verification", 'super-socializer'); ?></label>
+							<label for="the_champ_password_email_verification"><?php _e("Enable email verification", 'super-socializer'); ?><img id="the_champ_sl_emailver_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_password_email_verification" name="the_champ_login[email_verification]" type="checkbox" <?php echo isset($theChampLoginOptions['email_verification']) ? 'checked = "checked"' : '';?> value="1" />
@@ -1074,8 +1028,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_gdpr_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_gdpr_enable"><?php _e("Enable GDPR opt-in", 'super-socializer'); ?></label>
+							<label for="the_champ_gdpr_enable"><?php _e("Enable GDPR opt-in", 'super-socializer'); ?><img id="the_champ_gdpr_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_gdpr_enable" name="the_champ_login[gdpr_enable]" type="checkbox" <?php echo isset($theChampLoginOptions['gdpr_enable']) ? 'checked = "checked"' : '';?> value="1" />
@@ -1093,8 +1046,7 @@
 						<tbody id="the_champ_gdpr_options" <?php echo !isset($theChampLoginOptions['gdpr_enable']) ? 'style = "display: none"' : '';?> >
 							<tr>
 								<th>
-								<img id="the_champ_gdpr_placement_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
-								<label for="the_champ_gdpr_placement_above"><?php _e( "Placement of GDPR opt-in", 'super-socializer' ); ?></label>
+								<label for="the_champ_gdpr_placement_above"><?php _e( "Placement of GDPR opt-in", 'super-socializer' ); ?><img id="the_champ_gdpr_placement_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_gdpr_placement_above" name="the_champ_login[gdpr_placement]" type="radio" <?php echo ! isset( $theChampLoginOptions['gdpr_placement'] ) || $theChampLoginOptions['gdpr_placement'] == 'above' ? 'checked = "checked"' : '';?> value="above" />
@@ -1113,8 +1065,7 @@
 
 							<tr>
 								<th>
-								<img id="the_champ_privacy_policy_optin_text_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-								<label for="the_champ_privacy_policy_optin_text"><?php _e("Opt-in text", 'super-socializer'); ?></label>
+								<label for="the_champ_privacy_policy_optin_text"><?php _e("Opt-in text", 'super-socializer'); ?><img id="the_champ_privacy_policy_optin_text_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 								<textarea rows="7" cols="63" id="the_champ_privacy_policy_optin_text" name="the_champ_login[privacy_policy_optin_text]"><?php echo isset( $theChampLoginOptions['privacy_policy_optin_text'] ) ? $theChampLoginOptions['privacy_policy_optin_text'] : '' ?></textarea>
@@ -1131,8 +1082,7 @@
 
 							<tr>
 								<th>
-									<img id="the_champ_tc_placeholder_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label><?php _e("Text to link to Terms-Conditions page", 'super-socializer'); ?></label>
+									<label><?php _e("Text to link to Terms-Conditions page", 'super-socializer'); ?><img id="the_champ_tc_placeholder_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 									<input id="the_champ_tc_placeholder" name="the_champ_login[tc_placeholder]" type="text" value="<?php echo $theChampLoginOptions['tc_placeholder'] ?>" />
@@ -1149,8 +1099,7 @@
 
 							<tr>
 								<th>
-									<img id="the_champ_tc_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label><?php _e("Terms-Conditions Url", 'super-socializer'); ?></label>
+									<label><?php _e("Terms-Conditions Url", 'super-socializer'); ?><img id="the_champ_tc_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 									<input id="the_champ_tc_url" name="the_champ_login[tc_url]" type="text" value="<?php echo $theChampLoginOptions['tc_url'] ?>" />
@@ -1167,8 +1116,7 @@
 
 							<tr>
 								<th>
-									<img id="the_champ_privacy_ppu_placeholder_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label><?php _e("Text to link to Privacy Policy page", 'super-socializer'); ?></label>
+									<label><?php _e("Text to link to Privacy Policy page", 'super-socializer'); ?><img id="the_champ_privacy_ppu_placeholder_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 									<input id="the_champ_privacy_ppu_placeholder" name="the_champ_login[ppu_placeholder]" type="text" value="<?php echo $theChampLoginOptions['ppu_placeholder'] ?>" />
@@ -1185,8 +1133,7 @@
 
 							<tr>
 								<th>
-									<img id="the_champ_privacy_policy_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label><?php _e("Privacy Policy Url", 'super-socializer'); ?></label>
+									<label><?php _e("Privacy Policy Url", 'super-socializer'); ?><img id="the_champ_privacy_policy_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 								</th>
 								<td>
 									<input id="the_champ_privacy_policy_url" name="the_champ_login[privacy_policy_url]" type="text" value="<?php echo $theChampLoginOptions['privacy_policy_url'] ?>" />

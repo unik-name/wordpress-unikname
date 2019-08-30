@@ -16,8 +16,7 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 					<tr>
 						<th>
-						<img id="the_champ_sc_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-						<label for="the_champ_counter_enable"><?php _e("Enable Like Buttons", 'super-socializer'); ?></label>
+						<label for="the_champ_counter_enable"><?php _e("Enable Like Buttons", 'super-socializer'); ?><img id="the_champ_sc_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 						</th>
 						<td>
 						<input id="the_champ_counter_enable" name="the_champ_counter[enable]" type="checkbox" <?php echo isset($theChampCounterOptions['enable']) ? 'checked = "checked"' : '';?> value="1" />
@@ -62,8 +61,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_sc_horizontal_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_horizontal_enable"><?php _e("Enable standard interface", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_horizontal_enable"><?php _e("Enable standard interface", 'super-socializer'); ?><img id="the_champ_sc_horizontal_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_horizontal_enable" onclick="theChampHorizontalCounterOptionsToggle(this)" name="the_champ_counter[hor_enable]" type="checkbox" <?php echo isset($theChampCounterOptions['hor_enable']) ? 'checked = "checked"' : '';?> value="1" />
@@ -82,8 +80,7 @@
 						<tbody id="the_champ_horizontal_counter_options" <?php echo isset($theChampCounterOptions['hor_enable']) ? '' : 'style="display: none"'; ?>>
 						<tr>
 							<th>
-							<img id="the_champ_sc_horizontal_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_target_url"><?php _e("Target Url", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_target_url"><?php _e("Target Url", 'super-socializer'); ?><img id="the_champ_sc_horizontal_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td id="the_champ_target_url_column">
 							<input id="the_champ_target_url_default" name="the_champ_counter[horizontal_target_url]" type="radio" <?php echo !isset($theChampCounterOptions['horizontal_target_url']) || $theChampCounterOptions['horizontal_target_url'] == 'default' ? 'checked = "checked"' : '';?> value="default" />
@@ -105,8 +102,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_fblogin_title"><?php _e("Title", 'super-socializer'); ?></label>
+							<label for="the_champ_fblogin_title"><?php _e("Title", 'super-socializer'); ?><img id="the_champ_sc_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_fblogin_title" name="the_champ_counter[title]" type="text" value="<?php echo isset($theChampCounterOptions['title']) ? $theChampCounterOptions['title'] : '' ?>" />
@@ -123,8 +119,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Select and rearrange providers", 'super-socializer'); ?></label>
+							<label><?php _e("Select and rearrange providers", 'super-socializer'); ?><img id="the_champ_sc_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<ul id="the_champ_sc_rearrange">
@@ -175,8 +170,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_hor_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_hor_alignment"><?php _e("Horizontal alignment", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_hor_alignment"><?php _e("Horizontal alignment", 'super-socializer'); ?><img id="the_champ_sc_hor_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<select id="the_champ_sc_hor_alignment" name="the_champ_counter[hor_counter_alignment]">
@@ -197,8 +191,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_position_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Position with respect to content", 'super-socializer'); ?></label>
+							<label><?php _e("Position with respect to content", 'super-socializer'); ?><img id="the_champ_sc_position_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_counter_top" name="the_champ_counter[top]" type="checkbox" <?php echo isset($theChampCounterOptions['top']) ? 'checked = "checked"' : '';?> value="1" />
@@ -218,8 +211,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Interface location", 'super-socializer'); ?></label>
+							<label><?php _e("Interface location", 'super-socializer'); ?><img id="the_champ_sc_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_counter_home" name="the_champ_counter[home]" type="checkbox" <?php echo isset($theChampCounterOptions['home']) ? 'checked = "checked"' : '';?> value="1" />
@@ -312,8 +304,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_sc_vertical_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_vertical_enable"><?php _e("Enable floating like buttons", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_vertical_enable"><?php _e("Enable floating like buttons", 'super-socializer'); ?><img id="the_champ_sc_vertical_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_vertical_enable" onclick="theChampVerticalCounterOptionsToggle(this)" name="the_champ_counter[vertical_enable]" type="checkbox" <?php echo isset($theChampCounterOptions['vertical_enable']) ? 'checked = "checked"' : '';?> value="1" />
@@ -332,8 +323,7 @@
 						<tbody id="the_champ_vertical_counter_options" <?php echo isset($theChampCounterOptions['vertical_enable']) ? '' : 'style="display: none"'; ?>>
 						<tr>
 							<th>
-							<img id="the_champ_sc_vertical_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_vertical_target_url"><?php _e("Target Url", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_vertical_target_url"><?php _e("Target Url", 'super-socializer'); ?><img id="the_champ_sc_vertical_target_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td id="the_champ_vertical_target_url_column">
 							<input id="the_champ_vertical_target_url_default" name="the_champ_counter[vertical_target_url]" type="radio" <?php echo !isset($theChampCounterOptions['vertical_target_url']) || $theChampCounterOptions['vertical_target_url'] == 'default' ? 'checked = "checked"' : '';?> value="default" />
@@ -355,8 +345,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_vertical_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Select and rearrange providers", 'super-socializer'); ?></label>
+							<label><?php _e("Select and rearrange providers", 'super-socializer'); ?><img id="the_champ_sc_vertical_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<ul id="the_champ_sc_vertical_rearrange">
@@ -406,8 +395,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_vertical_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_vertical_bg_color"><?php _e("Background Color", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_vertical_bg_color"><?php _e("Background Color", 'super-socializer'); ?><img id="the_champ_sc_vertical_bg_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_vertical_bg_color" style="width: 100px" name="the_champ_counter[vertical_bg]" type="text" value="<?php echo isset($theChampCounterOptions['vertical_bg']) ? $theChampCounterOptions['vertical_bg'] : '' ?>" />
@@ -424,8 +412,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_alignment"><?php _e("Horizontal alignment", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_alignment"><?php _e("Horizontal alignment", 'super-socializer'); ?><img id="the_champ_sc_alignment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<select onchange="theChampToggleOffset(this.value)" id="the_champ_sc_alignment" name="the_champ_counter[alignment]">
@@ -446,8 +433,7 @@
 						<tbody id="the_champ_sc_left_offset_rows" <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] == 'left') ? '' : 'style="display: none"' ?>>
 						<tr>
 							<th>
-							<img id="the_champ_sc_left_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_left_offset"><?php _e("Left offset", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_left_offset"><?php _e("Left offset", 'super-socializer'); ?><img id="the_champ_sc_left_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" id="the_champ_sc_left_offset" name="the_champ_counter[left_offset]" type="text" value="<?php echo isset($theChampCounterOptions['left_offset']) ? $theChampCounterOptions['left_offset'] : '' ?>" />px
@@ -466,8 +452,7 @@
 						<tbody id="the_champ_sc_right_offset_rows" <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] == 'right') ? '' : 'style="display: none"' ?>>
 						<tr>
 							<th>
-							<img id="the_champ_sc_right_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_right_offset"><?php _e("Right offset", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_right_offset"><?php _e("Right offset", 'super-socializer'); ?><img id="the_champ_sc_right_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" id="the_champ_sc_right_offset" name="the_champ_counter[right_offset]" type="text" value="<?php echo isset($theChampCounterOptions['right_offset']) ? $theChampCounterOptions['right_offset'] : '' ?>" />px
@@ -485,8 +470,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_top_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_top_offset"><?php _e("Top offset", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_top_offset"><?php _e("Top offset", 'super-socializer'); ?><img id="the_champ_sc_top_offset_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input style="width: 100px" id="the_champ_sc_top_offset" name="the_champ_counter[top_offset]" type="text" value="<?php echo isset($theChampCounterOptions['top_offset']) ? $theChampCounterOptions['top_offset'] : '' ?>" />px
@@ -503,8 +487,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_vertical_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label><?php _e("Interface location", 'super-socializer'); ?></label>
+							<label><?php _e("Interface location", 'super-socializer'); ?><img id="the_champ_sc_vertical_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_counter_vertical_home" name="the_champ_counter[vertical_home]" type="checkbox" <?php echo isset($theChampCounterOptions['vertical_home']) ? 'checked = "checked"' : '';?> value="1" />
@@ -559,8 +542,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_ss_mobile_likeb_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_ss_mobile_likeb"><?php _e("Hide like buttons on mobile devices", 'super-socializer'); ?></label>
+							<label for="the_champ_ss_mobile_likeb"><?php _e("Hide like buttons on mobile devices", 'super-socializer'); ?><img id="the_champ_ss_mobile_likeb_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_ss_mobile_likeb" name="the_champ_counter[hide_mobile_likeb]" type="checkbox" <?php echo isset($theChampCounterOptions['hide_mobile_likeb']) ? 'checked = "checked"' : '';?> value="1" />
@@ -594,8 +576,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_surl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_surl_enable"><?php _e("Use shortlinks already installed, for tweet button", 'super-socializer'); ?></label>
+							<label for="the_champ_surl_enable"><?php _e("Use shortlinks already installed, for tweet button", 'super-socializer'); ?><img id="the_champ_surl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_surl_enable" name="the_champ_counter[use_shortlinks]" type="checkbox" <?php echo isset($theChampCounterOptions['use_shortlinks']) ? 'checked = "checked"' : '';?> value="1" />
@@ -612,8 +593,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sc_bitly_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_bitly_enable"><?php _e("Enable bit.ly url shortener for tweet button", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_bitly_enable"><?php _e("Enable bit.ly url shortener for tweet button", 'super-socializer'); ?><img id="the_champ_sc_bitly_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_bitly_enable" name="the_champ_counter[bitly_enable]" type="checkbox" <?php echo isset($theChampCounterOptions['bitly_enable']) ? 'checked = "checked"' : '';?> value="1" />
@@ -630,8 +610,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_bitly_login_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_bitly_login"><?php _e("bit.ly username", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_bitly_login"><?php _e("bit.ly username", 'super-socializer'); ?><img id="the_champ_sc_bitly_login_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_bitly_login" name="the_champ_counter[bitly_username]" type="text" value="<?php echo isset($theChampCounterOptions['bitly_username']) ? $theChampCounterOptions['bitly_username'] : '' ?>" />
@@ -649,8 +628,7 @@
 						
 						<tr>
 							<th>
-							<img id="the_champ_sc_bitly_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_bitly_key"><?php _e("bit.ly API Key", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_bitly_key"><?php _e("bit.ly API Key", 'super-socializer'); ?><img id="the_champ_sc_bitly_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_bitly_key" name="the_champ_counter[bitly_key]" type="text" value="<?php echo isset($theChampCounterOptions['bitly_key']) ? $theChampCounterOptions['bitly_key'] : '' ?>" />
@@ -668,8 +646,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_clear_shorturl_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<input type="button" class="button-primary" value="<?php _e('Clear Bitly Cache', 'super-socializer') ?>" onclick="theChampClearShorturlCache()" />
+							<input type="button" class="button-primary" value="<?php _e('Clear Bitly Cache', 'super-socializer') ?>" onclick="theChampClearShorturlCache()" /><img id="the_champ_clear_shorturl_cache_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
 							</th>
 							<td>
 							<img src="<?php echo plugins_url('../images/ajax_loader.gif', __FILE__) ?>" id="shorturl_cache_loading" style="display:none" />
@@ -694,8 +671,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_sc_language_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_language"><?php _e("Language", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_language"><?php _e("Language", 'super-socializer'); ?><img id="the_champ_sc_language_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_language" name="the_champ_counter[language]" type="text" value="<?php echo isset($theChampCounterOptions['language']) ? $theChampCounterOptions['language'] : '' ?>" />
@@ -719,8 +695,7 @@
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 						<tr>
 							<th>
-							<img id="the_champ_sc_twitter_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_twitter_username"><?php _e("Twitter username for Tweet (without @)", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_twitter_username"><?php _e("Twitter username for Tweet (without @)", 'super-socializer'); ?><img id="the_champ_sc_twitter_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_twitter_username" name="the_champ_counter[twitter_username]" type="text" value="<?php echo isset($theChampCounterOptions['twitter_username']) ? $theChampCounterOptions['twitter_username'] : '' ?>" />
@@ -738,8 +713,7 @@
 
 						<tr>
 							<th>
-							<img id="the_champ_sc_buffer_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-							<label for="the_champ_sc_buffer_username"><?php _e("Twitter username for Buffer sharing (without @)", 'super-socializer'); ?></label>
+							<label for="the_champ_sc_buffer_username"><?php _e("Twitter username for Buffer sharing (without @)", 'super-socializer'); ?><img id="the_champ_sc_buffer_username_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sc_buffer_username" name="the_champ_counter[buffer_username]" type="text" value="<?php echo isset($theChampCounterOptions['buffer_username']) ? $theChampCounterOptions['buffer_username'] : '' ?>" />
@@ -773,8 +747,7 @@
 						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 							<tr>
 								<th>
-								<img id="the_champ_mycred_referral_id_like_button_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" />
-								<label for="the_champ_mycred_referral_id_like_button"><?php _e("Append myCRED referral ID to the urls being shared", 'super-socializer'); ?></label>
+								<label for="the_champ_mycred_referral_id_like_button"><?php _e("Append myCRED referral ID to the urls being shared", 'super-socializer'); ?><img id="the_champ_mycred_referral_id_like_button_help" class="the_champ_help_bubble" src="<?php echo plugins_url( '../images/info.png', __FILE__ ) ?>" /></label>
 								</th>
 								<td>
 								<input id="the_champ_mycred_referral_id_like_button" name="the_champ_counter[mycred_referral]" type="checkbox" <?php echo isset( $theChampCounterOptions['mycred_referral'] ) ? 'checked = "checked"' : '';?> value="1" />

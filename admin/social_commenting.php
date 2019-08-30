@@ -49,8 +49,7 @@
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 								<tr>
 									<th>
-									<img id="the_champ_commenting_tab_order_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_commenting_tab_order"><?php _e("Order of tabs in commenting interface", 'super-socializer'); ?></label>
+									<label for="the_champ_commenting_tab_order"><?php _e("Order of tabs in commenting interface", 'super-socializer'); ?><img id="the_champ_commenting_tab_order_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_commenting_tab_order" name="the_champ_facebook[commenting_order]" type="text" value="<?php echo isset($theChampFacebookOptions['commenting_order']) ? $theChampFacebookOptions['commenting_order'] : '';?>" />
@@ -67,8 +66,7 @@
 
 								<tr>
 									<th>
-									<img id="the_champ_commenting_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_commenting_title"><?php _e("Comment area label", 'super-socializer'); ?></label>
+									<label for="the_champ_commenting_title"><?php _e("Comment area label", 'super-socializer'); ?><img id="the_champ_commenting_title_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_commenting_title" name="the_champ_facebook[commenting_label]" type="text" value="<?php echo isset($theChampFacebookOptions['commenting_label']) ? $theChampFacebookOptions['commenting_label'] : '';?>" />
@@ -90,8 +88,7 @@
 									?>
 									<tr>
 										<th>
-										<img id="the_champ_comments_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-										<label><?php _e("Enable Social Commenting at", 'super-socializer'); ?></label>
+										<label><?php _e("Enable Social Commenting at", 'super-socializer'); ?><img id="the_champ_comments_location_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 										</th>
 										<td>
 										<?php
@@ -120,8 +117,7 @@
 
 								<tr>
 									<th>
-									<img id="the_champ_commenting_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label><?php _e("HTML ID of comment form container", 'super-socializer'); ?></label>
+									<label><?php _e("HTML ID of comment form container", 'super-socializer'); ?><img id="the_champ_commenting_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_commenting_id" name="the_champ_facebook[commenting_id]" type="text" value="<?php echo isset($theChampFacebookOptions['commenting_id']) ? $theChampFacebookOptions['commenting_id'] : '';?>" />
@@ -188,8 +184,7 @@
 
 								<tr>
 									<th>
-									<img id="the_champ_fb_comment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_enable_fbcomments"><?php _e("Enable Facebook Commenting", 'super-socializer'); ?></label>
+									<label for="the_champ_enable_fbcomments"><?php _e("Enable Facebook Commenting", 'super-socializer'); ?><img id="the_champ_fb_comment_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_enable_fbcomments" name="the_champ_facebook[enable_fbcomments]" type="checkbox" <?php echo isset($theChampFacebookOptions['enable_fbcomments']) ? 'checked = "checked"' : '';?> value="1" />
@@ -206,8 +201,7 @@
 
 								<tr>
 									<th>
-									<img id="the_champ_fb_comment_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_comment_url"><?php _e('Url to comment on', 'super-socializer'); ?></label>
+									<label for="the_champ_comment_url"><?php _e('Url to comment on', 'super-socializer'); ?><img id="the_champ_fb_comment_url_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_comment_url" name="the_champ_facebook[urlToComment]" type="text" value="<?php echo isset($theChampFacebookOptions['urlToComment']) ? $theChampFacebookOptions['urlToComment'] : '' ?>" />
@@ -232,8 +226,7 @@
 
 								<tr>
 									<th>
-									<img id="the_champ_fb_comment_width_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_fbcomment_width"><?php _e('Width', 'super-socializer'); ?></label>
+									<label for="the_champ_fbcomment_width"><?php _e('Width', 'super-socializer'); ?><img id="the_champ_fb_comment_width_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_fbcomment_width" name="the_champ_facebook[comment_width]" type="text" value="<?php echo isset($theChampFacebookOptions['comment_width']) ? $theChampFacebookOptions['comment_width'] : '' ?>" />px
@@ -250,8 +243,7 @@
 								
 								<tr>
 									<th>
-									<img id="the_champ_fb_comment_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_fbcomment_color"><?php _e('Color Scheme', 'super-socializer'); ?></label>
+									<label for="the_champ_fbcomment_color"><?php _e('Color Scheme', 'super-socializer'); ?><img id="the_champ_fb_comment_color_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<select id="the_champ_fbcomment_color" name="the_champ_facebook[comment_color]">
@@ -271,8 +263,7 @@
 								
 								<tr>
 									<th>
-									<img id="the_champ_fb_comment_numposts_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_fbcomment_numposts"><?php _e('Number of comments', 'super-socializer'); ?></label>
+									<label for="the_champ_fbcomment_numposts"><?php _e('Number of comments', 'super-socializer'); ?><img id="the_champ_fb_comment_numposts_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_fbcomment_numposts" name="the_champ_facebook[comment_numposts]" type="text" value="<?php echo isset($theChampFacebookOptions['comment_numposts']) ? $theChampFacebookOptions['comment_numposts'] : '' ?>" />
@@ -289,8 +280,7 @@
 								
 								<tr>
 									<th>
-									<img id="the_champ_fb_comment_orderby_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_fbcomment_orderby"><?php _e('Order by', 'super-socializer'); ?></label>
+									<label for="the_champ_fbcomment_orderby"><?php _e('Order by', 'super-socializer'); ?><img id="the_champ_fb_comment_orderby_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<select id="the_champ_fbcomment_orderby" name="the_champ_facebook[comment_orderby]">
@@ -311,8 +301,7 @@
 
 								<tr>
 									<th>
-									<img id="the_champ_fb_comment_lang_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_fbcomment_lang"><?php _e('Language', 'super-socializer'); ?></label>
+									<label for="the_champ_fbcomment_lang"><?php _e('Language', 'super-socializer'); ?><img id="the_champ_fb_comment_lang_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_fbcomment_lang" name="the_champ_facebook[comment_lang]" type="text" value="<?php echo isset($theChampFacebookOptions['comment_lang']) ? $theChampFacebookOptions['comment_lang'] : '' ?>" />
@@ -336,8 +325,7 @@
 							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 								<tr>
 									<th>
-									<img id="the_champ_enable_dqcomments_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_enable_dqcomments"><?php _e("Enable Disqus Commenting", 'super-socializer'); ?></label>
+									<label for="the_champ_enable_dqcomments"><?php _e("Enable Disqus Commenting", 'super-socializer'); ?><img id="the_champ_enable_dqcomments_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_enable_dqcomments" name="the_champ_facebook[enable_disquscomments]" type="checkbox" <?php echo isset($theChampFacebookOptions['enable_disquscomments']) ? 'checked = "checked"' : '';?> value="1" />
@@ -354,8 +342,7 @@
 
 								<tr>
 									<th>
-									<img id="the_champ_commenting_dq_shortname_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-									<label for="the_champ_commenting_dq_shortname"><?php _e("Disqus Shortname", 'super-socializer'); ?></label>
+									<label for="the_champ_commenting_dq_shortname"><?php _e("Disqus Shortname", 'super-socializer'); ?><img id="the_champ_commenting_dq_shortname_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 									</th>
 									<td>
 									<input id="the_champ_commenting_dq_shortname" name="the_champ_facebook[dq_shortname]" type="text" value="<?php echo isset($theChampFacebookOptions['dq_shortname']) ? $theChampFacebookOptions['dq_shortname'] : ''; ?>" />

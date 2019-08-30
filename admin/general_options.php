@@ -17,8 +17,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 					<tr>
 						<th>
-						<img id="the_champ_footer_script_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" />
-						<label for="the_champ_footer_script"><?php _e("Include Javascript in website footer", 'super-socializer'); ?></label>
+						<label for="the_champ_footer_script"><?php _e("Include Javascript in website footer", 'super-socializer'); ?><img id="the_champ_footer_script_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 						</th>
 						<td>
 						<input id="the_champ_footer_script" name="the_champ_general[footer_script]" type="checkbox" <?php echo isset($theChampGeneralOptions['footer_script']) ? 'checked = "checked"' : '';?> value="1" />
