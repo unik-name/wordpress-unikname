@@ -94,6 +94,7 @@ class TwitchTV {
         curl_setopt($ch, CURLOPT_URL, $this->base_url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Accept: application/vnd.twitchtv.v5+json',
             'Authorization: OAuth ' . $access_token
         ));
         $output   = curl_exec($ch);
@@ -179,16 +180,15 @@ class TwitchTV {
      * @param string $profile_data
      * @return array         Array of data that includes the display name, Status, Chat links, game that the stream is playing and the banner
      */
-	 #modified
     public function get_userid($username, $profile_data = false, $access_token) {
         //initiate connection to the twitch.tv servers
         $curl = curl_init('https://api.twitch.tv/kraken/user');
-		curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
             'Accept: application/vnd.twitchtv.v5+json',
             'Authorization: OAuth ' . $access_token,
-			'Client-ID: ' . $this->client_id
+            'Client-ID: ' . $this->client_id
         ));
-		curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $result = curl_exec($curl);
         //makes sure that the cURL was excuted if not it generates the error stating that it didn't succeed.
         if (!$result) {
@@ -198,7 +198,7 @@ class TwitchTV {
             if (!empty($username)) {
                 $return         = json_decode($result, true);
                 if ($profile_data) {
-					return $return;
+                    return $return;
                 }else{
                     $user_id = $return['_id'];
                     return $user_id;

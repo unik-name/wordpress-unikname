@@ -1,10 +1,10 @@
 ﻿=== WordPress Social Share, Social Login and Social Comments Plugin - Super Socializer ===
-Contributors: Heateor, the_champ, Hungarian Translator: László Tavaszi http://kerekmese.hu, Chinese Translator: CalmSmile calmsmile.org, Portuguese Translator: Paulo Purkyt https://www.linkedin.com/in/ppurkyt, Italian Translator: FG3D (Freedom's Gate) https://fg3d.net, Spanish translator: Ignacio Iglesias http://trespies.com, Arabic Translator: http://www.ArabsSM.com, Russian/Ukrainian Translator: Nicholas Lagunov
+Contributors: Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Translator: László Tavaszi http://kerekmese.hu, Chinese Translator: CalmSmile calmsmile.org, Portuguese Translator: Paulo Purkyt https://www.linkedin.com/in/ppurkyt, Italian Translator: FG3D (Freedom's Gate) https://fg3d.net, Spanish translator: Ignacio Iglesias http://trespies.com, Arabic Translator: http://www.ArabsSM.com, Russian/Ukrainian Translator: Nicholas Lagunov
 Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login, Twitch login
 Requires at least: 2.5.0
-Tested up to: 5.2.2
-Stable tag: 7.12.34
+Tested up to: 5.2.3
+Stable tag: 7.12.35
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -210,6 +210,10 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.35 [25 September 2019] =
+* [Bugfix] Twitch login stopped working
+* [Security fix] Twitch login was not checking if user's email has been verified on Twitch
+
 = 7.12.34 [30 August 2019] =
 * [Bugfix] Using Twitch API v5 instead of v3, as it's going to shutdown
 * [Improvement] Twitch login is now saving users' email address too along with other profile details
@@ -1953,3 +1957,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Using Twitch API v5 instead of v3, as it's going to shutdown
 * [Improvement] Twitch login is now saving users' email address too along with other profile details
 * [Improvement] Admin UI improvement
+
+= 7.12.35 [25 September 2019] =
+* [Bugfix] Twitch login stopped working
+* [Security fix] Twitch login was not checking if user's email has been verified on Twitch
