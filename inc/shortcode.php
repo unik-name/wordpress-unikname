@@ -93,7 +93,7 @@ function the_champ_sharing_shortcode($params){
 		if($type == 'horizontal' && $title != ''){
 			$html .= '<div style="font-weight:bold" class="the_champ_sharing_title">' . ucfirst($title) . '</div>';
 		}
-		$html .= the_champ_prepare_sharing_html($shortUrl == '' ? $targetUrl : $shortUrl, $type, $count, $total_shares == 'ON' ? 1 : 0, $shareCountTransientId);
+		$html .= the_champ_prepare_sharing_html($shortUrl == '' ? $targetUrl : $shortUrl, $shareCountUrl, $type, $count, $total_shares == 'ON' ? 1 : 0, $shareCountTransientId);
 		$html .= '</div>';
 		if(($count || $total_shares == 'ON') && $cachedShareCount === false){
 			$html .= '<script>theChampLoadEvent(function(){theChampCallAjax(function(){theChampGetSharingCounts();});});</script>';

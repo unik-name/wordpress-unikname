@@ -3,8 +3,8 @@ Contributors: Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Trans
 Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login, Twitch login
 Requires at least: 2.5.0
-Tested up to: 5.2.3
-Stable tag: 7.12.35
+Tested up to: 5.2.4
+Stable tag: 7.12.36
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -14,8 +14,9 @@ Integrate Social Login, Social Share and Social Comments at your website easiest
 
 **Note:**
 1. Plugin will not work on local server. You should have an online website for the plugin to function properly.
-2. If you want to integrate only Facebook Comments, you should install <a target="_blank" href="https://wordpress.org/plugins/fancy-facebook-comments/">Fancy Comments</a>
-3. If you want to integrate only Social Share, you should install <a target="_blank" href="https://wordpress.org/plugins/sassy-social-share">Sassy Social Share</a>
+2. If you want to integrate only Facebook Login button, you should install <a target="_blank" href="https://wordpress.org/plugins/heateor-login/">Heateor Login</a>
+3. If you want to integrate only Facebook Comments, you should install <a target="_blank" href="https://wordpress.org/plugins/fancy-facebook-comments/">Fancy Comments</a>
+4. If you want to integrate only Social Share, you should install <a target="_blank" href="https://wordpress.org/plugins/sassy-social-share">Sassy Social Share</a>
 
 = Feature list =
 * GDPR Compliant
@@ -210,6 +211,10 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.36 [16 October 2019] =
+* [Bugfix] Querystring Parameters in the url of webpage were resetting the Facebook Like and Facebook Recommend counts to zero
+* [Bugfix] Admin was not receiving new user notification email with Woocommerce active
+
 = 7.12.35 [25 September 2019] =
 * [Bugfix] Twitch login stopped working
 * [Security fix] Twitch login was not checking if user's email has been verified on Twitch
@@ -1961,3 +1966,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 7.12.35 [25 September 2019] =
 * [Bugfix] Twitch login stopped working
 * [Security fix] Twitch login was not checking if user's email has been verified on Twitch
+
+= 7.12.36 [16 October 2019] =
+* [Bugfix] Querystring Parameters in the url of webpage were resetting the Facebook Like and Facebook Recommend counts to zero
+* [Bugfix] Admin was not receiving new user notification email with Woocommerce active

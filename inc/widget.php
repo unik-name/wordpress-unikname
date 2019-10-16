@@ -190,7 +190,7 @@ class TheChampSharingWidget extends WP_Widget {
 				$sharingUrl = $shortUrl;
 			}
 		}
-		echo the_champ_prepare_sharing_html($sharingUrl, 'horizontal', isset($instance['show_counts']), isset($instance['total_shares']), $shareCountTransientId, !is_singular() ? true : false);
+		echo the_champ_prepare_sharing_html($sharingUrl, $shareCountUrl, 'horizontal', isset($instance['show_counts']), isset($instance['total_shares']), $shareCountTransientId, !is_singular() ? true : false);
 
 		if( !empty( $instance['after_widget_content'] ) ){ 
 			echo '<div>' . $instance['after_widget_content'] . '</div>'; 
@@ -364,7 +364,7 @@ class TheChampVerticalSharingWidget extends WP_Widget {
 			}
 		}
 		//echo $before_widget;
-		echo the_champ_prepare_sharing_html($sharingUrl, 'vertical', isset($instance['show_counts']), isset($instance['total_shares']), $shareCountTransientId);
+		echo the_champ_prepare_sharing_html($sharingUrl, $shareCountUrl, 'vertical', isset($instance['show_counts']), isset($instance['total_shares']), $shareCountTransientId);
 		echo '</div>';
 		if((isset($instance['show_counts']) || isset($instance['total_shares'])) && $cachedShareCount == false){
 			echo '<script>theChampLoadEvent(

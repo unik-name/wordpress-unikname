@@ -7,7 +7,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 /**
  * Render sharing interface html
  */
-function the_champ_prepare_sharing_html( $postUrl, $sharingType = 'horizontal', $displayCount, $totalShares, $shareCountTransientId, $standardWidget = false ) {
+function the_champ_prepare_sharing_html( $postUrl, $shareCountUrl, $sharingType = 'horizontal', $displayCount, $totalShares, $shareCountTransientId, $standardWidget = false ) {
 	
 	global $post, $theChampSharingOptions;
 
@@ -199,7 +199,7 @@ function the_champ_prepare_sharing_html( $postUrl, $sharingType = 'horizontal', 
 					ucfirst( str_replace( array( ' ', '_', '.' ), '', $provider ) ),
 					$likeButtonCountContainer,
 					urlencode( $postUrl ),
-					$postUrl,
+					$shareCountUrl,
 					$postTitle,
 					$wpseoPostTitle,
 					$decodedPostTitle,
@@ -725,7 +725,7 @@ function the_champ_render_sharing($content){
 			$sharingUrl = the_champ_generate_social_sharing_short_url($postUrl, $postId);
 			
 			$shareCountTransientId = heateor_ss_get_share_count_transient_id($postUrl);
-			$sharingDiv = the_champ_prepare_sharing_html($sharingUrl, 'horizontal', isset($theChampSharingOptions['horizontal_counts']), isset($theChampSharingOptions['horizontal_total_shares']), $shareCountTransientId);
+			$sharingDiv = the_champ_prepare_sharing_html($sharingUrl, $shareCountUrl, 'horizontal', isset($theChampSharingOptions['horizontal_counts']), isset($theChampSharingOptions['horizontal_total_shares']), $shareCountTransientId);
 			$sharingContainerStyle = '';
 			$sharingTitleStyle = 'style="font-weight:bold"';
 			if(isset($theChampSharingOptions['hor_sharing_alignment'])){
@@ -810,7 +810,7 @@ function the_champ_render_sharing($content){
 			$sharingUrl = the_champ_generate_social_sharing_short_url($postUrl, $postId);
 			
 			$shareCountTransientId = heateor_ss_get_share_count_transient_id($postUrl);
-			$sharingDiv = the_champ_prepare_sharing_html($sharingUrl, 'vertical', isset($theChampSharingOptions['vertical_counts']), isset($theChampSharingOptions['vertical_total_shares']), $shareCountTransientId);
+			$sharingDiv = the_champ_prepare_sharing_html($sharingUrl, $shareCountUrl, 'vertical', isset($theChampSharingOptions['vertical_counts']), isset($theChampSharingOptions['vertical_total_shares']), $shareCountTransientId);
 			$offset = (isset($theChampSharingOptions['alignment']) && $theChampSharingOptions['alignment'] != '' && isset($theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset']) && $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] != '' ? $theChampSharingOptions['alignment'].': '.$theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'].'px;' : '').(isset($theChampSharingOptions['top_offset']) && $theChampSharingOptions['top_offset'] != '' ? 'top: '.$theChampSharingOptions['top_offset'].'px;' : '');
 			$verticalDiv = "<div class='the_champ_sharing_container the_champ_vertical_sharing" . ( isset( $theChampSharingOptions['hide_mobile_sharing'] ) ? ' the_champ_hide_sharing' : '' ) . ( isset( $theChampSharingOptions['bottom_mobile_sharing'] ) ? ' the_champ_bottom_sharing' : '' ) . "' style='width:" . ($theChampSharingOptions['vertical_sharing_size'] + 4) . "px;" . $offset . (isset($theChampSharingOptions['vertical_bg']) && $theChampSharingOptions['vertical_bg'] != '' ? 'background-color: '.$theChampSharingOptions['vertical_bg'] : '-webkit-box-shadow:none;box-shadow:none;') . "' " . ( the_champ_is_amp_page() ? '' : 'super-socializer-data-href="' . (isset($shareCountUrl) && $shareCountUrl ? $shareCountUrl : $postUrl) . '"' ) . ( heateor_ss_get_cached_share_count( $shareCountTransientId ) === false || the_champ_is_amp_page() ? "" : 'super-socializer-no-counts="1"' ) . ">".$sharingDiv."</div>";
 			// show vertical sharing
@@ -835,7 +835,7 @@ function the_champ_render_sharing($content){
 								}
 								$sharingUrl = the_champ_generate_social_sharing_short_url($postUrl, 0);
 								$shareCountTransientId = heateor_ss_get_share_count_transient_id($postUrl);
-								$sharingDiv = the_champ_prepare_sharing_html($sharingUrl, 'vertical', isset($theChampSharingOptions['vertical_counts']), isset($theChampSharingOptions['vertical_total_shares']), $shareCountTransientId);
+								$sharingDiv = the_champ_prepare_sharing_html($sharingUrl, $shareCountUrl, 'vertical', isset($theChampSharingOptions['vertical_counts']), isset($theChampSharingOptions['vertical_total_shares']), $shareCountTransientId);
 								$verticalDiv = "<div class='the_champ_sharing_container the_champ_vertical_sharing" . ( isset( $theChampSharingOptions['hide_mobile_sharing'] ) ? ' the_champ_hide_sharing' : '' ) . ( isset( $theChampSharingOptions['bottom_mobile_sharing'] ) ? ' the_champ_bottom_sharing' : '' ) . "' style='width:" . ($theChampSharingOptions['vertical_sharing_size'] + 4) . "px;" . $offset . (isset($theChampSharingOptions['vertical_bg']) && $theChampSharingOptions['vertical_bg'] != '' ? 'background-color: '.$theChampSharingOptions['vertical_bg'] : '-webkit-box-shadow:none;box-shadow:none;') . "' " . ( the_champ_is_amp_page() ? '' : 'super-socializer-data-href="' . (isset($shareCountUrl) && $shareCountUrl ? $shareCountUrl : $postUrl) . '"' ) . ( heateor_ss_get_cached_share_count($shareCountTransientId) === false || the_champ_is_amp_page() ? "" : 'super-socializer-no-counts="1"' ) . ">".$sharingDiv."</div>";
 							}
 							$content = $content.$verticalDiv;
