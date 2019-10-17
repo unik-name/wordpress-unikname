@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.36
+Version: 7.12.37
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.36');
+define('THE_CHAMP_SS_VERSION', '7.12.37');
 
 require 'helper.php';
 
@@ -405,7 +405,7 @@ function the_champ_connect(){
 		    $facebook = new Facebook\Facebook(array(
 		      'app_id' => $theChampLoginOptions['fb_key'],
 		      'app_secret' => $theChampLoginOptions['fb_secret'],
-		      'default_graph_version' => 'v2.10',
+		      'default_graph_version' => 'v3.2',
 		    ));
 
 		    $helper = $facebook->getRedirectLoginHelper();
