@@ -3,8 +3,8 @@ Contributors: Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Trans
 Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login, Twitch login
 Requires at least: 2.5.0
-Tested up to: 5.3
-Stable tag: 7.12.37
+Tested up to: 5.3.2
+Stable tag: 7.12.38
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -211,6 +211,9 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.38 [13 February 2020] =
+* [Security] Temporarily removed LiveJournal from social login networks due to an authentication bypass vulnerability
+
 = 7.12.37 [17 October 2019] =
 * [Improvement] Updated Facebook API to version 3.2 from version 2.10
 
@@ -1976,3 +1979,6 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 
 = 7.12.37 [17 October 2019] =
 * [Improvement] Updated Facebook API to version 3.2 from version 2.10
+
+= 7.12.38 [13 February 2020] =
+* [Security] Temporarily removed LiveJournal from social login networks due to an authentication bypass vulnerability

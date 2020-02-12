@@ -501,19 +501,8 @@ function the_champ_sanitize_profile_data($profileData, $provider){
 		$temp['link'] = isset($profileData -> website) && heateor_ss_validate_url($profileData -> website) !== false ? trim($profileData -> website) : '';
 		$temp['avatar'] = isset($profileData -> profile_picture) && heateor_ss_validate_url($profileData -> profile_picture) !== false ? trim($profileData -> profile_picture) : '';
 		$temp['large_avatar'] = '';
-	}elseif($provider == 'liveJournal' && isset($profileData['username']) && $profileData['username']){
-		$temp['email'] = '';
-		$temp['bio'] = '';
-		$temp['username'] = $profileData['username'];
-		$temp['link'] = heateor_ss_validate_url($profileData['link']) !== false ? trim($profileData['link']) : '';
-		$temp['avatar'] = heateor_ss_validate_url($profileData['avatar']) !== false ? trim($profileData['avatar']) : '';
-		$temp['name'] = $profileData['name'];
-		$temp['first_name'] = $profileData['first_name'];
-		$temp['last_name'] = $profileData['last_name'];
-		$temp['id'] = isset($profileData['username']) ? sanitize_text_field($profileData['username']) . '-lj' : '';
-		$temp['large_avatar'] = '';
 	}
-	if($provider != 'steam' && $provider != 'liveJournal'){
+	if($provider != 'steam'){
 		$temp['avatar'] = str_replace( 'http://', '//', $temp['avatar'] );
 		$temp['large_avatar'] = str_replace( 'http://', '//', $temp['large_avatar'] );
 	}
@@ -547,7 +536,7 @@ function the_champ_user_auth($profileData, $provider = 'facebook', $twitterRedir
 		if(isset($existingUser[0] -> ID)){
 			// check if account needs verification
 			if(get_user_meta($existingUser[0] -> ID, 'thechamp_key', true) != ''){
-				if(!in_array($profileData['provider'], array('twitter', 'instagram', 'steam', 'liveJournal', 'twitch'))){
+				if(!in_array($profileData['provider'], array('twitter', 'instagram', 'steam', 'twitch'))){
 					if(is_user_logged_in()){
 						wp_delete_user($existingUser[0] -> ID);
 						the_champ_link_account($socialId, $provider, $user_ID);

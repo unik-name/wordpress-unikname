@@ -135,11 +135,6 @@
 							<input id="the_champ_login_twitch" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('twitch', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="twitch" />
 							<label for="the_champ_login_twitch"><?php _e("Twitch", 'super-socializer'); ?></label>
 							</div>
-
-							<div class="theChampHorizontalSharingProviderContainer">
-							<input id="the_champ_login_livejournal" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('liveJournal', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="liveJournal" />
-							<label for="the_champ_login_livejournal"><?php _e("LiveJournal", 'super-socializer'); ?></label>
-							</div>
 							</td>
 						</tr>
 						
@@ -1264,15 +1259,12 @@
 			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 			?>
 		</p>
-		<a href="https://easy.roihunter.com/?referralCode=KWna_YiwQ_Iic4_y1u2" target="_blank"><img style="width:800px;margin-top:7px;" src="<?php echo plugins_url('../images/roihunter.png', __FILE__) ?>" /></a>
 		</form>
 		<div class="clear"></div>
 		<div class="stuffbox">
 			<h3><label><?php _e("Instagram Shoutout", 'super-socializer'); ?></label></h3>
 			<div class="inside" style="padding-left:10px">
-			<p><?php _e('If you can send (to hello@heateor.com) how our plugin is helping your business, we can share it on Instagram. You can also send any relevant hashtags and people to mention in the Instagram post.', 'super-socializer') ?></p>
-			<p><?php _e('<b>Example</b> - Blah-Blah Online Coaching teaches various programming language courses through their website. They have emerged as one of the most popular online coaching websites in the past year. Anyone can become proficient in programming language of their choice in a very easy way in no time.', 'super-socializer') ?></p>
-			<p><?php _e('@blahblahonlinecoaching proudly use #SuperSocializer to enable social features at their website, such as - Social Login, Social Share and Social Commenting. Be sure to visit their website at blahblahonlinecoaching.com where you can browse a variety of programming language courses.', 'super-socializer') ?></p>
+			<p><?php _e( 'If you can send (to hello@heateor.com) how this plugin is helping your business, we would be glad to shoutout on Instagram. You can also send any relevant hashtags and people to mention in the Instagram post.', 'super-socializer' ) ?></p>
 			</div>
 		</div>
 	</div>

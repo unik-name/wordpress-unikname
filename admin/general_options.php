@@ -98,7 +98,6 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 				</div>
 				</div>
 			</div>
-			<a href="https://easy.roihunter.com/?referralCode=KWna_YiwQ_Iic4_y1u2" target="_blank"><img style="width:800px" src="<?php echo plugins_url('../images/roihunter.png', __FILE__) ?>" /></a>
 			</div>
 			<?php include 'help.php'; ?>
 	</form>
@@ -106,9 +105,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 	<div class="stuffbox">
 		<h3><label><?php _e("Instagram Shoutout", 'super-socializer' ); ?></label></h3>
 		<div class="inside" style="padding-left:7px">
-		<p><?php _e( 'If you can send (to hello@heateor.com) how our plugin is helping your business, we can share it on Instagram. You can also send any relevant hashtags and people to mention in the Instagram post.', 'super-socializer' ) ?></p>
-		<p><?php _e( '<b>Example</b> - Blah-Blah Online Coaching teaches various programming language courses through their website. They have emerged as one of the most popular online coaching websites in the past year. Anyone can become proficient in programming language of their choice in a very easy way in no time.', 'super-socializer' ) ?></p>
-		<p><?php _e( '@blahblahonlinecoaching proudly use #SuperSocializer to enable social features at their website, such as - Social Login, Social Share and Social Commenting. Be sure to visit their website at blahblahonlinecoaching.com where you can browse a variety of programming language courses.', 'super-socializer' ) ?></p>
+		<p><?php _e( 'If you can send (to hello@heateor.com) how this plugin is helping your business, we would be glad to shoutout on Instagram. You can also send any relevant hashtags and people to mention in the Instagram post.', 'super-socializer' ) ?></p>
 		</div>
 	</div>
 </div>

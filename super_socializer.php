@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.37
+Version: 7.12.38
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.37');
+define('THE_CHAMP_SS_VERSION', '7.12.38');
 
 require 'helper.php';
 
@@ -686,88 +686,6 @@ function the_champ_connect(){
 			the_champ_close_login_popup($redirectTo);
 		}
 	}
-
-	// LiveJournal auth
-	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'LiveJournal'){
-		the_champ_livejournal_auth();
-	}
-}
-
-/**
- * LiveJournal auth
- */
-function the_champ_livejournal_auth(){
-	require('library/LiveJournalLogin/class.openid.v3.php');
-	$currentPageUrl = the_champ_get_valid_url(html_entity_decode(esc_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"])));
-	if(isset($_POST['openid_action']) && $_POST['openid_action'] == "SuperSocializerLogin"){ // Get identity from user and redirect browser to OpenID Server
-		$theChampOpenId = new SimpleOpenID;
-		$theChampOpenId->SetIdentity(sanitize_text_field($_POST['openid_url']).'.livejournal.com');
-		$theChampOpenId->SetTrustRoot($currentPageUrl);
-		$theChampOpenId->SetRequiredFields(array('email','fullname'));
-		$theChampOpenId->SetOptionalFields(array('dob','gender','postcode','country','language','timezone'));
-		if($theChampOpenId->GetOpenIDServer()){
-			$theChampOpenId->SetApprovedURL($currentPageUrl);  	// Send Response from OpenID server to this script
-			$theChampOpenId->Redirect(); 	// This will redirect user to OpenID Server
-		}else{
-			$error = $theChampOpenId->GetError();
-			echo "ERROR CODE: " . $error['code'] . "<br/>";
-			echo "ERROR DESCRIPTION: " . $error['description'] . "<br/>";
-		}
-		exit;
-	}elseif(isset($_GET['openid_mode']) && $_GET['openid_mode'] == 'id_res'){ 	// Perform HTTP Request to OpenID server to validate key
-		$theChampOpenId = new SimpleOpenID;
-		$theChampOpenId->SetIdentity($_GET['openid_identity']);
-		$theChampOpenIdValidationResult = $theChampOpenId->ValidateWithServer();
-		if($theChampOpenIdValidationResult == true){ 		// OK HERE KEY IS VALID
-			$userpicUrl = '';
-			if(isset($_GET['openid_claimed_id']) && $_GET['openid_claimed_id'] != ''){
-				$usernameParts = explode('.', str_replace('http://', '', sanitize_text_field($_GET['openid_claimed_id'])));
-				$response = wp_remote_get( 'http://www.livejournal.com/allpics.bml?user=' . $usernameParts[0],  array( 'timeout' => 15 ) );
-				if( ! is_wp_error( $response ) && isset( $response['response']['code'] ) && 200 === $response['response']['code'] ){
-					$body = wp_remote_retrieve_body( $response );
-					if($body){
-						$userpicsHtmlParts = explode('https://l-userpic.livejournal.com', $body);
-						$userpicsId = explode("'", $userpicsHtmlParts[1]);
-						$userpicUrl = 'https://l-userpic.livejournal.com' . $userpicsId[0];
-					}
-				}
-				$profileData = array();
-				$profileData['username'] = $usernameParts[0];
-				$profileData['link'] = trim($_GET['openid_claimed_id']);
-				$profileData['avatar'] = $userpicUrl;
-				$profileData['name'] = $usernameParts[0];
-				$profileData['first_name'] = $usernameParts[0];
-				$profileData['last_name'] = $usernameParts[0];
-				$redirection = isset($_GET['super_socializer_redirect_to']) && heateor_ss_validate_url($_GET['super_socializer_redirect_to']) !== false ? esc_url($_GET['super_socializer_redirect_to']) : '';
-				$profileData = the_champ_sanitize_profile_data($profileData, 'liveJournal');
-				if(isset($_GET['heateorMSEnabled'])){
-					$profileData['mc_subscribe'] = 1;
-				}
-				$response = the_champ_user_auth($profileData, 'liveJournal', $redirection);
-				if(is_array($response) && isset($response['message']) && $response['message'] == 'register' && (!isset($response['url']) || $response['url'] == '')){
-					$redirectTo = the_champ_get_login_redirection_url($redirection, true);
-				}elseif(isset($response['message']) && $response['message'] == 'linked'){
-					$redirectTo = $redirection . (strpos($redirection, '?') !== false ? '&' : '?') . 'linked=1';
-				}elseif(isset($response['message']) && $response['message'] == 'not linked'){
-					$redirectTo = $redirection . (strpos($redirection, '?') !== false ? '&' : '?') . 'linked=0';
-				}elseif(isset($response['url']) && $response['url'] != ''){
-					$redirectTo = $response['url'];
-				}else{
-					$redirectTo = the_champ_get_login_redirection_url($redirection);
-				}
-				the_champ_close_login_popup($redirectTo);
-			}
-		}elseif($theChampOpenId->IsError() == true){			// Oops, WE GOT SOME ERROR
-			$error = $theChampOpenId->GetError();
-			echo "ERROR CODE: " . $error['code'] . "<br/>";
-			echo "ERROR DESCRIPTION: " . $error['description'] . "<br/>";
-		}else{											// Signature Verification Failed
-			echo "INVALID AUTHORIZATION";
-		}
-	}elseif(isset($_GET['openid_mode']) && $_GET['openid_mode'] == 'cancel'){ // User Canceled the Request
-		the_champ_close_login_popup($currentPageUrl);
-	}
-	die;
 }
 
 /**
@@ -928,9 +846,8 @@ function the_champ_frontend_scripts(){
 		global $theChampSteamLogin;
 		$twitterRedirect = urlencode(the_champ_get_valid_url(html_entity_decode(esc_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]))));
 		$currentPageUrl = urldecode($twitterRedirect);
-		$theChampLJAuthUrl = remove_query_arg('action', the_champ_get_valid_url($currentPageUrl));
 		?>
-		<script> var theChampFBKey = '<?php echo $fbKey ?>', theChampSameTabLogin = '<?php echo isset($theChampLoginOptions["same_tab_login"]) ? 1 : 0; ?>', theChampVerified = <?php echo intval($userVerified) ?>; var theChampAjaxUrl = '<?php echo html_entity_decode(admin_url().$ajaxUrl) ?>'; var theChampPopupTitle = '<?php echo $notification; ?>'; var theChampEmailPopup = <?php echo intval($emailPopup); ?>; var theChampEmailAjaxUrl = '<?php echo html_entity_decode(admin_url().$emailAjaxUrl); ?>'; var theChampEmailPopupTitle = '<?php echo $emailPopupTitle; ?>'; var theChampEmailPopupErrorMsg = '<?php echo htmlspecialchars($emailPopupErrorMessage, ENT_QUOTES); ?>'; var theChampEmailPopupUniqueId = '<?php echo $emailPopupUniqueId; ?>'; var theChampEmailPopupVerifyMessage = '<?php echo $emailPopupVerifyMessage; ?>'; var theChampLJLoginUsernameString = '<?php echo htmlspecialchars(__('Enter your LiveJournal username', 'super-socializer'), ENT_QUOTES); ?>'; var theChampLJAuthUrl = '<?php echo $theChampLJAuthUrl . (strpos($theChampLJAuthUrl, '?') !== false ? '&' : '?') . "SuperSocializerAuth=LiveJournal"; ?>'; var theChampSteamAuthUrl = "<?php echo $theChampSteamLogin ? $theChampSteamLogin->url( esc_url(home_url()) . '?SuperSocializerSteamAuth=' . $twitterRedirect ) : ''; ?>"; var theChampTwitterRedirect = '<?php echo $twitterRedirect ?>'; <?php echo isset($theChampLoginOptions['disable_reg']) && isset($theChampLoginOptions['disable_reg_redirect']) && $theChampLoginOptions['disable_reg_redirect'] != '' ? 'var theChampDisableRegRedirect = "' . html_entity_decode(esc_url($theChampLoginOptions['disable_reg_redirect'])) . '";' : ''; ?> var heateorMSEnabled = 0; var theChampTwitterAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitter&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Facebook&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampTwitchAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitch&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Google&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Vkontakte&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Linkedin&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampXingAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Xing&super_socializer_redirect_to=" + theChampTwitterRedirect;</script>
+		<script> var theChampFBKey = '<?php echo $fbKey ?>', theChampSameTabLogin = '<?php echo isset($theChampLoginOptions["same_tab_login"]) ? 1 : 0; ?>', theChampVerified = <?php echo intval($userVerified) ?>; var theChampAjaxUrl = '<?php echo html_entity_decode(admin_url().$ajaxUrl) ?>'; var theChampPopupTitle = '<?php echo $notification; ?>'; var theChampEmailPopup = <?php echo intval($emailPopup); ?>; var theChampEmailAjaxUrl = '<?php echo html_entity_decode(admin_url().$emailAjaxUrl); ?>'; var theChampEmailPopupTitle = '<?php echo $emailPopupTitle; ?>'; var theChampEmailPopupErrorMsg = '<?php echo htmlspecialchars($emailPopupErrorMessage, ENT_QUOTES); ?>'; var theChampEmailPopupUniqueId = '<?php echo $emailPopupUniqueId; ?>'; var theChampEmailPopupVerifyMessage = '<?php echo $emailPopupVerifyMessage; ?>'; var theChampSteamAuthUrl = "<?php echo $theChampSteamLogin ? $theChampSteamLogin->url( esc_url(home_url()) . '?SuperSocializerSteamAuth=' . $twitterRedirect ) : ''; ?>"; var theChampTwitterRedirect = '<?php echo $twitterRedirect ?>'; <?php echo isset($theChampLoginOptions['disable_reg']) && isset($theChampLoginOptions['disable_reg_redirect']) && $theChampLoginOptions['disable_reg_redirect'] != '' ? 'var theChampDisableRegRedirect = "' . html_entity_decode(esc_url($theChampLoginOptions['disable_reg_redirect'])) . '";' : ''; ?> var heateorMSEnabled = 0; var theChampTwitterAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitter&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Facebook&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampTwitchAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitch&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Google&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Vkontakte&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Linkedin&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampXingAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Xing&super_socializer_redirect_to=" + theChampTwitterRedirect;</script>
 		<?php
 		if(!$combinedScript){
 			wp_enqueue_script('the_champ_sl_common', plugins_url('js/front/social_login/common.js', __FILE__), array('jquery'), THE_CHAMP_SS_VERSION, $inFooter);
@@ -1728,13 +1645,6 @@ function the_champ_addon_update_notification(){
 			<div class="error notice">
 				<h3>Social Login - myCRED Integration</h3>
 				<p><?php _e('Update "Social Login myCRED Integration" add-on for maximum compatibility with current version of Super Socialzer', 'super-socializer') ?></p>
-			</div>
-			<?php
-		}elseif(defined('HEATEOR_SOCIAL_LOGIN_MYCRED_INTEGRATION_VERSION') && version_compare('1.2.7', HEATEOR_SOCIAL_LOGIN_MYCRED_INTEGRATION_VERSION) > 0){
-			?>
-			<div class="error notice">
-				<h3>Social Login - myCRED Integration</h3>
-				<p><?php _e('Update "Social Login myCRED Integration" add-on for compatibility with LiveJournal Login of Super Socialzer', 'super-socializer') ?></p>
 			</div>
 			<?php
 		}
