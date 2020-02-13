@@ -18,12 +18,17 @@ require 'helper.php';
 $theChampLoginOptions = get_option('the_champ_login');
 if(the_champ_social_login_enabled()){
 	if(isset($theChampLoginOptions['providers']) && in_array('twitter', $theChampLoginOptions['providers'])){
-		require 'library/twitteroauth.php';
-	}
-	if(isset($theChampLoginOptions['providers']) && in_array('xing', $theChampLoginOptions['providers'])){
-		$theChampOauthConfigurationFile = plugins_url('library/oauth_configuration.json', __FILE__);
-		require 'library/http.php';
-		require 'library/oauth_client.php';
+		require 'library/Twitter/src/Config.php';
+		require 'library/Twitter/src/Response.php';
+		require 'library/Twitter/src/SignatureMethod.php';
+		require 'library/Twitter/src/HmacSha1.php';
+		require 'library/Twitter/src/Consumer.php';
+		require 'library/Twitter/src/Util.php';
+		require 'library/Twitter/src/Request.php';
+		require 'library/Twitter/src/TwitterOAuthException.php';
+		require 'library/Twitter/src/Token.php';
+		require 'library/Twitter/src/Util/JsonDecoder.php';
+		require 'library/Twitter/src/TwitterOAuth.php';
 	}
 	if(isset($theChampLoginOptions['providers']) && in_array('steam', $theChampLoginOptions['providers'])){
 		require 'library/SteamLogin/SteamLogin.php';
@@ -205,61 +210,7 @@ function the_champ_connect(){
 		}
 		die;
 	}
-	
-	// send request to Xing
-	if((isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Xing')){
-		if(function_exists('session_start')){
-			session_start();
-		}
-		if(!isset($_GET['oauth_token']) && isset($_SESSION['OAUTH_ACCESS_TOKEN'])){
-			Unset($_SESSION['OAUTH_ACCESS_TOKEN']);
-		}
-		if(isset($theChampLoginOptions['xing_ck']) && $theChampLoginOptions['xing_ck'] != '' && isset($theChampLoginOptions['xing_cs']) && $theChampLoginOptions['xing_cs'] != ''){
-			$xingClient = new oauth_client_class;
-			$xingClient->debug = 0;
-			$xingClient->debug_http = 1;
-			$xingClient->server = 'XING';
-			$xingClient->redirect_uri = home_url() . '/index.php?SuperSocializerAuth=Xing&super_socializer_redirect_to=' . str_replace(array('http://', 'https://'), '', esc_url(urldecode(trim($_GET['super_socializer_redirect_to'])))) . (isset($_GET['heateorMSEnabled']) ? '&heateorMSEnabled=1' : '');
-			$xingClient->client_id = $theChampLoginOptions['xing_ck'];
-			$xingClient->client_secret = $theChampLoginOptions['xing_cs'];
-			if(($success = $xingClient->Initialize())){
-				if(($success = $xingClient->Process())){
-					if(strlen($xingClient->access_token)){
-						$success = $xingClient->CallAPI(
-							'https://api.xing.com/v1/users/me', 
-							'GET', array(), array('FailOnAccessError'=>true), $xingResponse);
-					}
-				}
-				$success = $xingClient->Finalize($success);
-			}
-			if($xingClient->exit) die('exit');
-			if($success){
-				if(isset($xingResponse -> users) && is_array($xingResponse -> users) && isset($xingResponse -> users[0] -> id)){
-					$xingRedirect = the_champ_get_http() . esc_attr($_GET['super_socializer_redirect_to']);
-					$profileData = the_champ_sanitize_profile_data($xingResponse -> users[0], 'xing');
-					if(isset($_GET['heateorMSEnabled'])){
-						$profileData['mc_subscribe'] = 1;
-					}
-					$response = the_champ_user_auth($profileData, 'xing', $xingRedirect);
-					if(is_array($response) && isset($response['message']) && $response['message'] == 'register' && (!isset($response['url']) || $response['url'] == '')){
-						$redirectTo = the_champ_get_login_redirection_url($xingRedirect, true);
-					}elseif(isset($response['message']) && $response['message'] == 'linked'){
-						$redirectTo = $xingRedirect . (strpos($xingRedirect, '?') !== false ? '&' : '?') . 'linked=1';
-					}elseif(isset($response['message']) && $response['message'] == 'not linked'){
-						$redirectTo = $xingRedirect . (strpos($xingRedirect, '?') !== false ? '&' : '?') . 'linked=0';
-					}elseif(isset($response['url']) && $response['url'] != ''){
-						$redirectTo = $response['url'];
-					}else{
-						$redirectTo = the_champ_get_login_redirection_url($xingRedirect);
-					}
-					the_champ_close_login_popup($redirectTo);
-				}
-			}else{
-				echo 'Error:' . $xingClient->error;
-				die;
-			}
-		}
-	}
+
 	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Linkedin'){
 		if(isset($theChampLoginOptions['li_key']) && $theChampLoginOptions['li_key'] != '' && isset($theChampLoginOptions['li_secret']) && $theChampLoginOptions['li_secret'] != ''){
 			if(!isset($_GET['code']) && !isset($_GET['state'])){
@@ -364,7 +315,7 @@ function the_champ_connect(){
 			wp_redirect($twitchAuth->authenticate());
 			die;
 		}else{
-			$accessToken = $twitchAuth->get_access_token($_GET['code']);
+			$accessToken = $twitchAuth->get_access_token(esc_attr($_GET['code']));
 			$username = $twitchAuth->authenticated_user($accessToken);
 			if(isset($username)){
 			    $profileData = $twitchAuth->get_userid($username, true, $accessToken);
@@ -608,10 +559,11 @@ function the_champ_connect(){
 				die;
 			}
 			/* Build TwitterOAuth object with client credentials. */
-			$connection = new TwitterOAuth($theChampLoginOptions['twitter_key'], $theChampLoginOptions['twitter_secret']);
+			$connection = new Abraham\TwitterOAuth\TwitterOAuth($theChampLoginOptions['twitter_key'], $theChampLoginOptions['twitter_secret']);
+			$requestToken = $connection->oauth('oauth/request_token', ['oauth_callback' => esc_url(home_url())]);
 			/* Get temporary credentials. */
-			$requestToken = $connection->getRequestToken(esc_url(home_url()));
-			if($connection->http_code == 200){
+			//$requestToken = $connection->getRequestToken(esc_url(home_url()));
+			if($connection->getLastHttpCode() == 200){
 				// generate unique ID
 				$uniqueId = mt_rand();
 				// save oauth token and secret in db temporarily
@@ -623,7 +575,7 @@ function the_champ_connect(){
 				if(isset($_GET['super_socializer_redirect_to']) && heateor_ss_validate_url($_GET['super_socializer_redirect_to']) !== false){
 					update_user_meta($uniqueId, 'thechamp_twitter_redirect', esc_url(trim($_GET['super_socializer_redirect_to'])));
 				}
-				wp_redirect($connection->getAuthorizeURL($requestToken['oauth_token']));
+				wp_redirect($connection->url('oauth/authorize', ['oauth_token' => $requestToken['oauth_token']]));
 				die;
 			}else{
 				?>
@@ -655,11 +607,11 @@ function the_champ_connect(){
 			wp_redirect(esc_url(home_url()));
 			die;
 		}
-		$connection = new TwitterOAuth($theChampLoginOptions['twitter_key'], $theChampLoginOptions['twitter_secret'], $_REQUEST['oauth_token'], $oauthTokenSecret);
+		$connection = new Abraham\TwitterOAuth\TwitterOAuth($theChampLoginOptions['twitter_key'], $theChampLoginOptions['twitter_secret'], $_REQUEST['oauth_token'], $oauthTokenSecret);
 		/* Request access tokens from twitter */
-		$accessToken = $connection->getAccessToken($_REQUEST['oauth_verifier']);
+		$accessToken = $connection->oauth("oauth/access_token", ["oauth_verifier" => $_REQUEST['oauth_verifier']]);
 		/* Create a TwitterOauth object with consumer/user tokens. */
-		$connection = new TwitterOAuth($theChampLoginOptions['twitter_key'], $theChampLoginOptions['twitter_secret'], $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
+		$connection = new Abraham\TwitterOAuth\TwitterOAuth($theChampLoginOptions['twitter_key'], $theChampLoginOptions['twitter_secret'], $accessToken['oauth_token'], $accessToken['oauth_token_secret']);
 		$content = $connection->get('account/verify_credentials', array('include_email' => 'true'));
 		// delete temporary data
 		delete_user_meta($uniqueId, 'thechamp_twitter_oauthtokensecret');
@@ -729,13 +681,14 @@ function the_champ_get_http(){
  */
 function the_champ_get_valid_url($url){
 	$decodedUrl = urldecode($url);
-	if(html_entity_decode(esc_url(remove_query_arg(array('ss_message', 'SuperSocializerVerified', 'SuperSocializerUnverified'), $decodedUrl))) == wp_login_url() || $decodedUrl == home_url().'/wp-login.php?action=register' || $decodedUrl == home_url().'/wp-login.php?loggedout=true'){ 
+	if(html_entity_decode(esc_url(remove_query_arg(array('ss_message', 'SuperSocializerVerified', 'SuperSocializerUnverified', 'wp_lang', 'loggedout'), $decodedUrl))) == wp_login_url() || $decodedUrl == home_url().'/wp-login.php?action=register'){ 
 		$url = esc_url(home_url()).'/';
 	}elseif(isset($_GET['redirect_to'])){
-		if(urldecode($_GET['redirect_to']) == admin_url()){
+		$redirect_to = esc_url($_GET['redirect_to']);
+		if(urldecode($redirect_to) == admin_url()){
 			$url = esc_url(home_url()).'/';
-		}elseif(the_champ_validate_url(urldecode($_GET['redirect_to'])) && (strpos(urldecode($_GET['redirect_to']), 'http://') !== false || strpos(urldecode($_GET['redirect_to']), 'https://') !== false)){
-			$url = $_GET['redirect_to'];
+		}elseif(the_champ_validate_url(urldecode($redirect_to)) && (strpos(urldecode($redirect_to), 'http://') !== false || strpos(urldecode($redirect_to), 'https://') !== false)){
+			$url = $redirect_to;
 		}else{
 			$url = esc_url(home_url()).'/';
 		}
@@ -847,7 +800,7 @@ function the_champ_frontend_scripts(){
 		$twitterRedirect = urlencode(the_champ_get_valid_url(html_entity_decode(esc_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]))));
 		$currentPageUrl = urldecode($twitterRedirect);
 		?>
-		<script> var theChampFBKey = '<?php echo $fbKey ?>', theChampSameTabLogin = '<?php echo isset($theChampLoginOptions["same_tab_login"]) ? 1 : 0; ?>', theChampVerified = <?php echo intval($userVerified) ?>; var theChampAjaxUrl = '<?php echo html_entity_decode(admin_url().$ajaxUrl) ?>'; var theChampPopupTitle = '<?php echo $notification; ?>'; var theChampEmailPopup = <?php echo intval($emailPopup); ?>; var theChampEmailAjaxUrl = '<?php echo html_entity_decode(admin_url().$emailAjaxUrl); ?>'; var theChampEmailPopupTitle = '<?php echo $emailPopupTitle; ?>'; var theChampEmailPopupErrorMsg = '<?php echo htmlspecialchars($emailPopupErrorMessage, ENT_QUOTES); ?>'; var theChampEmailPopupUniqueId = '<?php echo $emailPopupUniqueId; ?>'; var theChampEmailPopupVerifyMessage = '<?php echo $emailPopupVerifyMessage; ?>'; var theChampSteamAuthUrl = "<?php echo $theChampSteamLogin ? $theChampSteamLogin->url( esc_url(home_url()) . '?SuperSocializerSteamAuth=' . $twitterRedirect ) : ''; ?>"; var theChampTwitterRedirect = '<?php echo $twitterRedirect ?>'; <?php echo isset($theChampLoginOptions['disable_reg']) && isset($theChampLoginOptions['disable_reg_redirect']) && $theChampLoginOptions['disable_reg_redirect'] != '' ? 'var theChampDisableRegRedirect = "' . html_entity_decode(esc_url($theChampLoginOptions['disable_reg_redirect'])) . '";' : ''; ?> var heateorMSEnabled = 0; var theChampTwitterAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitter&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Facebook&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampTwitchAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitch&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Google&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Vkontakte&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Linkedin&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampXingAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Xing&super_socializer_redirect_to=" + theChampTwitterRedirect;</script>
+		<script> var theChampFBKey = '<?php echo $fbKey ?>', theChampSameTabLogin = '<?php echo isset($theChampLoginOptions["same_tab_login"]) ? 1 : 0; ?>', theChampVerified = <?php echo intval($userVerified) ?>; var theChampAjaxUrl = '<?php echo html_entity_decode(admin_url().$ajaxUrl) ?>'; var theChampPopupTitle = '<?php echo $notification; ?>'; var theChampEmailPopup = <?php echo intval($emailPopup); ?>; var theChampEmailAjaxUrl = '<?php echo html_entity_decode(admin_url().$emailAjaxUrl); ?>'; var theChampEmailPopupTitle = '<?php echo $emailPopupTitle; ?>'; var theChampEmailPopupErrorMsg = '<?php echo htmlspecialchars($emailPopupErrorMessage, ENT_QUOTES); ?>'; var theChampEmailPopupUniqueId = '<?php echo $emailPopupUniqueId; ?>'; var theChampEmailPopupVerifyMessage = '<?php echo $emailPopupVerifyMessage; ?>'; var theChampSteamAuthUrl = "<?php echo $theChampSteamLogin ? $theChampSteamLogin->url( esc_url(home_url()) . '?SuperSocializerSteamAuth=' . $twitterRedirect ) : ''; ?>"; var theChampTwitterRedirect = '<?php echo $twitterRedirect ?>'; <?php echo isset($theChampLoginOptions['disable_reg']) && isset($theChampLoginOptions['disable_reg_redirect']) && $theChampLoginOptions['disable_reg_redirect'] != '' ? 'var theChampDisableRegRedirect = "' . html_entity_decode(esc_url($theChampLoginOptions['disable_reg_redirect'])) . '";' : ''; ?> var heateorMSEnabled = 0; var theChampTwitterAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitter&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Facebook&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampTwitchAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitch&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Google&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Vkontakte&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Linkedin&super_socializer_redirect_to=" + theChampTwitterRedirect;</script>
 		<?php
 		if(!$combinedScript){
 			wp_enqueue_script('the_champ_sl_common', plugins_url('js/front/social_login/common.js', __FILE__), array('jquery'), THE_CHAMP_SS_VERSION, $inFooter);

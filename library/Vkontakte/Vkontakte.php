@@ -11,7 +11,7 @@ class Vkontakte
      *
      * @link https://vk.com/dev/versions API version list
      */
-    private $apiVersion = '5.37';
+    private $apiVersion = '5.103';
 
     /**
      * The client ID (app ID)

@@ -42,7 +42,7 @@ Integrate Social Login, Social Share and Social Comments at your website easiest
 * Mobile responsive sharing interface
 * Compatible with AMP
 * Enable/Disable vertical/floating sharing interface on mobile device
-* Social Login from 10 Social Networks - Facebook, Google, Linkedin, Twitter, Vkontakte, Instagram, Xing, Steam, Twitch and LiveJournal
+* Social Login from 8 Social Networks - Facebook, Google, Linkedin, Twitter, Vkontakte, Instagram, Steam and Twitch
 * Enable Social Login interface at WordPress Login, Register pages and comment form
 * Syncs user's basic social profile data with WordPress profile
 * Enable Social Login at WooCommerce checkout page and customer login form
@@ -211,26 +211,31 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
-= 7.12.38 [13 February 2020] =
+= 7.12.38 [14 February 2020] =
 * [Security] Temporarily removed LiveJournal from social login networks due to an authentication bypass vulnerability
+* [Improvement] Updated Twitter Auth library to latest version
+* [Improvement] Updated Vkontakte API to latest version 5.103
+* [Improvement] Updated Google Auth library to latest version
+* [Improvement] Performance improvement
+* Removed Xing from social login networks
 
-= 7.12.37 [17 October 2019] =
+= 7.12.37 [1 January 2020] =
 * [Improvement] Updated Facebook API to version 3.2 from version 2.10
 
-= 7.12.36 [16 October 2019] =
+= 7.12.36 [16 December 2019] =
 * [Bugfix] Querystring Parameters in the url of webpage were resetting the Facebook Like and Facebook Recommend counts to zero
 * [Bugfix] Admin was not receiving new user notification email with Woocommerce active
 
-= 7.12.35 [25 September 2019] =
+= 7.12.35 [25 November 2019] =
 * [Bugfix] Twitch login stopped working
 * [Security fix] Twitch login was not checking if user's email has been verified on Twitch
 
-= 7.12.34 [30 August 2019] =
+= 7.12.34 [30 October 2019] =
 * [Bugfix] Using Twitch API v5 instead of v3, as it's going to shutdown
 * [Improvement] Twitch login is now saving users' email address too along with other profile details
 * [Improvement] Admin UI improvement
 
-= 7.12.33 [24 August 2019] =
+= 7.12.33 [24 September 2019] =
 * [Bugfix] "Trigger social login in the same browser tab" option was not working when "Load all Javascript files in single file" was enabled at General Options page
 * [Improvement] Email share is being triggered in the new browser tab instead of the same tab
 * [Improvement] New user notification email is using WooCommerce new user email template instead of the default new user email template of WordPress, if WooCommerce is active
@@ -1956,7 +1961,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Social share icons were not working with standard and transitional AMP modes
 * [New] Added option to specify link to terms-conditions page in the GDPR opt-in text for social login
 
-= 7.12.33 [24 August 2019] =
+= 7.12.33 [24 September 2019] =
 * [Bugfix] "Trigger social login in the same browser tab" option was not working when "Load all Javascript files in single file" was enabled at General Options page
 * [Improvement] Email share is being triggered in the new browser tab instead of the same tab
 * [Improvement] New user notification email is using WooCommerce new user email template instead of the default new user email template of WordPress, if WooCommerce is active
@@ -1964,21 +1969,26 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Improvement] Updated background of Instagram button to the multicolored one
 * [Improvement] Admin UI improvement
 
-= 7.12.34 [30 August 2019] =
+= 7.12.34 [30 October 2019] =
 * [Bugfix] Using Twitch API v5 instead of v3, as it's going to shutdown
 * [Improvement] Twitch login is now saving users' email address too along with other profile details
 * [Improvement] Admin UI improvement
 
-= 7.12.35 [25 September 2019] =
+= 7.12.35 [25 November 2019] =
 * [Bugfix] Twitch login stopped working
 * [Security fix] Twitch login was not checking if user's email has been verified on Twitch
 
-= 7.12.36 [16 October 2019] =
+= 7.12.36 [16 December 2019] =
 * [Bugfix] Querystring Parameters in the url of webpage were resetting the Facebook Like and Facebook Recommend counts to zero
 * [Bugfix] Admin was not receiving new user notification email with Woocommerce active
 
-= 7.12.37 [17 October 2019] =
+= 7.12.37 [1 January 2019] =
 * [Improvement] Updated Facebook API to version 3.2 from version 2.10
 
-= 7.12.38 [13 February 2020] =
+= 7.12.38 [14 February 2020] =
 * [Security] Temporarily removed LiveJournal from social login networks due to an authentication bypass vulnerability
+* [Improvement] Updated Twitter Auth library to latest version
+* [Improvement] Updated Vkontakte API to latest version 5.103
+* [Improvement] Updated Google Auth library to latest version
+* [Improvement] Performance improvement
+* Removed Xing from social login networks

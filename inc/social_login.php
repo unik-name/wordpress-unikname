@@ -446,17 +446,6 @@ function the_champ_sanitize_profile_data($profileData, $provider){
 		$temp['link'] = '';
 		$temp['avatar'] = isset($profileData['logo']) && heateor_ss_validate_url($profileData['logo']) !== false ? $profileData['logo'] : '';
 		$temp['large_avatar'] = isset($profileData['logo']) && heateor_ss_validate_url($profileData['logo']) !== false ? $profileData['logo'] : '';
-	}elseif($provider == 'xing'){
-		$temp['id'] = isset($profileData -> id) ? sanitize_text_field($profileData -> id) : '';
-	 	$temp['email'] = isset($profileData -> active_email) ? sanitize_email($profileData -> active_email) : '';;
-		$temp['name'] = isset($profileData -> display_name) ? $profileData -> display_name : '';
-		$temp['username'] = '';
-		$temp['first_name'] = isset($profileData -> first_name) ? $profileData -> first_name : '';
-		$temp['last_name'] = isset($profileData -> last_name) ? $profileData -> last_name : '';
-		$temp['bio'] = '';
-		$temp['link'] = isset($profileData -> permalink) && heateor_ss_validate_url($profileData -> permalink) !== false ? trim($profileData -> permalink) : '';
-		$temp['avatar'] = isset($profileData -> photo_urls -> medium_thumb) && heateor_ss_validate_url($profileData -> photo_urls -> medium_thumb) !== false ? trim($profileData -> photo_urls -> medium_thumb) : '';
-		$temp['large_avatar'] = isset($profileData -> photo_urls -> size_original) && heateor_ss_validate_url($profileData -> photo_urls -> size_original) !== false ? trim($profileData -> photo_urls -> size_original) : '';
 	}elseif($provider == 'linkedin'){
 		$temp['id'] = isset($profileData['id']) ? sanitize_text_field($profileData['id']) : '';
 		$temp['email'] = isset($profileData['email']) ? sanitize_email($profileData['email']) : '';

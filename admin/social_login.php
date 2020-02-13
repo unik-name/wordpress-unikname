@@ -123,10 +123,6 @@
 							<label for="the_champ_login_instagram"><?php _e("Instagram", 'super-socializer'); ?></label>
 							</div>
 							<div class="theChampHorizontalSharingProviderContainer">
-							<input id="the_champ_login_xing" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('xing', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="xing" />
-							<label for="the_champ_login_xing"><?php _e("Xing", 'super-socializer'); ?></label>
-							</div>
-							<div class="theChampHorizontalSharingProviderContainer">
 							<input id="the_champ_login_steam" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('steam', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="steam" />
 							<label for="the_champ_login_steam"><?php _e("Steam", 'super-socializer'); ?></label>
 							</div>
@@ -381,48 +377,6 @@
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Website URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
 							<strong style="color: #14ACDF"><?php echo esc_url(home_url()); ?></strong>
-							</div>
-							</td>
-						</tr>
-						
-						<tr>
-							<th>
-							<label for="the_champ_slxing_ck"><?php _e("Xing Consumer Key", 'super-socializer'); ?><img id="the_champ_slxing_ck_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
-							</th>
-							<td>
-							<input id="the_champ_slxing_ck" name="the_champ_login[xing_ck]" type="text" value="<?php echo isset($theChampLoginOptions['xing_ck']) ? $theChampLoginOptions['xing_ck'] : '' ?>" />
-							</td>
-						</tr>
-						
-						<tr class="the_champ_help_content" id="the_champ_slxing_ck_help_cont">
-							<td colspan="2">
-							<div>
-							<?php echo sprintf(__('Required for Xing Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Xing Consumer Key', 'super-socializer'), 'http://support.heateor.com/how-to-get-xing-consumer-key-and-secret/') ?>
-							<br/>
-							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Callback domain</strong> option mentioned at the link', 'super-socializer'); ?></span>
-							<br/>
-							<strong style="color: #14ACDF"><?php echo (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']; ?></strong>
-							</div>
-							</td>
-						</tr>
-						
-						<tr>
-							<th>
-							<label for="the_champ_slxing_cs"><?php _e("Xing Consumer Secret", 'super-socializer'); ?><img id="the_champ_slxing_cs_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
-							</th>
-							<td>
-							<input id="the_champ_slxing_cs" name="the_champ_login[xing_cs]" type="text" value="<?php echo isset($theChampLoginOptions['xing_cs']) ? $theChampLoginOptions['xing_cs'] : '' ?>" />
-							</td>
-						</tr>
-						
-						<tr class="the_champ_help_content" id="the_champ_slxing_cs_help_cont">
-							<td colspan="2">
-							<div>
-							<?php echo sprintf(__('Required for Xing Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Xing Consumer Secret', 'super-socializer'), 'http://support.heateor.com/how-to-get-xing-consumer-key-and-secret/') ?>
-							<br/>
-							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Callback domain</strong> option mentioned at the link', 'super-socializer'); ?></span>
-							<br/>
-							<strong style="color: #14ACDF"><?php echo (isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']; ?></strong>
 							</div>
 							</td>
 						</tr>
