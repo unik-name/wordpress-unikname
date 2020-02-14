@@ -435,17 +435,6 @@ function the_champ_sanitize_profile_data($profileData, $provider){
 		$temp['link'] = isset($profileData->profileurl) ? $profileData->profileurl : '';
 		$temp['avatar'] = isset($profileData->avatarmedium) && heateor_ss_validate_url($profileData->avatarmedium) !== false ? $profileData->avatarmedium : '';
 		$temp['large_avatar'] = isset($profileData->avatarfull) && heateor_ss_validate_url($profileData->avatarfull) !== false ? $profileData->avatarfull : '';
-	}elseif($provider == 'twitch'){
-		$temp['id'] = isset($profileData['_id']) ? sanitize_text_field($profileData['_id']) : '';
-	 	$temp['email'] = isset($profileData['email']) ? sanitize_text_field($profileData['email']) : '';
-		$temp['name'] = isset($profileData['name']) ? sanitize_text_field($profileData['name']) : '';
-		$temp['username'] = isset($profileData['display_name']) ? sanitize_text_field($profileData['display_name']) : '';
-		$temp['first_name'] = '';
-		$temp['last_name'] = '';
-		$temp['bio'] = isset($profileData['bio']) ? sanitize_text_field($profileData['bio']) : '';
-		$temp['link'] = '';
-		$temp['avatar'] = isset($profileData['logo']) && heateor_ss_validate_url($profileData['logo']) !== false ? $profileData['logo'] : '';
-		$temp['large_avatar'] = isset($profileData['logo']) && heateor_ss_validate_url($profileData['logo']) !== false ? $profileData['logo'] : '';
 	}elseif($provider == 'linkedin'){
 		$temp['id'] = isset($profileData['id']) ? sanitize_text_field($profileData['id']) : '';
 		$temp['email'] = isset($profileData['email']) ? sanitize_email($profileData['email']) : '';
@@ -525,7 +514,7 @@ function the_champ_user_auth($profileData, $provider = 'facebook', $twitterRedir
 		if(isset($existingUser[0] -> ID)){
 			// check if account needs verification
 			if(get_user_meta($existingUser[0] -> ID, 'thechamp_key', true) != ''){
-				if(!in_array($profileData['provider'], array('twitter', 'instagram', 'steam', 'twitch'))){
+				if(!in_array($profileData['provider'], array('twitter', 'instagram', 'steam'))){
 					if(is_user_logged_in()){
 						wp_delete_user($existingUser[0] -> ID);
 						the_champ_link_account($socialId, $provider, $user_ID);

@@ -1,7 +1,7 @@
 ﻿=== WordPress Social Share, Social Login and Social Comments Plugin - Super Socializer ===
 Contributors: Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Translator: László Tavaszi http://kerekmese.hu, Chinese Translator: CalmSmile calmsmile.org, Portuguese Translator: Paulo Purkyt https://www.linkedin.com/in/ppurkyt, Italian Translator: FG3D (Freedom's Gate) https://fg3d.net, Spanish translator: Ignacio Iglesias http://trespies.com, Arabic Translator: http://www.ArabsSM.com, Russian/Ukrainian Translator: Nicholas Lagunov
 Donate link: https://www.heateor.com/donate?action=Super+Socializer
-Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login, Twitch login
+Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
 Requires at least: 2.5.0
 Tested up to: 5.3.2
 Stable tag: 7.12.38
@@ -42,7 +42,7 @@ Integrate Social Login, Social Share and Social Comments at your website easiest
 * Mobile responsive sharing interface
 * Compatible with AMP
 * Enable/Disable vertical/floating sharing interface on mobile device
-* Social Login from 8 Social Networks - Facebook, Google, Linkedin, Twitter, Vkontakte, Instagram, Steam and Twitch
+* Social Login from 7 Social Networks - Facebook, Google, Linkedin, Twitter, Vkontakte, Instagram and Steam
 * Enable Social Login interface at WordPress Login, Register pages and comment form
 * Syncs user's basic social profile data with WordPress profile
 * Enable Social Login at WooCommerce checkout page and customer login form
@@ -218,6 +218,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Improvement] Updated Google Auth library to latest version
 * [Improvement] Performance improvement
 * Removed Xing from social login networks
+* Removed Twitch from social login networks temporarily because the TwitchAuth 3rd party library being used is no longer maintained
 
 = 7.12.37 [1 January 2020] =
 * [Improvement] Updated Facebook API to version 3.2 from version 2.10
@@ -1992,3 +1993,4 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Improvement] Updated Google Auth library to latest version
 * [Improvement] Performance improvement
 * Removed Xing from social login networks
+* Removed Twitch from social login networks temporarily because the TwitchAuth 3rd party library being used is no longer maintained

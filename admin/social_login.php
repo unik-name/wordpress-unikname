@@ -126,11 +126,6 @@
 							<input id="the_champ_login_steam" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('steam', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="steam" />
 							<label for="the_champ_login_steam"><?php _e("Steam", 'super-socializer'); ?></label>
 							</div>
-
-							<div class="theChampHorizontalSharingProviderContainer">
-							<input id="the_champ_login_twitch" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('twitch', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="twitch" />
-							<label for="the_champ_login_twitch"><?php _e("Twitch", 'super-socializer'); ?></label>
-							</div>
 							</td>
 						</tr>
 						
@@ -396,48 +391,6 @@
 							<?php echo sprintf(__('Required for Steam Social Login to work. Get it at <a href="%s" target="_blank">this link</a>', 'super-socializer'), 'https://steamcommunity.com/dev/apikey'); ?><br/>
 							<span style="color: #14ACDF"><?php _e('Save following <strong>domain</strong> to get the key', 'super-socializer'); ?></span><br/>
 							<strong style="color: #14ACDF"><?php echo esc_url(home_url()); ?></strong>
-							</div>
-							</td>
-						</tr>
-
-						<tr>
-							<th>
-							<label for="the_champ_sl_twitch_id"><?php _e("Twitch Client ID", 'super-socializer'); ?><img id="the_champ_sl_twitch_id_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
-							</th>
-							<td>
-							<input id="the_champ_sl_twitch_id" name="the_champ_login[twitch_client_id]" type="text" value="<?php echo isset($theChampLoginOptions['twitch_client_id']) ? $theChampLoginOptions['twitch_client_id'] : '' ?>" />
-							</td>
-						</tr>
-						
-						<tr class="the_champ_help_content" id="the_champ_sl_twitch_id_help_cont">
-							<td colspan="2">
-							<div>
-							<?php echo sprintf(__('Required for Twitch Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get it', 'super-socializer'), 'http://support.heateor.com/how-to-enable-twitch-login-at-wordpress-website') ?>
-							<br/>
-							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Redirect URI</strong> option mentioned at the link', 'super-socializer'); ?></span>
-							<br/>
-							<strong style="color: #14ACDF"><?php echo esc_url(home_url()) . '/?SuperSocializerAuth=Twitch'; ?></strong>
-							</div>
-							</td>
-						</tr>
-
-						<tr>
-							<th>
-							<label for="the_champ_sl_twitch_secret"><?php _e("Twitch Client Secret", 'super-socializer'); ?><img id="the_champ_sl_twitch_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
-							</th>
-							<td>
-							<input id="the_champ_sl_twitch_secret" name="the_champ_login[twitch_client_secret]" type="text" value="<?php echo isset($theChampLoginOptions['twitch_client_secret']) ? $theChampLoginOptions['twitch_client_secret'] : '' ?>" />
-							</td>
-						</tr>
-						
-						<tr class="the_champ_help_content" id="the_champ_sl_twitch_secret_help_cont">
-							<td colspan="2">
-							<div>
-							<?php echo sprintf(__('Required for Twitch Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get it', 'super-socializer'), 'http://support.heateor.com/how-to-enable-twitch-login-at-wordpress-website') ?>
-							<br/>
-							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Redirect URI</strong> option mentioned at the link', 'super-socializer'); ?></span>
-							<br/>
-							<strong style="color: #14ACDF"><?php echo esc_url(home_url()) . '/?SuperSocializerAuth=Twitch'; ?></strong>
 							</div>
 							</td>
 						</tr>
