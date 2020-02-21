@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
 Requires at least: 2.5.0
 Tested up to: 5.3.2
-Stable tag: 7.12.38
+Stable tag: 7.12.39
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -211,6 +211,9 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.39 [20 February 2020] =
+[Bugfix] LiveJournal and Twitch were appearing as blank icons in the social login icon-bar (if selected) after updating plugin to previous version
+
 = 7.12.38 [14 February 2020] =
 * [Security] Temporarily removed LiveJournal from social login networks due to an authentication bypass vulnerability
 * [Improvement] Updated Twitter Auth library to latest version
@@ -1994,3 +1997,6 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Improvement] Performance improvement
 * Removed Xing from social login networks
 * Removed Twitch from social login networks temporarily because the TwitchAuth 3rd party library being used is no longer maintained
+
+= 7.12.39 [20 February 2020] =
+[Bugfix] LiveJournal and Twitch were appearing as blank icons in the social login icon-bar (if selected) after updating plugin to previous version

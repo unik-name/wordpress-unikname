@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.38
+Version: 7.12.39
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.38');
+define('THE_CHAMP_SS_VERSION', '7.12.39');
 
 require 'helper.php';
 
@@ -1863,6 +1863,15 @@ function the_champ_update_db_check(){
 	$currentVersion = get_option('the_champ_ss_version');
 
 	if($currentVersion && $currentVersion != THE_CHAMP_SS_VERSION){
+		if(version_compare("7.12.39", $currentVersion) > 0){
+			global $theChampLoginOptions;
+			$networksToRemove = array('twitch', 'xing', 'liveJournal');
+			if(isset($theChampLoginOptions['providers']) && count($theChampLoginOptions['providers']) > 0){
+				$theChampLoginOptions['providers'] = array_diff($theChampLoginOptions['providers'], $networksToRemove);
+			}
+			update_option('the_champ_login', $theChampLoginOptions);
+		}
+
 		if(version_compare("7.12.32", $currentVersion) > 0){
 			global $theChampLoginOptions;
 			$theChampLoginOptions['tc_placeholder'] = 'Terms and Conditions';
