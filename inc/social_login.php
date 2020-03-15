@@ -49,7 +49,14 @@ function the_champ_login_button($widget = false){
 					}else{
 						$html .= '" onclick="theChampInitiateLogin(this)" >';
 					}
-					$html .= '<ss style="display:block" class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></ss></i></li>';
+					if($provider == 'facebook'){
+						$html .= '<div class="theChampFacebookLogoContainer">';
+					}
+					$html .= '<ss style="display:block" class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></ss>';
+					if($provider == 'facebook'){
+						$html .= '</div>';
+					}
+					$html .= '</i></li>';
 				}
 			}
 			$html .= '</ul>';

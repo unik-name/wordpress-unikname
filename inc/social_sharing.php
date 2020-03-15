@@ -1222,10 +1222,12 @@ function heateor_ss_get_share_count_transient_id($targetUrl){
 	return $postId;
 }
 
+
+
 /**
- * Determine which url to use for Whatsapp share
+ * Check if webpage is being visited in a mobile device
  */
-function heateor_ss_whatsapp_share_api(){
+function heateor_ss_check_if_mobile(){
 	if(isset($_SERVER['HTTP_USER_AGENT'])){
 		// detect the device for Whatsapp share API
 		$iphone = strpos($_SERVER['HTTP_USER_AGENT'], "iPhone");
@@ -1233,14 +1235,22 @@ function heateor_ss_whatsapp_share_api(){
 		$palmpre = strpos($_SERVER['HTTP_USER_AGENT'], "webOS");
 		$berry = strpos($_SERVER['HTTP_USER_AGENT'], "BlackBerry");
 		$ipod = strpos($_SERVER['HTTP_USER_AGENT'], "iPod");
-		// check if is a mobile
+		// check if it's a mobile
 		if($iphone || $android || $palmpre || $ipod || $berry == true){
-			return 'api';
-		}else{
-			return 'web';
+			return true;
 		}
 	}
-	return 'api';
+	return false;
+}
+
+/**
+ * Determine which url to use for Whatsapp share
+ */
+function heateor_ss_whatsapp_share_api(){
+	if(heateor_ss_check_if_mobile()){
+		return 'api';
+	}
+	return 'web';
 }
 
 /**

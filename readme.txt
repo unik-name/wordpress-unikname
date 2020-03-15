@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
 Requires at least: 2.5.0
 Tested up to: 5.3.2
-Stable tag: 7.12.39
+Stable tag: 7.12.40
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -211,6 +211,11 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.40 [15 March 2020] =
+[Bugfix] Facebook Messenger share icon was not working on mobile devices
+[Improvement] Facebook Messenger is now using the Facebook App ID saved for Facebook login in the social login options
+[Improvement] Updated Facebook login icon according to the new branding guidelines of Facebook
+
 = 7.12.39 [20 February 2020] =
 [Bugfix] LiveJournal and Twitch were appearing as blank icons in the social login icon-bar (if selected) after updating plugin to previous version
 
@@ -2000,3 +2005,8 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 
 = 7.12.39 [20 February 2020] =
 [Bugfix] LiveJournal and Twitch were appearing as blank icons in the social login icon-bar (if selected) after updating plugin to previous version
+
+= 7.12.40 [15 March 2020] =
+[Bugfix] Facebook Messenger share icon was not working on mobile devices
+[Improvement] Facebook Messenger is now using the Facebook App ID saved for Facebook login in the social login options
+[Improvement] Updated Facebook login icon according to the new branding guidelines of Facebook

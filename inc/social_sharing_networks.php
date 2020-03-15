@@ -5,7 +5,11 @@ defined('ABSPATH') or die("Cheating........Uh!!");
  * Social sharing networks
  */
 function heateor_ss_fetch_sharing_networks($sharingType){
-	global $theChampSharingOptions;
+	global $theChampSharingOptions, $theChampLoginOptions;
+	$fb_key = '595489497242932';
+	if(isset($theChampLoginOptions['fb_key']) && $theChampLoginOptions['fb_key']){
+		$fb_key = $theChampLoginOptions['fb_key'];
+	}
 	$sharingNetworks = array(
 		'facebook_share' => '<li style="padding:%padding%px 0 !important" class="the_champ_%network%">%like_count_container%<div class="fb-share-button" data-href="%post_url%" data-layout="button' . (isset($theChampSharingOptions[$sharingType.'_counts']) ? '_count' : '') . '"></div></li>',
 		'facebook_like' => '<li style="padding:%padding%px 0 !important" class="the_champ_%network%">%like_count_container%<div class="fb-like" data-href="%post_url%" data-layout="button' . (isset($theChampSharingOptions[$sharingType.'_counts']) ? '_count' : '') . '" data-action="like" data-show-faces="false" data-share="false"></div></li>',
@@ -58,7 +62,7 @@ function heateor_ss_fetch_sharing_networks($sharingType){
 		'Douban' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("https://www.douban.com/share/service?name=%post_title%&href=%encoded_post_url%&image=&updated=&bm=&url=%encoded_post_url%&title=%post_title%&sel=")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
 		'DZone' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("http://www.dzone.com/links/add.html?url=%encoded_post_url%&title=%post_title%")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
 		'Evernote' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("https://www.evernote.com/clip.action?url=%encoded_post_url%&title=%post_title%")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
-		'Facebook_Messenger' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("https://www.facebook.com/dialog/send?app_id=595489497242932&display=popup&link=%encoded_post_url%&redirect_uri=%encoded_post_url%")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
+		'Facebook_Messenger' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("'. (heateor_ss_check_if_mobile() ? 'fb-messenger://share/?link=%encoded_post_url%' : 'https://www.facebook.com/dialog/send?app_id='. $fb_key .'&display=popup&link=%encoded_post_url%&redirect_uri=%encoded_post_url%') .'")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
 		'Fark' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("https://www.fark.com/submit?new_url=%encoded_post_url%")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
 		'Fintel' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("https://fintel.io/submit?url=%encoded_post_url%")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
 		'Flipboard' => '<li class="%li_class%"><i %style% alt="%title%" Title="%title%" class="theChampSharing theChamp%ucfirst_network%Background" onclick=\'theChampPopup("https://share.flipboard.com/bookmarklet/popout?v=2&url=%encoded_post_url%&title=%post_title%")\'><ss style="%inner_style%" class="theChampSharingSvg theChamp%ucfirst_network%Svg"></ss></i></li>',
@@ -129,7 +133,11 @@ function heateor_ss_fetch_sharing_networks($sharingType){
  * Social sharing networks for AMP
  */
 function heateor_ss_fetch_amp_sharing_networks(){
-	global $theChampSharingOptions;
+	global $theChampSharingOptions, $theChampLoginOptions;
+	$fb_key = '595489497242932';
+	if(isset($theChampLoginOptions['fb_key']) && $theChampLoginOptions['fb_key']){
+		$fb_key = $theChampLoginOptions['fb_key'];
+	}
 	$ampIconPath = plugins_url('../images/amp', __FILE__);
 
 	$sharingNetworks = array(
@@ -184,7 +192,7 @@ function heateor_ss_fetch_amp_sharing_networks(){
 		'Douban' => '<a class="heateor_ss_amp heateor_ss_amp_douban" href="https://www.douban.com/share/service?name=%post_title%&href=%encoded_post_url%&image=&updated=&bm=&url=%encoded_post_url%&title=%post_title%&sel=" title="Douban" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/douban.svg" width="%width%" height="%height%" alt="Douban" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',
 		'DZone' => '<a class="heateor_ss_amp heateor_ss_amp_dzone" href="http://www.dzone.com/links/add.html?url=%encoded_post_url%&title=%post_title%" title="DZone" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/dzone.svg" width="%width%" height="%height%" alt="DZone" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',
 		'Evernote' => '<a class="heateor_ss_amp heateor_ss_amp_evernote" href="https://www.evernote.com/clip.action?url=%encoded_post_url%&title=%post_title%" title="Evernote" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/evernote.svg" width="%width%" height="%height%" alt="Evernote" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',
-		'Facebook_Messenger' => '<a class="heateor_ss_amp heateor_ss_amp_facebook_messenger" href="https://www.facebook.com/dialog/send?app_id=595489497242932&display=popup&link=%encoded_post_url%&redirect_uri=%encoded_post_url%" title="Facebook Messenger" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/facebook_messenger.svg" width="%width%" height="%height%" alt="Facebook Messenger" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',
+		'Facebook_Messenger' => '<a class="heateor_ss_amp heateor_ss_amp_facebook_messenger" href="'. (heateor_ss_check_if_mobile() ? 'fb-messenger://share/?link=%encoded_post_url%' : 'https://www.facebook.com/dialog/send?app_id='. $fb_key .'&display=popup&link=%encoded_post_url%&redirect_uri=%encoded_post_url%') .'" title="Facebook Messenger" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/facebook_messenger.svg" width="%width%" height="%height%" alt="Facebook Messenger" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',
 		'Fark' => '<a class="heateor_ss_amp heateor_ss_amp_fark" href="https://www.fark.com/submit?new_url=%encoded_post_url%" title="Fark" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/fark.svg" width="%width%" height="%height%" alt="Fark" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',
 		'Fintel' => '<a class="heateor_ss_amp heateor_ss_amp_fintel" href="https://fintel.io/submit?url=%encoded_post_url%" title="Fintel" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/fintel.svg" width="%width%" height="%height%" alt="Fintel" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',
 		'Flipboard' => '<a class="heateor_ss_amp heateor_ss_amp_flipboard" href="https://share.flipboard.com/bookmarklet/popout?v=2&url=%encoded_post_url%&title=%post_title%" title="Flipboard" rel="nofollow noopener" target="_blank"><amp-img src="'. $ampIconPath .'/flipboard.svg" width="%width%" height="%height%" alt="Flipboard" class="amp-wp-enforced-sizes" style="width: %width%px;"></amp-img></a>',

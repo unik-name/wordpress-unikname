@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.39
+Version: 7.12.40
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.39');
+define('THE_CHAMP_SS_VERSION', '7.12.40');
 
 require 'helper.php';
 
@@ -843,9 +843,13 @@ function the_champ_frontend_scripts(){
 	}
 	// sharing script
 	if(the_champ_social_sharing_enabled() || (the_champ_social_counter_enabled() && the_champ_vertical_social_counter_enabled())){
-		global $theChampSharingOptions, $theChampCounterOptions, $post;
+		global $theChampSharingOptions, $theChampCounterOptions, $theChampLoginOptions, $post;
+		$fb_key = '595489497242932';
+		if(isset($theChampLoginOptions['fb_key']) && $theChampLoginOptions['fb_key']){
+			$fb_key = $theChampLoginOptions['fb_key'];
+		}
 		?>
-		<script> var theChampSharingAjaxUrl = '<?php echo get_admin_url() ?>admin-ajax.php', heateorSsWhatsappShareAPI = '<?php echo heateor_ss_whatsapp_share_api(); ?>', heateorSsUrlCountFetched = [], heateorSsSharesText = '<?php echo htmlspecialchars(__('Shares', 'super-socializer'), ENT_QUOTES); ?>', heateorSsShareText = '<?php echo htmlspecialchars(__('Share', 'super-socializer'), ENT_QUOTES); ?>', theChampPluginIconPath = '<?php echo plugins_url('images/logo.png', __FILE__) ?>', theChampHorizontalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['hor_enable']) && ( isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares']) ) ? 1 : 0 ?>, theChampVerticalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['vertical_enable']) && ( isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']) ) ? 1 : 0 ?>, theChampSharingOffset = <?php echo (isset($theChampSharingOptions['alignment']) && $theChampSharingOptions['alignment'] != '' && isset($theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset']) && $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] != '' ? $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] : 0) ?>, theChampCounterOffset = <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] != '' && isset($theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset']) && $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] != '' ? $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] : 0) ?>, theChampMobileStickySharingEnabled = <?php echo isset($theChampSharingOptions['vertical_enable']) && isset($theChampSharingOptions['bottom_mobile_sharing']) && $theChampSharingOptions['horizontal_screen_width'] != '' ? 1 : 0; ?>, heateorSsCopyLinkMessage = "<?php echo htmlspecialchars(__('Link copied.', 'super-socializer'), ENT_QUOTES); ?>";
+		<script> var theChampSharingAjaxUrl = '<?php echo get_admin_url() ?>admin-ajax.php', heateorSsFbMessengerAPI = '<?php echo heateor_ss_check_if_mobile() ? "fb-messenger://share/?link=%encoded_post_url%" : "https://www.facebook.com/dialog/send?app_id=". $fb_key ."&display=popup&link=%encoded_post_url%&redirect_uri=%encoded_post_url%"; ?>',heateorSsWhatsappShareAPI = '<?php echo heateor_ss_whatsapp_share_api(); ?>', heateorSsUrlCountFetched = [], heateorSsSharesText = '<?php echo htmlspecialchars(__('Shares', 'super-socializer'), ENT_QUOTES); ?>', heateorSsShareText = '<?php echo htmlspecialchars(__('Share', 'super-socializer'), ENT_QUOTES); ?>', theChampPluginIconPath = '<?php echo plugins_url('images/logo.png', __FILE__) ?>', theChampHorizontalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['hor_enable']) && ( isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares']) ) ? 1 : 0 ?>, theChampVerticalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['vertical_enable']) && ( isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']) ) ? 1 : 0 ?>, theChampSharingOffset = <?php echo (isset($theChampSharingOptions['alignment']) && $theChampSharingOptions['alignment'] != '' && isset($theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset']) && $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] != '' ? $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] : 0) ?>, theChampCounterOffset = <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] != '' && isset($theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset']) && $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] != '' ? $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] : 0) ?>, theChampMobileStickySharingEnabled = <?php echo isset($theChampSharingOptions['vertical_enable']) && isset($theChampSharingOptions['bottom_mobile_sharing']) && $theChampSharingOptions['horizontal_screen_width'] != '' ? 1 : 0; ?>, heateorSsCopyLinkMessage = "<?php echo htmlspecialchars(__('Link copied.', 'super-socializer'), ENT_QUOTES); ?>";
 		<?php
 		if(isset($theChampSharingOptions['horizontal_re_providers']) && (isset($theChampSharingOptions['horizontal_more']) || in_array('Copy_Link', $theChampSharingOptions['horizontal_re_providers']))){
 			$postId = 0;
@@ -1522,7 +1526,7 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error notice">
 				<h3>Facebook Comments Moderation</h3>
-				<p><?php _e('Update "Facebook Comments Moderation" add-on for compatibility with current version of Super Socialzer', 'super-socializer') ?></p>
+				<p><?php _e('Update "Facebook Comments Moderation" add-on for compatibility with current version of Super Socializer', 'super-socializer') ?></p>
 			</div>
 			<?php
 		}
@@ -1531,16 +1535,16 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error notice">
 				<h3>Facebook Comments Notifier</h3>
-				<p><?php _e('Update "Facebook Comments Notifier" add-on for compatibility with current version of Super Socialzer', 'super-socializer') ?></p>
+				<p><?php _e('Update "Facebook Comments Notifier" add-on for compatibility with current version of Super Socializer', 'super-socializer') ?></p>
 			</div>
 			<?php
 		}
 
-		if(defined('HEATEOR_SOCIAL_LOGIN_BUTTONS_VERSION') && version_compare('1.1.5', HEATEOR_SOCIAL_LOGIN_BUTTONS_VERSION) > 0){
+		if(defined('HEATEOR_SOCIAL_LOGIN_BUTTONS_VERSION') && version_compare('1.1.16', HEATEOR_SOCIAL_LOGIN_BUTTONS_VERSION) > 0){
 			?>
 			<div class="error notice">
 				<h3>Social Login Buttons</h3>
-				<p><?php _e('Update "Social Login Buttons" add-on for compatibility with current version of Super Socialzer', 'super-socializer') ?></p>
+				<p><?php _e('Update "Social Login Buttons" add-on for compatibility with current version of Super Socializer', 'super-socializer') ?></p>
 			</div>
 			<?php
 		}
@@ -1549,7 +1553,7 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error notice">
 				<h3>Social Share - myCRED Integration</h3>
-				<p><?php _e('Update "Social Share myCRED Integration" add-on for maximum compatibility with current version of Super Socialzer', 'super-socializer') ?></p>
+				<p><?php _e('Update "Social Share myCRED Integration" add-on for maximum compatibility with current version of Super Socializer', 'super-socializer') ?></p>
 			</div>
 			<?php
 		}
@@ -1558,7 +1562,7 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error notice">
 				<h3>Social Login - myCRED Integration</h3>
-				<p><?php _e('Update "Social Login myCRED Integration" add-on for maximum compatibility with current version of Super Socialzer', 'super-socializer') ?></p>
+				<p><?php _e('Update "Social Login myCRED Integration" add-on for maximum compatibility with current version of Super Socializer', 'super-socializer') ?></p>
 			</div>
 			<?php
 		}
