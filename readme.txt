@@ -3,7 +3,7 @@ Contributors: Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Trans
 Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
 Requires at least: 2.5.0
-Tested up to: 5.3.2
+Tested up to: 5.4
 Stable tag: 7.12.40
 License: GPLv2 or later
 
