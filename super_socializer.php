@@ -3,7 +3,7 @@
 Plugin Name: Super Socializer
 Plugin URI: https://super-socializer-wordpress.heateor.com
 Description: A complete 360 degree solution to provide all the social features like Social Login, Social Commenting, Social Sharing, Social Media follow and more
-Version: 7.12.40
+Version: 7.12.41
 Author: Team Heateor
 Author URI: https://www.heateor.com
 Text Domain: super-socializer
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.40');
+define('THE_CHAMP_SS_VERSION', '7.12.41');
 
 require 'helper.php';
 
@@ -307,7 +307,9 @@ function the_champ_connect(){
 	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Facebook'){
 		if(isset($theChampLoginOptions['fb_key']) && $theChampLoginOptions['fb_key'] != '' && isset($theChampLoginOptions['fb_secret']) && $theChampLoginOptions['fb_secret'] != ''){
 			if(function_exists('session_start')){
-				session_start();
+				if(session_status() == PHP_SESSION_NONE){
+					session_start();
+				}
 				if(!isset($_GET['code'])){
 					// save referrer url in state
 					$_SESSION['super_socializer_facebook_redirect'] = isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : home_url();
@@ -454,7 +456,9 @@ function the_champ_connect(){
 	// Vkontakte
 	if((isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Vkontakte') || (isset($_GET['code']) && !isset($_GET['SuperSocializerAuth']))){
 		if(function_exists('session_start')){
-			session_start();
+			if(session_status() == PHP_SESSION_NONE){
+				session_start();
+			}
 		}
 		require 'library/Vkontakte/Vkontakte.php';
 		$heateorSsVkontakte = new Vkontakte(array(

@@ -461,7 +461,7 @@ function theChampMoreSharingPopup(elem, postUrl, postTitle, twitterTitle){
 	  Sina_Weibo: {
 		title: "Sina Weibo",
 		locale: "en-US",
-		redirect_url: "//service.weibo.com/share/share.php?url=" + postUrl + "&title=" + postTitle,
+		redirect_url: "http://service.weibo.com/share/share.php?url=" + postUrl + "&title=" + postTitle,
 	  },
 	  SiteJot: {
 		title: "SiteJot",

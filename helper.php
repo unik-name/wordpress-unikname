@@ -592,7 +592,14 @@ function the_champ_account_linking(){
 								}else{
 									$icons_container .= '" onclick="theChampInitiateLogin(this)" >';
 								}
-								$icons_container .= '<div class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></div></i></li>';
+								if($provider == 'facebook'){
+									$icons_container .= '<div class="theChampFacebookLogoContainer">';
+								}
+								$icons_container .= '<div class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></div>';
+								if($provider == 'facebook'){
+									$icons_container .= '</div>';
+								}
+								$icons_container .= '</i></li>';
 							}
 							$icons_container .= '</ul>';
 							if(isset($theChampLoginOptions['gdpr_enable']) && $theChampLoginOptions['gdpr_placement'] == 'below'){

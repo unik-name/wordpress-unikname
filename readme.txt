@@ -4,7 +4,7 @@ Donate link: https://www.heateor.com/donate?action=Super+Socializer
 Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
 Requires at least: 2.5.0
 Tested up to: 5.4
-Stable tag: 7.12.40
+Stable tag: 7.12.41
 License: GPLv2 or later
 
 The unique Social Plugin to let you integrate Social Login, Social Share, Social Comments and Social Media follow at your website
@@ -211,6 +211,14 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 8. **Social Commenting**: Disqus Commenting selected
 
 == Changelog ==
+= 7.12.41 [10 April 2020] =
+[Bugfix] Sina Weibo share was not working
+[Bugfix] Facebook logo was missing in Facebook login icon in Social Account Linking section
+[Bugfix] New user notification email was not working when WooCommerce was inactive
+[Improvement] Some code in Google login library was generating PHP warning with PHP 7.4
+[Improvement] PHP warning was being generated if PHP session had already been started in some other plugin/theme/code
+[Improvement] Facebook share popup window was fluctuating
+
 = 7.12.40 [15 March 2020] =
 [Bugfix] Facebook Messenger share icon was not working on mobile devices
 [Improvement] Facebook Messenger is now using the Facebook App ID saved for Facebook login in the social login options
@@ -2010,3 +2018,11 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 [Bugfix] Facebook Messenger share icon was not working on mobile devices
 [Improvement] Facebook Messenger is now using the Facebook App ID saved for Facebook login in the social login options
 [Improvement] Updated Facebook login icon according to the new branding guidelines of Facebook
+
+= 7.12.41 [10 April 2020] =
+[Bugfix] Sina Weibo share was not working
+[Bugfix] Facebook logo was missing in Facebook login icon in Social Account Linking section
+[Bugfix] New user notification email was not working when WooCommerce was inactive
+[Improvement] Some code in Google login library was generating PHP warning with PHP 7.4
+[Improvement] PHP warning was being generated if PHP session had already been started in some other plugin/theme/code 
+[Improvement] Facebook share popup window was fluctuating 
