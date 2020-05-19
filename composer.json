@@ -1,0 +1,13 @@
+{
+  "name": "unikname/unikname-connect",
+  "description": "Unikname Connect plugin for Wordpress 5.3 and more",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Unikname Team",
+      "email": "developers@unikname.com"
+    }
+  ],
+  "require": {}
+}
