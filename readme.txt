@@ -1,8 +1,7 @@
-﻿=== WordPress Social Share, Social Login and Social Comments Plugin - Super Socializer ===
-Contributors: Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Translator: László Tavaszi http://kerekmese.hu, Chinese Translator: CalmSmile calmsmile.org, Portuguese Translator: Paulo Purkyt https://www.linkedin.com/in/ppurkyt, Italian Translator: FG3D (Freedom's Gate) https://fg3d.net, Spanish translator: Ignacio Iglesias http://trespies.com, Arabic Translator: http://www.ArabsSM.com, Russian/Ukrainian Translator: Nicholas Lagunov
-Donate link: https://www.heateor.com/donate?action=Super+Socializer
-Tags: social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
-Requires at least: 2.5.0
+﻿=== WordPress Social Login with Unikname Connect Plugin - Unikname Connect for Wordpress ===
+Contributors: Unikname, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Translator: László Tavaszi http://kerekmese.hu, Chinese Translator: CalmSmile calmsmile.org, Portuguese Translator: Paulo Purkyt https://www.linkedin.com/in/ppurkyt, Italian Translator: FG3D (Freedom's Gate) https://fg3d.net, Spanish translator: Ignacio Iglesias http://trespies.com, Arabic Translator: http://www.ArabsSM.com, Russian/Ukrainian Translator: Nicholas Lagunov
+Tags: unikname, unikname connect, social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
+Requires at least: 5.3.0
 Tested up to: 5.4
 Stable tag: 7.12.41
 License: GPLv2 or later
@@ -23,7 +22,7 @@ Integrate Social Login, Social Share and Social Comments at your website easiest
 * Compatible with Gutenberg editor
 * Compatible with myCRED (append myCRED referral ID at the end of the url being shared)
 * Social Share from around 100 social networks
-* Social Media follow icons 
+* Social Media follow icons
 * Share counts are supported for Facebook, Linkedin, Twitter, Buffer, Reddit, Pinterest, Odnoklassniki, Fintel and Vkontakte
 * FREE icon customization options
 * Options to specify sharing icon shape - Square, Round and Rectangular
@@ -80,7 +79,7 @@ Detailed Overview:
 
 1. **Increased User Traffic**: When users share content over their Social network, it shows up in front of more people which results in increased user traffic at your website.
 
-2. **SEO Optimization**: Social sharing helps your website content get indexed faster and improves other factors that help in search engine optimization of your blog. 
+2. **SEO Optimization**: Social sharing helps your website content get indexed faster and improves other factors that help in search engine optimization of your blog.
 
 
 = Social Comments = Enables users to comment on your website using their Social Media accounts.
@@ -111,7 +110,7 @@ Detailed Overview:
 
 = Social Media Follow Icons = Redirect website visitors to your Social Media pages
 
-= Single sign-on = Enable single sign-on in your WordPress multisite network 
+= Single sign-on = Enable single sign-on in your WordPress multisite network
 
 = What makes this plugin different and why should I choose this plugin when there are many other social plugins? =
 1. **Free**: Yea, right. It is a free plugin. You need not pay single penny to use the features of this plugin.
@@ -555,7 +554,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 7.9.7 =
 * [New] Included "Super Socializer - Follow Icons" widget to integrate Social Media follow icons with your website
 * [Improvement] Users using Social Login were being logged out from website after closing the browser
-* [Bugfix] Social share icons in "more share icons popup" were coming out of it in a few cases 
+* [Bugfix] Social share icons in "more share icons popup" were coming out of it in a few cases
 
 = 7.9.6 =
 * [Bugfix] "create_function() is deprecated" error was being generated with PHP version 7.2
@@ -634,7 +633,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Linkedin Login icon was not appearing in some cases
 
 = 7.8.14 =
-* [New] Included LiveJournal in Social Login networks 
+* [New] Included LiveJournal in Social Login networks
 * [New] Added option to control automatic social account linking (if email address of social media account matches with existing email address)
 * [Bugfix] Twitter login of Ultimate Member - Social Login extension was not working with Super Socializer active
 * [Bugfix] Floating sharing icons and floating like buttons were not picking up correct title and url at archive pages
@@ -814,7 +813,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Url passed in Facebook sharer was not being encoded and querystring variables after '&' were not appearing in the url being shared
 * [Bugfix] Sharing icons were not appearing if posts page was a page other than homepage
 * [Bugfix] "failed to open stream" PHP warning was being generated in a few cases
-* [Bugfix] CSS of default login page was getting affected 
+* [Bugfix] CSS of default login page was getting affected
 * [Bugfix] Google +1 and GooglePlus Share buttons were vertically misaligned
 * [Bugfix] Fixed "theChampFBKey not defined" and "theChampFBLang not defined" Javascript errors generated when "Load all Javascript files in single file" option was enabled
 * [New] Added option to sync social profile data with BuddyPress XProfile fields
@@ -836,7 +835,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [New] Added option to specify time duration to refresh share count cache
 
 = 7.1 =
-* [Bugfix] Plugin functionality was breaking in a few cases when "Load all Javascript files in single file" option was enabled 
+* [Bugfix] Plugin functionality was breaking in a few cases when "Load all Javascript files in single file" option was enabled
 * [Improvement] Improved bit.ly short url cache resulting in reduced page load time
 * [Improvement] Specified "the_champ_sharing_title" class name for the div containing title of sharing interface
 * [Improvement] Removed German translation due to poor feedback
@@ -848,7 +847,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 7.0 =
 * [New] Added more options to customize social share icons and counters
 * [New] Now choose from over 100 social sharing and bookmarking services, to display in sharing bar
-* [New] Official Like/Tweet/+1 buttons can also be included in sharing bar with other sharing icons 
+* [New] Official Like/Tweet/+1 buttons can also be included in sharing bar with other sharing icons
 * [New] Added option to load all Javascript files combined in single file in single request
 * [New] Added option to enable OpenShareCount and NewShareCounts APIs to fetch Twitter share counts
 * [New] Added option to specify custom CSS at "Super Socializer > General Options" page
@@ -877,7 +876,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 6.6 =
 * [New] Added option to enable/disable sharing and like buttons at BuddyPress Group page
 * [New] Added option to show/hide options for website users to update social avatar at BuddyPress profile page
-* [New] Made changes to make plugin compatible with "Share Analytics" add-on 
+* [New] Made changes to make plugin compatible with "Share Analytics" add-on
 * [Bugfix] Horizontal sharing interface was appearing aligned vertically in some cases
 
 = 6.5 =
@@ -909,9 +908,9 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Facebook Like and Recommend buttons were not appearing consistently
 * [Bugfix] Social Login shortcode was displaying title for logged in users too
 * [Bugfix] Facebook Login was not working in Chrome on IOS
-* [Improvement] Widget code has been updated to use php5 style constructors 
-* [Improvement] WooCommerce shipping and billing details are now synced with social profile data 
-* [Improvement] Sharing icons got sexier 
+* [Improvement] Widget code has been updated to use php5 style constructors
+* [Improvement] WooCommerce shipping and billing details are now synced with social profile data
+* [Improvement] Sharing icons got sexier
 * [Improvement] If social profile data has username, it is being used as is for WordPress username
 
 = 5.8.1 =
@@ -931,8 +930,8 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [New] Included Serbo-Croatian Translation
 * [Improvement] Improved Print icon in sharing
 * [Improvement] Increased space between like buttons
-* [Improvement] Escaped output of add_query_arg and remove_query_arg functions 
-* [Improvement] Increased font size of share counts in vertical sharing bar 
+* [Improvement] Escaped output of add_query_arg and remove_query_arg functions
+* [Improvement] Increased font size of share counts in vertical sharing bar
 * [Bugfix] Tweet button was showing encoded characters for some content
 * [Bugfix] Support documentation links were redirecting to 404, "not found" page in websites with ssl enabled
 
@@ -973,7 +972,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 5.0.0 =
 * Improved Social Sharing icons
 * Two themes for sharing icons (round and square)
-* Option to change size of sharing icons (ranging between 16x16px and 35x35px) 
+* Option to change size of sharing icons (ranging between 16x16px and 35x35px)
 * Option to disable/enable "More" icon in sharing
 * Improved Social Login icons
 * Feature to slide in/out vertical sharing/counter interface
@@ -1001,7 +1000,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * Included option to enable only Facebook Commenting without enabling default comment form
 * Removed Facebook feed feature
 * Included 'Archives' in 'Sharing Location' option
-* Included filter 'the_champ_login_interface_filter' in 'inc/social_login.php' file to use custom icons for Social Login 
+* Included filter 'the_champ_login_interface_filter' in 'inc/social_login.php' file to use custom icons for Social Login
 * Included filter 'the_champ_ajax_response_filter' in helper.php file to alter AJAX responses
 * Included action 'the_champ_hook_update_profile_data' in 'inc/social_login.php' to update profile data
 * Included an option to enable/disable social account linking at BuddyPress profile page
@@ -1097,7 +1096,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * Sharing icons display number of shares
 * Included Instagram in Social Login
 * Optimized loading time of Social Sharing and Login interface
-* Facebook commenting and WordPress commenting can be used simultaneously (website users can switch between the two) 
+* Facebook commenting and WordPress commenting can be used simultaneously (website users can switch between the two)
 * Fixed the issue with Twitter login redirection
 * Added option to control redirection after user registration
 
@@ -1107,7 +1106,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 2.0.0 =
 * Included Vkontakte in Social Sharing and Social Login
 * Added option to disable sharing at particular post/page
-* Added option to specify language in Facebook comments 
+* Added option to specify language in Facebook comments
 
 = 1.0.2 =
 * Fixed the bug due to redeclaration of Twitter OAuth class
@@ -1143,7 +1142,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * Sharing icons display number of shares
 * Included Instagram in Social Login
 * Optimized loading time of Social Sharing and Login interface
-* Facebook commenting and WordPress commenting can be used simultaneously (website users can switch between the two) 
+* Facebook commenting and WordPress commenting can be used simultaneously (website users can switch between the two)
 * Fixed the issue with Twitter login redirection
 * Added option to control redirection after user registration
 
@@ -1245,7 +1244,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * Included option to enable only Facebook Commenting without enabling default comment form
 * Removed Facebook feed feature
 * Included 'Archives' in 'Sharing Location' option
-* Included filter 'the_champ_login_interface_filter' in 'inc/social_login.php' file to use custom icons for Social Login 
+* Included filter 'the_champ_login_interface_filter' in 'inc/social_login.php' file to use custom icons for Social Login
 * Included filter 'the_champ_ajax_response_filter' in helper.php file to alter AJAX responses
 * Included action 'the_champ_hook_update_profile_data' in 'inc/social_login.php' to update profile data
 * Included an option to enable/disable social account linking at BuddyPress profile page
@@ -1260,7 +1259,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 5.0.0 =
 * Improved Social Sharing icons
 * Two themes for sharing icons (round and square)
-* Option to change size of sharing icons (ranging between 16x16px and 35x35px) 
+* Option to change size of sharing icons (ranging between 16x16px and 35x35px)
 * Option to disable/enable "More" icon in sharing
 * Improved Social Login icons
 * Feature to slide in/out vertical sharing/counter interface
@@ -1316,8 +1315,8 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [New] Included Serbo-Croatian Translation
 * [Improvement] Improved Print icon in sharing
 * [Improvement] Increased space between like buttons
-* [Improvement] Escaped output of add_query_arg and remove_query_arg functions 
-* [Improvement] Increased font size of share counts in vertical sharing bar 
+* [Improvement] Escaped output of add_query_arg and remove_query_arg functions
+* [Improvement] Increased font size of share counts in vertical sharing bar
 * [Bugfix] Tweet button was showing encoded characters for some content
 * [Bugfix] Support documentation links were redirecting to 404, "not found" page in websites with ssl enabled
 
@@ -1334,9 +1333,9 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Facebook Like and Recommend buttons were not appearing consistently
 * [Bugfix] Social Login shortcode was displaying title for logged in users too
 * [Bugfix] Facebook Login was not working in Chrome on IOS
-* [Improvement] Widget code has been updated to use php5 style constructors 
-* [Improvement] WooCommerce shipping and billing details are now synced with social profile data 
-* [Improvement] Sharing icons got sexier 
+* [Improvement] Widget code has been updated to use php5 style constructors
+* [Improvement] WooCommerce shipping and billing details are now synced with social profile data
+* [Improvement] Sharing icons got sexier
 * [Improvement] If social profile data has username, it is being used as is for WordPress username
 
 = 6.1 =
@@ -1361,7 +1360,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 6.6 =
 * [New] Added option to enable/disable sharing and like buttons at BuddyPress Group page
 * [New] Added option to show/hide options for website users to update social avatar at BuddyPress profile page
-* [New] Made changes to make plugin compatible with "Share Analytics" add-on 
+* [New] Made changes to make plugin compatible with "Share Analytics" add-on
 * [Bugfix] Horizontal sharing interface was appearing aligned vertically in some cases
 
 = 6.6.1 =
@@ -1381,7 +1380,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 7.0 =
 * [New] Added more options to customize social share icons and counters
 * [New] Now choose from over 100 social sharing and bookmarking services, to display in sharing bar
-* [New] Official Like/Tweet/+1 buttons can also be included in sharing bar with other sharing icons 
+* [New] Official Like/Tweet/+1 buttons can also be included in sharing bar with other sharing icons
 * [New] Added option to load all Javascript files combined in single file in single request
 * [New] Added option to enable OpenShareCount and NewShareCounts APIs to fetch Twitter share counts
 * [New] Added option to specify custom CSS at "Super Socializer > General Options" page
@@ -1397,7 +1396,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] 'array_replace' function was causing fatal error at the websites running on PHP version < 5.3. Introduced fallback function for this.
 
 = 7.1 =
-* [Bugfix] Plugin functionality was breaking in a few cases when "Load all Javascript files in single file" option was enabled 
+* [Bugfix] Plugin functionality was breaking in a few cases when "Load all Javascript files in single file" option was enabled
 * [Improvement] Improved bit.ly short url cache resulting in reduced page load time
 * [Improvement] Specified "the_champ_sharing_title" class name for the div containing title of sharing interface
 * [Improvement] Removed German translation due to poor feedback
@@ -1419,7 +1418,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Bugfix] Url passed in Facebook sharer was not being encoded and querystring variables after '&' were not appearing in the url being shared
 * [Bugfix] Sharing icons were not appearing if posts page was a page other than homepage
 * [Bugfix] "failed to open stream" PHP warning was being generated in a few cases
-* [Bugfix] CSS of default login page was getting affected 
+* [Bugfix] CSS of default login page was getting affected
 * [Bugfix] Google +1 and GooglePlus Share buttons were vertically misaligned
 * [Bugfix] Fixed "theChampFBKey not defined" and "theChampFBLang not defined" Javascript errors generated when "Load all Javascript files in single file" option was enabled
 * [New] Added option to sync social profile data with BuddyPress XProfile fields
@@ -1597,7 +1596,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 * [Improvement] Performance improvement
 
 = 7.8.14 =
-* [New] Included LiveJournal in Social Login networks 
+* [New] Included LiveJournal in Social Login networks
 * [New] Added option to control automatic social account linking (if email address of social media account matches with existing email address)
 * [Bugfix] Twitter login of Ultimate Member - Social Login extension was not working with Super Socializer active
 * [Bugfix] Floating sharing icons and floating like buttons were not picking up correct title and url at archive pages
@@ -1684,7 +1683,7 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 = 7.9.7 =
 * [New] Included "Super Socializer - Follow Icons" widget to integrate Social Media follow icons with your website
 * [Improvement] Users using Social Login were being logged out from website after closing the browser
-* [Bugfix] Social share icons in "more share icons popup" were coming out of it in a few cases 
+* [Bugfix] Social share icons in "more share icons popup" were coming out of it in a few cases
 
 = 7.10 =
 * [Security] Social Login is more secure (props to <a href="https://github.com/calvinhughes" target="_blank">Calvin Hughes</a>)
@@ -2024,5 +2023,5 @@ Yes, we can help you with it. Just drop an email at support[ at ]heateor[ dot ]c
 [Bugfix] Facebook logo was missing in Facebook login icon in Social Account Linking section
 [Bugfix] New user notification email was not working when WooCommerce was inactive
 [Improvement] Some code in Google login library was generating PHP warning with PHP 7.4
-[Improvement] PHP warning was being generated if PHP session had already been started in some other plugin/theme/code 
-[Improvement] Facebook share popup window was fluctuating 
+[Improvement] PHP warning was being generated if PHP session had already been started in some other plugin/theme/code
+[Improvement] Facebook share popup window was fluctuating
