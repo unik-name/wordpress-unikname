@@ -40,10 +40,12 @@ function the_champ_login_button($widget = false){
 					}
 					// class
 					$html .= 'class="theChampLogin theChamp'. ucfirst($provider) .'Background theChamp'. ucfirst($provider) .'Login" ';
-					$html .= 'alt="Login with ';
-					$html .= ucfirst($provider);
-					$html .= '" title="Login with ';
-					$html .= ucfirst($provider);
+					// $html .= 'alt="Login with ';
+					// $html .= ucfirst($provider);
+					// $html .= '" title="Login with ';
+					// $html .= ucfirst($provider);
+					$html .= 'alt="Login with your private @unikname';
+					$html .= '" title="Login with your private @unikname';
 					if(current_filter() == 'comment_form_top' || current_filter() == 'comment_form_must_log_in_after'){
 						$html .= '" onclick="theChampCommentFormLogin = true; theChampInitiateLogin(this)" >';
 					}else{
@@ -408,6 +410,7 @@ function the_champ_buddypress_avatar($text, $args){
  * Format social profile data
  */
 function the_champ_sanitize_profile_data($profileData, $provider){
+	// echo "the_champ_sanitize_profile_data";
 	$temp = array();
 	if($provider == 'facebook'){
 		$temp['id'] = isset($profileData['id']) ? sanitize_text_field($profileData['id']) : '';
@@ -487,10 +490,10 @@ function the_champ_sanitize_profile_data($profileData, $provider){
 		$temp['avatar'] = isset($profileData -> profile_picture) && heateor_ss_validate_url($profileData -> profile_picture) !== false ? trim($profileData -> profile_picture) : '';
 		$temp['large_avatar'] = '';
 	}elseif($provider == 'unikname'){
-		$temp['id'] = isset($profileData -> id) ? sanitize_text_field($profileData -> id) : '';
-		$temp['email'] = '';
-		$temp['name'] = isset($profileData -> full_name) ? $profileData -> full_name : '';
-		$temp['username'] = isset($profileData -> username) ? $profileData -> username : '';
+		$temp['id'] = isset($profileData['id']) ? sanitize_text_field($profileData['id']) : '';
+		$temp['email'] = isset($profileData['email']) ? sanitize_email($profileData['email']) : '';
+		$temp['name'] = isset($profileData['name']) ? $profileData['name'] : '';
+		$temp['username'] = isset($profileData['preferredUsername']) ? $profileData['preferredUsername'] : '';
 		$temp['first_name'] = '';
 		$temp['last_name'] = '';
 		$temp['bio'] = '';
@@ -508,6 +511,7 @@ function the_champ_sanitize_profile_data($profileData, $provider){
 	$temp['first_name'] = isset($temp['first_name'][0]) && ctype_upper($temp['first_name'][0]) ? ucfirst(sanitize_user($temp['first_name'], true)) : sanitize_user($temp['first_name'], true);
 	$temp['last_name'] = isset($temp['last_name'][0]) && ctype_upper($temp['last_name'][0]) ? ucfirst(sanitize_user($temp['last_name'], true)) : sanitize_user($temp['last_name'], true);
 	$temp['provider'] = $provider;
+	// echo var_dump($temp);
 	return $temp;
 }
 
@@ -515,6 +519,7 @@ function the_champ_sanitize_profile_data($profileData, $provider){
  * User authentication after Social Login
  */
 function the_champ_user_auth($profileData, $provider = 'facebook', $twitterRedirect = ''){
+	// echo "2z99";
 	global $theChampLoginOptions, $user_ID;
 	// authenticate user
 	// check if Social ID exists in database
@@ -527,11 +532,15 @@ function the_champ_user_auth($profileData, $provider = 'facebook', $twitterRedir
 	if(isset($theChampLoginOptions['login_redirection']) && $theChampLoginOptions['login_redirection'] == 'bp_profile'){
 		$loginUrl = 'bp';
 	}
+	// echo "3";
 	if(count($existingUser) > 0){
+		// echo "3a";
 		// user exists in the database
 		if(isset($existingUser[0] -> ID)){
+			// echo "3a1";
 			// check if account needs verification
 			if(get_user_meta($existingUser[0] -> ID, 'thechamp_key', true) != ''){
+				// echo "3a1a";
 				if(!in_array($profileData['provider'], array('twitter', 'instagram', 'steam'))){
 					if(is_user_logged_in()){
 						wp_delete_user($existingUser[0] -> ID);

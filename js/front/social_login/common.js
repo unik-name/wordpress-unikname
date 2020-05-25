@@ -20,7 +20,7 @@ function theChampInitiateLogin(e) {
 		.find(".heateor_ss_social_login_optin");
 	if (0 == t.length || jQuery(t).is(":checked")) {
 		var a = e.getAttribute("alt");
-		"Login with Unikname" == a
+		a.includes("@unikname")
 			? theChampLoginPopup(theChampUniknameAuthUrl)
 			: "Login with Facebook" == a
 			? theChampLoginPopup(theChampFacebookAuthUrl)

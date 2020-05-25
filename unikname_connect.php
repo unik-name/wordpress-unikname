@@ -149,6 +149,116 @@ function the_champ_connect(){
 		}
 	}
 
+	// Unikname authentication
+	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Unikname'){
+		if(isset($theChampLoginOptions['un_key']) && $theChampLoginOptions['un_key'] != '' && isset($theChampLoginOptions['un_secret']) && $theChampLoginOptions['un_secret'] != ''){
+			if(!isset($_GET['code']) && !isset($_GET['state'])){
+				$uniknameAuthState = mt_rand();
+								update_user_meta($uniknameAuthState, 'heateor_ss_unikname_auth_state', isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : home_url());
+								if(isset($_GET['heateorMSEnabled'])){
+									update_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub', 1);
+								}
+					$uniknameScope = 'openid';
+					wp_redirect('https://integ.connect.unikname.com/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?SuperSocializerAuth=Unikname') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
+					die;
+			}
+			if(isset($_GET['code']) && isset($_GET['state']) && ($uniknameRedirectUrl = get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state', true))){
+				// echo "2a";
+				delete_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state');
+				$url = 'https://integ.connect.unikname.com/oidc/accessToken';
+				$data_access_token = array(
+					'grant_type' => 'authorization_code',
+					'code' => esc_attr(trim($_GET['code'])),
+					'redirect_uri' => home_url() . '/?SuperSocializerAuth=Unikname',
+					'client_id' => $theChampLoginOptions['un_key'],
+					'client_secret' => $theChampLoginOptions['un_secret']
+				);
+				$response = wp_remote_post($url, array(
+					'method' => 'POST',
+					'timeout' => 15,
+					'redirection' => 5,
+					'httpversion' => '1.0',
+					'sslverify' => false,
+					'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'),
+					'body' => http_build_query($data_access_token)
+						)
+				);
+				// echo "2b";
+				if(!is_wp_error($response) && isset($response['response']['code']) && 200 === $response['response']['code']){
+					// echo "2c";
+					$body = json_decode(wp_remote_retrieve_body($response));
+					if(is_object($body) && isset($body->access_token)){
+						// echo "2d";
+						// echo var_dump($body);
+						// fetch profile data
+						// TODO: replace this by an OIDC client
+						$profile = wp_remote_get('https://integ.connect.unikname.com/oidc/profile', array(
+								'method' => 'GET',
+								'timeout' => 15,
+								'headers' => array('Authorization' => "Bearer ".$body->access_token),
+								)
+						);
+						// echo "2d2";
+						// echo var_dump($profile);
+						if(!is_wp_error($profile) && isset($profile['response']['code']) && 200 === $profile['response']['code']){
+							// echo "2e";
+							$profileBody = json_decode(wp_remote_retrieve_body($profile));
+							if(is_object($profileBody) && isset($profileBody->id) && $profileBody->id){
+								// echo "2f";
+								$profileBody = json_decode(json_encode($profileBody), true);
+								// echo "profileBody: " . var_dump($profileBody);
+								// $firstName = '';//isset($firstLastNameBody['firstName']) && isset($firstLastNameBody['firstName']['localized']) && isset($firstLastNameBody['firstName']['preferredLocale']) && isset($firstLastNameBody['firstName']['preferredLocale']['language']) && isset($firstLastNameBody['firstName']['preferredLocale']['country']) ? $firstLastNameBody['firstName']['localized'][$firstLastNameBody['firstName']['preferredLocale']['language'] . '_' . $firstLastNameBody['firstName']['preferredLocale']['country']] : '';
+								// $lastName = '';//isset($firstLastNameBody['lastName']) && isset($firstLastNameBody['lastName']['localized']) && isset($firstLastNameBody['lastName']['preferredLocale']) && isset($firstLastNameBody['lastName']['preferredLocale']['language']) && isset($firstLastNameBody['lastName']['preferredLocale']['country']) ? $firstLastNameBody['lastName']['localized'][$firstLastNameBody['lastName']['preferredLocale']['language'] . '_' . $firstLastNameBody['lastName']['preferredLocale']['country']] : '';
+								$emailAddress = '';//isset($emailBody['elements']) && is_array($emailBody['elements']) && isset($emailBody['elements'][0]['handle~']) && isset($emailBody['elements'][0]['handle~']['emailAddress']) ? $emailBody['elements'][0]['handle~']['emailAddress'] : '';
+								$preferredUsername = '';
+								$name = '';
+								$user = array(
+									'firstName' => '',
+									'lastName' => '',
+									'email' => $emailAddress,
+									'id' => $profileBody['id'],
+									'preferredUsername' => $preferredUsername,
+									'name' => $name,
+									'smallAvatar' => '',
+									'largeAvatar' => ''
+								);
+								// echo "user: " . var_dump($user);
+
+								$profileData = the_champ_sanitize_profile_data($user, 'unikname');
+								// echo "profileData: " . var_dump($profileData);
+								// echo "2g";
+								if(get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_mc_sub', true)){
+									// echo "2h";
+									$profileData['mc_subscribe'] = 1;
+									delete_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub');
+								}
+								// echo "2i";
+								$response = the_champ_user_auth($profileData, 'unikname', $uniknameRedirectUrl);
+								if(is_array($response) && isset($response['message']) && $response['message'] == 'register' && (!isset($response['url']) || $response['url'] == '')){
+									// echo "2i1";
+									$redirectTo = the_champ_get_login_redirection_url($uniknameRedirectUrl, true);
+								}elseif(isset($response['message']) && $response['message'] == 'linked'){
+									// echo "2i2";
+									$redirectTo = $uniknameRedirectUrl . (strpos($uniknameRedirectUrl, '?') !== false ? '&' : '?') . 'linked=1';
+								}elseif(isset($response['message']) && $response['message'] == 'not linked'){
+									// echo "2i3";
+									$redirectTo = $uniknameRedirectUrl . (strpos($uniknameRedirectUrl, '?') !== false ? '&' : '?') . 'linked=0';
+								}elseif(isset($response['url']) && $response['url'] != ''){
+									// echo "2i4";
+									$redirectTo = $response['url'];
+								}else{
+									// echo "2i5";
+									$redirectTo = the_champ_get_login_redirection_url($uniknameRedirectUrl);
+								}
+								the_champ_close_login_popup($redirectTo);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
 	// Instagram auth
 	if(isset($_GET['SuperSocializerInstaToken']) && trim($_GET['SuperSocializerInstaToken']) != ''){
 		$instaAuthUrl = 'https://api.instagram.com/v1/users/self?access_token=' . sanitize_text_field($_GET['SuperSocializerInstaToken']);
@@ -425,7 +535,7 @@ function the_champ_connect(){
 	}
 	if(isset($_GET['code']) && isset($_GET['state'])){
 	    //Authenticate code from Google OAuth Flow
-	    if(is_object($googleClient)){
+	    if(isset($googleClient) && is_object($googleClient)){
 		    $googleClient->authenticate($_GET['code']);
 		    $accessTokenStr = $googleClient->getAccessToken();
 		    if($accessTokenStr){
@@ -604,101 +714,6 @@ function the_champ_connect(){
 		}
   }
   
-  // Unikname authentication
-	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Unikname'){
-		if(isset($theChampLoginOptions['un_key']) && $theChampLoginOptions['un_key'] != '' && isset($theChampLoginOptions['un_secret']) && $theChampLoginOptions['un_secret'] != ''){
-			if(!isset($_GET['code']) && !isset($_GET['state'])){
-				$uniknameAuthState = mt_rand();
-                update_user_meta($uniknameAuthState, 'heateor_ss_unikname_auth_state', isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : home_url());
-                if(isset($_GET['heateorMSEnabled'])){
-                	update_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub', 1);
-                }
-			    $uniknameScope = 'openid';
-			    wp_redirect('https://integ.connect.unikname.com/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?SuperSocializerAuth=Unikname') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
-			    die;
-			}
-			if(isset($_GET['code']) && isset($_GET['state']) && ($uniknameRedirectUrl = get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state', true))){
-				delete_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state');
-			    $url = 'https://integ.connect.unikname.com/oidc/accessToken';
-				$data_access_token = array(
-					'grant_type' => 'authorization_code',
-					'code' => esc_attr(trim($_GET['code'])),
-					'redirect_uri' => home_url() . '/?SuperSocializerAuth=Unikname',
-					'client_id' => $theChampLoginOptions['un_key'],
-					'client_secret' => $theChampLoginOptions['un_secret']
-				);
-				$response = wp_remote_post($url, array(
-					'method' => 'POST',
-					'timeout' => 15,
-					'redirection' => 5,
-					'httpversion' => '1.0',
-					'sslverify' => false,
-					'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'),
-					'body' => http_build_query($data_access_token)
-				    )
-				);
-				if(!is_wp_error($response) && isset($response['response']['code']) && 200 === $response['response']['code']){
-					$body = json_decode(wp_remote_retrieve_body($response));
-					if(is_object($body) && isset($body->access_token)){
-						// fetch profile data
-						// TODO: replace this by an OIDC client
-						$firstLastName = '';/*wp_remote_get('https://api.linkedin.com/v2/me?projection=(id,firstName,lastName,profilePicture(displayImage~:playableStreams))', array(
-								'method' => 'GET',
-								'timeout' => 15,
-								'headers' => array('Authorization' => "Bearer ".$body->access_token),
-						    )
-						);*/
-						$email = ''; /*wp_remote_get('https://api.linkedin.com/v2/emailAddress?q=members&projection=(elements*(handle~))', array(
-								'method' => 'GET',
-								'timeout' => 15,
-								'headers' => array('Authorization' => "Bearer ".$body->access_token),
-						    )
-						);*/
-						if(!is_wp_error($firstLastName) && isset($firstLastName['response']['code']) && 200 === $firstLastName['response']['code'] && !is_wp_error($email) && isset($email['response']['code']) && 200 === $email['response']['code']){
-							$firstLastNameBody = json_decode(wp_remote_retrieve_body($firstLastName));
-							$emailBody = json_decode(wp_remote_retrieve_body($email));
-							if(is_object($firstLastNameBody) && isset($firstLastNameBody->id) && $firstLastNameBody->id && is_object($emailBody) && isset($emailBody->elements)){
-								$firstLastNameBody = json_decode(json_encode($firstLastNameBody), true);
-								$emailBody = json_decode(json_encode($emailBody), true);
-								$firstName = isset($firstLastNameBody['firstName']) && isset($firstLastNameBody['firstName']['localized']) && isset($firstLastNameBody['firstName']['preferredLocale']) && isset($firstLastNameBody['firstName']['preferredLocale']['language']) && isset($firstLastNameBody['firstName']['preferredLocale']['country']) ? $firstLastNameBody['firstName']['localized'][$firstLastNameBody['firstName']['preferredLocale']['language'] . '_' . $firstLastNameBody['firstName']['preferredLocale']['country']] : '';
-								$lastName = isset($firstLastNameBody['lastName']) && isset($firstLastNameBody['lastName']['localized']) && isset($firstLastNameBody['lastName']['preferredLocale']) && isset($firstLastNameBody['lastName']['preferredLocale']['language']) && isset($firstLastNameBody['lastName']['preferredLocale']['country']) ? $firstLastNameBody['lastName']['localized'][$firstLastNameBody['lastName']['preferredLocale']['language'] . '_' . $firstLastNameBody['lastName']['preferredLocale']['country']] : '';
-								$smallAvatar = isset($firstLastNameBody['profilePicture']) && isset($firstLastNameBody['profilePicture']['displayImage~']) && isset($firstLastNameBody['profilePicture']['displayImage~']['elements']) && is_array($firstLastNameBody['profilePicture']['displayImage~']['elements']) && isset($firstLastNameBody['profilePicture']['displayImage~']['elements'][0]['identifiers']) && is_array($firstLastNameBody['profilePicture']['displayImage~']['elements'][0]['identifiers'][0]) && isset($firstLastNameBody['profilePicture']['displayImage~']['elements'][0]['identifiers'][0]['identifier']) ? $firstLastNameBody['profilePicture']['displayImage~']['elements'][0]['identifiers'][0]['identifier'] : '';
-								$largeAvatar = isset($firstLastNameBody['profilePicture']) && isset($firstLastNameBody['profilePicture']['displayImage~']) && isset($firstLastNameBody['profilePicture']['displayImage~']['elements']) && is_array($firstLastNameBody['profilePicture']['displayImage~']['elements']) && isset($firstLastNameBody['profilePicture']['displayImage~']['elements'][3]['identifiers']) && is_array($firstLastNameBody['profilePicture']['displayImage~']['elements'][3]['identifiers'][0]) && isset($firstLastNameBody['profilePicture']['displayImage~']['elements'][3]['identifiers'][0]['identifier']) ? $firstLastNameBody['profilePicture']['displayImage~']['elements'][3]['identifiers'][0]['identifier'] : '';
-								$emailAddress = isset($emailBody['elements']) && is_array($emailBody['elements']) && isset($emailBody['elements'][0]['handle~']) && isset($emailBody['elements'][0]['handle~']['emailAddress']) ? $emailBody['elements'][0]['handle~']['emailAddress'] : '';
-								$user = array(
-									'firstName' => $firstName,
-									'lastName' => $lastName,
-									'email' => $emailAddress,
-									'id' => $firstLastNameBody['id'],
-									'smallAvatar' => $smallAvatar,
-									'largeAvatar' => $largeAvatar
-								);
-
-								$profileData = the_champ_sanitize_profile_data($user, 'unikname');
-								if(get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_mc_sub', true)){
-									$profileData['mc_subscribe'] = 1;
-									delete_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub');
-								}
-								$response = the_champ_user_auth($profileData, 'unikname', $uniknameRedirectUrl);
-								if(is_array($response) && isset($response['message']) && $response['message'] == 'register' && (!isset($response['url']) || $response['url'] == '')){
-									$redirectTo = the_champ_get_login_redirection_url($uniknameRedirectUrl, true);
-								}elseif(isset($response['message']) && $response['message'] == 'linked'){
-									$redirectTo = $uniknameRedirectUrl . (strpos($uniknameRedirectUrl, '?') !== false ? '&' : '?') . 'linked=1';
-								}elseif(isset($response['message']) && $response['message'] == 'not linked'){
-									$redirectTo = $uniknameRedirectUrl . (strpos($uniknameRedirectUrl, '?') !== false ? '&' : '?') . 'linked=0';
-								}elseif(isset($response['url']) && $response['url'] != ''){
-									$redirectTo = $response['url'];
-								}else{
-									$redirectTo = the_champ_get_login_redirection_url($uniknameRedirectUrl);
-								}
-								the_champ_close_login_popup($redirectTo);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 }
 
 /**
