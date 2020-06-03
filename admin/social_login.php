@@ -178,7 +178,7 @@
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
-							<strong style="color: #14ACDF"><?php echo esc_url(home_url()); ?></strong>
+							<strong style="color: #14ACDF"><?php echo esc_url(home_url()).'/?OIDCCallback=UniknameConnect'; ?></strong>
 							</div>
 							</td>
 						</tr>
@@ -291,7 +291,7 @@
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Redirect URLs</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
-							<strong style="color: #14ACDF"><?php echo esc_url(home_url()).'/?SuperSocializerAuth=Linkedin'; ?></strong>
+							<strong style="color: #14ACDF"><?php echo esc_url(home_url()).'/?OIDCCallback=Linkedin'; ?></strong>
 							</div>
 							</td>
 						</tr>
@@ -312,7 +312,7 @@
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Redirect URLs</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
-							<strong style="color: #14ACDF"><?php echo esc_url(home_url()).'/?SuperSocializerAuth=Linkedin'; ?></strong>
+							<strong style="color: #14ACDF"><?php echo esc_url(home_url()).'/?OIDCCallback=Linkedin'; ?></strong>
 							</div>
 							</td>
 						</tr>

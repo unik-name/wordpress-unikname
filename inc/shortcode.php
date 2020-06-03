@@ -228,7 +228,7 @@ function the_champ_login_shortcode($params){
 			$html .= the_champ_login_button(true);
 			$html .= '</div><div style="clear:both"></div>';
 			if($redirect_url){
-				$html .= '<script type="text/javascript">theChampCustomRedirect = encodeURI("'. $redirect_url .'");var theChampSteamAuthUrl = ""; var theChampTwitterAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitter&super_socializer_redirect_to=" + theChampCustomRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Facebook&super_socializer_redirect_to=" + theChampCustomRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Google&super_socializer_redirect_to=" + theChampCustomRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Vkontakte&super_socializer_redirect_to=" + theChampCustomRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Linkedin&super_socializer_redirect_to=" + theChampCustomRedirect;</script>';
+				$html .= '<script type="text/javascript">theChampCustomRedirect = encodeURI("'. $redirect_url .'");var theChampSteamAuthUrl = ""; var theChampTwitterAuthUrl = theChampSiteUrl + "?OIDCCallback=Twitter&wp_unikname_redirect_to=" + theChampCustomRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?OIDCCallback=Facebook&wp_unikname_redirect_to=" + theChampCustomRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?OIDCCallback=Google&wp_unikname_redirect_to=" + theChampCustomRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?OIDCCallback=Vkontakte&wp_unikname_redirect_to=" + theChampCustomRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?OIDCCallback=Linkedin&wp_unikname_redirect_to=" + theChampCustomRedirect;</script>';
 			}
 		}
 		return $html;

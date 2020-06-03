@@ -149,17 +149,29 @@ function the_champ_connect(){
 		}
 	}
 
+
+//
+// ##     ## ##    ## #### ##    ## ##    ##    ###    ##     ## ######## 
+// ##     ## ###   ##  ##  ##   ##  ###   ##   ## ##   ###   ### ##       
+// ##     ## ####  ##  ##  ##  ##   ####  ##  ##   ##  #### #### ##       
+// ##     ## ## ## ##  ##  #####    ## ## ## ##     ## ## ### ## ######   
+// ##     ## ##  ####  ##  ##  ##   ##  #### ######### ##     ## ##       
+// ##     ## ##   ###  ##  ##   ##  ##   ### ##     ## ##     ## ##       
+//  #######  ##    ## #### ##    ## ##    ## ##     ## ##     ## ######## 
+//
+
+
 	// Unikname authentication
-	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Unikname'){
+	if(isset($_GET['OIDCCallback']) && sanitize_text_field($_GET['OIDCCallback']) == 'UniknameConnect'){
 		if(isset($theChampLoginOptions['un_key']) && $theChampLoginOptions['un_key'] != '' && isset($theChampLoginOptions['un_secret']) && $theChampLoginOptions['un_secret'] != ''){
 			if(!isset($_GET['code']) && !isset($_GET['state'])){
 				$uniknameAuthState = mt_rand();
-								update_user_meta($uniknameAuthState, 'heateor_ss_unikname_auth_state', isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : home_url());
+								update_user_meta($uniknameAuthState, 'heateor_ss_unikname_auth_state', isset($_GET['wp_unikname_redirect_to']) ? esc_url(trim($_GET['wp_unikname_redirect_to'])) : home_url());
 								if(isset($_GET['heateorMSEnabled'])){
 									update_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub', 1);
 								}
 					$uniknameScope = 'openid';
-					wp_redirect('https://integ.connect.unikname.com/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?SuperSocializerAuth=Unikname') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
+					wp_redirect('https://integ.connect.unikname.com/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?OIDCCallback=UniknameConnect') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
 					die;
 			}
 			if(isset($_GET['code']) && isset($_GET['state']) && ($uniknameRedirectUrl = get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state', true))){
@@ -169,7 +181,7 @@ function the_champ_connect(){
 				$data_access_token = array(
 					'grant_type' => 'authorization_code',
 					'code' => esc_attr(trim($_GET['code'])),
-					'redirect_uri' => home_url() . '/?SuperSocializerAuth=Unikname',
+					'redirect_uri' => home_url() . '/?OIDCCallback=UniknameConnect',
 					'client_id' => $theChampLoginOptions['un_key'],
 					'client_secret' => $theChampLoginOptions['un_secret']
 				);
@@ -258,7 +270,17 @@ function the_champ_connect(){
 			}
 		}
 	}
-	
+
+// 	
+// ##     ## ##    ## #### ##    ## ##    ##    ###    ##     ## ########    ######## ##    ## ########  
+// ##     ## ###   ##  ##  ##   ##  ###   ##   ## ##   ###   ### ##          ##       ###   ## ##     ## 
+// ##     ## ####  ##  ##  ##  ##   ####  ##  ##   ##  #### #### ##          ##       ####  ## ##     ## 
+// ##     ## ## ## ##  ##  #####    ## ## ## ##     ## ## ### ## ######      ######   ## ## ## ##     ## 
+// ##     ## ##  ####  ##  ##  ##   ##  #### ######### ##     ## ##          ##       ##  #### ##     ## 
+// ##     ## ##   ###  ##  ##   ##  ##   ### ##     ## ##     ## ##          ##       ##   ### ##     ## 
+//  #######  ##    ## #### ##    ## ##    ## ##     ## ##     ## ########    ######## ##    ## ########  
+// 
+
 	// Instagram auth
 	if(isset($_GET['SuperSocializerInstaToken']) && trim($_GET['SuperSocializerInstaToken']) != ''){
 		$instaAuthUrl = 'https://api.instagram.com/v1/users/self?access_token=' . sanitize_text_field($_GET['SuperSocializerInstaToken']);
@@ -266,7 +288,7 @@ function the_champ_connect(){
 		if( ! is_wp_error( $response ) && isset( $response['response']['code'] ) && 200 === $response['response']['code'] ){
 			$body = json_decode(wp_remote_retrieve_body( $response ));
 			if(is_object($body -> data) && isset($body -> data) && isset($body -> data -> id)){
-				$redirection = isset($_GET['super_socializer_redirect_to']) && heateor_ss_validate_url($_GET['super_socializer_redirect_to']) !== false ? esc_url($_GET['super_socializer_redirect_to']) : '';
+				$redirection = isset($_GET['wp_unikname_redirect_to']) && heateor_ss_validate_url($_GET['wp_unikname_redirect_to']) !== false ? esc_url($_GET['wp_unikname_redirect_to']) : '';
 				$profileData = the_champ_sanitize_profile_data($body -> data, 'instagram');
 				if(strpos($redirection, 'heateorMSEnabled') !== false){
 					$profileData['mc_subscribe'] = 1;
@@ -321,16 +343,16 @@ function the_champ_connect(){
 		die;
 	}
 
-	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Linkedin'){
+	if(isset($_GET['OIDCCallback']) && sanitize_text_field($_GET['OIDCCallback']) == 'Linkedin'){
 		if(isset($theChampLoginOptions['li_key']) && $theChampLoginOptions['li_key'] != '' && isset($theChampLoginOptions['li_secret']) && $theChampLoginOptions['li_secret'] != ''){
 			if(!isset($_GET['code']) && !isset($_GET['state'])){
 				$linkedinAuthState = mt_rand();
-                update_user_meta($linkedinAuthState, 'heateor_ss_linkedin_auth_state', isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : home_url());
+                update_user_meta($linkedinAuthState, 'heateor_ss_linkedin_auth_state', isset($_GET['wp_unikname_redirect_to']) ? esc_url(trim($_GET['wp_unikname_redirect_to'])) : home_url());
                 if(isset($_GET['heateorMSEnabled'])){
                 	update_user_meta($linkedinAuthState, 'heateor_ss_linkedin_mc_sub', 1);
                 }
 			    $linkedinScope = 'r_liteprofile,r_emailaddress';
-			    wp_redirect('https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=' . $theChampLoginOptions['li_key'] . '&redirect_uri=' . urlencode(home_url() . '/?SuperSocializerAuth=Linkedin') . '&state='. $linkedinAuthState .'&scope=' . $linkedinScope);
+			    wp_redirect('https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=' . $theChampLoginOptions['li_key'] . '&redirect_uri=' . urlencode(home_url() . '/?OIDCCallback=Linkedin') . '&state='. $linkedinAuthState .'&scope=' . $linkedinScope);
 			    die;
 			}
 			if(isset($_GET['code']) && isset($_GET['state']) && ($linkedinRedirectUrl = get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_linkedin_auth_state', true))){
@@ -339,7 +361,7 @@ function the_champ_connect(){
 				$data_access_token = array(
 					'grant_type' => 'authorization_code',
 					'code' => esc_attr(trim($_GET['code'])),
-					'redirect_uri' => home_url() . '/?SuperSocializerAuth=Linkedin',
+					'redirect_uri' => home_url() . '/?OIDCCallback=Linkedin',
 					'client_id' => $theChampLoginOptions['li_key'],
 					'client_secret' => $theChampLoginOptions['li_secret']
 				);
@@ -414,7 +436,7 @@ function the_champ_connect(){
 			}
 		}
 	}
-	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Facebook'){
+	if(isset($_GET['OIDCCallback']) && sanitize_text_field($_GET['OIDCCallback']) == 'Facebook'){
 		if(isset($theChampLoginOptions['fb_key']) && $theChampLoginOptions['fb_key'] != '' && isset($theChampLoginOptions['fb_secret']) && $theChampLoginOptions['fb_secret'] != ''){
 			if(function_exists('session_start')){
 				if(session_status() == PHP_SESSION_NONE){
@@ -422,7 +444,7 @@ function the_champ_connect(){
 				}
 				if(!isset($_GET['code'])){
 					// save referrer url in state
-					$_SESSION['super_socializer_facebook_redirect'] = isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : home_url();
+					$_SESSION['super_socializer_facebook_redirect'] = isset($_GET['wp_unikname_redirect_to']) ? esc_url(trim($_GET['wp_unikname_redirect_to'])) : home_url();
 				}
 			}
 			require 'library/Facebook/autoload.php';
@@ -439,12 +461,12 @@ function the_champ_connect(){
 
 		    $permissions = array('email'); // Optional permissions
 		    if(!isset($_GET['code'])){
-		        $loginUrl = $helper->getLoginUrl(home_url() . '/?SuperSocializerAuth=Facebook', $permissions);
+		        $loginUrl = $helper->getLoginUrl(home_url() . '/?OIDCCallback=Facebook', $permissions);
 		        wp_redirect($loginUrl);
 		        die;
 		    }else{
 			    try{
-	               $accessToken = $helper->getAccessToken(home_url() . '/?SuperSocializerAuth=Facebook');
+	               $accessToken = $helper->getAccessToken(home_url() . '/?OIDCCallback=Facebook');
 	            }catch(Facebook\Exceptions\FacebookResponseException $e){
 	            	_e('Problem fetching access token: ', 'super-socializer');
 					echo $e->getMessage();
@@ -495,7 +517,7 @@ function the_champ_connect(){
     		}
 		}
 	}
-	if((isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Google') || (isset($_GET['code']) && isset($_GET['state']))){
+	if((isset($_GET['OIDCCallback']) && sanitize_text_field($_GET['OIDCCallback']) == 'Google') || (isset($_GET['code']) && isset($_GET['state']))){
 		if(isset($theChampLoginOptions['google_key']) && $theChampLoginOptions['google_key'] != '' && isset($theChampLoginOptions['google_secret']) && $theChampLoginOptions['google_secret'] != ''){
 			require_once 'library/Google/Config.php';
 			require_once 'library/Google/Service.php';
@@ -526,7 +548,7 @@ function the_champ_connect(){
 		    $googleClient->setScopes(array('https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/userinfo.profile'));
 		    //Send Client Request
 		    $objOAuthService = new Google_Service_Oauth2($googleClient);
-		    $gpAuthUrl = $googleClient->createAuthUrl() . '&state=' . (isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : '');
+		    $gpAuthUrl = $googleClient->createAuthUrl() . '&state=' . (isset($_GET['wp_unikname_redirect_to']) ? esc_url(trim($_GET['wp_unikname_redirect_to'])) : '');
 		    if(!isset($_GET['code']) && !isset($_GET['state'])){
 		        wp_redirect($gpAuthUrl);
 		        die;
@@ -564,7 +586,7 @@ function the_champ_connect(){
 		}
 	}
 	// Vkontakte
-	if((isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Vkontakte') || (isset($_GET['code']) && !isset($_GET['SuperSocializerAuth']))){
+	if((isset($_GET['OIDCCallback']) && sanitize_text_field($_GET['OIDCCallback']) == 'Vkontakte') || (isset($_GET['code']) && !isset($_GET['OIDCCallback']))){
 		if(function_exists('session_start')){
 			if(session_status() == PHP_SESSION_NONE){
 				session_start();
@@ -578,14 +600,14 @@ function the_champ_connect(){
 		));
 		$heateorSsVkontakte->setScope(array('email'));
 	}
-	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Vkontakte'){
+	if(isset($_GET['OIDCCallback']) && sanitize_text_field($_GET['OIDCCallback']) == 'Vkontakte'){
 		if(isset($theChampLoginOptions['providers']) && in_array('vkontakte', $theChampLoginOptions['providers']) && isset($theChampLoginOptions['vk_key']) && $theChampLoginOptions['vk_key'] != '' && isset($theChampLoginOptions['vk_secure_key']) && $theChampLoginOptions['vk_secure_key'] != ''){
-			$_SESSION['super_socializer_vkontakte_redirect'] = isset($_GET['super_socializer_redirect_to']) ? esc_url(trim($_GET['super_socializer_redirect_to'])) : home_url();
+			$_SESSION['super_socializer_vkontakte_redirect'] = isset($_GET['wp_unikname_redirect_to']) ? esc_url(trim($_GET['wp_unikname_redirect_to'])) : home_url();
 			wp_redirect($heateorSsVkontakte->getLoginUrl());
 			die;
 		}
 	}
-	if(isset($_GET['code']) && !isset($_GET['SuperSocializerAuth'])){
+	if(isset($_GET['code']) && !isset($_GET['OIDCCallback'])){
 		if(isset($heateorSsVkontakte)){
 			$heateorSsVkontakte->authenticate($_GET['code']);
 			$userId = $heateorSsVkontakte->getUserId();
@@ -623,7 +645,7 @@ function the_champ_connect(){
 		}
 	}
 	// send request to twitter
-	if(isset($_GET['SuperSocializerAuth']) && sanitize_text_field($_GET['SuperSocializerAuth']) == 'Twitter' && !isset($_REQUEST['oauth_token'])){
+	if(isset($_GET['OIDCCallback']) && sanitize_text_field($_GET['OIDCCallback']) == 'Twitter' && !isset($_REQUEST['oauth_token'])){
 		if(isset($theChampLoginOptions['twitter_key']) && $theChampLoginOptions['twitter_key'] != '' && isset($theChampLoginOptions['twitter_secret']) && $theChampLoginOptions['twitter_secret'] != ''){
 			if(!function_exists('curl_init')){
 				?>
@@ -647,8 +669,8 @@ function the_champ_connect(){
 				if(isset($_GET['heateorMSEnabled'])){
 					update_user_meta($uniqueId, 'thechamp_mc_subscribe', '1');
 				}
-				if(isset($_GET['super_socializer_redirect_to']) && heateor_ss_validate_url($_GET['super_socializer_redirect_to']) !== false){
-					update_user_meta($uniqueId, 'thechamp_twitter_redirect', esc_url(trim($_GET['super_socializer_redirect_to'])));
+				if(isset($_GET['wp_unikname_redirect_to']) && heateor_ss_validate_url($_GET['wp_unikname_redirect_to']) !== false){
+					update_user_meta($uniqueId, 'thechamp_twitter_redirect', esc_url(trim($_GET['wp_unikname_redirect_to'])));
 				}
 				wp_redirect($connection->url('oauth/authorize', ['oauth_token' => $requestToken['oauth_token']]));
 				die;
@@ -876,7 +898,7 @@ function the_champ_frontend_scripts(){
 		$twitterRedirect = urlencode(the_champ_get_valid_url(html_entity_decode(esc_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]))));
 		$currentPageUrl = urldecode($twitterRedirect);
 		?>
-		<script> var theChampFBKey = '<?php echo $fbKey ?>', theChampSameTabLogin = '<?php echo isset($theChampLoginOptions["same_tab_login"]) ? 1 : 0; ?>', theChampVerified = <?php echo intval($userVerified) ?>; var theChampAjaxUrl = '<?php echo html_entity_decode(admin_url().$ajaxUrl) ?>'; var theChampPopupTitle = '<?php echo $notification; ?>'; var theChampEmailPopup = <?php echo intval($emailPopup); ?>; var theChampEmailAjaxUrl = '<?php echo html_entity_decode(admin_url().$emailAjaxUrl); ?>'; var theChampEmailPopupTitle = '<?php echo $emailPopupTitle; ?>'; var theChampEmailPopupErrorMsg = '<?php echo htmlspecialchars($emailPopupErrorMessage, ENT_QUOTES); ?>'; var theChampEmailPopupUniqueId = '<?php echo $emailPopupUniqueId; ?>'; var theChampEmailPopupVerifyMessage = '<?php echo $emailPopupVerifyMessage; ?>'; var theChampSteamAuthUrl = "<?php echo $theChampSteamLogin ? $theChampSteamLogin->url( esc_url(home_url()) . '?SuperSocializerSteamAuth=' . $twitterRedirect ) : ''; ?>"; var theChampTwitterRedirect = '<?php echo $twitterRedirect ?>'; <?php echo isset($theChampLoginOptions['disable_reg']) && isset($theChampLoginOptions['disable_reg_redirect']) && $theChampLoginOptions['disable_reg_redirect'] != '' ? 'var theChampDisableRegRedirect = "' . html_entity_decode(esc_url($theChampLoginOptions['disable_reg_redirect'])) . '";' : ''; ?> var heateorMSEnabled = 0; var theChampTwitterAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Twitter&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Facebook&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Google&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Vkontakte&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Linkedin&super_socializer_redirect_to=" + theChampTwitterRedirect; var theChampUniknameAuthUrl = theChampSiteUrl + "?SuperSocializerAuth=Unikname&super_socializer_redirect_to=" + theChampTwitterRedirect;</script>
+		<script> var theChampFBKey = '<?php echo $fbKey ?>', theChampSameTabLogin = '<?php echo isset($theChampLoginOptions["same_tab_login"]) ? 1 : 0; ?>', theChampVerified = <?php echo intval($userVerified) ?>; var theChampAjaxUrl = '<?php echo html_entity_decode(admin_url().$ajaxUrl) ?>'; var theChampPopupTitle = '<?php echo $notification; ?>'; var theChampEmailPopup = <?php echo intval($emailPopup); ?>; var theChampEmailAjaxUrl = '<?php echo html_entity_decode(admin_url().$emailAjaxUrl); ?>'; var theChampEmailPopupTitle = '<?php echo $emailPopupTitle; ?>'; var theChampEmailPopupErrorMsg = '<?php echo htmlspecialchars($emailPopupErrorMessage, ENT_QUOTES); ?>'; var theChampEmailPopupUniqueId = '<?php echo $emailPopupUniqueId; ?>'; var theChampEmailPopupVerifyMessage = '<?php echo $emailPopupVerifyMessage; ?>'; var theChampSteamAuthUrl = "<?php echo $theChampSteamLogin ? $theChampSteamLogin->url( esc_url(home_url()) . '?SuperSocializerSteamAuth=' . $twitterRedirect ) : ''; ?>"; var theChampTwitterRedirect = '<?php echo $twitterRedirect ?>'; <?php echo isset($theChampLoginOptions['disable_reg']) && isset($theChampLoginOptions['disable_reg_redirect']) && $theChampLoginOptions['disable_reg_redirect'] != '' ? 'var theChampDisableRegRedirect = "' . html_entity_decode(esc_url($theChampLoginOptions['disable_reg_redirect'])) . '";' : ''; ?> var heateorMSEnabled = 0; var theChampTwitterAuthUrl = theChampSiteUrl + "?OIDCCallback=Twitter&wp_unikname_redirect_to=" + theChampTwitterRedirect; var theChampFacebookAuthUrl = theChampSiteUrl + "?OIDCCallback=Facebook&wp_unikname_redirect_to=" + theChampTwitterRedirect; var theChampGoogleAuthUrl = theChampSiteUrl + "?OIDCCallback=Google&wp_unikname_redirect_to=" + theChampTwitterRedirect; var theChampVkontakteAuthUrl = theChampSiteUrl + "?OIDCCallback=Vkontakte&wp_unikname_redirect_to=" + theChampTwitterRedirect; var theChampLinkedinAuthUrl = theChampSiteUrl + "?OIDCCallback=Linkedin&wp_unikname_redirect_to=" + theChampTwitterRedirect; var theChampUniknameAuthUrl = theChampSiteUrl + "?OIDCCallback=UniknameConnect&wp_unikname_redirect_to=" + theChampTwitterRedirect;</script>
 		<?php
 		if(!$combinedScript){
 			wp_enqueue_script('the_champ_sl_common', plugins_url('js/front/social_login/common.js', __FILE__), array('jquery'), THE_CHAMP_SS_VERSION, $inFooter);
@@ -1727,7 +1749,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_fb_redirection_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Add %s in "Valid OAuth redirect URIs" option in your Facebook app settings for Facebook login to work. For more details, check step 9 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url() . '/?SuperSocializerAuth=Facebook', 'http://support.heateor.com/how-to-get-facebook-app-id/'); ?><input type="button" onclick="heateorSsFbRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('Add %s in "Valid OAuth redirect URIs" option in your Facebook app settings for Facebook login to work. For more details, check step 9 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url() . '/?OIDCCallback=Facebook', 'http://support.heateor.com/how-to-get-facebook-app-id/'); ?><input type="button" onclick="heateorSsFbRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
 				</div>
 				<?php
 			}
@@ -1915,7 +1937,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_linkedin_redirect_url_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('If you cannot get Linkedin login to work after updating the plugin, replace url saved in "Redirect URLs" option in your Linkedin app settings with %s. For more details, check step 6 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url().'/?SuperSocializerAuth=Linkedin', 'http://support.heateor.com/how-to-get-linkedin-api-key/'); ?><input type="button" onclick="heateorSsLinkedinNewRuNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Dismiss', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('If you cannot get Linkedin login to work after updating the plugin, replace url saved in "Redirect URLs" option in your Linkedin app settings with %s. For more details, check step 6 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url().'/?OIDCCallback=Linkedin', 'http://support.heateor.com/how-to-get-linkedin-api-key/'); ?><input type="button" onclick="heateorSsLinkedinNewRuNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Dismiss', 'super-socializer') ?>" /></p>
 				</div>
 				<?php
 			}
