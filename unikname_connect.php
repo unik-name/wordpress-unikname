@@ -12,6 +12,7 @@ License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
 define('THE_CHAMP_SS_VERSION', '7.12.41-1');
+define('UNIKNAME_CONNECT_SERVER', 'https://connect.unikname.com');
 
 require 'helper.php';
 
@@ -171,13 +172,12 @@ function the_champ_connect(){
 									update_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub', 1);
 								}
 					$uniknameScope = 'openid';
-					wp_redirect('https://integ.connect.unikname.com/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?OIDCCallback=UniknameConnect') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
+					wp_redirect(UNIKNAME_CONNECT_SERVER.'/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?SuperSocializerAuth=Unikname') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
 					die;
 			}
 			if(isset($_GET['code']) && isset($_GET['state']) && ($uniknameRedirectUrl = get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state', true))){
-				// echo "2a";
 				delete_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state');
-				$url = 'https://integ.connect.unikname.com/oidc/accessToken';
+				$url = UNIKNAME_CONNECT_SERVER.'/oidc/accessToken';
 				$data_access_token = array(
 					'grant_type' => 'authorization_code',
 					'code' => esc_attr(trim($_GET['code'])),
@@ -196,6 +196,7 @@ function the_champ_connect(){
 						)
 				);
 				// echo "2b";
+				echo var_dump($response);
 				if(!is_wp_error($response) && isset($response['response']['code']) && 200 === $response['response']['code']){
 					// echo "2c";
 					$body = json_decode(wp_remote_retrieve_body($response));
@@ -204,7 +205,7 @@ function the_champ_connect(){
 						// echo var_dump($body);
 						// fetch profile data
 						// TODO: replace this by an OIDC client
-						$profile = wp_remote_get('https://integ.connect.unikname.com/oidc/profile', array(
+						$profile = wp_remote_get(UNIKNAME_CONNECT_SERVER.'/oidc/profile', array(
 								'method' => 'GET',
 								'timeout' => 15,
 								'headers' => array('Authorization' => "Bearer ".$body->access_token),
