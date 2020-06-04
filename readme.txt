@@ -1,7 +1,7 @@
 ﻿=== WordPress Social Login with Unikname Connect Plugin - Unikname Connect for Wordpress ===
 Contributors: Unikname, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Translator: László Tavaszi http://kerekmese.hu, Chinese Translator: CalmSmile calmsmile.org, Portuguese Translator: Paulo Purkyt https://www.linkedin.com/in/ppurkyt, Italian Translator: FG3D (Freedom's Gate) https://fg3d.net, Spanish translator: Ignacio Iglesias http://trespies.com, Arabic Translator: http://www.ArabsSM.com, Russian/Ukrainian Translator: Nicholas Lagunov
 Tags: unikname, unikname connect, social login, social share, social commenting, social comments, social plugin, profile data, social analytics, online identity, social profile storage, single sign-on, social media follow, facebook login
-Requires at least: 5.3.0
+Requires at least: 5.0.0
 Tested up to: 5.4
 Stable tag: 7.12.41
 License: GPLv2 or later
