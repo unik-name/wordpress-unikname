@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Unikname Connect
-Plugin URI: https://docs.unikname.com
-Description: Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce website.
+Plugin URI: https://docs.unik-name.com/integration/connect/apps/wordpress/
+Description: Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce websites.
 Version: 7.12.41-1
 Author: Unikname
 Author URI: https://www.unikname.com
@@ -12,7 +12,10 @@ License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
 define('THE_CHAMP_SS_VERSION', '7.12.41-1');
-define('UNIKNAME_CONNECT_SERVER', 'https://connect.unikname.com');
+
+if (!defined('UNIKNAME_CONNECT_SERVER')) {
+	define('UNIKNAME_CONNECT_SERVER', getenv('UNIKNAME_CONNECT_SERVER') ?: 'https://connect.unikname.com');
+}
 
 require 'helper.php';
 
@@ -172,7 +175,7 @@ function the_champ_connect(){
 									update_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub', 1);
 								}
 					$uniknameScope = 'openid';
-					wp_redirect(UNIKNAME_CONNECT_SERVER.'/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?SuperSocializerAuth=Unikname') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
+					wp_redirect(UNIKNAME_CONNECT_SERVER.'/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?OIDCCallback=UniknameConnect') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
 					die;
 			}
 			if(isset($_GET['code']) && isset($_GET['state']) && ($uniknameRedirectUrl = get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state', true))){
@@ -196,7 +199,7 @@ function the_champ_connect(){
 						)
 				);
 				// echo "2b";
-				echo var_dump($response);
+				// echo var_dump($response);
 				if(!is_wp_error($response) && isset($response['response']['code']) && 200 === $response['response']['code']){
 					// echo "2c";
 					$body = json_decode(wp_remote_retrieve_body($response));
