@@ -1334,8 +1334,13 @@ div.the_champ_login_container i.theChampFacebookBackground {
 	left: 38px;
 }
 i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
- width: 319px;
- background-color: #0f2852;
+	width: 345px !important;
+	height: 35px;
+	padding: 6px 12px !important; 
+	background-color: rgb(15, 40, 82);
+	border-radius: 4px;
+	border-width: 1px;
+	border-color: rgb(15, 40, 82);
 }
 i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin ss {
 	background-size: 29px 29px !important;
@@ -1346,6 +1351,9 @@ i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin ss {
 i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin ss:after {
 	content: "Connect with your private @unikname";
 	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	font-family: 'Noto Sans', Arial, Helvetica;
 	color: #ffffff;
 	position: absolute;
 	left: 43px;
