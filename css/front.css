@@ -1337,7 +1337,7 @@ ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUnik
 	background-position-x: 0.5em !important;
 }
 ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin ss:after {
-	content: "Connect with your @unikname";
+	content: "Use your private @unikname";
 	font-style: normal;
 	color: #ffffff;
 	left: 3.5em;
