@@ -478,9 +478,10 @@
 							</th>
 							<td>
 							<input id="the_champ_sl_same_tab" name="the_champ_login[same_tab_login]" type="checkbox" <?php echo isset($theChampLoginOptions['same_tab_login']) ? 'checked = "checked"' : '';?> value="1" />
-							</td>
-						</tr>
-
+					  	</td>
+  					</tr> -->
+	  				<input id="the_champ_sl_same_tab" name="the_champ_login[same_tab_login]" type="hidden" value="1" />
+						<!--
 						<tr class="the_champ_help_content" id="the_champ_sl_same_tab_help_cont">
 							<td colspan="2">
 							<div>
