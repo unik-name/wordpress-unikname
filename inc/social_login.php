@@ -101,7 +101,7 @@ if(isset($theChampLoginOptions['enable_before_wc'])){
 	add_action( 'woocommerce_before_customer_login_form', 'the_champ_login_button' );
 }
 if(isset($theChampLoginOptions['enable_after_wc'])){
-	add_action( 'woocommerce_login_form', 'the_champ_login_button' );
+	add_action( 'woocommerce_login_form_end', 'the_champ_login_button' );
 }
 if(isset($theChampLoginOptions['enable_register_wc'])){
 	add_action( 'woocommerce_register_form', 'the_champ_login_button' );
