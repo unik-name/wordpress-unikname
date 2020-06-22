@@ -2,7 +2,7 @@
 <div id="fb-root"></div>
 	<div>
 		<?php
-		echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+		// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 		?>
 	</div>
 	<div class="metabox-holder">
@@ -38,12 +38,12 @@
 			<ul>
 				<li style="margin-left:9px"><a style="margin:0; line-height:auto !important; height:23px" class="nav-tab" href="#tabs-1"><?php _e('Basic Configuration', 'super-socializer') ?></a></li>
 				<li style="margin-left:9px"><a style="margin:0; line-height:auto !important; height:23px" class="nav-tab" href="#tabs-2"><?php _e('Advanced Configuration', 'super-socializer') ?></a></li>
-				<li style="margin-left:9px"><a style="margin:0; line-height:auto !important; height:23px" class="nav-tab" href="#tabs-3"><?php _e('GDPR', 'super-socializer') ?></a></li>
+				<!-- <li style="margin-left:9px"><a style="margin:0; line-height:auto !important; height:23px" class="nav-tab" href="#tabs-3"><?php _e('GDPR', 'super-socializer') ?></a></li>
 				<?php if($theChampIsBpActive){ ?>
 				<li style="margin-left:9px"><a style="margin:0; line-height:auto !important; height:23px" class="nav-tab" href="#tabs-4"><?php _e('XProfile Integration', 'super-socializer') ?></a></li>
 				<?php } ?>
 				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-5"><?php _e('Shortcode & Widget', 'super-socializer') ?></a></li>
-				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-6"><?php _e('FAQ', 'super-socializer') ?></a></li>
+				<li style="margin-left:9px"><a style="margin:0; height:23px" class="nav-tab" href="#tabs-6"><?php _e('FAQ', 'super-socializer') ?></a></li> -->
 			</ul>
 			</h2>
 			<div class="menu_containt_div" id="tabs-1">
@@ -53,9 +53,9 @@
 					<h3 class="hndle"><label><?php _e('Basic Configuration', 'super-socializer');?></label></h3>
 					<div class="inside">
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
-						<tr>
+						<!-- <tr>
 							<td colspan="2"><a href="https://www.heateor.com/social-login-buttons" target="_blank" style="text-decoration:none"><input style="width: auto;padding: 10px 42px;" type="button" value="<?php _e('Customize Social Login Icons', 'super-socializer'); ?> >>>" class="ss_demo"></a></td>
-						</tr>
+						</tr> -->
 
 						<tr>
 							<th>
@@ -102,7 +102,7 @@
 							<input id="the_champ_login_unikname" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('unikname', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="unikname" />
 							<label for="the_champ_login_unikname"><?php _e("Unikname", 'super-socializer'); ?></label>
 							</div>
-							<div class="theChampHorizontalSharingProviderContainer">
+							<!-- <div class="theChampHorizontalSharingProviderContainer">
 							<input id="the_champ_login_facebook" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('facebook', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="facebook" />
 							<label for="the_champ_login_facebook"><?php _e("Facebook", 'super-socializer'); ?></label>
 							</div>
@@ -129,7 +129,7 @@
 							<div class="theChampHorizontalSharingProviderContainer">
 							<input id="the_champ_login_steam" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('steam', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="steam" />
 							<label for="the_champ_login_steam"><?php _e("Steam", 'super-socializer'); ?></label>
-							</div>
+							</div> -->
 							</td>
 						</tr>
 
@@ -143,7 +143,7 @@
 
 						<tr>
 							<th>
-							<label for="the_champ_unlogin_key"><?php _e("Unikname App @unikname", 'super-socializer'); ?><img id="the_champ_slun_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
+							<label for="the_champ_unlogin_key"><?php _e("Unikname Connect @unikname", 'super-socializer'); ?><img id="the_champ_slun_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_unlogin_key" name="the_champ_login[un_key]" type="text" value="<?php echo isset($theChampLoginOptions['un_key']) ? $theChampLoginOptions['un_key'] : '' ?>" />
@@ -153,18 +153,18 @@
 						<tr class="the_champ_help_content" id="the_champ_slun_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Facebook Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
-							<br/>
+							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get an organization @unikname</a>', 'super-socializer'), 'https://docs.unikname.com/integration/connect/apps/wordpress/') ?>
+							<!-- <br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
-							<strong style="color: #14ACDF"><?php echo esc_url(home_url()); ?></strong>
+							<strong style="color: #14ACDF"><?php echo esc_url(home_url()); ?></strong> -->
 							</div>
 							</td>
 						</tr>
 
 						<tr>
 							<th>
-							<label for="the_champ_unlogin_secret"><?php _e("Unikname App Secret", 'super-socializer'); ?><img id="the_champ_slun_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
+							<label for="the_champ_unlogin_secret"><?php _e("Unikname Connect Secret", 'super-socializer'); ?><img id="the_champ_slun_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_unlogin_secret" name="the_champ_login[un_secret]" type="text" value="<?php echo isset($theChampLoginOptions['un_secret']) ? $theChampLoginOptions['un_secret'] : '' ?>" />
@@ -174,16 +174,16 @@
 						<tr class="the_champ_help_content" id="the_champ_slun_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Facebook Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App Secret', 'super-socializer'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
-							<br/>
+							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get Unikname Connect Secret</a>', 'super-socializer'), 'https://docs.unikname.com/integration/connect/apps/wordpress/') ?>
+							<!-- <br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
-							<strong style="color: #14ACDF"><?php echo esc_url(home_url()).'/?OIDCCallback=UniknameConnect'; ?></strong>
+							<strong style="color: #14ACDF"><?php echo esc_url(home_url()).'/?OIDCCallback=UniknameConnect'; ?></strong> -->
 							</div>
 							</td>
 						</tr>
 
-						<tr>
+						<!-- <tr>
 							<th>
 							<label for="the_champ_fblogin_key"><?php _e("Facebook App ID", 'super-socializer'); ?><img id="the_champ_slfb_key_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
@@ -439,7 +439,7 @@
 							<strong style="color: #14ACDF"><?php echo esc_url(home_url()); ?></strong>
 							</div>
 							</td>
-						</tr>
+						</tr> -->
 					</table>
 					</div>
 				</div>
@@ -472,7 +472,7 @@
 							</td>
 						</tr>
 
-						<tr>
+						<!-- <tr>
 							<th>
 							<label for="the_champ_sl_same_tab"><?php _e("Trigger social login in the same browser tab", 'super-socializer'); ?><img id="the_champ_sl_same_tab_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
@@ -487,9 +487,9 @@
 							<?php _e('Trigger social login in the same browser tab instead of a popup window', 'super-socializer') ?>
 							</div>
 							</td>
-						</tr>
+						</tr> -->
 
-						<tr>
+						<!-- <tr>
 							<th>
 							<label for="the_champ_sl_align"><?php _e("Center align icons", 'super-socializer'); ?><img id="the_champ_sl_align_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
@@ -504,7 +504,7 @@
 							<?php _e('Center align social login icons', 'super-socializer') ?>
 							</div>
 							</td>
-						</tr>
+						</tr> -->
 
 						<tr>
 							<th>
@@ -633,7 +633,7 @@
 							</tr>
 						    <?php
 						}
-						if(!isset($theChampFacebookOptions['force_fb_comment']) && isset($theChampLoginOptions['enable'])){
+						/*if(!isset($theChampFacebookOptions['force_fb_comment']) && isset($theChampLoginOptions['enable'])){
 							?>
 							<tr>
 								<th>
@@ -653,7 +653,8 @@
 								</td>
 							</tr>
 							<?php
-						}
+						}*/
+						/*
 						?>
 						<tr>
 							<th>
@@ -709,7 +710,7 @@
 							</div>
 							</td>
 						</tr>
-						<?php } ?>
+						<?php }*/ ?>
 
 						</tbody>
 
@@ -970,7 +971,7 @@
 			<div class="menu_containt_div" id="tabs-3">
 				<div class="clear"></div>
 				<div class="the_champ_left_column">
-				<div class="stuffbox">
+				<!-- <div class="stuffbox">
 					<h3><label><?php _e('GDPR', 'super-socializer');?></label></h3>
 					<div class="inside">
 					<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
@@ -1098,7 +1099,7 @@
 						</tbody>
 					</table>
 					</div>
-				</div>
+				</div> -->
 				</div>
 				<?php include 'help.php'; ?>
 			</div>
@@ -1168,7 +1169,7 @@
 			<?php } ?>
 
 			<div class="menu_containt_div" id="tabs-5">
-				<div class="clear"></div>
+				<!-- <div class="clear"></div>
 				<div class="the_champ_left_column">
 				<div class="stuffbox">
 					<h3><label><?php _e('Shortcode & Widget', 'super-socializer');?></label></h3>
@@ -1177,12 +1178,12 @@
 						<p><a style="text-decoration:none" href="http://support.heateor.com/social-linking-shortcode" target="_blank"><?php _e('Social Linking Shortcode', 'super-socializer') ?></a></p>
 					</div>
 				</div>
-				</div>
+				</div> -->
 				<?php include 'help.php'; ?>
 			</div>
 
 			<div class="menu_containt_div" id="tabs-6">
-				<div class="clear"></div>
+				<!-- <div class="clear"></div>
 				<div class="the_champ_left_column">
 				<div class="stuffbox">
 					<h3><label><?php _e('FAQ', 'super-socializer');?></label></h3>
@@ -1197,7 +1198,7 @@
 						<p><a href="http://support.heateor.com/browser-blocking-social-features/" target="_blank"><?php _e('Why is my browser blocking some features of the plugin?', 'super-socializer' ) ?></a></p>
 					</div>
 				</div>
-				</div>
+				</div> -->
 				<?php include 'help.php'; ?>
 			</div>
 
@@ -1209,15 +1210,15 @@
 		</p>
 		<p>
 			<?php
-			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+			// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 			?>
 		</p>
 		</form>
 		<div class="clear"></div>
-		<div class="stuffbox">
+		<!-- <div class="stuffbox">
 			<h3><label><?php _e("Instagram Shoutout", 'super-socializer'); ?></label></h3>
 			<div class="inside" style="padding-left:10px">
 			<p><?php _e( 'If you can send (to hello@heateor.com) how this plugin is helping your business, we would be glad to shoutout on Instagram. You can also send any relevant hashtags and people to mention in the Instagram post.', 'super-socializer' ) ?></p>
 			</div>
-		</div>
+		</div> -->
 	</div>

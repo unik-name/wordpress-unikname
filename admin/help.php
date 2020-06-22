@@ -1,5 +1,5 @@
 <?php defined('ABSPATH') or die("Cheating........Uh!!"); ?>
-<div class="the_champ_right_column">
+<!-- <div class="the_champ_right_column">
 	<div class="stuffbox">
 		<h3><label><?php _e('About', 'super-socializer');?></label><label style="float:right"><?php _e('Version', 'super-socializer');?> <?php echo get_option('the_champ_ss_version'); ?></label></h3>
 		<div class="inside">
@@ -115,4 +115,4 @@
 		</div>
 	</div>
 	
-</div>
+</div> -->

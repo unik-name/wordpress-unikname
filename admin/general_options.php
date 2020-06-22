@@ -4,7 +4,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 <div id="fb-root"></div>
 <div>
 	<?php
-	echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+	// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 	?>
 </div>
 <div class="metabox-holder columns-2" id="post-body">
@@ -102,10 +102,10 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 			<?php include 'help.php'; ?>
 	</form>
 	<div class="clear"></div>
-	<div class="stuffbox">
+	<!-- <div class="stuffbox">
 		<h3><label><?php _e("Instagram Shoutout", 'super-socializer' ); ?></label></h3>
 		<div class="inside" style="padding-left:7px">
 		<p><?php _e( 'If you can send (to hello@heateor.com) how this plugin is helping your business, we would be glad to shoutout on Instagram. You can also send any relevant hashtags and people to mention in the Instagram post.', 'super-socializer' ) ?></p>
 		</div>
-	</div>
+	</div> -->
 </div>
