@@ -3,7 +3,7 @@
 Plugin Name: Unikname Connect
 Plugin URI: https://docs.unik-name.com/integration/connect/apps/wordpress/
 Description: Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce websites.
-Version: 7.12.41-1
+Version: 8.0.0
 Author: Unikname
 Author URI: https://www.unikname.com
 Text Domain: unikname-connect
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '7.12.41-1');
+define('THE_CHAMP_SS_VERSION', '8.0.0');
 
 if (!defined('UNIKNAME_CONNECT_SERVER')) {
 	define('UNIKNAME_CONNECT_SERVER', getenv('UNIKNAME_CONNECT_SERVER') ?: 'https://connect.unikname.com');
@@ -1396,7 +1396,7 @@ function the_champ_save_default_options(){
 
 	// login options
 	add_option('the_champ_login', array(
-	   'title' => __('Login with your Social ID', 'super-socializer'),
+	   'title' => __('We recommend the next-generation authentication: simple, secure, private', 'super-socializer'),
 	   'email_error_message' => __('Email you entered is already registered or invalid', 'super-socializer'),
 	   'avatar' => 1,
 	   'email_required' => 1,
@@ -1418,10 +1418,10 @@ function the_champ_save_default_options(){
 
 	// social commenting options
 	add_option('the_champ_facebook', array(
-	   'enable_commenting' => '1',
-	   'enable_fbcomments' => '1',
-	   'enable_page' => '1',
-	   'enable_post' => '1',
+	   'enable_commenting' => '0',
+	   'enable_fbcomments' => '0',
+	   'enable_page' => '0',
+	   'enable_post' => '0',
 	   'comment_lang' => get_locale(),
 	   'commenting_order' => 'wordpress,facebook,disqus',
 	   'commenting_label' => 'Leave a reply',
@@ -1432,7 +1432,7 @@ function the_champ_save_default_options(){
 
 	// sharing options
 	add_option('the_champ_sharing', array(
-	   'enable' => '1',
+	   'enable' => '0',
 	   'horizontal_sharing_shape' => 'round',
 	   'horizontal_sharing_size' => '35',
 	   'horizontal_sharing_width' => '70',
@@ -1654,9 +1654,9 @@ function the_champ_addon_update_notification(){
 		global $theChampLoginOptions;
 		if(get_transient('heateor-ss-admin-notice-on-activation')){ ?>
 	        <div class="notice notice-success is-dismissible">
-	            <p><strong><?php printf(__('Thanks for installing Super Socializer plugin', 'super-socializer'), 'http://support.heateor.com/super-socializer-configuration'); ?></strong></p>
+	            <p><strong><?php printf(__('Thanks for installing Unikname Connect plugin', 'super-socializer'), 'https://docs.unikname.com/integration/connect/apps/wordpress/'); ?></strong></p>
 	            <p>
-					<a href="http://support.heateor.com/super-socializer-configuration" target="_blank" class="button button-primary"><?php _e('Configure the Plugin', 'super-socializer'); ?></a>
+					<a href="https://docs.unikname.com/integration/connect/apps/wordpress/" target="_blank" class="button button-primary"><?php _e('Configure the Plugin', 'super-socializer'); ?></a>
 				</p>
 	        </div> <?php
 	        // Delete transient, only display this notice once
@@ -1835,7 +1835,7 @@ function the_champ_addon_update_notification(){
 		}
 
 		if(version_compare('7.11.12', $currentVersion) <= 0){
-			if(isset($theChampLoginOptions['enable']) && isset($theChampLoginOptions['gdpr_enable']) && $theChampLoginOptions['privacy_policy_url'] == ''){
+			/*if(isset($theChampLoginOptions['enable']) && isset($theChampLoginOptions['gdpr_enable']) && $theChampLoginOptions['privacy_policy_url'] == ''){
 				?>
 				<div class="error">
 					<h3>Super Socializer</h3>
@@ -1864,7 +1864,7 @@ function the_champ_addon_update_notification(){
 					<p><?php echo sprintf(__('This plugin is GDPR compliant. You need to update the privacy policy of your website regarding the personal data this plugin saves, as mentioned <a href="%s" target="_blank">here</a>', 'super-socializer'), 'http://support.heateor.com/gdpr-and-our-plugins'); ?><input type="button" onclick="heateorSsGDPRNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
 				</div>
 				<?php
-			}
+			}*/
 
 		}
 
@@ -2008,6 +2008,25 @@ function the_champ_update_db_check(){
 	$currentVersion = get_option('the_champ_ss_version');
 
 	if($currentVersion && $currentVersion != THE_CHAMP_SS_VERSION){
+		if(version_compare("8.0.0", $currentVersion) > 0){
+			global $theChampLoginOptions;
+			$theChampLoginOptions['title'] = __('We recommend the next-generation authentication: simple, secure, private');
+			update_option('the_champ_login', $theChampLoginOptions);
+
+			// Force disabling of 'the_champ_facebook'
+			global $theChampFacebookOptions;
+			$theChampFacebookOptions['enable_commenting'] = '0';
+			$theChampFacebookOptions['enable_fbcomments'] = '0';
+			$theChampFacebookOptions['enable_page'] = '0';
+			$theChampFacebookOptions['enable_post'] = '0';
+			update_option('the_champ_facebook', $theChampFacebookOptions);
+
+			// Force disabling of 'the_champ_sharing'
+			global $theChampSharingOptions;
+			$theChampSharingOptions['enable'] = '0';
+			update_option('the_champ_sharing', $theChampSharingOptions);
+		}
+
 		if(version_compare("7.12.39", $currentVersion) > 0){
 			global $theChampLoginOptions;
 			$networksToRemove = array('twitch', 'xing', 'liveJournal');
