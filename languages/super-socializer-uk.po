@@ -17,19 +17,19 @@ msgstr ""
 "%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../super_socializer.php:339
+#: ../unikname_connect.php:339
 msgid "Problem fetching access token: "
 msgstr ""
 
-#: ../super_socializer.php:343 ../super_socializer.php:357
+#: ../unikname_connect.php:343 ../unikname_connect.php:357
 msgid "Facebook SDK returned an error: "
 msgstr ""
 
-#: ../super_socializer.php:353
+#: ../unikname_connect.php:353
 msgid "Graph returned an error: "
 msgstr ""
 
-#: ../super_socializer.php:521
+#: ../unikname_connect.php:521
 msgid ""
 "cURL is not enabled at your website server. Please contact your website "
 "server administrator to enable it."
@@ -37,7 +37,7 @@ msgstr ""
 "Curl не включений у вашому веб-сайті. Вам, можливо, буде потрібно звернутися "
 "до адміністратора вашого сайту, щоб включити це."
 
-#: ../super_socializer.php:549
+#: ../unikname_connect.php:549
 #, fuzzy, php-format
 msgid ""
 "Enter exactly the following url in <strong>Website</strong> option in your "
@@ -46,7 +46,7 @@ msgstr ""
 "Введіть діюче посилання для <strong> сайту </ strong> та <strong> зворотне "
 "посилання </ strong> у вашому додатку Твіттера (дивіться крок 3% s)"
 
-#: ../super_socializer.php:552
+#: ../unikname_connect.php:552
 #, fuzzy, php-format
 msgid ""
 "Enter exactly the following url in <strong>Callback URLs</strong> option in "
@@ -55,7 +55,7 @@ msgstr ""
 "Введіть діюче посилання для <strong> сайту </ strong> та <strong> зворотне "
 "посилання </ strong> у вашому додатку Твіттера (дивіться крок 3% s)"
 
-#: ../super_socializer.php:555
+#: ../unikname_connect.php:555
 msgid ""
 "Make sure cURL is enabled at your website server. You may need to contact "
 "the server administrator of your website to verify this"
@@ -64,67 +64,67 @@ msgstr ""
 "буде потрібно звернутися до адміністратора сервера вашого сайту, щоб "
 "переконатися в цьому."
 
-#: ../super_socializer.php:737 ../helper.php:972
+#: ../unikname_connect.php:737 ../helper.php:972
 msgid "Please verify your email address to login."
 msgstr "Будь ласка, підтвердіть свою адресу електронної пошти."
 
-#: ../super_socializer.php:737
+#: ../unikname_connect.php:737
 msgid "Your email has been verified. Now you can login to your account"
 msgstr ""
 "Ваша електронна адреса була перевірена. Тепер ви можете увійти до свого "
 "облікового запису"
 
-#: ../super_socializer.php:741
+#: ../unikname_connect.php:741
 msgid "Notification"
 msgstr "Повідомлення"
 
-#: ../super_socializer.php:759 ../admin/social_login.php:672
+#: ../unikname_connect.php:759 ../admin/social_login.php:672
 msgid "Email required"
 msgstr "Електронна адреса (обо'язково)"
 
-#: ../super_socializer.php:762
+#: ../unikname_connect.php:762
 msgid "Please check your email inbox to complete the registration."
 msgstr "Будь ласка, перевірте вашу поштову скриньку для завершення реєстрації."
 
-#: ../super_socializer.php:840
+#: ../unikname_connect.php:840
 msgid "Leave a reply"
 msgstr "Залишити коментар"
 
-#: ../super_socializer.php:856 ../inc/social_sharing.php:241
+#: ../unikname_connect.php:856 ../inc/social_sharing.php:241
 msgid "Shares"
 msgstr "Поширили:"
 
-#: ../super_socializer.php:856 ../inc/social_sharing.php:241
+#: ../unikname_connect.php:856 ../inc/social_sharing.php:241
 msgid "Share"
 msgstr "Поділитися"
 
-#: ../super_socializer.php:856
+#: ../unikname_connect.php:856
 #, fuzzy
 msgid "Link copied."
 msgstr "LinkedIn"
 
-#: ../super_socializer.php:1102
+#: ../unikname_connect.php:1102
 msgid "Super Socializer - General Options"
 msgstr "Super Socializer - Загальні Параметри"
 
-#: ../super_socializer.php:1102 ../admin/general_options.php:15
+#: ../unikname_connect.php:1102 ../admin/general_options.php:15
 #: ../admin/social_commenting.php:47
 msgid "General Options"
 msgstr "Загальні параметри"
 
-#: ../super_socializer.php:1170 ../helper.php:894
+#: ../unikname_connect.php:1170 ../helper.php:894
 msgid "Social Avatar"
 msgstr "Соціальний Аватар"
 
-#: ../super_socializer.php:1173
+#: ../unikname_connect.php:1173
 msgid "Small Avatar Url"
 msgstr "Посилання для маленького аватара"
 
-#: ../super_socializer.php:1177
+#: ../unikname_connect.php:1177
 msgid "Large Avatar Url"
 msgstr "Посилання для великого аватара"
 
-#: ../super_socializer.php:1181 ../helper.php:897
+#: ../unikname_connect.php:1181 ../helper.php:897
 msgid ""
 "Do not fetch and update social avatar from my profile, next time I Social "
 "Login"
@@ -132,83 +132,83 @@ msgstr ""
 "Не отримувати і оновлювати соціальний аватар з мого профілю, в наступний "
 "раз  коли я використовую вхід через соцмережі"
 
-#: ../super_socializer.php:1185 ../helper.php:898
+#: ../unikname_connect.php:1185 ../helper.php:898
 msgid "Update social avatar, next time I Social Login"
 msgstr ""
 "Оновлення аватара соцмереж наступного разу при використанні входу через "
 "соцмережі"
 
-#: ../super_socializer.php:1262
+#: ../unikname_connect.php:1262
 msgid "Login with your Social ID"
 msgstr "Увійти через соціальний аккаунт"
 
-#: ../super_socializer.php:1263
+#: ../unikname_connect.php:1263
 msgid "Email you entered is already registered or invalid"
 msgstr "Електронна пошта, яку ви ввели, вже зареєстрована або недійсна"
 
-#: ../super_socializer.php:1268
+#: ../unikname_connect.php:1268
 msgid "Please enter a valid email address. You might be required to verify it"
 msgstr ""
 "Будь ласка, введіть дійсну адресу електронної пошти. Вам, можливо, буде "
 "потрібно перевірити його"
 
-#: ../super_socializer.php:1272 ../super_socializer.php:1962
+#: ../unikname_connect.php:1272 ../unikname_connect.php:1962
 msgid "Link your social account to login to your account at this website"
 msgstr ""
 "Введіть посилання на ваш аккаунт в соціальних мережах щоб увійти в обліковий "
 "запис на цьому сайті"
 
-#: ../super_socializer.php:1520
+#: ../unikname_connect.php:1520
 msgid "Thanks for installing Super Socializer plugin"
 msgstr ""
 
-#: ../super_socializer.php:1522
+#: ../unikname_connect.php:1522
 msgid "Configure the Plugin"
 msgstr ""
 
-#: ../super_socializer.php:1533
+#: ../unikname_connect.php:1533
 msgid ""
 "Update \"Facebook Comments Moderation\" add-on for compatibility with "
 "current version of Super Socializer"
 msgstr ""
 
-#: ../super_socializer.php:1542
+#: ../unikname_connect.php:1542
 msgid ""
 "Update \"Facebook Comments Notifier\" add-on for compatibility with current "
 "version of Super Socializer"
 msgstr ""
 
-#: ../super_socializer.php:1551
+#: ../unikname_connect.php:1551
 msgid ""
 "Update \"Social Login Buttons\" add-on for compatibility with current "
 "version of Super Socializer"
 msgstr ""
 
-#: ../super_socializer.php:1560
+#: ../unikname_connect.php:1560
 msgid ""
 "Update \"Social Share myCRED Integration\" add-on for maximum compatibility "
 "with current version of Super Socializer"
 msgstr ""
 
-#: ../super_socializer.php:1569
+#: ../unikname_connect.php:1569
 msgid ""
 "Update \"Social Login myCRED Integration\" add-on for maximum compatibility "
 "with current version of Super Socializer"
 msgstr ""
 
-#: ../super_socializer.php:1580
+#: ../unikname_connect.php:1580
 #, php-format
 msgid ""
 "To continue using Steam login save Steam API key <a href=\"%s\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1595
+#: ../unikname_connect.php:1595
 #, php-format
 msgid ""
 "To continue using Social Login, save the secret keys <a href=\"%s\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1619
+#: ../unikname_connect.php:1619
 #, php-format
 msgid ""
 "Add %s in \"Valid OAuth redirect URIs\" option in your Facebook app settings "
@@ -216,14 +216,14 @@ msgid ""
 "target=\"_blank\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1619 ../super_socializer.php:1644
-#: ../super_socializer.php:1669 ../super_socializer.php:1694
-#: ../super_socializer.php:1727 ../super_socializer.php:1755
-#: ../super_socializer.php:1782 ../super_socializer.php:1859
+#: ../unikname_connect.php:1619 ../unikname_connect.php:1644
+#: ../unikname_connect.php:1669 ../unikname_connect.php:1694
+#: ../unikname_connect.php:1727 ../unikname_connect.php:1755
+#: ../unikname_connect.php:1782 ../unikname_connect.php:1859
 msgid "Okay"
 msgstr "Гаразд."
 
-#: ../super_socializer.php:1644
+#: ../unikname_connect.php:1644
 #, php-format
 msgid ""
 "Add %s in \"Callback URLs\" option in your Twitter app settings for Twitter "
@@ -231,7 +231,7 @@ msgid ""
 "\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1669
+#: ../unikname_connect.php:1669
 #, php-format
 msgid ""
 "Add %s in \"Authorized Redirect URLs\" option in your Linkedin app settings "
@@ -239,7 +239,7 @@ msgid ""
 "target=\"_blank\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1694
+#: ../unikname_connect.php:1694
 #, php-format
 msgid ""
 "Add %s in \"Authorized redirect URIs\" option in your Google client settings "
@@ -247,13 +247,13 @@ msgid ""
 "target=\"_blank\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1705
+#: ../unikname_connect.php:1705
 #, php-format
 msgid ""
 "Save the url of privacy policy page of your website <a href=\"%s\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1727
+#: ../unikname_connect.php:1727
 #, php-format
 msgid ""
 "This plugin is GDPR compliant. You need to update the privacy policy of your "
@@ -261,7 +261,7 @@ msgid ""
 "\"%s\" target=\"_blank\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1755
+#: ../unikname_connect.php:1755
 #, php-format
 msgid ""
 "Now plugin supports a new service Twitcount.com to show Twitter shares. To "
@@ -270,7 +270,7 @@ msgid ""
 "your website %s with them. No need to copy-paste any code from their website."
 msgstr ""
 
-#: ../super_socializer.php:1782
+#: ../unikname_connect.php:1782
 #, php-format
 msgid ""
 "Replace url saved in \"Callback URLs\" option in your Twitter app settings "
@@ -278,7 +278,7 @@ msgid ""
 "\"%s\" target=\"_blank\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1807
+#: ../unikname_connect.php:1807
 #, php-format
 msgid ""
 "If you cannot get Linkedin login to work after updating the plugin, replace "
@@ -286,11 +286,11 @@ msgid ""
 "For more details, check step 6 <a href=\"%s\" target=\"_blank\">here</a>"
 msgstr ""
 
-#: ../super_socializer.php:1807 ../super_socializer.php:1834
+#: ../unikname_connect.php:1807 ../unikname_connect.php:1834
 msgid "Dismiss"
 msgstr ""
 
-#: ../super_socializer.php:1833
+#: ../unikname_connect.php:1833
 #, php-format
 msgid ""
 "Save Facebook App ID and Secret keys in \"Standard Interface\" and/or "
@@ -299,7 +299,7 @@ msgid ""
 "that, clear share counts cache from \"Miscellaneous\" section"
 msgstr ""
 
-#: ../super_socializer.php:1859
+#: ../unikname_connect.php:1859
 #, php-format
 msgid ""
 "Your website visitors will see a popup notification (only once) if their "
@@ -315,7 +315,7 @@ msgstr ""
 "користувачів, якщо їх браузери блокують функції плагіна» <a href=\"%s\"> тут "
 "</a>"
 
-#: ../super_socializer.php:2038
+#: ../unikname_connect.php:2038
 msgid ""
 "Your browser is blocking some features of this website. Please follow the "
 "instructions at {support_url} to unblock these."
