@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Super Socializer\n"
+"Project-Id-Version: Unkname Connect\n"
 "POT-Creation-Date: 2020-04-10 17:18+0530\n"
 "PO-Revision-Date: 2020-04-10 17:18+0530\n"
 "Last-Translator: Heateor <hello@heateor.com>\n"
@@ -101,8 +101,8 @@ msgid "Link copied."
 msgstr "链接已复制。"
 
 #: unikname_connect.php:1102
-msgid "Super Socializer - General Options"
-msgstr "Super Socializer-常规选项"
+msgid "Unkname Connect - General Options"
+msgstr "Unkname Connect-常规选项"
 
 #: unikname_connect.php:1102 admin/general_options.php:15
 #: admin/social_commenting.php:47
@@ -132,7 +132,7 @@ msgid "Update social avatar, next time I Social Login"
 msgstr "更新社会化头像，下次社会化登录"
 
 #: unikname_connect.php:1262
-msgid "Login with your Social ID"
+msgid "We recommend the next-generation authentication: simple, secure, private"
 msgstr "使用您的社交 ID登录"
 
 #: unikname_connect.php:1263
@@ -148,7 +148,7 @@ msgid "Link your social account to login to your account at this website"
 msgstr "链接你的社会化媒体帐户登录您本站账号"
 
 #: unikname_connect.php:1520
-msgid "Thanks for installing Super Socializer plugin"
+msgid "Thanks for installing Unkname Connect plugin"
 msgstr ""
 
 #: unikname_connect.php:1522
@@ -159,14 +159,14 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Update \"Facebook Comments Moderation\" add-on for compatibility with "
-"current version of Super Socializer"
+"current version of Unkname Connect"
 msgstr "更新 \"facebook 评论审核\" 加载项与当前版本的Super Socialzer"
 
 #: unikname_connect.php:1542
 #, fuzzy
 msgid ""
 "Update \"Facebook Comments Notifier\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr ""
 "更新 \"facebook 评论通知程序\" 加载项, 以与当前版本的超级社交提供兼容性"
 
@@ -174,14 +174,14 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Update \"Social Login Buttons\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr "更新 \"社交登录按钮\" 加载项与当前版本的超级社交器兼容"
 
 #: unikname_connect.php:1560
 #, fuzzy
 msgid ""
 "Update \"Social Share myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 "更新 \"社交分享 mycred 集成\" 加载项, 以最大限度地与当前版本的超级社交提供兼"
 "容"
@@ -190,7 +190,7 @@ msgstr ""
 #, fuzzy
 msgid ""
 "Update \"Social Login myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 "更新 \"社交登录 mycred 集成\" 加载项, 以最大限度地兼容当前版本的超级社交"
 
@@ -314,7 +314,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Save Facebook App ID and Secret keys in \"Standard Interface\" and/or "
-"\"Floating Interface\" section(s) at <a href=\"%s\">Super Socializer > "
+"\"Floating Interface\" section(s) at <a href=\"%s\">Unkname Connect > "
 "Social Sharing</a> page to fix the issue with Facebook share count. After "
 "that, clear share counts cache from \"Miscellaneous\" section"
 msgstr ""
@@ -2631,7 +2631,7 @@ msgid ""
 "Enable Social Login from \"Basic Configuration\" section at \"Super "
 "Socializer > Social Login\" page in admin panel"
 msgstr ""
-"在管理员控制面板中的”Super Socializer > 社交登录”页，从”基本配置”启用社交化登"
+"在管理员控制面板中的”Unkname Connect > 社交登录”页，从”基本配置”启用社交化登"
 "录。"
 
 #: inc/social_sharing.php:31 inc/social_sharing.php:340
@@ -2679,8 +2679,8 @@ msgid ""
 msgstr "请点击下面的链接或粘贴在浏览器中, 以验证您的电子邮件"
 
 #: inc/widget.php:11
-msgid "Super Socializer - Login"
-msgstr "Super Socializer-登录"
+msgid "Unkname Connect - Login"
+msgstr "Unkname Connect-登录"
 
 #: inc/widget.php:13
 #, fuzzy
@@ -2697,9 +2697,9 @@ msgstr "使用您的社交帐户登录"
 
 #: inc/widget.php:82
 msgid ""
-"Make sure Social Login is enabled at \"Super Socializer > Social Login\" "
+"Make sure Social Login is enabled at \"Unkname Connect > Social Login\" "
 "page."
-msgstr "请确保在”Super Socializer > 社交登录”页上启用社交登录。"
+msgstr "请确保在”Unkname Connect > 社交登录”页上启用社交登录。"
 
 #: inc/widget.php:83
 msgid "Title (before login):"
@@ -2733,7 +2733,7 @@ msgstr ""
 
 #: inc/widget.php:251
 msgid ""
-"Make sure \"Standard Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Standard Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr "确保在 \"超级社交工具 > 社交共享\" 页面上启用了 \"标准社交共享\"。"
 
@@ -2764,7 +2764,7 @@ msgstr ""
 
 #: inc/widget.php:431
 msgid ""
-"Make sure \"Floating Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Floating Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr "确保在 \"超级社交工具 > 社交共享\" 页面上启用了 \"浮动社交共享\"。"
 
@@ -2795,7 +2795,7 @@ msgstr ""
 
 #: inc/widget.php:597
 msgid ""
-"Make sure \"Standard Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Standard Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr "确保从 \"超级社会化工具 > 类似按钮\" 页面启用 \"标准类似按钮\"。"
 
@@ -2810,12 +2810,12 @@ msgstr ""
 
 #: inc/widget.php:747
 msgid ""
-"Make sure \"Floating Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Floating Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr "确保从 \"超级社会化工具 > 像按钮一样\" 页面中启用 \"浮动式按钮\"。"
 
 #: inc/widget.php:791
-msgid "Super Socializer - Follow Icons"
+msgid "Unkname Connect - Follow Icons"
 msgstr ""
 
 #: inc/widget.php:793
@@ -3170,7 +3170,7 @@ msgstr "RSS 订阅链接:"
 #~ "Socializer</strong> menu in the left sidebar. <strong>Social Sharing</"
 #~ "strong> is enabled at your website by default."
 #~ msgstr ""
-#~ "在左侧边栏<strong> Super Socializer</strong>菜单下面区域开始配置选项。 "
+#~ "在左侧边栏<strong> Unkname Connect</strong>菜单下面区域开始配置选项。 "
 #~ "<strong>社会共享</strong>在您的网站上默认启用。"
 
 #~ msgid ""
@@ -3198,8 +3198,8 @@ msgstr "RSS 订阅链接:"
 #~ "在<strong>喜欢按钮</strong>部分，您可以选择喜欢/  ＋1按钮，以及配置一致的"
 #~ "选项 "
 
-#~ msgid "Super Socializer - Social Avatar"
-#~ msgstr "Super Socializer -社会化头像"
+#~ msgid "Unkname Connect - Social Avatar"
+#~ msgstr "Unkname Connect -社会化头像"
 
 #~ msgid "Username: %s"
 #~ msgstr "用户名： %s"

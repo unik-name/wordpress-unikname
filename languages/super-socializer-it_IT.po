@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Super Socializer\n"
+"Project-Id-Version: Unkname Connect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 17:19+0530\n"
 "PO-Revision-Date: 2020-04-10 17:19+0530\n"
@@ -107,8 +107,8 @@ msgid "Link copied."
 msgstr "LinkedIn"
 
 #: ../unikname_connect.php:1102
-msgid "Super Socializer - General Options"
-msgstr "Super Socializer - Opzioni"
+msgid "Unkname Connect - General Options"
+msgstr "Unkname Connect - Opzioni"
 
 #: ../unikname_connect.php:1102 ../admin/general_options.php:15
 #: ../admin/social_commenting.php:47
@@ -140,7 +140,7 @@ msgid "Update social avatar, next time I Social Login"
 msgstr "La prossima volta che si usa Social Login, aggiorna il social avatar."
 
 #: ../unikname_connect.php:1262
-msgid "Login with your Social ID"
+msgid "We recommend the next-generation authentication: simple, secure, private"
 msgstr "Login con il tuo ID Social"
 
 #: ../unikname_connect.php:1263
@@ -159,7 +159,7 @@ msgstr ""
 "Collega il tuo social account per accedere al tuo account su questo sito"
 
 #: ../unikname_connect.php:1520
-msgid "Thanks for installing Super Socializer plugin"
+msgid "Thanks for installing Unkname Connect plugin"
 msgstr ""
 
 #: ../unikname_connect.php:1522
@@ -169,31 +169,31 @@ msgstr ""
 #: ../unikname_connect.php:1533
 msgid ""
 "Update \"Facebook Comments Moderation\" add-on for compatibility with "
-"current version of Super Socializer"
+"current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1542
 msgid ""
 "Update \"Facebook Comments Notifier\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1551
 msgid ""
 "Update \"Social Login Buttons\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1560
 msgid ""
 "Update \"Social Share myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1569
 msgid ""
 "Update \"Social Login myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1580
@@ -294,7 +294,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Save Facebook App ID and Secret keys in \"Standard Interface\" and/or "
-"\"Floating Interface\" section(s) at <a href=\"%s\">Super Socializer > "
+"\"Floating Interface\" section(s) at <a href=\"%s\">Unkname Connect > "
 "Social Sharing</a> page to fix the issue with Facebook share count. After "
 "that, clear share counts cache from \"Miscellaneous\" section"
 msgstr ""
@@ -2788,7 +2788,7 @@ msgid ""
 "Socializer > Social Login\" page in admin panel"
 msgstr ""
 "Abilita Social Login nella sezione \"Configurazione di base\" che si trova "
-"nella pagina \"Super Socializer > Social Login\" del pannello di "
+"nella pagina \"Unkname Connect > Social Login\" del pannello di "
 "amministrazione"
 
 #: ../inc/social_sharing.php:31 ../inc/social_sharing.php:340
@@ -2839,8 +2839,8 @@ msgstr ""
 "browser."
 
 #: ../inc/widget.php:11
-msgid "Super Socializer - Login"
-msgstr "Super Socializer - Login"
+msgid "Unkname Connect - Login"
+msgstr "Unkname Connect - Login"
 
 #: ../inc/widget.php:13
 #, fuzzy
@@ -2857,7 +2857,7 @@ msgstr "Login con il tuo Account Social"
 
 #: ../inc/widget.php:82
 msgid ""
-"Make sure Social Login is enabled at \"Super Socializer > Social Login\" "
+"Make sure Social Login is enabled at \"Unkname Connect > Social Login\" "
 "page."
 msgstr ""
 "Assicurati che \"Social Login \" sia abilitato alla pagina \"Super "
@@ -2898,7 +2898,7 @@ msgstr ""
 
 #: ../inc/widget.php:251
 msgid ""
-"Make sure \"Standard Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Standard Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr ""
 "Assicurati che \"Social Sharing Standard\" sia abilitato alla pagina \"Super "
@@ -2933,7 +2933,7 @@ msgstr ""
 
 #: ../inc/widget.php:431
 msgid ""
-"Make sure \"Floating Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Floating Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr ""
 "Assicurati che \"Social Sharing Floating\" sia abilitato alla pagina \"Super "
@@ -2967,11 +2967,11 @@ msgstr ""
 
 #: ../inc/widget.php:597
 msgid ""
-"Make sure \"Standard Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Standard Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr ""
 "Assicurati che i \"Pulsanti Standard Mi-Piace\" siano abilitati nella pagina "
-"\"Super Socializer > Like Buttons\"."
+"\"Unkname Connect > Like Buttons\"."
 
 #: ../inc/widget.php:631
 #, fuzzy
@@ -2985,16 +2985,16 @@ msgstr ""
 
 #: ../inc/widget.php:747
 msgid ""
-"Make sure \"Floating Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Floating Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr ""
 "Assicurati che i \"Pulsanti Floating Mi-Piace\" siano abilitati nella pagina "
-"\"Super Socializer > Like Buttons\"."
+"\"Unkname Connect > Like Buttons\"."
 
 #: ../inc/widget.php:791
 #, fuzzy
-msgid "Super Socializer - Follow Icons"
-msgstr "Super Socializer - Login"
+msgid "Unkname Connect - Follow Icons"
+msgstr "Unkname Connect - Login"
 
 #: ../inc/widget.php:793
 #, fuzzy
@@ -3312,7 +3312,7 @@ msgstr ""
 #~ "strong> is enabled at your website by default."
 #~ msgstr ""
 #~ "Comincia configurando le opzioni nelle sezioni sotto il menu "
-#~ "<strong>Super Socializer</strong> nella sidebar di sinistra. "
+#~ "<strong>Unkname Connect</strong> nella sidebar di sinistra. "
 #~ "<strong>Social Sharing</strong> é abilitata come impostazione predefinita "
 #~ "nel tuo sito web."
 
@@ -3344,8 +3344,8 @@ msgstr ""
 #~ "Nella sezione <strong>Pulsanti Mi-Piace</strong>, puoi scegliere i "
 #~ "pulsanti Mi-Piace/+1 e configurarne le opzioni"
 
-#~ msgid "Super Socializer - Social Avatar"
-#~ msgstr "Super Socializer - Social Avatar"
+#~ msgid "Unkname Connect - Social Avatar"
+#~ msgstr "Unkname Connect - Social Avatar"
 
 #~ msgid "Username: %s"
 #~ msgstr "Nome utente: %s"
@@ -3444,7 +3444,7 @@ msgstr ""
 #~ msgstr "Opzioni salvate correttamente"
 
 #~ msgid ""
-#~ "Make sure Social Login is enabled from \"Super Socializer > Social Login"
+#~ "Make sure Social Login is enabled from \"Unkname Connect > Social Login"
 #~ "\" page."
 #~ msgstr ""
 #~ "Assicurarsi che Social Login sia abilitato nella pagina \"Super "
@@ -3455,14 +3455,14 @@ msgstr ""
 #~ "Socializer > Social Sharing\" page."
 #~ msgstr ""
 #~ "Assicurarsi che \"Horizontal Social Sharing\" sia abilitata nella pagina "
-#~ "\"Super Socializer> Social Sharing\"."
+#~ "\"Unkname Connect> Social Sharing\"."
 
 #~ msgid ""
-#~ "Make sure \"Vertical Social Sharing\" is enabled from \"Super Socializer "
+#~ "Make sure \"Vertical Social Sharing\" is enabled from \"Unkname Connect "
 #~ "> Social Sharing\" page."
 #~ msgstr ""
 #~ "Assicurarsi che \"Vertical Social Sharing\" sia abilitata nella pagina "
-#~ "\"Super Socializer > Social Sharing\"."
+#~ "\"Unkname Connect > Social Sharing\"."
 
 #~ msgid "You can see the plugin in action at following link"
 #~ msgstr "Puoi vedere il plugin in azione seguendo il successivo collegamento"
@@ -3630,8 +3630,8 @@ msgstr ""
 
 #~ msgid ""
 #~ "You can navigate to the <strong>Appearance</strong> > <strong>Widgets</"
-#~ "strong> section in the left pan and drag <strong>Super Socializer - "
-#~ "Counter (Horizontal Widget)</strong> and <strong>Super Socializer - "
+#~ "strong> section in the left pan and drag <strong>Unkname Connect - "
+#~ "Counter (Horizontal Widget)</strong> and <strong>Unkname Connect - "
 #~ "Counter (Vertical Floating Widget)</strong> widgets in the required area."
 #~ msgstr ""
 #~ "Puoi navigare alla sezione <strong>Appearence</strong> > <strong>Widgets</"
@@ -3667,7 +3667,7 @@ msgstr ""
 #~ "Socializer\" section"
 #~ msgstr ""
 #~ "Modifica la pagina / posta e selezionare l'opzione \"Disabilita Facebook "
-#~ "Commenti su questo post/pagina \" in fondo in sezione \"Super Socializer\""
+#~ "Commenti su questo post/pagina \" in fondo in sezione \"Unkname Connect\""
 
 #~ msgid "Social Sharing"
 #~ msgstr "Condivisione Sociale"
@@ -3676,7 +3676,7 @@ msgstr ""
 #~ msgid ""
 #~ "<strong>Note:</strong> To disable sharing and specify minimum share "
 #~ "counts per social network on particular page/post, edit that page/post "
-#~ "and check the options at the bottom in <strong>\"Super Socializer\"</"
+#~ "and check the options at the bottom in <strong>\"Unkname Connect\"</"
 #~ "strong> section"
 #~ msgstr ""
 #~ "<strong>Nota:</strong> per disabilitare la condivisione sociale in pagine "
@@ -3757,8 +3757,8 @@ msgstr ""
 
 #~ msgid ""
 #~ "You can navigate to the <strong>Appearance</strong> > <strong>Widgets</"
-#~ "strong> section in the left pan and drag <strong>Super Socializer - "
-#~ "Sharing (Horizontal Widget)</strong> and <strong>Super Socializer - "
+#~ "strong> section in the left pan and drag <strong>Unkname Connect - "
+#~ "Sharing (Horizontal Widget)</strong> and <strong>Unkname Connect - "
 #~ "Sharing (Vertical Floating Widget)</strong> widgets in the required area."
 #~ msgstr ""
 #~ "Puoi navigare alla sezione <strong>Apparenza</strong> > <strong>Widgets</"
@@ -3851,10 +3851,10 @@ msgstr ""
 
 #~ msgid ""
 #~ "Edit that page/post and check the option \"Disable Facebook Comments on "
-#~ "this post/page\" at the bottom in \"Super Socializer\" section"
+#~ "this post/page\" at the bottom in \"Unkname Connect\" section"
 #~ msgstr ""
 #~ "Modifica la pagina / posta e selezionare l'opzione \"Disabilita Facebook "
-#~ "Commenti su questo post/pagina \" in fondo in sezione \"Super Socializer\""
+#~ "Commenti su questo post/pagina \" in fondo in sezione \"Unkname Connect\""
 
 #~ msgid ""
 #~ "How to enable only Facebook Comments without enabling default comment "
@@ -3897,18 +3897,18 @@ msgstr ""
 
 #~ msgid ""
 #~ "You can navigate to the <strong>Appearance</strong> > <strong>Widgets</"
-#~ "strong> section in the left pan and drag <strong>Super Socializer - "
+#~ "strong> section in the left pan and drag <strong>Unkname Connect - "
 #~ "Login</strong> widget in the required area."
 #~ msgstr ""
 #~ "Puoi navigare alla sezione <strong>Apparenza</strong> > <strong>Widgets</"
-#~ "strong> nella vaschetta sinistra e trascinare <strong>Super Socializer - "
+#~ "strong> nella vaschetta sinistra e trascinare <strong>Unkname Connect - "
 #~ "Login</strong> widget all'area necessaria."
 
 #~ msgid "White-Label"
 #~ msgstr "Etichetta bianca"
 
 #~ msgid ""
-#~ "Remove the plugin credit links (\"Super Socializer by The Champ\") in "
+#~ "Remove the plugin credit links (\"Unkname Connect by The Champ\") in "
 #~ "just $15. Interested? Email me: <a href=\"mailto:lordofthechamps@gmail.com"
 #~ "\">lordofthechamps@gmail.com</a>"
 #~ msgstr ""
@@ -4039,12 +4039,12 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "Navigate to Appearance > Widgets section in the admin panel of your "
-#~ "website and activate \"Super Socializer - Sharing\" widget in the desired "
+#~ "website and activate \"Unkname Connect - Sharing\" widget in the desired "
 #~ "area. This will display the sharing counts of the home/index page of your "
 #~ "website. Do not forget to turn on the sharing counts in widget options."
 #~ msgstr ""
 #~ "Naviga alla sezione Apparenza > Widgets del tuo sito web e attiva il "
-#~ "widget \"Super Socializer - Sharing\" nell'area desiderata. Questa "
+#~ "widget \"Unkname Connect - Sharing\" nell'area desiderata. Questa "
 #~ "funzione mostrará la quantitá di condivisioni della pagina home/index del "
 #~ "tuo sito web. Non dimenticarte di abilitare il contatore di quantitá di "
 #~ "condivisioni nella pagina \"Condivisioni Sociali\" del pannello di "

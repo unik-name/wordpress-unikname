@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Super Socializer\n"
+"Project-Id-Version: Unkname Connect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 17:18+0530\n"
 "PO-Revision-Date: 2020-04-10 17:18+0530\n"
-"Last-Translator: Heateor <hello@heateor.com>\n"
-"Language-Team: Heateor <hello@heateor.com>\n"
+"Last-Translator: Unikname <developers@unikname.com>\n"
+"Language-Team: Unikname <developers@unikname.com>\n"
 "Language: en_IN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,7 +90,7 @@ msgid "Link copied."
 msgstr ""
 
 #: ../unikname_connect.php:1102
-msgid "Super Socializer - General Options"
+msgid "Unkname Connect - General Options"
 msgstr ""
 
 #: ../unikname_connect.php:1102 ../admin/general_options.php:15
@@ -121,7 +121,7 @@ msgid "Update social avatar, next time I Social Login"
 msgstr ""
 
 #: ../unikname_connect.php:1262
-msgid "Login with your Social ID"
+msgid "We recommend the next-generation authentication: simple, secure, private"
 msgstr ""
 
 #: ../unikname_connect.php:1263
@@ -137,7 +137,7 @@ msgid "Link your social account to login to your account at this website"
 msgstr ""
 
 #: ../unikname_connect.php:1520
-msgid "Thanks for installing Super Socializer plugin"
+msgid "Thanks for installing Unkname Connect plugin"
 msgstr ""
 
 #: ../unikname_connect.php:1522
@@ -147,31 +147,31 @@ msgstr ""
 #: ../unikname_connect.php:1533
 msgid ""
 "Update \"Facebook Comments Moderation\" add-on for compatibility with "
-"current version of Super Socializer"
+"current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1542
 msgid ""
 "Update \"Facebook Comments Notifier\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1551
 msgid ""
 "Update \"Social Login Buttons\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1560
 msgid ""
 "Update \"Social Share myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1569
 msgid ""
 "Update \"Social Login myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1580
@@ -272,7 +272,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Save Facebook App ID and Secret keys in \"Standard Interface\" and/or "
-"\"Floating Interface\" section(s) at <a href=\"%s\">Super Socializer > "
+"\"Floating Interface\" section(s) at <a href=\"%s\">Unkname Connect > "
 "Social Sharing</a> page to fix the issue with Facebook share count. After "
 "that, clear share counts cache from \"Miscellaneous\" section"
 msgstr ""
@@ -2498,7 +2498,7 @@ msgid ""
 msgstr ""
 
 #: ../inc/widget.php:11
-msgid "Super Socializer - Login"
+msgid "Unkname Connect - Login"
 msgstr ""
 
 #: ../inc/widget.php:13
@@ -2513,7 +2513,7 @@ msgstr ""
 
 #: ../inc/widget.php:82
 msgid ""
-"Make sure Social Login is enabled at \"Super Socializer > Social Login\" "
+"Make sure Social Login is enabled at \"Unkname Connect > Social Login\" "
 "page."
 msgstr ""
 
@@ -2548,7 +2548,7 @@ msgstr ""
 
 #: ../inc/widget.php:251
 msgid ""
-"Make sure \"Standard Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Standard Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr ""
 
@@ -2577,7 +2577,7 @@ msgstr ""
 
 #: ../inc/widget.php:431
 msgid ""
-"Make sure \"Floating Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Floating Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr ""
 
@@ -2605,7 +2605,7 @@ msgstr ""
 
 #: ../inc/widget.php:597
 msgid ""
-"Make sure \"Standard Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Standard Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr ""
 
@@ -2617,12 +2617,12 @@ msgstr ""
 
 #: ../inc/widget.php:747
 msgid ""
-"Make sure \"Floating Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Floating Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr ""
 
 #: ../inc/widget.php:791
-msgid "Super Socializer - Follow Icons"
+msgid "Unkname Connect - Follow Icons"
 msgstr ""
 
 #: ../inc/widget.php:793

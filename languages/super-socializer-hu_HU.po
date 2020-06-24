@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Super Socializer\n"
+"Project-Id-Version: Unkname Connect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-10 17:19+0530\n"
 "PO-Revision-Date: 2020-04-10 17:19+0530\n"
@@ -104,8 +104,8 @@ msgstr "LinkedIn"
 
 #: ../unikname_connect.php:1102
 #, fuzzy
-msgid "Super Socializer - General Options"
-msgstr "Super Socializer - Belépés"
+msgid "Unkname Connect - General Options"
+msgstr "Unkname Connect - Belépés"
 
 #: ../unikname_connect.php:1102 ../admin/general_options.php:15
 #: ../admin/social_commenting.php:47
@@ -138,7 +138,7 @@ msgid "Update social avatar, next time I Social Login"
 msgstr ""
 
 #: ../unikname_connect.php:1262
-msgid "Login with your Social ID"
+msgid "We recommend the next-generation authentication: simple, secure, private"
 msgstr ""
 
 #: ../unikname_connect.php:1263
@@ -154,7 +154,7 @@ msgid "Link your social account to login to your account at this website"
 msgstr "Kapcsold össze közösségi fiókod, hogy belépj erre az oldalra"
 
 #: ../unikname_connect.php:1520
-msgid "Thanks for installing Super Socializer plugin"
+msgid "Thanks for installing Unkname Connect plugin"
 msgstr ""
 
 #: ../unikname_connect.php:1522
@@ -164,31 +164,31 @@ msgstr ""
 #: ../unikname_connect.php:1533
 msgid ""
 "Update \"Facebook Comments Moderation\" add-on for compatibility with "
-"current version of Super Socializer"
+"current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1542
 msgid ""
 "Update \"Facebook Comments Notifier\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1551
 msgid ""
 "Update \"Social Login Buttons\" add-on for compatibility with current "
-"version of Super Socializer"
+"version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1560
 msgid ""
 "Update \"Social Share myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1569
 msgid ""
 "Update \"Social Login myCRED Integration\" add-on for maximum compatibility "
-"with current version of Super Socializer"
+"with current version of Unkname Connect"
 msgstr ""
 
 #: ../unikname_connect.php:1580
@@ -289,7 +289,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Save Facebook App ID and Secret keys in \"Standard Interface\" and/or "
-"\"Floating Interface\" section(s) at <a href=\"%s\">Super Socializer > "
+"\"Floating Interface\" section(s) at <a href=\"%s\">Unkname Connect > "
 "Social Sharing</a> page to fix the issue with Facebook share count. After "
 "that, clear share counts cache from \"Miscellaneous\" section"
 msgstr ""
@@ -2788,7 +2788,7 @@ msgid ""
 "Enable Social Login from \"Basic Configuration\" section at \"Super "
 "Socializer > Social Login\" page in admin panel"
 msgstr ""
-"Győződjön meg arról, Szociális Login engedélyezve van az \"Super Socializer "
+"Győződjön meg arról, Szociális Login engedélyezve van az \"Unkname Connect "
 "> Social Login\" oldalon."
 
 #: ../inc/social_sharing.php:31 ../inc/social_sharing.php:340
@@ -2838,8 +2838,8 @@ msgid ""
 msgstr ""
 
 #: ../inc/widget.php:11
-msgid "Super Socializer - Login"
-msgstr "Super Socializer - Belépés"
+msgid "Unkname Connect - Login"
+msgstr "Unkname Connect - Belépés"
 
 #: ../inc/widget.php:13
 #, fuzzy
@@ -2857,10 +2857,10 @@ msgstr ""
 #: ../inc/widget.php:82
 #, fuzzy
 msgid ""
-"Make sure Social Login is enabled at \"Super Socializer > Social Login\" "
+"Make sure Social Login is enabled at \"Unkname Connect > Social Login\" "
 "page."
 msgstr ""
-"Győződjön meg arról, Szociális Login engedélyezve van az \"Super Socializer "
+"Győződjön meg arról, Szociális Login engedélyezve van az \"Unkname Connect "
 "> Social Login\" oldalon."
 
 #: ../inc/widget.php:83
@@ -2898,11 +2898,11 @@ msgstr ""
 #: ../inc/widget.php:251
 #, fuzzy
 msgid ""
-"Make sure \"Standard Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Standard Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr ""
 "Győződjön meg arról, \"horizontális szociális Sharing\" engedélyezve az "
-"\"Super Socializer > Social Sharing\" oldalon...."
+"\"Unkname Connect > Social Sharing\" oldalon...."
 
 #: ../inc/widget.php:252 ../inc/widget.php:598
 msgid "Title:"
@@ -2935,11 +2935,11 @@ msgstr ""
 #: ../inc/widget.php:431
 #, fuzzy
 msgid ""
-"Make sure \"Floating Social Sharing\" is enabled at \"Super Socializer > "
+"Make sure \"Floating Social Sharing\" is enabled at \"Unkname Connect > "
 "Social Sharing\" page."
 msgstr ""
 "Győződjön meg arról, \"horizontális szociális Sharing\" engedélyezve az "
-"\"Super Socializer > Social Sharing\" oldalon."
+"\"Unkname Connect > Social Sharing\" oldalon."
 
 #: ../inc/widget.php:444 ../inc/widget.php:756
 msgid "Alignment"
@@ -2969,7 +2969,7 @@ msgstr ""
 #: ../inc/widget.php:597
 #, fuzzy
 msgid ""
-"Make sure \"Standard Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Standard Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr ""
 "Győződjön meg arról, \"Vertical Like gombok\" engedélyezve az \"Super "
@@ -2988,7 +2988,7 @@ msgstr ""
 #: ../inc/widget.php:747
 #, fuzzy
 msgid ""
-"Make sure \"Floating Like Buttons\" are enabled from \"Super Socializer > "
+"Make sure \"Floating Like Buttons\" are enabled from \"Unkname Connect > "
 "Like Buttons\" page."
 msgstr ""
 "Győződjön meg arról, \"Vízszintes Like gombok\" engedélyezve az \"Super "
@@ -2996,8 +2996,8 @@ msgstr ""
 
 #: ../inc/widget.php:791
 #, fuzzy
-msgid "Super Socializer - Follow Icons"
-msgstr "Super Socializer - Belépés"
+msgid "Unkname Connect - Follow Icons"
+msgstr "Unkname Connect - Belépés"
 
 #: ../inc/widget.php:793
 msgid "These icons link to your Social Media accounts"
@@ -3293,7 +3293,7 @@ msgstr ""
 #~ "Socializer</strong> menu in the left sidebar. <strong>Social Sharing</"
 #~ "strong> is enabled at your website by default."
 #~ msgstr ""
-#~ "Kezdd el a beállítást a <strong>Super Socializer</strong> menu alatti "
+#~ "Kezdd el a beállítást a <strong>Unkname Connect</strong> menu alatti "
 #~ "menüpontokban a bal oldalon. A <strong>Közösségi Megosztás</strong> már "
 #~ "be is van kapcsolva oldaladon."
 
@@ -3327,8 +3327,8 @@ msgstr ""
 #~ "gombokat, és elvégezheted beállításukat."
 
 #, fuzzy
-#~ msgid "Super Socializer - Social Avatar"
-#~ msgstr "Super Socializer - Belépés"
+#~ msgid "Unkname Connect - Social Avatar"
+#~ msgstr "Unkname Connect - Belépés"
 
 #~ msgid "Excerpts"
 #~ msgstr "Kivonatok"
@@ -3507,7 +3507,7 @@ msgstr ""
 #~ "Socializer\"</strong> section"
 #~ msgstr ""
 #~ "<strong>Megjegyzés:</strong> Az egyes bejegyzéseknél/oldalaknál ki tudod "
-#~ "kapcsolni a megosztást a szerkesztési felület <strong>\"Super Socializer"
+#~ "kapcsolni a megosztást a szerkesztési felület <strong>\"Unkname Connect"
 #~ "\"</strong> részében"
 
 #, fuzzy
@@ -3591,13 +3591,13 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "You can navigate to the <strong>Appearance</strong> > <strong>Widgets</"
-#~ "strong> section in the left pan and drag <strong>Super Socializer - "
-#~ "Counter (Horizontal Widget)</strong> and <strong>Super Socializer - "
+#~ "strong> section in the left pan and drag <strong>Unkname Connect - "
+#~ "Counter (Horizontal Widget)</strong> and <strong>Unkname Connect - "
 #~ "Counter (Vertical Floating Widget)</strong> widgets in the required area."
 #~ msgstr ""
 #~ "A bal oldali menü <strong>Megjelenés</strong> > <strong>Widgetek</strong> "
-#~ "részében megfoghatod a <strong>Super Socializer - Megosztás (Vízszintes "
-#~ "Widget)</strong> és <strong>Super Socializer - Megosztás (Függőleges "
+#~ "részében megfoghatod a <strong>Unkname Connect - Megosztás (Vízszintes "
+#~ "Widget)</strong> és <strong>Unkname Connect - Megosztás (Függőleges "
 #~ "Widget)</strong>widgetet és a kívánt helyre húzhatod."
 
 #, fuzzy
@@ -3627,7 +3627,7 @@ msgstr ""
 #~ "Socializer\" section"
 #~ msgstr ""
 #~ "Szerkeszteni, hogy az oldal / post, és ellenőrizze a lehetőséget, "
-#~ "\"Disable Facebook hozzászólásokról / oldal \" alul \"Super Socializer \" "
+#~ "\"Disable Facebook hozzászólásokról / oldal \" alul \"Unkname Connect \" "
 #~ "fejezetben"
 
 #~ msgid "Social Sharing"
@@ -3637,11 +3637,11 @@ msgstr ""
 #~ msgid ""
 #~ "<strong>Note:</strong> To disable sharing and specify minimum share "
 #~ "counts per social network on particular page/post, edit that page/post "
-#~ "and check the options at the bottom in <strong>\"Super Socializer\"</"
+#~ "and check the options at the bottom in <strong>\"Unkname Connect\"</"
 #~ "strong> section"
 #~ msgstr ""
 #~ "<strong>Megjegyzés:</strong> Az egyes bejegyzéseknél/oldalaknál ki tudod "
-#~ "kapcsolni a megosztást a szerkesztési felület <strong>\"Super Socializer"
+#~ "kapcsolni a megosztást a szerkesztési felület <strong>\"Unkname Connect"
 #~ "\"</strong> részében"
 
 #~ msgid ""
@@ -3717,13 +3717,13 @@ msgstr ""
 
 #~ msgid ""
 #~ "You can navigate to the <strong>Appearance</strong> > <strong>Widgets</"
-#~ "strong> section in the left pan and drag <strong>Super Socializer - "
-#~ "Sharing (Horizontal Widget)</strong> and <strong>Super Socializer - "
+#~ "strong> section in the left pan and drag <strong>Unkname Connect - "
+#~ "Sharing (Horizontal Widget)</strong> and <strong>Unkname Connect - "
 #~ "Sharing (Vertical Floating Widget)</strong> widgets in the required area."
 #~ msgstr ""
 #~ "A bal oldali menü <strong>Megjelenés</strong> > <strong>Widgetek</strong> "
-#~ "részében megfoghatod a <strong>Super Socializer - Megosztás (Vízszintes "
-#~ "Widget)</strong> és <strong>Super Socializer - Megosztás (Függőleges "
+#~ "részében megfoghatod a <strong>Unkname Connect - Megosztás (Vízszintes "
+#~ "Widget)</strong> és <strong>Unkname Connect - Megosztás (Függőleges "
 #~ "Widget)</strong>widgetet és a kívánt helyre húzhatod."
 
 #~ msgid ""
@@ -3809,10 +3809,10 @@ msgstr ""
 
 #~ msgid ""
 #~ "Edit that page/post and check the option \"Disable Facebook Comments on "
-#~ "this post/page\" at the bottom in \"Super Socializer\" section"
+#~ "this post/page\" at the bottom in \"Unkname Connect\" section"
 #~ msgstr ""
 #~ "Szerkeszteni, hogy az oldal / post, és ellenőrizze a lehetőséget, "
-#~ "\"Disable Facebook hozzászólásokról / oldal \" alul \"Super Socializer \" "
+#~ "\"Disable Facebook hozzászólásokról / oldal \" alul \"Unkname Connect \" "
 #~ "fejezetben"
 
 #~ msgid ""
@@ -3855,22 +3855,22 @@ msgstr ""
 
 #~ msgid ""
 #~ "You can navigate to the <strong>Appearance</strong> > <strong>Widgets</"
-#~ "strong> section in the left pan and drag <strong>Super Socializer - "
+#~ "strong> section in the left pan and drag <strong>Unkname Connect - "
 #~ "Login</strong> widget in the required area."
 #~ msgstr ""
 #~ "A bal oldali menü <strong>Megjelenés</strong> > <strong>Widgetek</strong> "
-#~ "részében megfoghatod a <strong>Super Socializer - Belépés</strong> "
+#~ "részében megfoghatod a <strong>Unkname Connect - Belépés</strong> "
 #~ "widgetet és a kívánt helyre húzhatod."
 
 #~ msgid "White-Label"
 #~ msgstr "White-Label"
 
 #~ msgid ""
-#~ "Remove the plugin credit links (\"Super Socializer by The Champ\") in "
+#~ "Remove the plugin credit links (\"Unkname Connect by The Champ\") in "
 #~ "just $15. Interested? Email me: <a href=\"mailto:lordofthechamps@gmail.com"
 #~ "\">lordofthechamps@gmail.com</a>"
 #~ msgstr ""
-#~ "Tűntesd el a plugin készítőinek linkjét (\"Super Socializer by The Champ"
+#~ "Tűntesd el a plugin készítőinek linkjét (\"Unkname Connect by The Champ"
 #~ "\") mindössze $15 dolcsiért. Érdekel? Írj nekem e-mailtl (angolul): <a "
 #~ "href=\"mailto:lordofthechamps@gmail.com\">lordofthechamps@gmail.com</a>"
 
@@ -3986,11 +3986,11 @@ msgstr ""
 
 #~ msgid ""
 #~ "Navigate to Appearance > Widgets section in the admin panel of your "
-#~ "website and activate \"Super Socializer - Sharing\" widget in the desired "
+#~ "website and activate \"Unkname Connect - Sharing\" widget in the desired "
 #~ "area. This will display the sharing counts of the home/index page of your "
 #~ "website. Do not forget to turn on the sharing counts in widget options."
 #~ msgstr ""
-#~ "Az oldalad Megjelenés > Widgetek menüjében helyezd a \"Super Socializer - "
+#~ "Az oldalad Megjelenés > Widgetek menüjében helyezd a \"Unkname Connect - "
 #~ "Sharing\" widgetet a megfelelő widget helyre. Ez a home/index oldalon "
 #~ "megjeleníti a megosztások számát. Ne felejtsd el a widget beállításnál "
 #~ "bekapcsolni a számláló megjelenítést."
