@@ -15,7 +15,7 @@
 				<table width="100%" border="0" cellspacing="0" cellpadding="0" class="form-table editcomment menu_content_table">
 					<tr>
 						<th>
-						<label for="the_champ_login_enable"><?php _e("Enable Social Login", 'super-socializer'); ?><img id="the_champ_sl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
+						<label for="the_champ_login_enable"><?php _e("Enable Unikname Connect", 'super-socializer'); ?><img id="the_champ_sl_enable_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 						</th>
 						<td>
 						<input id="the_champ_login_enable" name="the_champ_login[enable]" type="checkbox" <?php echo isset($theChampLoginOptions['enable']) ? 'checked = "checked"' : '';?> value="1" />
@@ -25,7 +25,7 @@
 					<tr class="the_champ_help_content" id="the_champ_sl_enable_help_cont">
 						<td colspan="2">
 						<div>
-						<?php _e('Master control for Social Login. It must be checked to enable Social Login functionality', 'super-socializer') ?>
+						<?php _e('Master control for Unikname Connect. It must be checked to enable Unikname Connect functionality', 'super-socializer') ?>
 						</div>
 						</td>
 					</tr>
@@ -59,7 +59,7 @@
 
 						<tr>
 							<th>
-							<label for="the_champ_sl_disable_reg"><?php _e("Disable user registration via Social Login", 'super-socializer'); ?><img id="the_champ_sl_disable_reg_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
+							<label for="the_champ_sl_disable_reg"><?php _e("Disable user registration via Unikname Connect", 'super-socializer'); ?><img id="the_champ_sl_disable_reg_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
 							<input id="the_champ_sl_disable_reg" name="the_champ_login[disable_reg]" onclick="if(this.checked){jQuery('#the_champ_disable_reg_options').css('display', 'table-row-group')}else{ jQuery('#the_champ_disable_reg_options').css('display', 'none') }" type="checkbox" <?php echo isset($theChampLoginOptions['disable_reg']) ? 'checked = "checked"' : '';?> value="1" />
@@ -69,7 +69,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sl_disable_reg_help_cont">
 							<td colspan="2">
 							<div>
-							<?php _e('After enabling this option, new users will not be able to login through social login. Only existing users will be able to social login.', 'super-socializer') ?>
+							<?php _e('After enabling this option, new users will not be able to login through Unikname Connect. Only existing users will be able to login with Unikname Connect.', 'super-socializer') ?>
 							</div>
 							</td>
 						</tr>
@@ -95,13 +95,14 @@
 
 						<tr>
 							<th>
-							<label><?php _e("Select Social Networks", 'super-socializer'); ?><img id="the_champ_sl_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
+							<!-- <label><?php _e("Select Social Networks", 'super-socializer'); ?><img id="the_champ_sl_providers_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label> -->
 							</th>
 							<td>
-							<div class="theChampHorizontalSharingProviderContainer">
-							<input id="the_champ_login_unikname" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('unikname', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="unikname" />
-							<label for="the_champ_login_unikname"><?php _e("Unikname", 'super-socializer'); ?></label>
-							</div>
+							<input id="the_champ_login_unikname" name="the_champ_login[providers][]" type="hidden" checked = "checked" value="unikname" />
+							<!-- <div class="theChampHorizontalSharingProviderContainer">
+							<input id="the_champ_login_unikname" name="the_champ_login[providers][]" type="checkbox" <?php /*echo isset($theChampLoginOptions['providers']) && in_array('unikname', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';*/?> value="unikname" />
+							<label for="the_champ_login_unikname"><?php /*_e("Unikname", 'super-socializer'); */?></label>
+							</div> -->
 							<!-- <div class="theChampHorizontalSharingProviderContainer">
 							<input id="the_champ_login_facebook" name="the_champ_login[providers][]" type="checkbox" <?php echo isset($theChampLoginOptions['providers']) && in_array('facebook', $theChampLoginOptions['providers']) ? 'checked = "checked"' : '';?> value="facebook" />
 							<label for="the_champ_login_facebook"><?php _e("Facebook", 'super-socializer'); ?></label>
@@ -167,7 +168,7 @@
 							<label for="the_champ_unlogin_secret"><?php _e("Unikname Connect Secret", 'super-socializer'); ?><img id="the_champ_slun_secret_help" class="the_champ_help_bubble" src="<?php echo plugins_url('../images/info.png', __FILE__) ?>" /></label>
 							</th>
 							<td>
-							<input id="the_champ_unlogin_secret" name="the_champ_login[un_secret]" type="text" value="<?php echo isset($theChampLoginOptions['un_secret']) ? $theChampLoginOptions['un_secret'] : '' ?>" />
+							<input id="the_champ_unlogin_secret" name="the_champ_login[un_secret]" type="password" value="<?php echo isset($theChampLoginOptions['un_secret']) ? $theChampLoginOptions['un_secret'] : '' ?>" />
 							</td>
 						</tr>
 
