@@ -54,8 +54,7 @@ Detailed Overview:
 
 = Important links =
 * <a target="_blank" href="https://docs.unikname.com/integration/connect/apps/wordpress/#examples-of-integration-with-unikname-connect">Plugin Demo</a>
-
-<a href="https://docs.unikname.com/integration/connect/apps/wordpress/#troubleshooting">Support Documentation</a> | <a href="https://www.heateor.com/social-analytics-sharing">Social Analytics</a> | <a href="https://www.heateor.com/add-ons">Add-ons</a>
+* <a href="https://docs.unikname.com/integration/connect/apps/wordpress/#troubleshooting">Support Documentation</a>
 
 You can provide your feedbacks on <a href="https://forum.unikname.com/c/support/15" target="_blank">our Support Forum</a>.
 
