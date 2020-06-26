@@ -9,10 +9,10 @@ License: GPLv2 or later
 The unique plugin to let you integrate Unikname Connect at your website, the next-generation authentication: simple, secure, private.
 
 **Note:**
-This plug is incompatible to "Super Socializer" plugin, from Heateor.
+This plugin is incompatible to "Super Socializer" plugin, from Heateor.
 
 == Description ==
-Integrate Unikname Connect at your website easiest and simplest possible way.
+The unique plugin to let you integrate Unikname Connect at your website, the next-generation authentication: simple, secure, private.
 
 = Feature list =
 * Social Login from Unikname Connect
@@ -20,7 +20,6 @@ Integrate Unikname Connect at your website easiest and simplest possible way.
 * Syncs user's basic Unikname profile data with WordPress profile
 * Enable Unikname Connect at WooCommerce checkout page and customer login form
 * Syncs user's basic Unikname profile data with WooCommerce profile
-* Sync Unikname profile data with BuddyPress XProfile fields
 * Auto-approve comments made by users logged in using Unikname Connect
 * Use user's Unikname profile avatar as profile picture at your website
 * Customizable login/post-registration redirection
@@ -48,10 +47,9 @@ Detailed Overview:
 1. **Free**: Yea, right. It is a free plugin. You need not pay single penny to use the features of this plugin.
 2. **No need to register anywhere**: Unlike other third party Social plugins, you do not need to create an account at third party website.
 3. **Absolutely Simple**: Plugin configuration is kept dead simple. Screenshots are provided with options wherever required.
-4. **Fresh Icon Themes**: Fresh and trendy themes are used for Unikname Connect.
-5. **Optimal Loading time**: Loading time of Unikname Connect icons is optimal and if you compare with other plugins, you will find it less than that of all those plugins.
-6. We promise to provide **best quality** among other similar plugins. If you find our plugin is lacking some feature, you can email us and we will do our best to include that feature in our plugin as soon as possible.
-7. Our **support team is available** to answer your queries and assist you. You will find us the quickest to respond.
+4. **Optimal Loading time**: Loading time of Unikname Connect icons is optimal and if you compare with other plugins, you will find it less than that of all those plugins.
+5. We promise to provide **best quality** among other similar plugins. If you find our plugin is lacking some feature, you can email us and we will do our best to include that feature in our plugin as soon as possible.
+6. Our **support team is available** to answer your queries and assist you. You will find us the quickest to respond.
 
 = Important links =
 * <a target="_blank" href="https://docs.unikname.com/integration/connect/apps/wordpress/#examples-of-integration-with-unikname-connect">Plugin Demo</a>
