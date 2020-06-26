@@ -3,6 +3,7 @@ Contributors: Space Elephant, Unikname, Heateor, farhan8heateor, jatin8heateor, 
 Requires at least: 5.0.0
 Tested up to: 5.4
 Stable tag: 8.0.0
+Requires PHP: 5.6.20
 License: GPLv2 or later
 
 The unique plugin to let you integrate Unikname Connect at your website, the next-generation authentication: simple, secure, private.
