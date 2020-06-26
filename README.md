@@ -1,5 +1,7 @@
 # Unikname Connect for Wordpress
 
+Installation, configuration, screenshots 👉 https://docs.unikname.com/integration/connect/apps/wordpress/
+
 ## License
 
 This code is licensed under the [GNU General Public License v2.0 or later](LICENSE).
