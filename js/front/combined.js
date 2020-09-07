@@ -109,7 +109,9 @@ function theChampInitiateLogin(e) {
 		.find(".heateor_ss_social_login_optin");
 	if (0 == t.length || jQuery(t).is(":checked")) {
 		var a = e.getAttribute("alt");
-		"Login with Facebook" == a
+		a.includes("@unikname")
+			? theChampLoginPopup(theChampUniknameAuthUrl)
+			: "Login with Facebook" == a
 			? theChampLoginPopup(theChampFacebookAuthUrl)
 			: "Login with Steam" == a
 			? theChampLoginPopup(theChampSteamAuthUrl)

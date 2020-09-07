@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="114" height="23" viewBox="0 0 114 23">
+  <g id="Group_48" data-name="Group 48" transform="translate(-1084 -88)">
+    <line id="Line_140" data-name="Line 140" x2="100" transform="translate(1090 99)" fill="none" stroke="#2b6bf3" stroke-width="2"/>
+    <g id="Rectangle_359" data-name="Rectangle 359" transform="translate(1115 88)" fill="#fff" stroke="#2b6bf3" stroke-width="2">
+      <rect width="50" height="23" rx="6" stroke="none"/>
+      <rect x="1" y="1" width="48" height="21" rx="5" fill="none"/>
+    </g>
+    <g id="Path_175" data-name="Path 175" transform="translate(1084 95)" fill="none">
+      <path d="M4,0A4,4,0,1,1,0,4,4,4,0,0,1,4,0Z" stroke="none"/>
+      <path d="M 4 2 C 2.897200107574463 2 2 2.897200107574463 2 4 C 2 5.102799892425537 2.897200107574463 6 4 6 C 5.102799892425537 6 6 5.102799892425537 6 4 C 6 2.897200107574463 5.102799892425537 2 4 2 M 4 0 C 6.209139823913574 0 8 1.790860176086426 8 4 C 8 6.209139823913574 6.209139823913574 8 4 8 C 1.790860176086426 8 0 6.209139823913574 0 4 C 0 1.790860176086426 1.790860176086426 0 4 0 Z" stroke="none" fill="#2b6bf3"/>
+    </g>
+    <g id="Ellipse_247" data-name="Ellipse 247" transform="translate(1190 95)" fill="none" stroke="#2b6bf3" stroke-width="2">
+      <circle cx="4" cy="4" r="4" stroke="none"/>
+      <circle cx="4" cy="4" r="3" fill="none"/>
+    </g>
+  </g>
+</svg>

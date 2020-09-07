@@ -1,0 +1,627 @@
+@font-face {
+  font-family: 'helvetica';
+  src: url("../fonts/Helvetica.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block; }
+.unik-name-admin-container {
+  margin-top: 20px; }
+  .unik-name-admin-container .unik-top-header {
+    background-image: url(../images/unikname-bg-banner.jpg);
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    background-position: center; }
+    .unik-name-admin-container .unik-top-header img {
+      width: 100%; }
+    .unik-name-admin-container .unik-top-header .left {
+      flex-basis: calc(100% - 260px);
+      position: relative; }
+      @media screen and (max-width: 680px) {
+        .unik-name-admin-container .unik-top-header .left {
+          flex-basis: calc(100% - 30px); } }
+      .unik-name-admin-container .unik-top-header .left img {
+        width: 498px; }
+      .unik-name-admin-container .unik-top-header .left .content-left {
+        position: absolute;
+        height: 100%;
+        top: 40px;
+        width: 60%;
+        margin-left: 170px; }
+        @media screen and (max-width: 1024px) {
+          .unik-name-admin-container .unik-top-header .left .content-left {
+            width: 88%;
+            margin-left: 80px; } }
+        .unik-name-admin-container .unik-top-header .left .content-left img {
+          width: 220px;
+          padding-top: 25px; }
+        .unik-name-admin-container .unik-top-header .left .content-left h3 {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 100;
+          margin-top: 0;
+          line-height: 30px; }
+    .unik-name-admin-container .unik-top-header .right {
+      flex-basis: 195px;
+      margin-right: 55px;
+      margin-top: 11px; }
+      @media screen and (max-width: 680px) {
+        .unik-name-admin-container .unik-top-header .right {
+          display: none; } }
+  .unik-name-admin-container .unik-content-admin .nav-tab-wrapper {
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #00A099; }
+    .unik-name-admin-container .unik-content-admin .nav-tab-wrapper a {
+      display: inline-block;
+      flex-basis: 16.666%;
+      margin-left: 0;
+      border: 0;
+      padding: 10px 0px;
+      text-align: center;
+      background-color: transparent;
+      color: #fff;
+      position: relative;
+      font-size: 15px; }
+      @media screen and (max-width: 1024px) {
+        .unik-name-admin-container .unik-content-admin .nav-tab-wrapper a {
+          flex-basis: 33%; } }
+      .unik-name-admin-container .unik-content-admin .nav-tab-wrapper a.nav-tab-active {
+        background-color: #C41D02;
+        margin-bottom: 0px; }
+      .unik-name-admin-container .unik-content-admin .nav-tab-wrapper a:first-child:before {
+        content: none; }
+      .unik-name-admin-container .unik-content-admin .nav-tab-wrapper a:last-child:after {
+        content: none; }
+      .unik-name-admin-container .unik-content-admin .nav-tab-wrapper a:hover {
+        background-color: #C41D02; }
+      .unik-name-admin-container .unik-content-admin .nav-tab-wrapper a:focus {
+        box-shadow: none;
+        outline: none; }
+  .unik-name-admin-container .unik-content-admin .unik-content-tab {
+    min-height: 500px;
+    border: 1px solid #E4E9FF;
+    border-top: 0px;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background-color: #fff; }
+    .unik-name-admin-container .unik-content-admin .unik-content-tab .item {
+      padding: 10px 0px;
+      position: relative; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item label.name {
+        font-size: 15px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox > label {
+        display: inline-block;
+        line-height: 20px;
+        width: 300px;
+        margin-right: 40px;
+        margin-top: 18px; }
+        @media screen and (max-width: 1200px) {
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox > label {
+            width: 230px; } }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox .item-checkbox {
+        width: max-content;
+        display: inline-block; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox .item-checkbox input[type=checkbox] {
+          height: 0;
+          width: 0;
+          visibility: hidden;
+          display: none; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox .item-checkbox label {
+          cursor: pointer;
+          text-indent: -9999px;
+          width: 80px;
+          height: 35px;
+          background: #E4E9FF;
+          display: block;
+          border-radius: 100px;
+          position: relative; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox .item-checkbox label:after {
+          content: '';
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          width: 27px;
+          height: 27px;
+          background: #00A099;
+          border-radius: 90px;
+          transition: 0.5s; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox .item-checkbox input:checked + label {
+          background: #0F2852; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox .item-checkbox input:checked + label:after {
+          left: calc(100% - 5px);
+          transform: translateX(-100%); }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox .item-checkbox label:active:after {
+          width: 130px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-text .item-text {
+        margin-top: 10px;
+        font-size: 16px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-text .item-text input {
+          border: 1px solid #0F2852;
+          border-radius: 13px;
+          height: 43px;
+          background-color: #F1F9FF;
+          color: #000000;
+          padding: 5px 15px; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-text .item-text input#unikname_email_popup_height {
+            width: 100px;
+            text-align: center; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-number-radius label.name {
+        display: inline-block;
+        width: 120px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-number-radius .item-number-radius {
+        margin-top: 10px;
+        font-size: 16px;
+        display: inline-block; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-number-radius .item-number-radius input {
+          border: 1px solid #0F2852;
+          border-radius: 13px;
+          height: 43px;
+          background-color: #F1F9FF;
+          color: #000000;
+          padding: 5px 15px;
+          width: 100px;
+          text-align: center; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio > label {
+        font-size: 15px;
+        display: block;
+        margin-bottom: 10px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .item-radio label.container {
+        display: block;
+        position: relative;
+        padding-left: 39px;
+        margin-bottom: 14px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 14px;
+        padding-top: 5px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .item-radio label.container input[type=radio] {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .item-radio label.container input[type=radio]:checked ~ .checkmark:after {
+            display: block; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .item-radio label.container .checkmark {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 25px;
+          width: 25px;
+          border-radius: 50%;
+          border: 1px solid #E4E9FF; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .item-radio label.container .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00A099; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .item-radio label.container:hover input ~ .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+          top: 9px;
+          left: 9px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #00A099; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .custom-url-register {
+        display: block;
+        width: 100%;
+        margin-top: 15px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio .custom-url-register input {
+          min-height: 40px;
+          padding: 10px 15px;
+          border-radius: 13px;
+          background-color: #F1F9FF;
+          border: 1px solid #0F2852; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color label.name {
+        width: 120px;
+        display: inline-block; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color {
+        display: inline-block; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container {
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container input[type=radio] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            display: none; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container input[type=radio]:checked ~ .checkmark:after {
+              display: block; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border: 1px solid #E4E9FF;
+            border-radius: 100%; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container .checkmark.blue {
+              background-color: #0F2852; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container .checkmark.turquoise {
+              background-color: #2B6BF3; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container .checkmark:after {
+              content: "";
+              position: absolute;
+              display: none;
+              top: -2px;
+              left: -2px;
+              width: 22px;
+              height: 22px;
+              border-radius: 50%;
+              border: 1px solid #0F2852; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment label.name {
+        display: inline-block;
+        width: 120px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment {
+        display: inline-block; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container {
+          position: relative;
+          padding-left: 100px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container input[type=radio] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            display: none; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container input[type=radio]:checked ~ .checkmark-alignment.left {
+              background-image: url(../images/active-left.svg); }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container input[type=radio]:checked ~ .checkmark-alignment.center {
+              background-image: url(../images/active-center.svg); }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container input[type=radio]:checked ~ .checkmark-alignment.right {
+              background-image: url(../images/active-right.svg); }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container .checkmark-alignment {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90px;
+            height: 18px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container .checkmark-alignment.left {
+              background-image: url(../images/unactive-left.svg); }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container .checkmark-alignment.center {
+              background-image: url(../images/unactive-center.svg); }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container .checkmark-alignment.right {
+              background-image: url(../images/unactive-right.svg); }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-alignment .item-radio-alignment label.container .checkmark-alignment:after {
+              content: "";
+              position: absolute;
+              display: none;
+              top: -2px;
+              left: -2px;
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              border: 1px solid #0F2852; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-select label.name {
+        display: inline-block;
+        width: 120px;
+        height: 100%;
+        line-height: 20px;
+        position: absolute;
+        top: 10px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-select .item-select {
+        display: inline-block;
+        width: 70%;
+        padding-left: 120px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-select .item-select select {
+          padding: 5px 10px;
+          height: 40px !important;
+          border-radius: 13px;
+          background-color: #E4E9FF;
+          border: 1px solid #0F2852;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: url(../images/icon-drop.svg);
+          background-repeat: no-repeat;
+          background-position-x: calc(100% - 5px);
+          background-position-y: 5px;
+          width: 100%;
+          padding-right: 30px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-textarea > label {
+        margin-bottom: 10px;
+        display: block; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-textarea .item-textarea textarea {
+        background-color: #E4E9FF;
+        border: 1px solid #0F2852;
+        border-radius: 10px;
+        width: 100%;
+        height: 60px;
+        padding: 10px 15px; }
+    .unik-name-admin-container .unik-content-admin .unik-content-tab .button-custom-style {
+      margin-top: 10px; }
+    .unik-name-admin-container .unik-content-admin .unik-content-tab .column-2 {
+      flex-basis: 50%; }
+      @media screen and (max-width: 1024px) {
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .column-2 {
+          flex-basis: 100%; } }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .column-2 .content-column {
+        padding: 30px; }
+  .unik-name-admin-container .unik-content-admin .unik-style-button-container {
+    border: 1px solid #E6DFDF;
+    border-radius: 5px;
+    background-color: #F3F3F3;
+    padding: 10px 30px;
+    margin: 30px 15px; }
+    .unik-name-admin-container .unik-content-admin .unik-style-button-container h5 {
+      font-size: 22px;
+      position: relative;
+      margin-top: 10px;
+      font-weight: 400;
+      font-style: italic;
+      margin-bottom: 25px; }
+      .unik-name-admin-container .unik-content-admin .unik-style-button-container h5:before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: calc(100% - 120px);
+        z-index: 9;
+        background-color: #000000;
+        bottom: -1px;
+        right: 0; }
+      .unik-name-admin-container .unik-content-admin .unik-style-button-container h5.title-register:before {
+        width: calc(100% - 150px); }
+      .unik-name-admin-container .unik-content-admin .unik-style-button-container h5.account-link:before {
+        width: calc(100% - 226px); }
+    .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container {
+      width: calc(100% - 20px);
+      border: 1px #0f2951 dashed;
+      padding: 10px;
+      position: relative; }
+      .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview {
+        text-align: center;
+        max-width: 260px; }
+        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview h6 {
+          margin: 0px;
+          text-align: center;
+          font-size: 15px;
+          font-weight: normal;
+          margin-bottom: 5px; }
+        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview .button-unikname-connect {
+          background-color: #0F2852;
+          border-radius: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 10px 15px 10px 10px; }
+          .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview .button-unikname-connect img {
+            width: 30px;
+            margin: auto; }
+          .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview .button-unikname-connect label {
+            font-size: 16px;
+            line-height: 28px;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            margin: auto; }
+        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview p {
+          margin: 0px;
+          margin-top: 5px;
+          font-size: 13px; }
+        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview.left {
+          margin-left: 0;
+          margin-right: auto; }
+        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview.center {
+          margin-left: auto;
+          margin-right: auto; }
+        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview.right {
+          margin-left: auto;
+          margin-right: 0; }
+
+.super-socializer-linking-container table.form-table tbody tr td {
+  border: 0px; }
+  .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul {
+    float: none; }
+    .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+      float: none;
+      display: block;
+      min-width: 100%;
+      width: 300px;
+      display: inline-flex;
+      height: 55px !important;
+      padding: 5px 0px !important; }
+      .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg {
+        width: 65px;
+        height: 100%;
+        margin-left: 5px;
+        background: none;
+        background-repeat: no-repeat;
+        background-image: url(../images/icon-unikname.svg) !important; }
+        .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg:after {
+          content: none; }
+      .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
+        color: #fff;
+        line-height: 40px;
+        padding-left: 5px;
+        font-style: normal;
+        font-size: 15px; }
+
+.the_champ_outer_login_container {
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  min-width: 260px;
+  width: 260px !important;
+  font-size: 15px;
+  font-family: "helvetica"; }
+  .the_champ_outer_login_container.unikname_alignment_left {
+    margin-left: 0;
+    margin-right: auto; }
+  .the_champ_outer_login_container.unikname_alignment_right {
+    margin-left: auto;
+    margin-right: 0; }
+  .the_champ_outer_login_container.unikname_alignment_center {
+    margin-left: auto;
+    margin-right: auto; }
+  .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li {
+    float: none; }
+    .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+      float: none;
+      display: block;
+      min-width: 100%;
+      width: 100%;
+      display: inline-flex;
+      height: 42px !important;
+      padding: 5px 0px !important; }
+      .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg {
+        width: 45px;
+        height: 100%;
+        margin-left: 20px;
+        background: none;
+        background-repeat: no-repeat;
+        background-image: url(../images/icon-unikname.svg) !important; }
+        .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg:after {
+          content: none; }
+      .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
+        color: #fff !important;
+        padding-left: 10px;
+        font-style: normal;
+        font-size: 15px !important;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto; }
+        .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label:hover {
+          cursor: pointer; }
+      .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin:hover {
+        cursor: pointer; }
+  .the_champ_outer_login_container .the_champ_login_container.button_color_blue ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+    background-color: #0F2852 !important; }
+  .the_champ_outer_login_container .the_champ_login_container.button_color_turquoise ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+    background-color: #2B6BF3 !important; }
+  .the_champ_outer_login_container .the_champ_social_button_description {
+    font-size: 13px;
+    font-style: italic; }
+
+.theChampCommentingTabs ul {
+  float: none; }
+
+.super-socializer-linking-container table.form-table tbody tr {
+  border: 0px !important; }
+  .super-socializer-linking-container table.form-table tbody tr td {
+    border: 0px;
+    text-align: center;
+    padding: 0px !important; }
+    .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul {
+      float: none; }
+      .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+        float: none;
+        display: block;
+        min-width: auto;
+        width: 250px;
+        display: inline-flex;
+        height: 45px !important;
+        padding: 10px 0px !important;
+        background-color: #0F2852;
+        border-radius: 15px; }
+        .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg {
+          width: 45px;
+          height: 100%;
+          margin-left: 25px;
+          background: none;
+          background-repeat: no-repeat;
+          background-image: url(../images/icon-unikname.svg) !important;
+          background-size: contain !important;
+          background-position: 10px !important; }
+          .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg:after {
+            content: none; }
+        .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
+          color: #fff !important;
+          padding-left: 10px;
+          font-style: normal;
+          font-size: 15px !important;
+          text-align: center;
+          margin-top: auto;
+          margin-bottom: auto;
+          font-family: "helvetica";
+          line-height: 0;
+          -webkit-font-smoothing: auto; }
+          .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label:hover {
+            cursor: pointer; }
+        .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin:hover {
+          cursor: pointer; }
+    .super-socializer-linking-container table.form-table tbody tr td p.sub-title {
+      font-family: "helvetica";
+      font-size: 13px;
+      font-style: italic; }
+
+body.wp-admin .stuffbox {
+  background-color: transparent;
+  background: transparent;
+  border: 0;
+  box-shadow: 0 0 black; }
+  body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul {
+    float: none;
+    margin-top: 20px;
+    margin-bottom: 0px; }
+    body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+      height: 25px !important; }
+      body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
+        font-family: "helvetica"; }
+  body.wp-admin .stuffbox table.form-table tbody tr td p.sub-title {
+    margin-top: 0px; }
+
+.waiel-style-or {
+  color: #D8D8D8; }
+  .waiel-style-or span {
+    display: block;
+    width: max-content;
+    margin: auto;
+    position: relative;
+    color: #737373;
+    font-family: "helvetica";
+    font-size: 14px; }
+    .waiel-style-or span:after {
+      content: "";
+      width: 110px;
+      height: 1px;
+      background-color: #737373;
+      position: absolute;
+      top: 11px;
+      left: 28px; }
+    .waiel-style-or span:before {
+      content: "";
+      width: 110px;
+      height: 1px;
+      background-color: #737373;
+      position: absolute;
+      top: 11px;
+      right: 28px; }
+
+body.login .waiel-style-or span:after {
+  top: 8px; }
+body.login .waiel-style-or span:before {
+  top: 8px; }
+
+form.woocommerce-checkout > .checkout__billing > * {
+  -webkit-box-flex: unset;
+  -ms-flex-positive: unset;
+  flex-grow: unset; }
+
+/*# sourceMappingURL=admin-main.css.map */
