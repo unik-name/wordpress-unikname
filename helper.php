@@ -70,11 +70,12 @@ function the_champ_facebook_page(){
  */
 function the_champ_social_login_page(){
 	// social login options
-	global $theChampLoginOptions, $theChampFacebookOptions, $theChampIsBpActive;
+	global $theChampLoginOptions, $theChampFacebookOptions, $theChampIsBpActive, $theChampGeneralOptions, $unikNameStyleButtonOptions;
 	// message on saving options
 	echo the_champ_settings_saved_notification();
 	echo the_champ_login_notifications($theChampLoginOptions);
-	require 'admin/social_login.php';
+	//require 'admin/social_login.php';
+	require 'templates/general_options.php';
 }
 
 /**
@@ -135,6 +136,7 @@ function the_champ_options_init(){
 	register_setting('the_champ_sharing_options', 'the_champ_sharing', 'the_champ_validate_options');
 	register_setting('the_champ_counter_options', 'the_champ_counter', 'the_champ_validate_options');
 	register_setting('the_champ_general_options', 'the_champ_general', 'the_champ_validate_options');
+	register_setting('unik_name_style_button_options', 'unik_name_style_button', 'the_champ_validate_options');
 	if((the_champ_social_sharing_enabled() || the_champ_social_counter_enabled() || the_champ_social_commenting_enabled()) && current_user_can('manage_options')){
 		// show option to disable sharing on particular page/post
 		$post_types = get_post_types( array( 'public' => true ), 'names', 'and' );
@@ -156,6 +158,8 @@ function the_champ_admin_scripts(){
 	<script>var theChampWebsiteUrl = '<?php echo esc_url(home_url()) ?>', theChampHelpBubbleTitle = "<?php echo __('Click to show help', 'super-socializer') ?>", theChampHelpBubbleCollapseTitle = "<?php echo __('Click to hide help', 'super-socializer') ?>" </script>
 	<?php
 	wp_enqueue_script('the_champ_admin_script', plugins_url('js/admin/admin.js', __FILE__), array('jquery', 'jquery-ui-tabs'), THE_CHAMP_SS_VERSION);
+
+	wp_enqueue_script('unikname_admin_script', plugins_url('assets/js/admin-script.js', __FILE__), array('jquery', 'jquery-ui-tabs'), THE_CHAMP_SS_VERSION);
 }
 
 /**
@@ -190,6 +194,7 @@ function the_champ_admin_counter_scripts(){
  */	
 function the_champ_admin_style(){
 	wp_enqueue_style('the_champ_admin_style', plugins_url('css/admin.css', __FILE__), false, THE_CHAMP_SS_VERSION);
+	wp_enqueue_style('unikname_admin_style', plugins_url('assets/css/admin-main.css', __FILE__), false, THE_CHAMP_SS_VERSION);
 }
 
 /**
@@ -492,7 +497,7 @@ if(is_multisite() && is_main_site()){
 
 function the_champ_account_linking(){
 	if(is_user_logged_in()){
-		wp_enqueue_style('the-champ-frontend-css', plugins_url('css/front.css', __FILE__), false, THE_CHAMP_SS_VERSION);
+		wp_enqueue_style('the-champ-frontend-css', plugins_url('assets/css/main.css', __FILE__), false, THE_CHAMP_SS_VERSION);
 		global $theChampFacebookOptions, $theChampLoginOptions, $user_ID;
 		$twitterRedirect = urlencode(the_champ_get_valid_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . html_entity_decode(esc_url(remove_query_arg(array('linked'))))));
 		$currentPageUrl = urldecode($twitterRedirect);
@@ -528,6 +533,8 @@ function the_champ_account_linking(){
 			var theChampVkontakteAuthUrl = theChampSiteUrl + "?OIDCCallback=Vkontakte&wp_unikname_redirect_to=" + theChampTwitterRedirect;
 			var theChampLinkedinAuthUrl = theChampSiteUrl + "?OIDCCallback=Linkedin&wp_unikname_redirect_to=" + theChampTwitterRedirect;
 			var theChampUniknameAuthUrl = theChampSiteUrl + "?OIDCCallback=UniknameConnect&wp_unikname_redirect_to=" + theChampTwitterRedirect;
+			// alert("tantant");
+			// console.log(theChampUniknameAuthUrl);
 			</script>
 			<?php
 			$userVerified = false;
@@ -547,7 +554,7 @@ function the_champ_account_linking(){
 		$html = '<style type="text/css">table.superSocializerTable td{padding: 10px;}div.heateor_ss_sl_optin_container a{color:blue}div.heateor_ss_sl_optin_container label{font-size:11px;font-weight:normal}input.heateor_ss_social_login_optin{vertical-align:middle}</style>';
 
 		$html .= '<div class="metabox-holder columns-2 super-socializer-linking-container" id="post-body">
-            <div class="stuffbox" style="width:60%; padding-bottom:10px">
+            <div class="stuffbox" style="width:250px; padding-bottom:10px">
                 <div class="inside" style="padding:0">
                     <table class="form-table editcomment superSocializerTable">
                         <tbody>';
@@ -585,8 +592,9 @@ function the_champ_account_linking(){
                         }
 						if(count($existingProviders) > 0){
                         $html .= '<tr>
-                            <td colspan="2"><strong>' . $theChampLoginOptions['scl_title'] . '</strong><br/>';
+                            <td colspan="2">';
 							foreach($existingProviders as $provider){
+
 								$icons_container .= '<li><i ';
 								// id
 								if( $provider == 'google' ){
@@ -594,15 +602,13 @@ function the_champ_account_linking(){
 								}
 								// class
 								$icons_container .= 'class="theChampLogin theChamp'. ucfirst($provider) .'Background theChamp'. ucfirst($provider) .'Login" ';
-								$icons_container .= 'alt="Login with ';
-								$icons_container .= ucfirst($provider);
-								$icons_container .= '" title="Login with ';
-								if($provider == 'live'){
-									$icons_container .= 'Windows Live';
-								}else{
-									$icons_container .= ucfirst($provider);
-								}
-								if(current_filter() == 'comment_form_top'){
+								// $html .= 'alt="Login with ';
+								// $html .= ucfirst($provider);
+								// $html .= '" title="Login with ';
+								// $html .= ucfirst($provider);
+								$icons_container .= 'alt="Login with your private @unikname';
+								$icons_container .= '" title="Login with your private @unikname';
+								if(current_filter() == 'comment_form_top' || current_filter() == 'comment_form_must_log_in_after'){
 									$icons_container .= '" onclick="theChampCommentFormLogin = true; theChampInitiateLogin(this)" >';
 								}else{
 									$icons_container .= '" onclick="theChampInitiateLogin(this)" >';
@@ -610,7 +616,10 @@ function the_champ_account_linking(){
 								if($provider == 'facebook'){
 									$icons_container .= '<div class="theChampFacebookLogoContainer">';
 								}
-								$icons_container .= '<div class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></div>';
+								$icons_container .= '<ss style="display:block" class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></ss>';
+								if(isset($theChampLoginOptions['scl_link_label']) && $theChampLoginOptions['scl_link_label'] != ''){
+									$icons_container .= '<label class="button_label">'.$theChampLoginOptions['scl_link_label'].'</label>';
+								}
 								if($provider == 'facebook'){
 									$icons_container .= '</div>';
 								}
@@ -622,34 +631,38 @@ function the_champ_account_linking(){
 								$icons_container .= $gdprOptIn;
 							}
 							$icons_container .= '</div>';
+
 							$html .= $icons_container;
+							$html .= '<p class="sub-title">' . $theChampLoginOptions['scl_title'] . '</p>';	
 	                        $html .= '</td>
 	                        </tr>';
 	                    }
-                        $html .= '<tr>
-                            <td colspan="2">';
-                            	if(is_array($linkedAccounts) || $primarySocialNetwork){
-                            		$html .= '<table>
-                            		<tbody>';
-                            		$primarySocialId = get_user_meta($user_ID, 'thechamp_social_id', true);
-                            		if($primarySocialNetwork && $primarySocialId){
-                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == get_user_meta($user_ID, 'thechamp_social_id', true);
-	                            		$html .= '<tr>
-	                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input type="button" onclick="theChampUnlink(this, \''. $primarySocialNetwork .'\')" value="'. __('Remove', 'super-socializer') .'" /></td></tr>';
-                            		}
-                            		if(is_array($linkedAccounts) && count($linkedAccounts) > 0){
-                            			foreach($linkedAccounts as $key => $value){
-	                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == $value;
-	                            			$html .= '<tr>
-	                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($key) .'</strong></td><td><input type="button" onclick="theChampUnlink(this, \''. $key .'\')" value="'. __('Remove', 'super-socializer') .'" /></td></tr>';
+	                    if(is_array($linkedAccounts) || $primarySocialNetwork){
+	                        $html .= '<tr>
+	                            <td colspan="2">';
+	                            	
+	                            		$html .= '<table>
+	                            		<tbody>';
+	                            		$primarySocialId = get_user_meta($user_ID, 'thechamp_social_id', true);
+	                            		if($primarySocialNetwork && $primarySocialId){
+	                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == get_user_meta($user_ID, 'thechamp_social_id', true);
+		                            		$html .= '<tr>
+		                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input type="button" onclick="theChampUnlink(this, \''. $primarySocialNetwork .'\')" value="'. __('Remove', 'super-socializer') .'" /></td></tr>';
 	                            		}
-                            		}
-                            		$html .= '</tbody>
-                            		</table>';
-                            	}
-                            $html .= '</td>
-                        </tr>
-                    	</tbody>
+	                            		if(is_array($linkedAccounts) && count($linkedAccounts) > 0){
+	                            			foreach($linkedAccounts as $key => $value){
+		                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == $value;
+		                            			$html .= '<tr>
+		                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($key) .'</strong></td><td><input type="button" onclick="theChampUnlink(this, \''. $key .'\')" value="'. __('Remove', 'super-socializer') .'" /></td></tr>';
+		                            		}
+	                            		}
+	                            		$html .= '</tbody>
+	                            		</table>';
+	                            	
+	                            $html .= '</td>
+	                        </tr>';
+                        }
+                    	$html .= '</tbody>
                     </table>
                 </div>
             </div>

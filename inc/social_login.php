@@ -7,9 +7,20 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 /**
  * Render Social Login icons HTML
  */
-function the_champ_login_button($widget = false){
+function the_champ_login_button($widget = false, $action = 'login'){
 	if(!is_user_logged_in() && the_champ_social_login_enabled()){
-		global $theChampLoginOptions;
+		global $theChampLoginOptions, $unikNameStyleButtonOptions;
+		global $buttonLoginTitle, $buttonLoginLabel, $buttonRegisterTitle, $buttonRegisterLabel, $subTitleLogin, $subTitleRegister;
+		
+		$titleButton 		= $buttonLoginTitle;
+		$labelButton 		= $buttonLoginLabel;
+		$subTitleButton		= $subTitleLogin;
+		if($action == 'register'){
+			$titleButton 	= $buttonRegisterTitle;
+			$labelButton 	= $buttonRegisterLabel;
+			$subTitleButton	= $subTitleRegister;
+		} 
+
 		$html = '';
 		$customInterface = apply_filters('the_champ_login_interface_filter', '', $theChampLoginOptions, $widget);
 		if($customInterface != ''){
@@ -17,12 +28,14 @@ function the_champ_login_button($widget = false){
 		}elseif(isset($theChampLoginOptions['providers']) && is_array($theChampLoginOptions['providers']) && count($theChampLoginOptions['providers']) > 0){
 			$html = the_champ_login_notifications($theChampLoginOptions);
 			if(!$widget){
-				$html .= '<div class="the_champ_outer_login_container">';
-				if(isset($theChampLoginOptions['title']) && $theChampLoginOptions['title'] != ''){
-					$html .= '<div class="the_champ_social_login_title">'. $theChampLoginOptions['title'] .'</div>';
+				$html .= '<div class="the_champ_outer_login_container unikname_alignment_'.$unikNameStyleButtonOptions[$action.'_button_alignment'].'">';
+				if(isset($unikNameStyleButtonOptions[$action.'_button_title']) && $unikNameStyleButtonOptions[$action.'_button_title'] != ''){
+					$html .= '<div class="the_champ_social_login_title">'.$titleButton[$unikNameStyleButtonOptions[$action.'_button_title']].'</div>';
+				}else{
+					$html .= '<div class="the_champ_social_login_title">'.$titleButton[1].'</div>';
 				}
 			}
-			$html .= '<div class="the_champ_login_container">';
+			$html .= '<div class="the_champ_login_container '.'uniknmae_action_'.$action.' '.'button_color_'.$unikNameStyleButtonOptions[$action.'_color'].'">';
 			$gdprOptIn = '';
 			if(isset($theChampLoginOptions['gdpr_enable'])){
 				$gdprOptIn = '<div class="heateor_ss_sl_optin_container"><label><input type="checkbox" class="heateor_ss_social_login_optin" value="1" />'. str_replace(array($theChampLoginOptions['ppu_placeholder'], $theChampLoginOptions['tc_placeholder']), array('<a href="'. $theChampLoginOptions['privacy_policy_url'] .'" target="_blank">'. $theChampLoginOptions['ppu_placeholder'] .'</a>', '<a href="'. $theChampLoginOptions['tc_url'] .'" target="_blank">'. $theChampLoginOptions['tc_placeholder'] .'</a>'), wp_strip_all_tags($theChampLoginOptions['privacy_policy_optin_text'])) .'</label></div>';
@@ -40,6 +53,7 @@ function the_champ_login_button($widget = false){
 					}
 					// class
 					$html .= 'class="theChampLogin theChamp'. ucfirst($provider) .'Background theChamp'. ucfirst($provider) .'Login" ';
+					$html .= 'style="border-radius: '.$unikNameStyleButtonOptions[$action.'_border_radius'].'px" ';
 					// $html .= 'alt="Login with ';
 					// $html .= ucfirst($provider);
 					// $html .= '" title="Login with ';
@@ -55,6 +69,11 @@ function the_champ_login_button($widget = false){
 						$html .= '<div class="theChampFacebookLogoContainer">';
 					}
 					$html .= '<ss style="display:block" class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></ss>';
+					if(isset($unikNameStyleButtonOptions[$action.'_button_label']) && $unikNameStyleButtonOptions[$action.'_button_label'] != ''){
+						$html .= '<label class="button_label">'.$labelButton[$unikNameStyleButtonOptions[$action.'_button_label']].'</label>';
+					}else{
+						$html .= '<label class="button_label">'.$labelButton[1].'</label>';
+					}
 					if($provider == 'facebook'){
 						$html .= '</div>';
 					}
@@ -66,7 +85,13 @@ function the_champ_login_button($widget = false){
 				$html .= '<div style="clear:both"></div>';
 				$html .= $gdprOptIn;
 			}
+
 			$html .= '</div>';
+			if(isset($unikNameStyleButtonOptions[$action.'_button_description']) && $unikNameStyleButtonOptions[$action.'_button_description'] >= 1){
+				$html .= '<div class="the_champ_social_button_description"> 🔐 '.$subTitleButton[$unikNameStyleButtonOptions[$action.'_button_description']].'</div>';
+			}else{
+				$html .= '<div class="the_champ_social_button_description"> 🔐 '.$subTitleButton['1'].'</div>';
+			}
 			if(!$widget){
 				$html .= '</div><div style="clear:both; margin-bottom: 6px"></div>';
 			}
@@ -78,38 +103,76 @@ function the_champ_login_button($widget = false){
 		}
 	}
 }
+function unikname_link_account_with_unikname(){
+	echo the_champ_account_linking();
+}
+
+function unikname_html_or_button(){
+	global $theChampLoginOptions;
+	if ( isset($theChampLoginOptions['enable']) && $theChampLoginOptions['enable'] == 1 ) {
+		echo '<div class="waiel-style-or"><span>'.__('or','unikname-connect').'</span></div>';
+	}
+}
+
+/**
+ * Render Unik Name Login icons HTML
+ */
+function unikname_login_button_icon_or_before(){
+	unikname_html_or_button();
+	the_champ_login_button(false, 'login');
+}
+function unikname_login_button_icon_or_after(){
+	the_champ_login_button(false, 'login');
+	unikname_html_or_button();
+}
+/**
+ * Render Unik Name Login icons HTML
+ */
+function unikname_register_button_icon_or_before(){
+	unikname_html_or_button();
+	the_champ_login_button(false, 'register');
+}
+function unikname_register_button_icon_or_after(){
+	the_champ_login_button(false, 'register');
+	unikname_html_or_button();
+}
 
 // enable FB login at login, register and comment form
 if(isset($theChampLoginOptions['enableAtLogin']) && $theChampLoginOptions['enableAtLogin'] == 1){
-	add_action('login_form', 'the_champ_login_button');
-	add_action('bp_before_sidebar_login_form', 'the_champ_login_button');
+	add_action('login_form', 'unikname_login_button_icon_or_before', 1000);
+	add_action('bp_before_sidebar_login_form', 'unikname_login_button_icon_or_before');
 }
 if(isset($theChampLoginOptions['enableAtRegister']) && $theChampLoginOptions['enableAtRegister'] == 1){
-	add_action('register_form', 'the_champ_login_button');
-	add_action('after_signup_form', 'the_champ_login_button');
-	add_action('bp_before_account_details_fields', 'the_champ_login_button');
+	add_action('register_form', 'unikname_register_button_icon_or_before');
+	add_action('after_signup_form', 'unikname_register_button_icon_or_before');
+	add_action('bp_before_account_details_fields', 'unikname_register_button_icon_or_before');
 }
 if(isset($theChampLoginOptions['enableAtComment']) && $theChampLoginOptions['enableAtComment'] == 1){
 	global $user_ID;
 	if(get_option('comment_registration') && intval($user_ID) == 0){
-		add_action('comment_form_must_log_in_after', 'the_champ_login_button');
+		add_action('comment_form_must_log_in_after', 'unikname_register_button_icon_or_before');
 	}else{
-		add_action('comment_form_top', 'the_champ_login_button');
+		add_action('comment_form_top', 'unikname_login_button_icon_or_after');
 	}
 }
 if(isset($theChampLoginOptions['enable_before_wc'])){
-	add_action( 'woocommerce_before_customer_login_form', 'the_champ_login_button' );
+	add_action( 'woocommerce_before_customer_login_form', 'unikname_login_button_icon_or_after' );
 }
 if(isset($theChampLoginOptions['enable_after_wc'])){
-	add_action( 'woocommerce_login_form_end', 'the_champ_login_button' );
+	add_action( 'woocommerce_after_customer_login_form', 'unikname_login_button_icon_or_before' );
+}
+if(isset($theChampLoginOptions['enable_form_login_wc'])){
+	add_action( 'woocommerce_login_form_end', 'unikname_login_button_icon_or_before' );
 }
 if(isset($theChampLoginOptions['enable_register_wc'])){
-	add_action( 'woocommerce_register_form', 'the_champ_login_button' );
+	add_action( 'woocommerce_register_form_end', 'unikname_register_button_icon_or_before' );
 }
 if(isset($theChampLoginOptions['enable_wc_checkout']) && $theChampLoginOptions['enable_wc_checkout'] == 1){
-	add_action( 'woocommerce_checkout_before_customer_details', 'the_champ_login_button' );
+	add_action( 'woocommerce_checkout_before_customer_details', 'unikname_login_button_icon_or_after' );
 }
-
+if(isset($theChampLoginOptions['link_my_account_fe']) && $theChampLoginOptions['link_my_account_fe'] == 1 && isset($theChampLoginOptions['enable']) && $theChampLoginOptions['enable'] == 1){
+	add_action( 'woocommerce_before_edit_account_form', 'unikname_link_account_with_unikname' );
+}
 /**
  * Login user to Wordpress.
  */

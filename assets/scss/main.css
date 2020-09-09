@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'helvetica';
+  src: url("../fonts/Helvetica.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: block; }
+.the_champ_outer_login_container {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  min-width: 260px;
+  width: 260px !important;
+  font-size: 15px;
+  font-family: "helvetica"; }
+  .the_champ_outer_login_container.unikname_alignment_left {
+    margin-left: 0;
+    margin-right: auto; }
+  .the_champ_outer_login_container.unikname_alignment_right {
+    margin-left: auto;
+    margin-right: 0; }
+  .the_champ_outer_login_container.unikname_alignment_center {
+    margin-left: auto;
+    margin-right: auto; }
+  .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li {
+    float: none; }
+    .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+      float: none;
+      display: block;
+      min-width: 100%;
+      width: 100%;
+      display: inline-flex;
+      height: 42px !important;
+      padding: 5px 0px !important; }
+      .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg {
+        width: 45px;
+        height: 100%;
+        margin-left: 20px;
+        background: none;
+        background-repeat: no-repeat;
+        background-image: url(../images/icon-unikname.svg) !important; }
+        .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg:after {
+          content: none; }
+      .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
+        color: #fff !important;
+        padding-left: 10px;
+        font-style: normal;
+        font-size: 15px !important;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto; }
+        .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label:hover {
+          cursor: pointer; }
+      .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin:hover {
+        cursor: pointer; }
+  .the_champ_outer_login_container .the_champ_login_container.button_color_blue ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+    background-color: #0F2852 !important; }
+  .the_champ_outer_login_container .the_champ_login_container.button_color_turquoise ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+    background-color: #2B6BF3 !important; }
+  .the_champ_outer_login_container .the_champ_social_button_description {
+    font-size: 13px;
+    font-style: italic; }
+
+.theChampCommentingTabs ul {
+  float: none; }
+
+.super-socializer-linking-container table.form-table tbody tr {
+  border: 0px !important; }
+  .super-socializer-linking-container table.form-table tbody tr td {
+    border: 0px;
+    text-align: center;
+    padding: 0px !important; }
+    .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul {
+      float: none; }
+      .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+        float: none;
+        display: block;
+        min-width: auto;
+        width: 250px;
+        display: inline-flex;
+        height: 45px !important;
+        padding: 10px 0px !important;
+        background-color: #0F2852;
+        border-radius: 15px; }
+        .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg {
+          width: 45px;
+          height: 100%;
+          margin-left: 25px;
+          background: none;
+          background-repeat: no-repeat;
+          background-image: url(../images/icon-unikname.svg) !important;
+          background-size: contain !important;
+          background-position: 10px !important; }
+          .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin .theChampLoginSvg:after {
+            content: none; }
+        .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
+          color: #fff !important;
+          padding-left: 10px;
+          font-style: normal;
+          font-size: 15px !important;
+          text-align: center;
+          margin-top: auto;
+          margin-bottom: auto;
+          font-family: "helvetica";
+          line-height: 0;
+          -webkit-font-smoothing: auto; }
+          .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label:hover {
+            cursor: pointer; }
+        .super-socializer-linking-container table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin:hover {
+          cursor: pointer; }
+    .super-socializer-linking-container table.form-table tbody tr td p.sub-title {
+      font-family: "helvetica";
+      font-size: 13px;
+      font-style: italic; }
+
+body.wp-admin .stuffbox {
+  background-color: transparent;
+  background: transparent;
+  border: 0;
+  box-shadow: 0 0 black; }
+  body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul {
+    float: none;
+    margin-top: 20px;
+    margin-bottom: 0px; }
+    body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
+      height: 25px !important; }
+      body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
+        font-family: "helvetica"; }
+  body.wp-admin .stuffbox table.form-table tbody tr td p.sub-title {
+    margin-top: 0px; }
+
+form.woocommerce-checkout > .checkout__billing > * {
+  -webkit-box-flex: unset;
+  -ms-flex-positive: unset;
+  flex-grow: unset; }
+
+/*# sourceMappingURL=main.css.map */
