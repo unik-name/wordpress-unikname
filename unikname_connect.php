@@ -16,10 +16,17 @@ define('THE_CHAMP_SS_VERSION', '8.0.0');
 if (!defined('UNIKNAME_CONNECT_SERVER')) {
 	define('UNIKNAME_CONNECT_SERVER', getenv('UNIKNAME_CONNECT_SERVER') ?: 'https://connect.unikname.com');
 }
+if ( ! defined( 'UNIKNAME_PLUGIN_FILE' ) ) define( 'UNIKNAME_PLUGIN_FILE', __FILE__ );
+if ( ! defined( 'UNIKNAME_ABSPATH' ) ) define( 'UNIKNAME_ABSPATH', dirname( UNIKNAME_PLUGIN_FILE ) . '/' );
+if ( ! defined( 'UNIKNAME_DIR_URL' ) ) define( 'UNIKNAME_DIR_URL', plugin_dir_url(UNIKNAME_PLUGIN_FILE) );
 
 require 'helper.php';
 
 $theChampLoginOptions = get_option('the_champ_login');
+$unikNameStyleButtonOptions = get_option('unik_name_style_button');
+require 'includes/define-value.php';
+
+// End Button
 if(the_champ_social_login_enabled()){
 	if(isset($theChampLoginOptions['providers']) && in_array('twitter', $theChampLoginOptions['providers'])){
 		require 'library/Twitter/src/Config.php';
@@ -1196,6 +1203,7 @@ function the_champ_frontend_styles(){
 	}?></style>
 	<?php
 	wp_enqueue_style( 'the_champ_frontend_css', plugins_url( 'css/front.css', __FILE__ ), false, THE_CHAMP_SS_VERSION );
+	wp_enqueue_style( 'unikname_frontend_css', plugins_url( 'assets/css/main.css', __FILE__ ), false, THE_CHAMP_SS_VERSION);
 	$default_svg = false;
 	if ( isset( $theChampSharingOptions['enable'] ) ) {
 		if ( isset( $theChampSharingOptions['hor_enable'] ) ) {
@@ -1234,13 +1242,13 @@ function the_champ_frontend_styles(){
  * Create plugin menu in admin.
  */
 function the_champ_create_admin_menu(){
-	$page = add_menu_page('Unikname Connect', 'Unikname Connect', 'manage_options', 'heateor-ss-general-options', 'the_champ_general_options_page', plugins_url('images/logo.png', __FILE__));
+	$page = add_menu_page('Unikname Connect', 'Unikname Connect', 'manage_options', 'heateor-social-login', 'the_champ_social_login_page', plugins_url('images/logo.png', __FILE__));
 	// general options page
-	$generalOptionsPage = add_submenu_page( 'heateor-ss-general-options', __( "Unikname Connect - General Options", 'super-socializer' ), __( "General Options", 'super-socializer' ), 'manage_options', 'heateor-ss-general-options', 'the_champ_general_options_page' );
+	//$generalOptionsPage = add_submenu_page( 'heateor-ss-general-options', __( "Unikname Connect - General Options", 'super-socializer' ), __( "General Options", 'super-socializer' ), 'manage_options', 'heateor-ss-general-options', 'the_champ_general_options_page' );
 	// facebook page
 	// $facebookPage = add_submenu_page('heateor-ss-general-options', 'Super Socializer - Social Commenting', 'Social Commenting', 'manage_options', 'heateor-social-commenting', 'the_champ_facebook_page');
 	// social login page
-	$loginPage = add_submenu_page('heateor-ss-general-options', 'Unikname Connect Configuration', 'Configuration', 'manage_options', 'heateor-social-login', 'the_champ_social_login_page');
+	//$loginPage = add_submenu_page('heateor-ss-general-options', 'Unikname Connect Configuration', 'Configuration', 'manage_options', 'heateor-social-login', 'the_champ_social_login_page');
 	// social sharing page
 	// $sharingPage = add_submenu_page('heateor-ss-general-options', 'Super Socializer - Social Sharing', 'Social Sharing', 'manage_options', 'heateor-social-sharing', 'the_champ_social_sharing_page');
 	// like buttons page
@@ -1248,9 +1256,9 @@ function the_champ_create_admin_menu(){
 	add_action('admin_print_scripts-' . $page, 'the_champ_admin_scripts');
 	add_action('admin_print_scripts-' . $page, 'the_champ_admin_style');
 	add_action('admin_print_scripts-' . $page, 'the_champ_fb_sdk_script');
-	add_action('admin_print_scripts-' . $generalOptionsPage, 'the_champ_admin_scripts');
-	add_action('admin_print_scripts-' . $generalOptionsPage, 'the_champ_fb_sdk_script');
-	add_action('admin_print_styles-' . $generalOptionsPage, 'the_champ_admin_style');
+	// add_action('admin_print_scripts-' . $generalOptionsPage, 'the_champ_admin_scripts');
+	// add_action('admin_print_scripts-' . $generalOptionsPage, 'the_champ_fb_sdk_script');
+	// add_action('admin_print_styles-' . $generalOptionsPage, 'the_champ_admin_style');
 	// add_action('admin_print_scripts-' . $facebookPage, 'the_champ_admin_scripts');
 	// add_action('admin_print_scripts-' . $facebookPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_styles-' . $facebookPage, 'the_champ_admin_style');
