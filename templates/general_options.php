@@ -13,7 +13,7 @@
     <div class="unik-content-admin">
         <form method="post" action="options.php" novalidate="novalidate" id="waiel-job-setting-content">
             <?php 
-                $urlAdmin       = admin_url('/admin.php?page=heateor-social-login');
+                $urlAdmin       = admin_url('/admin.php?page=heateor-ss-general-options');
                 $tabCurrent     = '';
                 if(isset($_GET['tab']) && $_GET['tab'] != '') $tabCurrent = $_GET['tab']; 
             ?>
