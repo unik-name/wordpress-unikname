@@ -1,8 +1,8 @@
 ﻿=== Unikname Connect for WordPress ===
 Contributors: Space Elephant, Unikname, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
 Requires at least: 5.0.0
-Tested up to: 5.4
-Stable tag: 8.0.0
+Tested up to: 5.5
+Stable tag: 8.1.0
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -92,5 +92,19 @@ Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wor
 
 
 == Changelog ==
+
+= 8.1.0 [2020-09-10] =
+
+- **Added**
+	- You can now link your existing WordPress account with your Unikname profile!
+		More to come for WP admins to strongly secure their backend in a next version
+
+- **Changed**
+	- New backend UI for a great plugin configuration experience
+	- Many new styling, position, labels ... options for the Unikname Connect button
+	- New translations
+
 = 8.0.0 [2020-06-25] =
-[Improvement] Initial version of the plugin
+
+- **Added**
+	- Initial version of the plugin
