@@ -2,7 +2,7 @@
 Contributors: Space Elephant, Unikname, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
 Requires at least: 5.0.0
 Tested up to: 5.5
-Stable tag: 8.1.0
+Stable tag: 8.1.1
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -92,6 +92,12 @@ Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wor
 
 
 == Changelog ==
+
+= 8.1.1 [2020-09-14] =
+
+- **Fixed**
+	- WP-UNC plugin doesn't disable when it is updated on some configuration
+	- Button labels are always translated according to the current locale on existing installations
 
 = 8.1.0 [2020-09-10] =
 
