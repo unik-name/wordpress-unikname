@@ -79,7 +79,7 @@ function the_champ_init(){
 	add_action('login_enqueue_scripts', 'the_champ_frontend_scripts');
 	add_action('login_enqueue_scripts', 'the_champ_frontend_styles');
 	add_action('parse_request', 'the_champ_connect');
-	load_plugin_textdomain('super-socializer', false, dirname(plugin_basename(__FILE__)).'/languages/');
+	load_plugin_textdomain('unikname-connect', false, dirname(plugin_basename(__FILE__)).'/languages/');
 	if(heateor_ss_is_plugin_active('woocommerce/woocommerce.php')){
 		add_action('the_champ_user_successfully_created', 'the_champ_sync_woocom_profile', 10, 3);
 	}
@@ -1242,7 +1242,7 @@ function the_champ_frontend_styles(){
  * Create plugin menu in admin.
  */
 function the_champ_create_admin_menu(){
-	$page = add_menu_page('Unikname Connect', 'Unikname Connect', 'manage_options', 'heateor-social-login', 'the_champ_social_login_page', plugins_url('images/logo.png', __FILE__));
+	$page = add_menu_page('Unikname Connect', 'Unikname Connect', 'manage_options', 'heateor-ss-general-options', 'the_champ_social_login_page', plugins_url('images/logo.png', __FILE__));
 	// general options page
 	//$generalOptionsPage = add_submenu_page( 'heateor-ss-general-options', __( "Unikname Connect - General Options", 'super-socializer' ), __( "General Options", 'super-socializer' ), 'manage_options', 'heateor-ss-general-options', 'the_champ_general_options_page' );
 	// facebook page
@@ -1722,7 +1722,7 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error">
 				<h3>Super Socializer</h3>
-				<p><?php echo sprintf(__('To continue using Steam login save Steam API key <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-social-login'); ?></p>
+				<p><?php echo sprintf(__('To continue using Steam login save Steam API key <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-optionsn'); ?></p>
 			</div>
 			<?php
 		}
@@ -1737,7 +1737,7 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error">
 				<h3>Super Socializer</h3>
-				<p><?php echo sprintf(__('To continue using Social Login, save the secret keys <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-social-login'); ?></p>
+				<p><?php echo sprintf(__('To continue using Social Login, save the secret keys <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options'); ?></p>
 			</div>
 			<?php
 		}
@@ -1847,7 +1847,7 @@ function the_champ_addon_update_notification(){
 				?>
 				<div class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Save the url of privacy policy page of your website <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-social-login#tabs-3'); ?></p>
+					<p><?php echo sprintf(__('Save the url of privacy policy page of your website <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options#tabs-3'); ?></p>
 				</div>
 				<?php
 			}

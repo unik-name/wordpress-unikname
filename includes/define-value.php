@@ -10,8 +10,8 @@
         '1' => __('With your @unikname','unikname-connect') 
     );
     $subTitleLogin = array(
-        '1' => __('The next-gen identifier: simple, secure and private. <a href=" https://my.unikname.app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
-        '2' => __('The next-gen identifier: simple, secure and private.','unikname-connect')
+        '1' => __('🔐 The next-gen identifier: simple, secure and private. <a href=" https://my.unikname.app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
+        '2' => __('🔐 The next-gen identifier: simple, secure and private.','unikname-connect')
     );
     // Register
     $buttonRegisterTitle = array(
@@ -24,8 +24,8 @@
         '1' => __('With your @unikname','unikname-connect'),
     );
     $subTitleRegister = array(
-        '1' => __('The next-gen identifier: simple, secure and private. <a href=" https://my.unikname.app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
-        '2' => __('The next-gen identifier: simple, secure and private.','unikname-connect')
+        '1' => __('🔐 The next-gen identifier: simple, secure and private. <a href=" https://my.unikname.app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
+        '2' => __('🔐 The next-gen identifier: simple, secure and private.','unikname-connect')
     );
 
     add_action('init', 'unikname_default_value_style', 1);

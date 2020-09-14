@@ -284,12 +284,12 @@ msgid "Text on 'Email required' popup"
 msgstr ""
 
 #: includes/define-value.php:14 includes/define-value.php:28
-msgid "The next-gen identifier: simple, secure and private."
+msgid "🔐 The next-gen identifier: simple, secure and private."
 msgstr ""
 
 #: includes/define-value.php:13
 msgid ""
-"The next-gen identifier: simple, secure and private. <a href=\" https://my."
+"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
 "unikname."
 "app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
 ">Read more.</a>"
@@ -297,7 +297,7 @@ msgstr ""
 
 #: includes/define-value.php:27
 msgid ""
-"The next-gen identifier: simple, secure and private. <a href=\" https://my."
+"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
 "unikname."
 "app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\""
 ">Read more.</a>"
