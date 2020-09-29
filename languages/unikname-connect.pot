@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-01 10:32+0000\n"
+"POT-Creation-Date: 2020-09-29 13:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,167 +15,100 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.3.2"
 
-#: templates/settings/login_options.php:80
-#: templates/settings/login_options.php:104
-msgid "Account dashboard"
+#: unikname_connect.php:881
+msgid "Please verify your email address to login."
 msgstr ""
 
-#: templates/settings/advanced_options.php:3
-msgid "Account linking options"
+#: unikname_connect.php:881
+msgid "Your email has been verified. Now you can login to your account"
 msgstr ""
 
-#: templates/general_options.php:37
-msgid "Advanced options"
+#: unikname_connect.php:885
+msgid "Notification"
 msgstr ""
 
-#: templates/settings/style_options.php:44
-#: templates/settings/style_options.php:134
-msgid "Alignment"
+#: unikname_connect.php:903
+msgid "Set up your account"
 msgstr ""
 
-#: templates/general_options.php:22
-msgid "Basic configuration"
+#: unikname_connect.php:906
+msgid "Please check your email inbox to complete the registration."
 msgstr ""
 
-#: templates/settings/style_options.php:38
-#: templates/settings/style_options.php:128
-msgid "Border radius"
+#: unikname_connect.php:907
+msgid "Username already exists."
 msgstr ""
 
-#: templates/settings/style_options.php:81
-#: templates/settings/style_options.php:171
-msgid "Button description"
+#: unikname_connect.php:908
+msgid "The username is required."
 msgstr ""
 
-#: templates/settings/style_options.php:71
-#: templates/settings/style_options.php:161
-msgid "Button label"
+#: inc/social_login.php:16 includes/define-value.php:4
+#: templates/settings/style_options.php:5
+msgid "Login"
 msgstr ""
 
-#: templates/settings/style_options.php:61
-#: templates/settings/style_options.php:151
-msgid "Button title"
+#: inc/social_login.php:17 includes/define-value.php:5
+#: templates/settings/style_options.php:6
+msgid "Sign in"
 msgstr ""
 
-#: templates/settings/style_options.php:25
-#: templates/settings/style_options.php:115
-msgid "Color"
-msgstr ""
-
-#: includes/define-value.php:6 includes/define-value.php:20
+#: inc/social_login.php:18 inc/social_login.php:32 includes/define-value.php:6
+#: includes/define-value.php:20 templates/settings/style_options.php:7
+#: templates/settings/style_options.php:21
 msgid "Continue"
 msgstr ""
 
-#: templates/settings/general_options.php:25
-msgid "Custom CSS"
+#: inc/social_login.php:22 inc/social_login.php:36 includes/define-value.php:10
+#: includes/define-value.php:24 templates/settings/style_options.php:11
+#: templates/settings/style_options.php:25
+msgid "With your @unikname"
 msgstr ""
 
-#: templates/settings/login_options.php:84
-#: templates/settings/login_options.php:108
-msgid "Custom Url"
-msgstr ""
-
-#: templates/settings/general_options.php:18
-msgid "Delete all the options on plugin deletion"
-msgstr ""
-
-#: templates/settings/basic_configuration.php:11
-msgid "Disable user registration via Unikname Connect"
-msgstr ""
-
-#: templates/general_options.php:31
-msgid "Email options"
-msgstr ""
-
-#: templates/settings/email_options.php:40
-msgid "Email popup height"
-msgstr ""
-
-#: templates/settings/email_options.php:26
-msgid "Email popup options"
-msgstr ""
-
-#: templates/settings/email_options.php:4
-msgid "Email required"
-msgstr ""
-
-#: templates/settings/login_options.php:38
-msgid "Enable after WooCommerce Customer Login Form"
-msgstr ""
-
-#: templates/settings/login_options.php:24
-msgid "Enable at comment form"
-msgstr ""
-
-#: templates/settings/login_options.php:10
-msgid "Enable at login page"
-msgstr ""
-
-#: templates/settings/login_options.php:17
-msgid "Enable at register page"
-msgstr ""
-
-#: templates/settings/login_options.php:63
-msgid "Enable at WooCommerce checkout page"
-msgstr ""
-
-#: templates/settings/login_options.php:45
-msgid "Enable at WooCommerce Customer Login Form"
-msgstr ""
-
-#: templates/settings/login_options.php:56
-msgid "Enable at WooCommerce Customer Register Form"
-msgstr ""
-
-#: templates/settings/advanced_options.php:18
-msgid "Enable at WooCommerce my account page (link account)"
-msgstr ""
-
-#: templates/settings/login_options.php:31
-msgid "Enable before WooCommerce Customer Login Form"
-msgstr ""
-
-#: templates/settings/email_options.php:46
-msgid "Enable email verification"
-msgstr ""
-
-#: templates/settings/basic_configuration.php:4
-msgid "Enable Unikname Connect"
-msgstr ""
-
-#: templates/settings/email_options.php:34
-msgid "Error message for 'Email required' popup"
-msgstr ""
-
-#: templates/general_options.php:25
-msgid "General options"
-msgstr ""
-
-#: templates/settings/login_options.php:76
-#: templates/settings/login_options.php:100
-msgid "Homepage"
-msgstr ""
-
-#. URI of the plugin
-msgid "https://docs.unik-name.com/integration/connect/apps/wordpress/"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "https://www.unikname.com"
-msgstr ""
-
-#: templates/settings/style_options.php:101
-msgid "icon unik name"
-msgstr ""
-
-#: templates/settings/general_options.php:4
-msgid "Include Javascript in website footer"
-msgstr ""
-
-#. Description of the plugin
+#: inc/social_login.php:25 includes/define-value.php:13
+#: templates/settings/style_options.php:14
 msgid ""
-"Integrate the famous Unikname Connect login solution into your Wordpress or "
-"WooCommerce websites."
+"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
+"unikname."
+"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
+">Read more.</a>"
+msgstr ""
+
+#: inc/social_login.php:26 inc/social_login.php:40 includes/define-value.php:14
+#: includes/define-value.php:28 templates/settings/style_options.php:15
+#: templates/settings/style_options.php:29
+msgid "🔐 The next-gen identifier: simple, secure and private."
+msgstr ""
+
+#: inc/social_login.php:30 includes/define-value.php:18
+#: templates/settings/style_options.php:19
+msgid "Sign up"
+msgstr ""
+
+#: inc/social_login.php:31 includes/define-value.php:19
+#: templates/settings/style_options.php:20
+msgid "Register"
+msgstr ""
+
+#: inc/social_login.php:39 includes/define-value.php:27
+#: templates/settings/style_options.php:28
+msgid ""
+"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
+"unikname."
+"app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\""
+">Read more.</a>"
+msgstr ""
+
+#: inc/social_login.php:140
+msgid "or"
+msgstr ""
+
+#: inc/social_login.php:259
+msgid "Redacted user "
+msgstr ""
+
+#: templates/general_options.php:5
+msgid "Logo Unik Name"
 msgstr ""
 
 #: templates/general_options.php:6
@@ -184,127 +117,96 @@ msgid ""
 "your user accounts from hacks and data theft"
 msgstr ""
 
-#: templates/settings/advanced_options.php:12
-msgid "Label"
+#: templates/general_options.php:22
+msgid "Basic configuration"
 msgstr ""
 
-#: templates/settings/advanced_options.php:25
-msgid ""
-"Link social account to already existing account, if email address matches"
-msgstr ""
-
-#: templates/settings/general_options.php:11
-msgid "Load all Javascript files in single file"
-msgstr ""
-
-#: includes/define-value.php:4
-msgid "Login"
-msgstr ""
-
-#: templates/settings/style_options.php:6
-msgid "Login button"
+#: templates/general_options.php:25
+msgid "General options"
 msgstr ""
 
 #: templates/general_options.php:28
 msgid "Login options"
 msgstr ""
 
-#: templates/settings/login_options.php:94
-msgid "Login redirection"
-msgstr ""
-
-#: templates/general_options.php:5
-msgid "Logo Unik Name"
-msgstr ""
-
-#: inc/social_login.php:103
-msgid "or"
-msgstr ""
-
-#: templates/settings/style_options.php:88
-#: templates/settings/style_options.php:178
-msgid "Read more"
-msgstr ""
-
-#: templates/settings/style_options.php:88
-#: templates/settings/style_options.php:178
-msgid "Read more link: "
-msgstr ""
-
-#: templates/settings/basic_configuration.php:18
-msgid "Redirection url"
-msgstr ""
-
-#: includes/define-value.php:19
-msgid "Register"
-msgstr ""
-
-#: templates/settings/style_options.php:96
-msgid "Register button"
-msgstr ""
-
-#: templates/settings/login_options.php:70
-msgid "Registration redirection"
-msgstr ""
-
-#: templates/settings/login_options.php:96
-msgid "Same page where user logged in"
-msgstr ""
-
-#: templates/general_options.php:89
-msgid "Save Changes"
-msgstr ""
-
-#: templates/settings/email_options.php:18
-msgid "Send new user registration notification email to admin"
-msgstr ""
-
-#: templates/settings/email_options.php:11
-msgid "Send post-registration email to user to set account password"
-msgstr ""
-
-#: includes/define-value.php:5
-msgid "Sign in"
-msgstr ""
-
-#: includes/define-value.php:18
-msgid "Sign up"
+#: templates/general_options.php:31
+msgid "Email options"
 msgstr ""
 
 #: templates/general_options.php:34
 msgid "Style options"
 msgstr ""
 
-#: templates/settings/advanced_options.php:6
-msgid "Sub Title"
+#: templates/general_options.php:37
+msgid "Advanced options"
 msgstr ""
 
-#: templates/settings/email_options.php:28
-msgid "Text on 'Email required' popup"
+#: templates/general_options.php:89
+msgid "Save Changes"
 msgstr ""
 
-#: includes/define-value.php:14 includes/define-value.php:28
-msgid "🔐 The next-gen identifier: simple, secure and private."
+#: templates/email_popup.php:15
+msgid "Welcome to "
 msgstr ""
 
-#: includes/define-value.php:13
-msgid ""
-"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
-"unikname."
-"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
-">Read more.</a>"
+#: templates/email_popup.php:17
+msgid "Your account must be set up before using it."
 msgstr ""
 
-#: includes/define-value.php:27
-msgid ""
-"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
-"unikname."
-"app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\""
-">Read more.</a>"
+#: templates/email_popup.php:18
+msgid "Let’s go!"
 msgstr ""
 
-#: templates/settings/login_options.php:4
-msgid "Title"
+#: templates/email_popup.php:21 templates/email_popup.php:39
+msgid "Next"
+msgstr ""
+
+#: templates/email_popup.php:25
+msgid "Contact"
+msgstr ""
+
+#: templates/email_popup.php:27
+msgid "This email is used to communicate with you"
+msgstr ""
+
+#: templates/email_popup.php:31 templates/email_popup.php:32
+msgid "Your email"
+msgstr ""
+
+#: templates/email_popup.php:35 templates/email_popup.php:36
+msgid "Confirm your email"
+msgstr ""
+
+#: templates/email_popup.php:43
+msgid "Username"
+msgstr ""
+
+#: templates/email_popup.php:46 templates/email_popup.php:47
+msgid "Your username"
+msgstr ""
+
+#: templates/email_popup.php:50
+msgid "Finish"
+msgstr ""
+
+#: templates/email_popup.php:116
+msgid "Email is not in the correct format!"
+msgstr ""
+
+#: templates/email_popup.php:118
+msgid "Email field is required!"
+msgstr ""
+
+#: templates/email_popup.php:120
+msgid "Email addresses do not match!"
+msgstr ""
+
+#: templates/email_popup.php:136
+msgid "Email already exists."
+msgstr ""
+
+#: templates/settings/general_options.php:4
+msgid "Include Javascript in website footer"
 msgstr ""
 
 #: templates/settings/general_options.php:7
@@ -312,29 +214,98 @@ msgstr ""
 #: templates/settings/general_options.php:21
 #: templates/settings/basic_configuration.php:7
 #: templates/settings/basic_configuration.php:14
-#: templates/settings/login_options.php:13
-#: templates/settings/login_options.php:20
-#: templates/settings/login_options.php:27
-#: templates/settings/login_options.php:34
-#: templates/settings/login_options.php:41
-#: templates/settings/login_options.php:48
-#: templates/settings/login_options.php:59
-#: templates/settings/login_options.php:66
+#: templates/settings/login_options.php:7
+#: templates/settings/login_options.php:14
+#: templates/settings/login_options.php:21
+#: templates/settings/login_options.php:28
+#: templates/settings/login_options.php:35
+#: templates/settings/login_options.php:42
+#: templates/settings/login_options.php:53
+#: templates/settings/login_options.php:60
 #: templates/settings/advanced_options.php:21
 #: templates/settings/advanced_options.php:28
 #: templates/settings/email_options.php:7
 #: templates/settings/email_options.php:14
 #: templates/settings/email_options.php:21
-#: templates/settings/email_options.php:49
+#: templates/settings/email_options.php:30
 msgid "Toggle"
 msgstr ""
 
-#. Author of the plugin
-msgid "Unikname"
+#: templates/settings/general_options.php:11
+msgid "Load all Javascript files in single file"
 msgstr ""
 
-#. Name of the plugin
-msgid "Unikname Connect"
+#: templates/settings/general_options.php:18
+msgid "Delete all the options on plugin deletion"
+msgstr ""
+
+#: templates/settings/general_options.php:25
+msgid "Custom CSS"
+msgstr ""
+
+#: templates/settings/style_options.php:34
+msgid "Login button"
+msgstr ""
+
+#: templates/settings/style_options.php:53
+#: templates/settings/style_options.php:143
+msgid "Color"
+msgstr ""
+
+#: templates/settings/style_options.php:66
+#: templates/settings/style_options.php:156
+#: templates/settings/email_options.php:74
+msgid "Border radius"
+msgstr ""
+
+#: templates/settings/style_options.php:72
+#: templates/settings/style_options.php:162
+msgid "Alignment"
+msgstr ""
+
+#: templates/settings/style_options.php:89
+#: templates/settings/style_options.php:179
+msgid "Button title"
+msgstr ""
+
+#: templates/settings/style_options.php:99
+#: templates/settings/style_options.php:189
+msgid "Button label"
+msgstr ""
+
+#: templates/settings/style_options.php:109
+#: templates/settings/style_options.php:199
+msgid "Button description"
+msgstr ""
+
+#: templates/settings/style_options.php:116
+#: templates/settings/style_options.php:206
+msgid "Read more link: "
+msgstr ""
+
+#: templates/settings/style_options.php:116
+#: templates/settings/style_options.php:206
+msgid "Read more"
+msgstr ""
+
+#: templates/settings/style_options.php:124
+msgid "Register button"
+msgstr ""
+
+#: templates/settings/style_options.php:129
+msgid "icon unik name"
+msgstr ""
+
+#: templates/settings/basic_configuration.php:4
+msgid "Enable Unikname Connect"
+msgstr ""
+
+#: templates/settings/basic_configuration.php:11
+msgid "Disable user registration via Unikname Connect"
+msgstr ""
+
+#: templates/settings/basic_configuration.php:18
+msgid "Redirection url"
 msgstr ""
 
 #: templates/settings/basic_configuration.php:24
@@ -345,6 +316,140 @@ msgstr ""
 msgid "Unikname Connect Secret"
 msgstr ""
 
-#: includes/define-value.php:10 includes/define-value.php:24
-msgid "With your @unikname"
+#: templates/settings/login_options.php:4
+msgid "Enable at login page"
+msgstr ""
+
+#: templates/settings/login_options.php:11
+msgid "Enable at register page"
+msgstr ""
+
+#: templates/settings/login_options.php:18
+msgid "Enable at comment form"
+msgstr ""
+
+#: templates/settings/login_options.php:25
+msgid "Enable before WooCommerce Customer Login Form"
+msgstr ""
+
+#: templates/settings/login_options.php:32
+msgid "Enable after WooCommerce Customer Login Form"
+msgstr ""
+
+#: templates/settings/login_options.php:39
+msgid "Enable at WooCommerce Customer Login Form"
+msgstr ""
+
+#: templates/settings/login_options.php:50
+msgid "Enable at WooCommerce Customer Register Form"
+msgstr ""
+
+#: templates/settings/login_options.php:57
+msgid "Enable at WooCommerce checkout page"
+msgstr ""
+
+#: templates/settings/login_options.php:64
+msgid "Registration redirection"
+msgstr ""
+
+#: templates/settings/login_options.php:70
+#: templates/settings/login_options.php:94
+msgid "Homepage"
+msgstr ""
+
+#: templates/settings/login_options.php:74
+#: templates/settings/login_options.php:98
+msgid "Account dashboard"
+msgstr ""
+
+#: templates/settings/login_options.php:78
+#: templates/settings/login_options.php:102
+msgid "Custom Url"
+msgstr ""
+
+#: templates/settings/login_options.php:88
+msgid "Login redirection"
+msgstr ""
+
+#: templates/settings/login_options.php:90
+msgid "Same page where user logged in"
+msgstr ""
+
+#: templates/settings/advanced_options.php:3
+msgid "Account linking options"
+msgstr ""
+
+#: templates/settings/advanced_options.php:6
+msgid "Sub Title"
+msgstr ""
+
+#: templates/settings/advanced_options.php:12
+msgid "Label"
+msgstr ""
+
+#: templates/settings/advanced_options.php:18
+msgid "Enable at WooCommerce my account page (link account)"
+msgstr ""
+
+#: templates/settings/advanced_options.php:25
+msgid ""
+"Link social account to already existing account, if email address matches"
+msgstr ""
+
+#: templates/settings/email_options.php:4
+msgid "Email required"
+msgstr ""
+
+#: templates/settings/email_options.php:11
+msgid "Send post-registration email to user to set account password"
+msgstr ""
+
+#: templates/settings/email_options.php:18
+msgid "Send new user registration notification email to admin"
+msgstr ""
+
+#: templates/settings/email_options.php:27
+msgid "Enable email verification"
+msgstr ""
+
+#: templates/settings/email_options.php:39
+msgid "Logo"
+msgstr ""
+
+#: templates/settings/email_options.php:55
+msgid "Main color"
+msgstr ""
+
+#: templates/settings/email_options.php:61
+msgid "Button style"
+msgstr ""
+
+#: templates/settings/email_options.php:63
+msgid "Standard"
+msgstr ""
+
+#: templates/settings/email_options.php:67
+msgid "Outline"
+msgstr ""
+
+#. Name of the plugin
+msgid "Unikname Connect"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Integrate the famous Unikname Connect login solution into your Wordpress or "
+"WooCommerce websites."
+msgstr ""
+
+#. URI of the plugin
+msgid "https://docs.unik-name.com/integration/connect/apps/wordpress/"
+msgstr ""
+
+#. Author of the plugin
+msgid "Unikname"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.unikname.com"
 msgstr ""

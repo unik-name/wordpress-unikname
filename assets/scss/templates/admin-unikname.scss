@@ -455,6 +455,63 @@
 						}
 					}
 				}
+				&.type-image-upload{
+					img.image-display-url{
+						height: 40px;
+						padding: 5px 15px;
+						border: 1px #0f2951 dashed;
+						margin-top: 10px;
+						border-radius: 5px;
+					}
+					.waiel-upload-btn{
+						img{
+						    width: 25px;
+						    padding: 5px;
+						    border: 1px solid #102852;
+						    border-radius: 100%;
+						    margin-bottom: 10px;
+						    margin-left: 20px;
+						}
+						&:hover{
+							cursor: pointer;
+						}
+					}
+				}
+				&.type-color-picker{
+					>label{
+					    display: inline-block;
+					    line-height: 20px;
+					    width: 80px;
+					    margin-right: 40px;
+					    margin-top: 18px;
+					    @media screen and (max-width: 1200px) {
+					    	 width: 230px;
+					    }
+					}
+					.item-color{
+						width: max-content;
+						display: inline-block;
+					}
+					.wp-picker-container .wp-color-result.button{
+						height: 38px;
+						border-radius: 100px;
+						padding-left: 40px;
+						border: 1px solid #102852;
+					}
+					.wp-color-result-text{
+						height: 36px;
+						line-height: 34px;
+						font-size: 13px;
+						border-radius: 0 100px 100px 0;
+						border: 0px;
+					}	
+					.wp-picker-container input[type=text].wp-color-picker{
+						height: 38px;
+					}
+					.wp-picker-container .wp-picker-clear{
+						height: 38px;
+					}				
+				}
 			}
 			.button-custom-style{
 				margin-top: 10px;

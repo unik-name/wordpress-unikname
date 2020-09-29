@@ -160,6 +160,10 @@ function the_champ_admin_scripts(){
 	wp_enqueue_script('the_champ_admin_script', plugins_url('js/admin/admin.js', __FILE__), array('jquery', 'jquery-ui-tabs'), THE_CHAMP_SS_VERSION);
 
 	wp_enqueue_script('unikname_admin_script', plugins_url('assets/js/admin-script.js', __FILE__), array('jquery', 'jquery-ui-tabs'), THE_CHAMP_SS_VERSION);
+
+	wp_enqueue_media();
+    wp_enqueue_style( 'wp-color-picker' );
+    wp_enqueue_script( 'wp-color-picker');
 }
 
 /**
@@ -281,7 +285,7 @@ function the_champ_ajax_response($response){
 function the_champ_notify(){
 	if(isset($_GET['message'])){
 		?>
-		<div><?php echo esc_attr($_GET['message']) ?></div>
+		<div class="unikname-content-ajax-container"><?php echo esc_attr($_GET['message']) ?></div>
 		<?php
 	}
 	die;
