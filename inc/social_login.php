@@ -256,8 +256,9 @@ function the_champ_create_username($profileData){
 		}
 		$firstName = str_replace("_", " ", $user_name[0]);
 	}else{
-		$username = !$username ? $profileData['id'] : $username;
-		$firstName = $profileData['id'];
+		$userNameTemp = __('Redacted user ','unikname-connect').'('.substr($profileData['id'],0,5).')';
+		$username = !$username ? $userNameTemp : $username;
+		$firstName = $userNameTemp;
 	}
 	return $username."|tc|".$firstName."|tc|".$lastName;
 }
@@ -265,7 +266,7 @@ function the_champ_create_username($profileData){
 /**
  * Create user in Wordpress database.
  */
-function the_champ_create_user($profileData, $verification = false){
+function the_champ_create_user($profileData, $verification = false, $userNameCustom = ''){
 	// create username, firstname and lastname
 	$usernameFirstnameLastname = explode('|tc|', the_champ_create_username($profileData));
 	$username = $usernameFirstnameLastname[0];
@@ -282,7 +283,10 @@ function the_champ_create_user($profileData, $verification = false){
 		$emailParts = explode('@', $profileData['email']);
 		$username = $emailParts[0];
 	}
-
+	// Custom User Name
+	if($userNameCustom != ''){
+		$username = $userNameCustom;
+	}
 	$userName = $username;
 	while($nameexists == true){
 		if(username_exists($userName) != 0){
@@ -729,7 +733,8 @@ function the_champ_user_auth($profileData, $provider = 'facebook', $twitterRedir
 		if(!isset($profileData['email']) || $profileData['email'] == ''){
 			if(!isset($theChampLoginOptions['email_required']) || $theChampLoginOptions['email_required'] != 1){
 				// generate dummy email
-				$profileData['email'] = $profileData['id'].'@'.$provider.'.com';
+				//$profileData['email'] = $profileData['id'].'@'.$provider.'.com';
+				$profileData['email'] = '';
 			}else{
 				// save temporary data
 				if($twitterRedirect != ''){
@@ -799,19 +804,7 @@ function the_champ_link_account($socialId, $provider, $userId){
  * Ask email in a popup
  */
 function the_champ_ask_email(){
-	global $theChampLoginOptions;
-	echo isset($theChampLoginOptions['email_popup_text']) && $theChampLoginOptions['email_popup_text'] != '' ? '<div style="margin-top: 5px">'.$theChampLoginOptions['email_popup_text'].'</div>' : ''; ?>
-	<style type="text/css">
-		div.tb-close-icon{ display: none }
-	</style>
-	<div id="the_champ_error" style="margin: 2px 0px;"></div>
-	<div style="margin: 6px 0 15px 0;"><input placeholder="<?php _e('Email', 'super-socializer') ?>" type="text" id="the_champ_email" /></div>
-	<div style="margin: 6px 0 15px 0;"><input placeholder="<?php _e('Confirm email', 'super-socializer') ?>" type="text" id="the_champ_confirm_email" /></div>
-	<div>
-		<button type="button" id="save" onclick="the_champ_save_email(this)"><?php _e('Save', 'super-socializer') ?></button>
-		<button type="button" id="cancel" onclick="the_champ_save_email(this)"><?php _e('Cancel', 'super-socializer') ?></button>
-	</div>
-	<?php
+ 	include_once UNIKNAME_ABSPATH . 'templates/email_popup.php';
 	die;
 }
 add_action('wp_ajax_nopriv_the_champ_ask_email', 'the_champ_ask_email');
@@ -825,7 +818,8 @@ function the_champ_save_email(){
 		if(isset($_POST['id']) && ($id = intval(trim($_POST['id']))) != ''){
 			if($elementId == 'save'){
 				global $theChampLoginOptions;
-				$email = isset($_POST['email']) ? sanitize_email(trim($_POST['email'])) : '';
+				$email 				= isset($_POST['email']) ? sanitize_email(trim($_POST['email'])) : '';
+				$userNameCustom 	= isset($_POST['username']) ? trim($_POST['username']) : '';
 				// validate email
 				if(is_email($email) && !email_exists($email)){
 					if(($tempData = get_user_meta($id, 'the_champ_temp_data', true)) != ''){
@@ -844,7 +838,7 @@ function the_champ_save_email(){
 						}
 						do_action('the_champ_before_registration', $tempData);
 						// create new user
-						$userId = the_champ_create_user($tempData, $verify);
+						$userId = the_champ_create_user($tempData, $verify, $userNameCustom);
 						if($userId && !$verify){
 							// login user
 							$tempData['askemail'] = 1;
@@ -878,6 +872,34 @@ function the_champ_save_email(){
 	die;
 }
 add_action('wp_ajax_nopriv_the_champ_save_email', 'the_champ_save_email');
+
+// Check User Name Exist
+function unikname_check_username_exist(){
+	if(isset($_POST['user_name']) && $_POST['user_name'] != ''){
+		$userNameCheck 	= $_POST['user_name'];
+		$statusExist 	= 0;
+		if(username_exists($userNameCheck) > 0){
+			$statusExist = 1;
+		}
+		the_champ_ajax_response(array('status' => 'done', 'user_name' => $statusExist));
+	}
+	die;
+}
+add_action('wp_ajax_nopriv_unikname_check_username_exist', 'unikname_check_username_exist');
+
+// Check Email Exist
+function unikname_check_email_exist(){
+	if(isset($_POST['email']) && $_POST['email'] != ''){
+		$userEmail 		= $_POST['email'];
+		$statusExist 	= 0;
+		if(is_email($userEmail) && email_exists($userEmail) > 0){
+			$statusExist = 1;
+		}
+		the_champ_ajax_response(array('status' => 'done', 'email' => $statusExist));
+	}
+	die;
+}
+add_action('wp_ajax_nopriv_unikname_check_email_exist', 'unikname_check_email_exist');
 
 /**
  * Send verification email to user.

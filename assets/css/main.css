@@ -165,4 +165,138 @@ form.woocommerce-checkout > .checkout__billing > * {
   -ms-flex-positive: unset;
   flex-grow: unset; }
 
+.unik-name-popup-email .unikname-list-content-step {
+  margin: auto;
+  margin-bottom: 0px;
+  padding: 20px 20px; }
+  .unik-name-popup-email .unikname-list-content-step .unikname-item-step {
+    font-size: 22px;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step.active {
+      height: auto;
+      overflow: visible;
+      visibility: visible;
+      opacity: 1; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step img.email-logo {
+      height: 40px; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step h4 {
+      font-size: 22px;
+      margin-top: 18px;
+      margin-bottom: 20px;
+      text-transform: capitalize; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step h3 {
+      font-size: 20px;
+      margin-top: 18px;
+      margin-bottom: 5px;
+      margin-top: 5px; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step .description p {
+      font-size: 13px;
+      padding-bottom: 0px !important;
+      margin-bottom: 15px; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step .sub-description {
+      font-size: 12px;
+      padding-bottom: 0px !important;
+      margin-bottom: 10px; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step .email-input {
+      margin-bottom: 10px; }
+      .unik-name-popup-email .unikname-list-content-step .unikname-item-step .email-input label {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 5px;
+        display: block; }
+      .unik-name-popup-email .unikname-list-content-step .unikname-item-step .email-input input {
+        font-size: 14px;
+        background-color: transparent;
+        padding-left: 15px; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step #the_champ_error, .unik-name-popup-email .unikname-list-content-step .unikname-item-step #unikname_the_champ_error {
+      color: #d40000;
+      margin: 8px 0;
+      font-size: 13px; }
+    .unik-name-popup-email .unikname-list-content-step .unikname-item-step .btn-button-action {
+      text-align: right;
+      margin-top: 20px; }
+      .unik-name-popup-email .unikname-list-content-step .unikname-item-step .btn-button-action button {
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: normal;
+        padding: 9px 20px; }
+        .unik-name-popup-email .unikname-list-content-step .unikname-item-step .btn-button-action button:focus {
+          outline: none; }
+.unik-name-popup-email .unikname-session-navigation ul.unikname-list-step {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 20px; }
+  .unik-name-popup-email .unikname-session-navigation ul.unikname-list-step li {
+    list-style: none;
+    display: inline-block; }
+    .unik-name-popup-email .unikname-session-navigation ul.unikname-list-step li span {
+      width: 15px;
+      height: 15px;
+      background-color: #949494;
+      display: inline-block;
+      border-radius: 100%;
+      margin-left: 5px;
+      margin-right: 5px; }
+
+#TB_window.loadding:after {
+  border: .1875rem solid #a1a6c4;
+  border-radius: 50%;
+  border-top: .1875rem solid #364084;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1.25rem;
+  margin-top: -1.25rem;
+  content: ""; }
+#TB_window.loadding:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: #a5a5a563;
+  left: 0;
+  top: 0; }
+#TB_window #TB_title {
+  height: 50px; }
+  #TB_window #TB_title #TB_ajaxWindowTitle {
+    text-align: center;
+    float: none;
+    padding: 10px 0;
+    width: 100%;
+    height: 50px; }
+  #TB_window #TB_title #TB_closeAjaxWindow {
+    display: none !important; }
+#TB_window #TB_ajaxContent {
+  width: 100% !important;
+  height: auto !important;
+  border: 0px;
+  padding: 0; }
+  #TB_window #TB_ajaxContent .unikname-content-ajax-container {
+    padding: 20px;
+    font-size: 13px; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 /*# sourceMappingURL=main.css.map */

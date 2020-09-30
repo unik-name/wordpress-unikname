@@ -57,20 +57,48 @@ function theChampValidateEmail(e) {
 }
 function the_champ_save_email(e) {
 	var t = document.getElementById("the_champ_email").value.trim(),
-		a = document.getElementById("the_champ_confirm_email").value.trim();
-	return "save" != e.id || theChampValidateEmail(t)
-		? t != a
-			? ((document.getElementById("the_champ_error").innerHTML =
-					"Email addresses do not match"),
-			  void jQuery("#TB_ajaxContent").css("height", "auto"))
-			: void theChampCallAjax(function () {
-					theChampSaveEmail(e.id, t);
-			  })
-		: ((document.getElementById(
-				"the_champ_error"
-		  ).innerHTML = theChampEmailPopupErrorMsg),
-		  void jQuery("#TB_ajaxContent").css("height", "auto"));
+		a = document.getElementById("the_champ_confirm_email").value.trim(),
+		userName = jQuery('#the_champ_user_name').val();
+	if(userName == ''){
+		jQuery('#the_champ_error').html(uniknameRequired);
+	}else{
+		jQuery.ajax({
+			type: "POST",
+			dataType: "json",
+			url: theChampAjaxUrl,
+			data: {
+				action: "unikname_check_username_exist",
+				user_name: userName,
+			},
+		    beforeSend: function() {
+		        // setting a timeout
+		        jQuery('#TB_window').addClass('loadding');
+		    },
+			success: function (user_name_reponse) {
+				jQuery('#TB_window').removeClass('loadding');
+				if(user_name_reponse.user_name == 1){
+					jQuery('#the_champ_error').html(uniknameUsernameExists);
+				}else{
+					jQuery('#the_champ_error').html('');
+					return "save" != e.id || theChampValidateEmail(t)
+						? t != a
+							? ((document.getElementById("the_champ_error").innerHTML =
+									"Email addresses do not match"),
+							  void jQuery("#TB_ajaxContent").css("height", "auto"))
+							: void theChampCallAjax(function () {
+									theChampSaveEmail(e.id, t);
+							  })
+						: ((document.getElementById(
+								"the_champ_error"
+						  ).innerHTML = theChampEmailPopupErrorMsg),
+						  void jQuery("#TB_ajaxContent").css("height", "auto"));				
+				}
+
+			},
+		});		
+	} // End if check require username
 }
+
 function theChampSaveEmail(e, t) {
 	(document.getElementById("the_champ_error").innerHTML =
 		'<img src="' + theChampLoadingImgPath + '" />'),
@@ -83,8 +111,10 @@ function theChampSaveEmail(e, t) {
 				elemId: e,
 				email: t,
 				id: theChampEmailPopupUniqueId,
+				username: jQuery('#the_champ_user_name').val(),
 			},
 			success: function (e) {
+				console.log(e);
 				window.history.pushState(
 					{ html: "html", pageTitle: "page title" },
 					"",
@@ -98,7 +128,7 @@ function theChampSaveEmail(e, t) {
 						? tb_remove()
 						: 1 == e.status && "verify" == e.message
 						? (document.getElementById("TB_ajaxContent").innerHTML =
-								"<strong>" + theChampEmailPopupVerifyMessage + "</strong>")
+								"<div class='unikname-content-ajax-container'>" + theChampEmailPopupVerifyMessage + "</div>")
 						: 0 == e.status &&
 						  ((document.getElementById("the_champ_error").innerHTML =
 								e.message),
