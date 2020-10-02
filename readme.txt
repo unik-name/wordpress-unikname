@@ -93,24 +93,8 @@ Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wor
 
 == Changelog ==
 
-= 8.1.1 [2020-09-14] =
-
-- **Fixed**
-	- WP-UNC plugin doesn't disable when it is updated on some configuration
-	- Button labels are always translated according to the current locale on existing installations
-
-= 8.1.0 [2020-09-10] =
+= 8.2.0 [2020-10-02] =
 
 - **Added**
-	- You can now link your existing WordPress account with your Unikname profile!
-		More to come for WP admins to strongly secure their backend in a next version
-
-- **Changed**
-	- New backend UI for a great plugin configuration experience
-	- Many new styling, position, labels ... options for the Unikname Connect button
-	- New translations
-
-= 8.0.0 [2020-06-25] =
-
-- **Added**
-	- Initial version of the plugin
+  - The visitor's email collecting when he signs in on your site the first time has been totally revamped
+    You can customize colours and a front banner!
