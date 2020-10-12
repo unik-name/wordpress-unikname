@@ -52,7 +52,7 @@
 			</div>
 		</div>
 		<div class="item type-color-picker">
-			<label class="name"><?=__('Main color','unikname-connect')?></label>
+			<label class="name"><?=__('Button color','unikname-connect')?></label>
 			<div class="item-color">
 				<input type="text" name="the_champ_login[email_main_color]" value="<?php echo isset($theChampLoginOptions['email_main_color']) ? $theChampLoginOptions['email_main_color'] : '#0F2852' ?>" class="waiel-color-picker" />		
 			</div>

@@ -25,6 +25,7 @@ require 'helper.php';
 $theChampLoginOptions = get_option('the_champ_login');
 $unikNameStyleButtonOptions = get_option('unik_name_style_button');
 require 'includes/define-value.php';
+require 'includes/core-function.php';
 
 // End Button
 if(the_champ_social_login_enabled()){

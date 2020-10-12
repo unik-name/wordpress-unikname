@@ -117,10 +117,14 @@ body.wp-admin .stuffbox {
   background: transparent;
   border: 0;
   box-shadow: 0 0 black; }
+  body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_social_login_title {
+    margin-top: 10px; }
   body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul {
     float: none;
     margin-top: 20px;
     margin-bottom: 0px; }
+    body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul.button-link-account {
+      margin-top: 5px; }
     body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
       height: 25px !important; }
       body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
@@ -164,6 +168,9 @@ form.woocommerce-checkout > .checkout__billing > * {
   -webkit-box-flex: unset;
   -ms-flex-positive: unset;
   flex-grow: unset; }
+
+.the_champ_social_login_title {
+  font-size: 13px; }
 
 .unik-name-popup-email .unikname-list-content-step {
   margin: auto;

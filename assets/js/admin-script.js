@@ -36,7 +36,17 @@ var unikNameJS = (function ($, window, undefined) {
         $('input[name="unik_name_style_button[login_color]"]').change(function() {
             if(this.value == 'blue') buttonLogin.find('.button-unikname-connect').css('background-color', '#0F2852');
             if(this.value == 'turquoise') buttonLogin.find('.button-unikname-connect').css('background-color', '#2B6BF3');
+            if(this.value == 'custom'){
+                $('.unikname-login-custom-color').css('display','block');
+                buttonLogin.find('.button-unikname-connect').css('background-color', $('.unikname-login-custom-color .waiel-color-picker').val());
+            }else{
+                $('.unikname-login-custom-color').css('display','none');
+            }
         }); 
+        $('.unikname-login-custom-color .wp-picker-default').change(function() {
+            alert("tantatn");
+            buttonLogin.find('.button-unikname-connect').css('background-color', $('.unikname-login-custom-color .waiel-color-picker').val());
+        });
         // Change Border Radius
         $('input[name="unik_name_style_button[login_border_radius]"]').change(function() {
             buttonLogin.find('.button-unikname-connect').css('border-radius', this.value+'px');
@@ -68,7 +78,16 @@ var unikNameJS = (function ($, window, undefined) {
         $('input[name="unik_name_style_button[register_color]"]').change(function() {
             if(this.value == 'blue') buttonRegister.find('.button-unikname-connect').css('background-color', '#0F2852');
             if(this.value == 'turquoise') buttonRegister.find('.button-unikname-connect').css('background-color', '#2B6BF3');
+            if(this.value == 'custom'){
+                $('.unikname-register-custom-color').css('display','block');
+                buttonRegister.find('.button-unikname-connect').css('background-color', $('.unikname-register-custom-color .waiel-color-picker').val());
+            }else{
+                $('.unikname-register-custom-color').css('display','none');
+            }
         }); 
+        $('.unikname-register-custom-color .waiel-color-picker').change(function() {
+            buttonRegister.find('.button-unikname-connect').css('background-color', $('.unikname-register-custom-color .waiel-color-picker').val());
+        });
         // Change Border Radius
         $('input[name="unik_name_style_button[register_border_radius]"]').change(function() {
             buttonRegister.find('.button-unikname-connect').css('border-radius', this.value+'px');
