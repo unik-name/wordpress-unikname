@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-29 13:04+0000\n"
-"PO-Revision-Date: 2020-09-29 13:07+0000\n"
+"POT-Creation-Date: 2020-10-13 00:13+0000\n"
+"PO-Revision-Date: 2020-10-13 00:15+0000\n"
 "Last-Translator: admin <admin@gmail.com>\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -14,39 +14,72 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.2.3"
 
-#: unikname_connect.php:881
+#: unikname_connect.php:882
 msgid "Please verify your email address to login."
 msgstr "Veuillez vérifier votre adresse e-mail pour vous connecter."
 
-#: unikname_connect.php:881
+#: unikname_connect.php:882
 msgid "Your email has been verified. Now you can login to your account"
 msgstr ""
 "Votre mail a été vérifié. Vous pouvez maintenant vous connecter à votre "
 "compte"
 
-#: unikname_connect.php:885
+#: unikname_connect.php:886
 msgid "Notification"
 msgstr "Notification"
 
-#: unikname_connect.php:903
+#: unikname_connect.php:904
 msgid "Set up your account"
 msgstr "Paramétrage de votre compte"
 
-#: unikname_connect.php:906
+#: unikname_connect.php:907
 msgid "Please check your email inbox to complete the registration."
 msgstr ""
 "Veuillez vérifier votre boîte de réception pour terminer l’inscription."
 
-#: unikname_connect.php:907
+#: unikname_connect.php:908
 msgid "Username already exists."
 msgstr "Le nom d’utilisateur existe déjà."
 
-#: unikname_connect.php:908
+#: unikname_connect.php:909
 msgid "The username is required."
 msgstr "Le nom d’utilisateur est obligatoire"
 
+#: helper.php:508 includes/define-value.php:33
+#: templates/settings/advanced_options.php:5
+msgid "🔐 Link your @unikname to login to your account at this website"
+msgstr ""
+"🔐 Associer votre @unikname pour vous connecter à votre compte sur ce site"
+
+#: helper.php:511 includes/define-value.php:36
+#: templates/settings/advanced_options.php:8
+msgid "with your @unikname"
+msgstr "avec votre @unikname"
+
+#: helper.php:514 inc/social_login.php:25 includes/define-value.php:13
+#: includes/define-value.php:39 templates/settings/style_options.php:14
+#: templates/settings/advanced_options.php:11
+msgid ""
+"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
+"unikname."
+"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
+">Read more.</a>"
+msgstr ""
+"🔐 L’identifiant nouvelle génération : simple, sécurisé et privé. <a href=\" "
+"https://my.unikname."
+"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
+">En savoir plus.</a>"
+
+#: helper.php:515 inc/social_login.php:26 inc/social_login.php:40
+#: includes/define-value.php:14 includes/define-value.php:28
+#: includes/define-value.php:40 templates/settings/style_options.php:15
+#: templates/settings/style_options.php:29
+#: templates/settings/advanced_options.php:12
+msgid "🔐 The next-gen identifier: simple, secure and private."
+msgstr "🔐 L’identifiant nouvelle génération : simple, sécurisé et privé."
+
 #: inc/social_login.php:16 includes/define-value.php:4
-#: templates/settings/style_options.php:5
+#: templates/general_options.php:25 templates/settings/style_options.php:5
 msgid "Login"
 msgstr "S’identifier"
 
@@ -66,25 +99,6 @@ msgstr "Continuez"
 #: templates/settings/style_options.php:25
 msgid "With your @unikname"
 msgstr "Avec votre @unikname"
-
-#: inc/social_login.php:25 includes/define-value.php:13
-#: templates/settings/style_options.php:14
-msgid ""
-"🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
-"unikname."
-"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
-">Read more.</a>"
-msgstr ""
-"🔐 L’identifiant nouvelle génération : simple, sécurisé et privé. <a href=\" "
-"https://my.unikname."
-"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
-">En savoir plus.</a>"
-
-#: inc/social_login.php:26 inc/social_login.php:40 includes/define-value.php:14
-#: includes/define-value.php:28 templates/settings/style_options.php:15
-#: templates/settings/style_options.php:29
-msgid "🔐 The next-gen identifier: simple, secure and private."
-msgstr "🔐 L’identifiant nouvelle génération : simple, sécurisé et privé."
 
 #: inc/social_login.php:30 includes/define-value.php:18
 #: templates/settings/style_options.php:19
@@ -109,11 +123,11 @@ msgstr ""
 "app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\""
 ">En savoir plus.</a>"
 
-#: inc/social_login.php:140
+#: inc/social_login.php:168
 msgid "or"
 msgstr "ou"
 
-#: inc/social_login.php:259
+#: inc/social_login.php:287
 msgid "Redacted user "
 msgstr "Utilisateur masqué "
 
@@ -128,27 +142,23 @@ msgid ""
 msgstr ""
 
 #: templates/general_options.php:22
-msgid "Basic configuration"
-msgstr ""
-
-#: templates/general_options.php:25
-msgid "General options"
+msgid "General"
 msgstr ""
 
 #: templates/general_options.php:28
-msgid "Login options"
+msgid "Style"
 msgstr ""
 
 #: templates/general_options.php:31
-msgid "Email options"
+msgid "Email"
 msgstr ""
 
 #: templates/general_options.php:34
-msgid "Style options"
+msgid "Account linking"
 msgstr ""
 
 #: templates/general_options.php:37
-msgid "Advanced options"
+msgid "Advanced"
 msgstr ""
 
 #: templates/general_options.php:89
@@ -199,19 +209,19 @@ msgstr "Votre nom d’utilisateur"
 msgid "Finish"
 msgstr "Terminer"
 
-#: templates/email_popup.php:116
+#: templates/email_popup.php:106
 msgid "Email is not in the correct format!"
 msgstr "L'email n'a pas le bon format !"
 
-#: templates/email_popup.php:118
+#: templates/email_popup.php:108
 msgid "Email field is required!"
 msgstr "Le champ email est obligatoire !"
 
-#: templates/email_popup.php:120
+#: templates/email_popup.php:110
 msgid "Email addresses do not match!"
 msgstr "Les adresses e-mail ne correspondent pas!"
 
-#: templates/email_popup.php:136
+#: templates/email_popup.php:126
 msgid "Email already exists."
 msgstr "L'email existe déjà."
 
@@ -232,8 +242,8 @@ msgstr ""
 #: templates/settings/login_options.php:42
 #: templates/settings/login_options.php:53
 #: templates/settings/login_options.php:60
-#: templates/settings/advanced_options.php:21
-#: templates/settings/advanced_options.php:28
+#: templates/settings/advanced_options.php:53
+#: templates/settings/advanced_options.php:60
 #: templates/settings/email_options.php:7
 #: templates/settings/email_options.php:14
 #: templates/settings/email_options.php:21
@@ -257,52 +267,60 @@ msgstr ""
 msgid "Login button"
 msgstr ""
 
-#: templates/settings/style_options.php:53
-#: templates/settings/style_options.php:143
+#: templates/settings/style_options.php:69
+#: templates/settings/style_options.php:185
 msgid "Color"
 msgstr ""
 
-#: templates/settings/style_options.php:66
-#: templates/settings/style_options.php:156
+#: templates/settings/style_options.php:86
+#: templates/settings/style_options.php:202
+msgid "Custom Color"
+msgstr ""
+
+#: templates/settings/style_options.php:92
+#: templates/settings/style_options.php:208
 #: templates/settings/email_options.php:74
 msgid "Border radius"
 msgstr ""
 
-#: templates/settings/style_options.php:72
-#: templates/settings/style_options.php:162
+#: templates/settings/style_options.php:98
+#: templates/settings/style_options.php:214
 msgid "Alignment"
 msgstr ""
 
-#: templates/settings/style_options.php:89
-#: templates/settings/style_options.php:179
+#: templates/settings/style_options.php:115
+#: templates/settings/style_options.php:231
+#: templates/settings/advanced_options.php:20
 msgid "Button title"
 msgstr ""
 
-#: templates/settings/style_options.php:99
-#: templates/settings/style_options.php:189
+#: templates/settings/style_options.php:125
+#: templates/settings/style_options.php:241
+#: templates/settings/advanced_options.php:30
 msgid "Button label"
 msgstr ""
 
-#: templates/settings/style_options.php:109
-#: templates/settings/style_options.php:199
+#: templates/settings/style_options.php:135
+#: templates/settings/style_options.php:251
+#: templates/settings/advanced_options.php:40
 msgid "Button description"
 msgstr ""
 
-#: templates/settings/style_options.php:116
-#: templates/settings/style_options.php:206
+#: templates/settings/style_options.php:142
+#: templates/settings/style_options.php:258
 msgid "Read more link: "
 msgstr ""
 
-#: templates/settings/style_options.php:116
-#: templates/settings/style_options.php:206
+#: templates/settings/style_options.php:142
+#: templates/settings/style_options.php:258
 msgid "Read more"
 msgstr ""
 
-#: templates/settings/style_options.php:124
+#: templates/settings/style_options.php:150
 msgid "Register button"
 msgstr ""
 
-#: templates/settings/style_options.php:129
+#: templates/settings/style_options.php:155
 msgid "icon unik name"
 msgstr ""
 
@@ -385,23 +403,15 @@ msgstr ""
 msgid "Same page where user logged in"
 msgstr ""
 
-#: templates/settings/advanced_options.php:3
+#: templates/settings/advanced_options.php:17
 msgid "Account linking options"
 msgstr ""
 
-#: templates/settings/advanced_options.php:6
-msgid "Sub Title"
-msgstr ""
-
-#: templates/settings/advanced_options.php:12
-msgid "Label"
-msgstr ""
-
-#: templates/settings/advanced_options.php:18
+#: templates/settings/advanced_options.php:50
 msgid "Enable at WooCommerce my account page (link account)"
 msgstr ""
 
-#: templates/settings/advanced_options.php:25
+#: templates/settings/advanced_options.php:57
 msgid ""
 "Link social account to already existing account, if email address matches"
 msgstr ""
@@ -427,7 +437,7 @@ msgid "Logo"
 msgstr ""
 
 #: templates/settings/email_options.php:55
-msgid "Main color"
+msgid "Button color"
 msgstr ""
 
 #: templates/settings/email_options.php:61
