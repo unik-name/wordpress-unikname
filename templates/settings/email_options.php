@@ -39,7 +39,9 @@
 			<label class="name"><?=__('Logo','unikname-connect')?></label>
 			<div class="item-checkbox">
 				<?php
-					$imgURL 	 = UNIKNAME_DIR_URL.'assets/images/logo-unikname-blue.png';
+
+					$imgURL 	 = UNIKNAME_DIR_URL.'assets/images/default-email-logo.png';
+
 					if(isset($theChampLoginOptions['email_logo']) && $theChampLoginOptions['email_logo'] != ''){
 						$imgURL  = $theChampLoginOptions['email_logo'];
 					}
