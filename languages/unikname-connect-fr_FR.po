@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-13 00:13+0000\n"
-"PO-Revision-Date: 2020-10-13 00:15+0000\n"
+"PO-Revision-Date: 2020-10-22 13:11+0000\n"
 "Last-Translator: admin <admin@gmail.com>\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -211,7 +211,7 @@ msgstr "Terminer"
 
 #: templates/email_popup.php:106
 msgid "Email is not in the correct format!"
-msgstr "L'email n'a pas le bon format !"
+msgstr "L’email n’a pas le bon format !"
 
 #: templates/email_popup.php:108
 msgid "Email field is required!"
@@ -223,7 +223,7 @@ msgstr "Les adresses e-mail ne correspondent pas!"
 
 #: templates/email_popup.php:126
 msgid "Email already exists."
-msgstr "L'email existe déjà."
+msgstr "L’email existe déjà."
 
 #: templates/settings/general_options.php:4
 msgid "Include Javascript in website footer"
