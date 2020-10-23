@@ -2,7 +2,7 @@
 Contributors: Space Elephant, Unikname, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
 Requires at least: 5.0.0
 Tested up to: 5.5
-Stable tag: 8.2.0
+Stable tag: 8.2.1
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -90,11 +90,17 @@ Yes, we can help you with it. Just go to <a href="https://forum.unikname.com/c/s
 
 Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wordpress/#configuring-your-service" target="_blank">can be seen on the documentation</a>.
 
-
 == Changelog ==
+
+= 8.2.1 [2020-10-22] =
+
+- **Fixed**
+  - Broken new users' welcome page with French locale
 
 = 8.2.0 [2020-10-02] =
 
 - **Added**
   - The visitor's email collecting when he signs in on your site the first time has been totally revamped
     You can customize colours and a front banner!
+
+[Full changelog is also available](CHANGELOG.txt).
