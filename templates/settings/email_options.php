@@ -78,9 +78,33 @@
 		</div>
 	</div>
 </div>
+<?php
+	$listColorOldLoginButton = get_option('_unik_name_color_button_login');
+	$listColorOldLoginButton = array_reverse($listColorOldLoginButton);
+	$arrayOld 				 = array();
+	$arrayDefault 			 = array('#ffffff', '#000000','#dd3333', '#dd9933','#eeee22');
+	for($i = 0; $i < 5; $i++){
+		if(array_key_exists($i, $listColorOldLoginButton)){
+			$arrayOld[$i] 	= $listColorOldLoginButton[$i];
+		}else{
+			$arrayOld[$i] 	= $arrayDefault[$i];
+		}
+	}
+?>
 <script type="text/javascript">
 	jQuery(document).ready(function($){
-		$('.waiel-color-picker').wpColorPicker();
+		var myOptions = {
+		    defaultColor: '#0F2852',
+		    change: function(event, ui){
+		    	var theColor = ui.color.toString();
+		    	$('#unikname_button_login').find('.button-unikname-connect').css('background-color', theColor);
+		    },
+		    // a callback to fire when the input is emptied or an invalid color
+		    clear: function() {},
+		    hide: true,
+		    palettes: <?=json_encode($arrayOld);?>
+		};
+		$('.waiel-color-picker').wpColorPicker(myOptions);
 	    $('.waiel-upload-btn').click(function(e) {
 	    	var thisSelect = $(this);
 	        e.preventDefault();
