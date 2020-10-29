@@ -501,6 +501,20 @@ if(is_multisite() && is_main_site()){
 
 function the_champ_account_linking(){
 	if(is_user_logged_in()){
+
+		//
+	    // Button Link Account
+	    $buttonLinkTitle = array(
+	        '1' => __('🔐 Link your @unikname to login to your account at this website','unikname-connect'),
+	    );
+	    $buttonLinkLabel = array(
+	        '1' => __('with your @unikname','unikname-connect'),
+	    ); 
+	    $buttonLinkDes   = array(
+	        '1' => __('🔐 The next-gen identifier: simple, secure and private. <a href=" https://my.unikname.app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
+	        '2' => __('🔐 The next-gen identifier: simple, secure and private.','unikname-connect')
+	    );
+		//
 		wp_enqueue_style('the-champ-frontend-css', plugins_url('assets/css/main.css', __FILE__), false, THE_CHAMP_SS_VERSION);
 		global $theChampFacebookOptions, $theChampLoginOptions, $user_ID;
 		$twitterRedirect = urlencode(the_champ_get_valid_url(the_champ_get_http().$_SERVER["HTTP_HOST"] . html_entity_decode(esc_url(remove_query_arg(array('linked'))))));
@@ -573,14 +587,19 @@ function the_champ_account_linking(){
 	                        	</tr>';
                         	}
                         }
-                        $icons_container = '<div class="the_champ_login_container">';
+                        $icons_container = '';
+                        $keyButtonTitle  = 1;
+						if( isset($theChampLoginOptions['scl_title']) ) $keyButtonTitle = $theChampLoginOptions['scl_title'];
+						$icons_container .= '<div class="the_champ_social_login_title">'.$buttonLinkTitle[$keyButtonTitle].'</div>';
+
+                        $icons_container .= '<div class="the_champ_login_container">';
                         if(isset($theChampLoginOptions['gdpr_enable'])){
 							$gdprOptIn = '<div class="heateor_ss_sl_optin_container"><label><input type="checkbox" class="heateor_ss_social_login_optin" value="1" />'. str_replace(array($theChampLoginOptions['ppu_placeholder'], $theChampLoginOptions['tc_placeholder']), array('<a href="'. $theChampLoginOptions['privacy_policy_url'] .'" target="_blank">'. $theChampLoginOptions['ppu_placeholder'] .'</a>', '<a href="'. $theChampLoginOptions['tc_url'] .'" target="_blank">'. $theChampLoginOptions['tc_placeholder'] .'</a>'), wp_strip_all_tags($theChampLoginOptions['privacy_policy_optin_text'])) .'</label></div>';
 						}
 						if(isset($theChampLoginOptions['gdpr_enable']) && $theChampLoginOptions['gdpr_placement'] == 'above'){
 							$icons_container .= $gdprOptIn;
 						}
-                        $icons_container .= '<ul class="the_champ_login_ul">';
+                        $icons_container .= '<ul class="the_champ_login_ul button-link-account">';
 						$existingProviders = array();
 						$primarySocialNetwork = get_user_meta($user_ID, 'thechamp_provider', true);
 						$existingProviders[] = $primarySocialNetwork;
@@ -621,9 +640,10 @@ function the_champ_account_linking(){
 									$icons_container .= '<div class="theChampFacebookLogoContainer">';
 								}
 								$icons_container .= '<ss style="display:block" class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></ss>';
-								if(isset($theChampLoginOptions['scl_link_label']) && $theChampLoginOptions['scl_link_label'] != ''){
-									$icons_container .= '<label class="button_label">'.$theChampLoginOptions['scl_link_label'].'</label>';
-								}
+								$keyButtonLabel   = 1;
+								if(isset($theChampLoginOptions['scl_link_label']) ) $keyButtonLabel = $theChampLoginOptions['scl_link_label'];
+								$icons_container .= '<label class="button_label">'.$buttonLinkLabel[$keyButtonLabel].'</label>';
+								
 								if($provider == 'facebook'){
 									$icons_container .= '</div>';
 								}
@@ -637,7 +657,9 @@ function the_champ_account_linking(){
 							$icons_container .= '</div>';
 
 							$html .= $icons_container;
-							$html .= '<p class="sub-title">' . $theChampLoginOptions['scl_title'] . '</p>';	
+							$keyButtonDes 	= 1;
+							if(isset($theChampLoginOptions['scl_description'])) $keyButtonDes = $theChampLoginOptions['scl_description'];
+							$html .= '<p class="sub-title">' . $buttonLinkDes[$keyButtonDes] . '</p>';	
 	                        $html .= '</td>
 	                        </tr>';
 	                    }

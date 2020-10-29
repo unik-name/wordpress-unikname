@@ -42,10 +42,38 @@ function the_champ_login_button($widget = false, $action = 'login'){
 		$titleButton 		= $buttonLoginTitle;
 		$labelButton 		= $buttonLoginLabel;
 		$subTitleButton		= $subTitleLogin;
+		$bgRegister 	= '#2B6BF3';
+		if(isset($unikNameStyleButtonOptions['login_color'])){
+			switch ($unikNameStyleButtonOptions['login_color']) {
+				case 'blue':
+					$bgRegister 	= '#0F2852';
+					break;
+				case 'turquoise':
+					$bgRegister 	= '#2B6BF3';
+					break;
+				default:
+					$bgRegister 	= $unikNameStyleButtonOptions['login_color_custom'];
+					break;
+			}
+		}
 		if($action == 'register'){
 			$titleButton 	= $buttonRegisterTitle;
 			$labelButton 	= $buttonRegisterLabel;
 			$subTitleButton	= $subTitleRegister;
+			$bgRegister 	= '#2B6BF3';
+			if(isset($unikNameStyleButtonOptions['register_color'])){
+				switch ($unikNameStyleButtonOptions['register_color']) {
+					case 'blue':
+						$bgRegister 	= '#0F2852';
+						break;
+					case 'turquoise':
+						$bgRegister 	= '#2B6BF3';
+						break;
+					default:
+						$bgRegister 	= $unikNameStyleButtonOptions['register_color_custom'];
+						break;
+				}
+			}
 		} 
 
 		$html = '';
@@ -80,7 +108,7 @@ function the_champ_login_button($widget = false, $action = 'login'){
 					}
 					// class
 					$html .= 'class="theChampLogin theChamp'. ucfirst($provider) .'Background theChamp'. ucfirst($provider) .'Login" ';
-					$html .= 'style="border-radius: '.$unikNameStyleButtonOptions[$action.'_border_radius'].'px" ';
+					$html .= 'style="border-radius: '.$unikNameStyleButtonOptions[$action.'_border_radius'].'px; background-color: '.$bgRegister.' !important;" ';
 					// $html .= 'alt="Login with ';
 					// $html .= ucfirst($provider);
 					// $html .= '" title="Login with ';

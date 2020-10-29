@@ -42,9 +42,25 @@
 				<p><?php echo isset($unikNameStyleButtonOptions['login_button_description']) ? $subTitleLogin[$unikNameStyleButtonOptions['login_button_description']] : $subTitleLogin['1'];?></p>
 			</div>
 		</div>
+		<?php
+			$bgRegister 	= '#2B6BF3';
+			if(isset($unikNameStyleButtonOptions['login_color'])){
+				switch ($unikNameStyleButtonOptions['login_color']) {
+					case 'blue':
+						$bgRegister 	= '#0F2852';
+						break;
+					case 'turquoise':
+						$bgRegister 	= '#2B6BF3';
+						break;
+					default:
+						$bgRegister 	= $unikNameStyleButtonOptions['login_color_custom'];
+						break;
+				}
+			}
+		?>
 		<style type="text/css">
 			#unikname_button_login .button-unikname-connect{
-				background-color: <?php echo isset($unikNameStyleButtonOptions['login_color']) && $unikNameStyleButtonOptions['login_color'] == 'turquoise' ? '#2B6BF3' : '#0F2852';?>;
+				background-color: <?php echo  $bgRegister; ?>;
 				border-radius: <?php echo isset($unikNameStyleButtonOptions['login_border_radius']) ? $unikNameStyleButtonOptions['login_border_radius'].'px' : '30px' ?>;
 			}
 		</style>
@@ -60,6 +76,16 @@
 						<input type="radio" name="unik_name_style_button[login_color]" <?php echo !isset($unikNameStyleButtonOptions['login_color']) || $unikNameStyleButtonOptions['login_color'] == 'turquoise' ? 'checked = "checked"' : '';?> value="turquoise">
 						<span class="checkmark turquoise"></span>
 					</label>
+					<label class="container">
+						<input type="radio" name="unik_name_style_button[login_color]" <?php echo !isset($unikNameStyleButtonOptions['login_color']) || $unikNameStyleButtonOptions['login_color'] == 'custom' ? 'checked = "checked"' : '';?> value="custom">
+						<span class="checkmark custom"></span>
+					</label>
+				</div>
+			</div>
+			<div class="item type-color-picker unikname-custom-color unikname-login-custom-color"  <?php echo !isset($unikNameStyleButtonOptions['login_color']) || $unikNameStyleButtonOptions['login_color'] == 'custom' ? 'style="display: block;"' : '';?>>
+				<label class="name"><?=__('Custom Color','unikname-connect')?></label>
+				<div class="item-color">
+					<input type="text" name="unik_name_style_button[login_color_custom]" value="<?php echo isset($unikNameStyleButtonOptions['login_color_custom']) ? $unikNameStyleButtonOptions['login_color_custom'] : '#0F2852' ?>" class="waiel-color-picker" />		
 				</div>
 			</div>
 			<div class="item type-number-radius">
@@ -132,9 +158,25 @@
 				<p><?php echo isset($unikNameStyleButtonOptions['register_button_description']) ? $subTitleRegister[$unikNameStyleButtonOptions['register_button_description']] : $subTitleRegister['1'];?></p>
 			</div>
 		</div>
+		<?php
+			$bgRegister 	= '#2B6BF3';
+			if(isset($unikNameStyleButtonOptions['register_color'])){
+				switch ($unikNameStyleButtonOptions['register_color']) {
+					case 'blue':
+						$bgRegister 	= '#0F2852';
+						break;
+					case 'turquoise':
+						$bgRegister 	= '#2B6BF3';
+						break;
+					default:
+						$bgRegister 	= $unikNameStyleButtonOptions['register_color_custom'];
+						break;
+				}
+			}
+		?>
 		<style type="text/css">
 			#unikname_button_register .button-unikname-connect{
-				background-color: <?php echo isset($unikNameStyleButtonOptions['register_color']) && $unikNameStyleButtonOptions['register_color'] == 'turquoise' ? '#2B6BF3' : '#0F2852';?>;
+				background-color: <?php echo $bgRegister;?>;
 				border-radius: <?php echo isset($unikNameStyleButtonOptions['register_border_radius']) ? $unikNameStyleButtonOptions['register_border_radius'].'px' : '30px' ?>;
 			}
 		</style>
@@ -150,6 +192,16 @@
 						<input type="radio" name="unik_name_style_button[register_color]" <?php echo !isset($unikNameStyleButtonOptions['register_color']) || $unikNameStyleButtonOptions['register_color'] == 'turquoise' ? 'checked = "checked"' : '';?> value="turquoise">
 						<span class="checkmark turquoise"></span>
 					</label>
+					<label class="container">
+						<input type="radio" name="unik_name_style_button[register_color]" <?php echo !isset($unikNameStyleButtonOptions['register_color']) || $unikNameStyleButtonOptions['register_color'] == 'custom' ? 'checked = "checked"' : '';?> value="custom">
+						<span class="checkmark custom"></span>
+					</label>
+				</div>
+			</div>
+			<div class="item type-color-picker unikname-custom-color unikname-register-custom-color"  <?php echo !isset($unikNameStyleButtonOptions['register_color']) || $unikNameStyleButtonOptions['register_color'] == 'custom' ? 'style="display: block;"' : '';?>>
+				<label class="name"><?=__('Custom Color','unikname-connect')?></label>
+				<div class="item-color">
+					<input type="text" name="unik_name_style_button[register_color_custom]" value="<?php echo isset($unikNameStyleButtonOptions['register_color_custom']) ? $unikNameStyleButtonOptions['register_color_custom'] : '#0F2852' ?>" class="waiel-color-picker" />		
 				</div>
 			</div>
 			<div class="item type-number-radius">
@@ -209,3 +261,45 @@
 		</div>
 	</div>
 </div>
+<?php
+	$listColorOldLoginButton = get_option('_unik_name_color_button_login');
+	$listColorOldLoginButton = array_reverse($listColorOldLoginButton);
+	$arrayOld 				 = array();
+	$arrayDefault 			 = array('#ffffff', '#000000','#dd3333', '#dd9933','#eeee22');
+	for($i = 0; $i < 5; $i++){
+		if(array_key_exists($i, $listColorOldLoginButton)){
+			$arrayOld[$i] 	= $listColorOldLoginButton[$i];
+		}else{
+			$arrayOld[$i] 	= $arrayDefault[$i];
+		}
+	}
+?>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+		var myOptions = {
+		    defaultColor: '#0F2852',
+		    change: function(event, ui){
+		    	var theColor = ui.color.toString();
+		    	$('#unikname_button_login').find('.button-unikname-connect').css('background-color', theColor);
+		    },
+		    // a callback to fire when the input is emptied or an invalid color
+		    clear: function() {},
+		    hide: true,
+		    palettes: <?=json_encode($arrayOld);?>
+		};
+		$('.unikname-login-custom-color .waiel-color-picker').wpColorPicker(myOptions);
+
+		var myOptionsRegister = {
+		    defaultColor: '#0F2852',
+		    change: function(event, ui){
+		    	var theColor = ui.color.toString();
+		    	$('#unikname_button_register').find('.button-unikname-connect').css('background-color', theColor);
+		    },
+		    // a callback to fire when the input is emptied or an invalid color
+		    clear: function() {},
+		    hide: true,
+		    palettes: <?=json_encode($arrayOld);?>
+		};
+		$('.unikname-register-custom-color .waiel-color-picker').wpColorPicker(myOptionsRegister);
+	});
+</script>

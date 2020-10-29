@@ -19,22 +19,22 @@
             ?>
             <nav class="nav-tab-wrapper woo-nav-tab-wrapper">
                 <a href="<?=$urlAdmin?>" class="nav-tab <?=(($tabCurrent == '') ? 'nav-tab-active' : '')?>">
-                    <?=__('Basic configuration','unikname-connect');?>
-                </a>
-                <a href="<?=$urlAdmin?>&tab=general-options" class="nav-tab <?=(($tabCurrent == 'general-options') ? 'nav-tab-active' : '')?>">
-                    <?=__('General options','unikname-connect');?>
+                    <?=__('General','unikname-connect');?>
                 </a>
                 <a href="<?=$urlAdmin?>&tab=login-options" class="nav-tab <?=(($tabCurrent == 'login-options') ? 'nav-tab-active' : '')?>">
-                    <?=__('Login options','unikname-connect');?>
-                </a>
-                <a href="<?=$urlAdmin?>&tab=email-options" class="nav-tab <?=(($tabCurrent == 'email-options') ? 'nav-tab-active' : '')?>">
-                    <?=__('Email options','unikname-connect');?>
+                    <?=__('Login','unikname-connect');?>
                 </a>
                 <a href="<?=$urlAdmin?>&tab=style-options" class="nav-tab <?=(($tabCurrent == 'style-options') ? 'nav-tab-active' : '')?>">
-                    <?=__('Style options','unikname-connect');?>
+                    <?=__('Style','unikname-connect');?>
+                </a>
+                <a href="<?=$urlAdmin?>&tab=email-options" class="nav-tab <?=(($tabCurrent == 'email-options') ? 'nav-tab-active' : '')?>">
+                    <?=__('Email','unikname-connect');?>
                 </a>
                 <a href="<?=$urlAdmin?>&tab=advanced-options" class="nav-tab <?=(($tabCurrent == 'advanced-options') ? 'nav-tab-active' : '')?>">
-                    <?=__('Advanced options','unikname-connect');?>
+                    <?=__('Account linking','unikname-connect');?>
+                </a>
+                <a href="<?=$urlAdmin?>&tab=general-options" class="nav-tab <?=(($tabCurrent == 'general-options') ? 'nav-tab-active' : '')?>">
+                    <?=__('Advanced','unikname-connect');?>
                 </a>
             </nav>
             <div class="unik-content-tab">
