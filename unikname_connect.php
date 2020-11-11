@@ -891,6 +891,8 @@ function the_champ_frontend_scripts(){
 		$emailPopupErrorMessage = '';
 		$emailPopupUniqueId = '';
 		$emailPopupVerifyMessage = '';
+		$userNameExists 	= '';
+		$userNameRequired 	= '';
 		if(isset($_GET['SuperSocializerEmail']) && isset($_GET['par']) && trim($_GET['par']) != ''){
 			$emailPopup = true;
 			$emailAjaxUrl = esc_url(add_query_arg(
