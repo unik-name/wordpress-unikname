@@ -641,7 +641,7 @@ function the_champ_account_linking(){
 								}
 								$icons_container .= '<ss style="display:block" class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></ss>';
 								$keyButtonLabel   = 1;
-								if(isset($theChampLoginOptions['scl_link_label'])  && $theChampLoginOptions['scl_link_label'] != '' && intval($theChampLoginOptions['scl_link_label']) != 0)) $keyButtonLabel = $theChampLoginOptions['scl_link_label'];
+								if(isset($theChampLoginOptions['scl_link_label'])  && $theChampLoginOptions['scl_link_label'] != '' && intval($theChampLoginOptions['scl_link_label']) != 0 ) $keyButtonLabel = $theChampLoginOptions['scl_link_label'];
 								$icons_container .= '<label class="button_label">'.$buttonLinkLabel[$keyButtonLabel].'</label>';
 								
 								if($provider == 'facebook'){
