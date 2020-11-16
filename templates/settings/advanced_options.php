@@ -21,7 +21,7 @@
 					<div class="item-select">
 						<select name="the_champ_login[scl_title]">
 							<?php foreach ($buttonLinkTitle as $key => $value) { ?>
-								<option <?php echo !isset($theChampLoginOptions['scl_title']) || $theChampLoginOptions['scl_title'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
+								<option <?php echo isset($theChampLoginOptions['scl_title']) && $theChampLoginOptions['scl_title'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
 							<?php } // Endforeach ?>
 						</select>
 					</div>
@@ -31,7 +31,7 @@
 					<div class="item-select">
 						<select name="the_champ_login[scl_link_label]">
 							<?php foreach ($buttonLinkLabel as $key => $value) { ?>
-								<option <?php echo !isset($theChampLoginOptions['scl_link_label']) || $theChampLoginOptions['scl_link_label'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
+								<option <?php echo isset($theChampLoginOptions['scl_link_label']) && $theChampLoginOptions['scl_link_label'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
 							<?php } // Endforeach ?>
 						</select>
 					</div>
@@ -41,7 +41,7 @@
 					<div class="item-select">
 						<select name="the_champ_login[scl_description]">
 							<?php foreach ($buttonLinkDes as $key => $value) { ?>
-								<option <?php echo !isset($theChampLoginOptions['scl_description']) || $theChampLoginOptions['scl_description'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
+								<option <?php echo isset($theChampLoginOptions['scl_description']) && $theChampLoginOptions['scl_description'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
 							<?php } // Endforeach ?>
 						</select>
 					</div>
