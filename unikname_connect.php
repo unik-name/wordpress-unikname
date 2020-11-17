@@ -890,6 +890,8 @@ function the_champ_frontend_scripts(){
 		$emailPopupErrorMessage = '';
 		$emailPopupUniqueId = '';
 		$emailPopupVerifyMessage = '';
+		$userNameExists = '';
+		$userNameRequired = '';
 		if(isset($_GET['SuperSocializerEmail']) && isset($_GET['par']) && trim($_GET['par']) != ''){
 			$emailPopup = true;
 			$emailAjaxUrl = esc_url(add_query_arg(
@@ -1264,9 +1266,9 @@ function the_champ_create_admin_menu(){
 	// add_action('admin_print_scripts-' . $facebookPage, 'the_champ_admin_scripts');
 	// add_action('admin_print_scripts-' . $facebookPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_styles-' . $facebookPage, 'the_champ_admin_style');
-	add_action('admin_print_scripts-' . $loginPage, 'the_champ_admin_scripts');
-	add_action('admin_print_scripts-' . $loginPage, 'the_champ_fb_sdk_script');
-	add_action('admin_print_styles-' . $loginPage, 'the_champ_admin_style');
+	// add_action('admin_print_scripts-' . $loginPage, 'the_champ_admin_scripts');
+	// add_action('admin_print_scripts-' . $loginPage, 'the_champ_fb_sdk_script');
+	// add_action('admin_print_styles-' . $loginPage, 'the_champ_admin_style');
 	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_admin_scripts');
 	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_admin_sharing_scripts');
