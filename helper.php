@@ -623,6 +623,9 @@ function the_champ_account_linking(){
 								$icons_container .= '<ss style="display:block" class="theChampLoginSvg theChamp'. ucfirst($provider) .'LoginSvg"></ss>';
 								if(isset($theChampLoginOptions['scl_link_label']) && $theChampLoginOptions['scl_link_label'] != ''){
 									$icons_container .= '<label class="button_label">'.$theChampLoginOptions['scl_link_label'].'</label>';
+								}else{
+									$icons_container .= '<label class="button_label">'.__('With your @unikname','unikname-connect').'</label>';
+									
 								}
 								if($provider == 'facebook'){
 									$icons_container .= '</div>';

@@ -1419,6 +1419,7 @@ function the_champ_save_default_options(){
 	   'enableAtRegister' => 1,
 	   'enableAtComment' => 1,
 	   'scl_title' => __('Link your social account to login to your account at this website', 'super-socializer'),
+	   'scl_link_label'	=> __('With your @unikname','unikname-connect'),
 	   'link_account' => 1,
 	   'gdpr_placement' => 'above',
 	   'privacy_policy_url' => '',
