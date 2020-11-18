@@ -11,7 +11,7 @@
 				<div class="item type-text">
 					<label class="name"><?=__('Label','unikname-connect')?></label>
 					<div class="item-text">
-						<input id="unikname_scl_title" name="the_champ_login[scl_link_label]" type="text" value="<?php echo isset($theChampLoginOptions['scl_link_label']) ? $theChampLoginOptions['scl_link_label'] : '' ?>" />
+						<input id="unikname_scl_title" name="the_champ_login[scl_link_label]" type="text" value="<?php echo isset($theChampLoginOptions['scl_link_label']) && $theChampLoginOptions['scl_link_label'] != '' ? $theChampLoginOptions['scl_link_label'] : __('With your @unikname','unikname-connect') ?>" />
 					</div>
 				</div>
 				<div class="item type-checkbox">
