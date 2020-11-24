@@ -1,17 +1,49 @@
+<?php
+	global $buttonLinkTitle, $buttonLinkLabel, $buttonLinkDes;
+    // Button Link Account
+    $buttonLinkTitle = array(
+        '1' => __('🔐 Link your @unikname to login to your account at this website','unikname-connect'),
+    );
+    $buttonLinkLabel = array(
+        '1' => __('with your @unikname','unikname-connect'),
+    ); 
+    $buttonLinkDes   = array(
+        '1' => __('🔐 The next-gen identifier: simple, secure and private. <a href=" https://my.unikname.app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
+        '2' => __('🔐 The next-gen identifier: simple, secure and private.','unikname-connect')
+    );
+?>
 <div class="column-2">
 		<div class="unik-style-button-container">
 			<h5 class="account-link"><?=__('Account linking options','unikname-connect')?></h5>
 			<div class="button-custom-style">
-				<div class="item type-text">
-					<label class="name"><?=__('Sub Title','unikname-connect')?></label>
-					<div class="item-text">
-						<input id="unikname_scl_title" name="the_champ_login[scl_title]" type="text" value="<?php echo isset($theChampLoginOptions['scl_title']) ? $theChampLoginOptions['scl_title'] : '' ?>" />
+				<div class="item type-select">
+					<label class="name"><?=__('Button title','unikname-connect')?></label>
+					<div class="item-select">
+						<select name="the_champ_login[scl_title]">
+							<?php foreach ($buttonLinkTitle as $key => $value) { ?>
+								<option <?php echo isset($theChampLoginOptions['scl_title']) && $theChampLoginOptions['scl_title'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
+							<?php } // Endforeach ?>
+						</select>
 					</div>
 				</div>
-				<div class="item type-text">
-					<label class="name"><?=__('Label','unikname-connect')?></label>
-					<div class="item-text">
-						<input id="unikname_scl_title" name="the_champ_login[scl_link_label]" type="text" value="<?php echo isset($theChampLoginOptions['scl_link_label']) && $theChampLoginOptions['scl_link_label'] != '' ? $theChampLoginOptions['scl_link_label'] : __('With your @unikname','unikname-connect') ?>" />
+				<div class="item type-select">
+					<label class="name"><?=__('Button label','unikname-connect')?></label>
+					<div class="item-select">
+						<select name="the_champ_login[scl_link_label]">
+							<?php foreach ($buttonLinkLabel as $key => $value) { ?>
+								<option <?php echo isset($theChampLoginOptions['scl_link_label']) && $theChampLoginOptions['scl_link_label'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
+							<?php } // Endforeach ?>
+						</select>
+					</div>
+				</div>
+				<div class="item type-select">
+					<label class="name"><?=__('Button description','unikname-connect')?></label>
+					<div class="item-select">
+						<select name="the_champ_login[scl_description]">
+							<?php foreach ($buttonLinkDes as $key => $value) { ?>
+								<option <?php echo isset($theChampLoginOptions['scl_description']) && $theChampLoginOptions['scl_description'] == $key ? 'selected="selected"' : '';?> value="<?=$key?>"><?=$value?></option>
+							<?php } // Endforeach ?>
+						</select>
 					</div>
 				</div>
 				<div class="item type-checkbox">
