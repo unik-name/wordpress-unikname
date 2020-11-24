@@ -3,7 +3,7 @@
 Plugin Name: Unikname Connect
 Plugin URI: https://docs.unik-name.com/integration/connect/apps/wordpress/
 Description: Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce websites.
-Version: 8.2.1
+Version: 8.2.2
 Author: Unikname
 Author URI: https://www.unikname.com
 Text Domain: unikname-connect
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '8.2.1');
+define('THE_CHAMP_SS_VERSION', '8.2.2');
 
 if (!defined('UNIKNAME_CONNECT_SERVER')) {
 	define('UNIKNAME_CONNECT_SERVER', getenv('UNIKNAME_CONNECT_SERVER') ?: 'https://connect.unikname.com');
@@ -1988,6 +1988,8 @@ function the_champ_addon_update_notification(){
 			}
 		}
 
+		// TODO remove the whole "heateor_ss_browser_notification_read" feature
+		/*
 		if(!get_option('heateor_ss_browser_notification_read')){
 			?>
 			<script type="text/javascript">
@@ -2009,7 +2011,7 @@ function the_champ_addon_update_notification(){
 				<p><?php echo sprintf(__('Your website visitors will see a popup notification (only once) if their browsers block any of the features of the plugin so that they can change their browser settings to unblock these. You can turn it OFF by disabling "Show popup notification to users if their browsers block the plugin features" option <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options'); ?><input type="button" onclick="heateorSsBrowserNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
 			</div>
 			<?php
-		}
+		}*/
 	}
 }
 add_action('admin_notices', 'the_champ_addon_update_notification');
