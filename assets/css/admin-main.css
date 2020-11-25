@@ -261,6 +261,10 @@
               background-color: #0F2852; }
             .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container .checkmark.turquoise {
               background-color: #2B6BF3; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container .checkmark.custom {
+              background-image: url(../images/color-picker.png);
+              background-size: cover;
+              background-position: center; }
             .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-radio-color .item-radio-color label.container .checkmark:after {
               content: "";
               position: absolute;
@@ -398,6 +402,8 @@
         height: 38px; }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-color-picker .wp-picker-container .wp-picker-clear {
         height: 38px; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-color-picker.unikname-custom-color {
+        display: none; }
     .unik-name-admin-container .unik-content-admin .unik-content-tab .button-custom-style {
       margin-top: 10px; }
     .unik-name-admin-container .unik-content-admin .unik-content-tab .column-2 {
@@ -618,10 +624,14 @@ body.wp-admin .stuffbox {
   background: transparent;
   border: 0;
   box-shadow: 0 0 black; }
+  body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_social_login_title {
+    margin-top: 10px; }
   body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul {
     float: none;
     margin-top: 20px;
     margin-bottom: 0px; }
+    body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul.button-link-account {
+      margin-top: 5px; }
     body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
       height: 25px !important; }
       body.wp-admin .stuffbox table.form-table tbody tr td .the_champ_login_container .the_champ_login_ul i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin label.button_label {
@@ -665,5 +675,8 @@ form.woocommerce-checkout > .checkout__billing > * {
   -webkit-box-flex: unset;
   -ms-flex-positive: unset;
   flex-grow: unset; }
+
+.the_champ_social_login_title {
+  font-size: 13px; }
 
 /*# sourceMappingURL=admin-main.css.map */

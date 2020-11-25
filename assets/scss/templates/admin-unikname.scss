@@ -328,6 +328,11 @@
 							    &.turquoise{
 							    	background-color: $skyblue;
 							    }
+							    &.custom{
+									background-image: url(../images/color-picker.png);
+									background-size: cover;
+									background-position: center;
+							    }
 								&:after{
 									content: "";
 									position: absolute;
@@ -510,6 +515,9 @@
 					}
 					.wp-picker-container .wp-picker-clear{
 						height: 38px;
+					}
+					&.unikname-custom-color{
+						display: none;
 					}				
 				}
 			}

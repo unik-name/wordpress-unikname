@@ -25,6 +25,7 @@ require 'helper.php';
 $theChampLoginOptions = get_option('the_champ_login');
 $unikNameStyleButtonOptions = get_option('unik_name_style_button');
 require 'includes/define-value.php';
+require 'includes/core-function.php';
 
 // End Button
 if(the_champ_social_login_enabled()){
@@ -890,8 +891,8 @@ function the_champ_frontend_scripts(){
 		$emailPopupErrorMessage = '';
 		$emailPopupUniqueId = '';
 		$emailPopupVerifyMessage = '';
-		$userNameExists = '';
-		$userNameRequired = '';
+		$userNameExists 	= '';
+		$userNameRequired 	= '';
 		if(isset($_GET['SuperSocializerEmail']) && isset($_GET['par']) && trim($_GET['par']) != ''){
 			$emailPopup = true;
 			$emailAjaxUrl = esc_url(add_query_arg(
@@ -1419,7 +1420,6 @@ function the_champ_save_default_options(){
 	   'enableAtRegister' => 1,
 	   'enableAtComment' => 1,
 	   'scl_title' => __('Link your social account to login to your account at this website', 'super-socializer'),
-	   'scl_link_label'	=> __('With your @unikname','unikname-connect'),
 	   'link_account' => 1,
 	   'gdpr_placement' => 'above',
 	   'privacy_policy_url' => '',
@@ -1987,7 +1987,6 @@ function the_champ_addon_update_notification(){
 				<?php
 			}
 		}
-
 		// TODO remove the whole "heateor_ss_browser_notification_read" feature
 		/*
 		if(!get_option('heateor_ss_browser_notification_read')){
@@ -2011,6 +2010,7 @@ function the_champ_addon_update_notification(){
 				<p><?php echo sprintf(__('Your website visitors will see a popup notification (only once) if their browsers block any of the features of the plugin so that they can change their browser settings to unblock these. You can turn it OFF by disabling "Show popup notification to users if their browsers block the plugin features" option <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options'); ?><input type="button" onclick="heateorSsBrowserNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
 			</div>
 			<?php
+		}
 		}*/
 	}
 }
