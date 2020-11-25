@@ -1,3 +1,8 @@
+= UNRELEASED =
+
+- **Changed**
+  - Improve error logging when an error occurs with OIDC callback call
+
 = 8.2.2 [2020-11-19] =
 
 - **Fixed**
