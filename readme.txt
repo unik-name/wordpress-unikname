@@ -109,4 +109,4 @@ Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wor
   - The visitor's email collecting when he signs in on your site the first time has been totally revamped
     You can customize colours and a front banner!
 
-[Full changelog is also available](CHANGELOG.txt).
+[Full changelog is also available](https://github.com/unik-name/wordpress-unikname-connect/blob/master/CHANGELOG.txt).
