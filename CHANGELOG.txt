@@ -1,3 +1,14 @@
+= UNRELEASED =
+
+- **Added**
+  - New custom colour for the Unikname Connect button
+
+- **Changed**
+  - New "Link account" experience
+  - Improve "Link account" configuration options
+  - Rename admin buttons
+  - Simplify "email" section configuration
+
 = 8.2.2 [2020-11-19] =
 
 - **Fixed**
