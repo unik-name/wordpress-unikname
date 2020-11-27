@@ -2,7 +2,7 @@
 Contributors: Space Elephant, Unikname, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
 Requires at least: 5.0.0
 Tested up to: 5.5
-Stable tag: 8.2.2
+Stable tag: 8.2.3
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -91,6 +91,11 @@ Yes, we can help you with it. Just go to <a href="https://forum.unikname.com/c/s
 Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wordpress/#configuring-your-service" target="_blank">can be seen on the documentation</a>.
 
 == Changelog ==
+
+= 8.2.3 [2020-11-27] =
+
+- **Changed**
+  - Improve error logging when an error occurs with OIDC callback call
 
 = 8.2.2 [2020-11-19] =
 
