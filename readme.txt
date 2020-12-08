@@ -1,8 +1,9 @@
 ﻿=== Unikname Connect for WordPress ===
-Contributors: Space Elephant, Unikname, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
+Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian
+Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
 Requires at least: 5.0.0
 Tested up to: 5.5
-Stable tag: 8.2.2
+Stable tag: 8.2.3
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -92,6 +93,11 @@ Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wor
 
 == Changelog ==
 
+= 8.2.3 [2020-11-27] =
+
+- **Changed**
+  - Improve error logging when an error occurs with OIDC callback call
+
 = 8.2.2 [2020-11-19] =
 
 - **Fixed**
@@ -109,4 +115,4 @@ Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wor
   - The visitor's email collecting when he signs in on your site the first time has been totally revamped
     You can customize colours and a front banner!
 
-[Full changelog is also available](CHANGELOG.txt).
+[Full changelog is also available](https://github.com/unik-name/wordpress-unikname-connect/blob/master/CHANGELOG.txt).

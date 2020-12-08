@@ -8,6 +8,11 @@
   - Improve "Link account" configuration options
   - Rename admin buttons
 
+= 8.2.3 [2020-11-27] =
+
+- **Changed**
+  - Improve error logging when an error occurs with OIDC callback call
+
 = 8.2.2 [2020-11-19] =
 
 - **Fixed**

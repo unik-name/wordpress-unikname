@@ -3,7 +3,7 @@
 Plugin Name: Unikname Connect
 Plugin URI: https://docs.unik-name.com/integration/connect/apps/wordpress/
 Description: Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce websites.
-Version: 8.2.2
+Version: 8.2.3
 Author: Unikname
 Author URI: https://www.unikname.com
 Text Domain: unikname-connect
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '8.2.2');
+define('THE_CHAMP_SS_VERSION', '8.2.3');
 
 if (!defined('UNIKNAME_CONNECT_SERVER')) {
 	define('UNIKNAME_CONNECT_SERVER', getenv('UNIKNAME_CONNECT_SERVER') ?: 'https://connect.unikname.com');
@@ -196,7 +196,7 @@ function the_champ_connect(){
 					'client_id' => $theChampLoginOptions['un_key'],
 					'client_secret' => $theChampLoginOptions['un_secret']
 				);
-				$response = wp_remote_post($url, array(
+				$parameters = array(
 					'method' => 'POST',
 					'timeout' => 15,
 					'redirection' => 5,
@@ -204,33 +204,24 @@ function the_champ_connect(){
 					'sslverify' => false,
 					'headers' => array('Content-Type' => 'application/x-www-form-urlencoded'),
 					'body' => http_build_query($data_access_token)
-						)
 				);
-				// echo "2b";
-				// echo var_dump($response);
+				$response = wp_remote_post($url, $parameters);
 				if(!is_wp_error($response) && isset($response['response']['code']) && 200 === $response['response']['code']){
-					// echo "2c";
 					$body = json_decode(wp_remote_retrieve_body($response));
 					if(is_object($body) && isset($body->access_token)){
-						// echo "2d";
-						// echo var_dump($body);
 						// fetch profile data
 						// TODO: replace this by an OIDC client
-						$profile = wp_remote_get(UNIKNAME_CONNECT_SERVER.'/oidc/profile', array(
-								'method' => 'GET',
-								'timeout' => 15,
-								'headers' => array('Authorization' => "Bearer ".$body->access_token),
-								)
+						$url = UNIKNAME_CONNECT_SERVER.'/oidc/profile';
+						$parameters = array(
+							'method' => 'GET',
+							'timeout' => 15,
+							'headers' => array('Authorization' => "Bearer ".$body->access_token),
 						);
-						// echo "2d2";
-						// echo var_dump($profile);
+						$profile = wp_remote_get($url, $parameters);
 						if(!is_wp_error($profile) && isset($profile['response']['code']) && 200 === $profile['response']['code']){
-							// echo "2e";
 							$profileBody = json_decode(wp_remote_retrieve_body($profile));
 							if(is_object($profileBody) && isset($profileBody->id) && $profileBody->id){
-								// echo "2f";
 								$profileBody = json_decode(json_encode($profileBody), true);
-								// echo "profileBody: " . var_dump($profileBody);
 								// $firstName = '';//isset($firstLastNameBody['firstName']) && isset($firstLastNameBody['firstName']['localized']) && isset($firstLastNameBody['firstName']['preferredLocale']) && isset($firstLastNameBody['firstName']['preferredLocale']['language']) && isset($firstLastNameBody['firstName']['preferredLocale']['country']) ? $firstLastNameBody['firstName']['localized'][$firstLastNameBody['firstName']['preferredLocale']['language'] . '_' . $firstLastNameBody['firstName']['preferredLocale']['country']] : '';
 								// $lastName = '';//isset($firstLastNameBody['lastName']) && isset($firstLastNameBody['lastName']['localized']) && isset($firstLastNameBody['lastName']['preferredLocale']) && isset($firstLastNameBody['lastName']['preferredLocale']['language']) && isset($firstLastNameBody['lastName']['preferredLocale']['country']) ? $firstLastNameBody['lastName']['localized'][$firstLastNameBody['lastName']['preferredLocale']['language'] . '_' . $firstLastNameBody['lastName']['preferredLocale']['country']] : '';
 								$emailAddress = '';//isset($emailBody['elements']) && is_array($emailBody['elements']) && isset($emailBody['elements'][0]['handle~']) && isset($emailBody['elements'][0]['handle~']['emailAddress']) ? $emailBody['elements'][0]['handle~']['emailAddress'] : '';
@@ -246,42 +237,47 @@ function the_champ_connect(){
 									'smallAvatar' => '',
 									'largeAvatar' => ''
 								);
-								// echo "user: " . var_dump($user);
 
 								$profileData = the_champ_sanitize_profile_data($user, 'unikname');
-								// echo "profileData: " . var_dump($profileData);
-								// echo "2g";
 								if(get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_mc_sub', true)){
-									// echo "2h";
 									$profileData['mc_subscribe'] = 1;
 									delete_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub');
 								}
-								// echo "2i";
 								$response = the_champ_user_auth($profileData, 'unikname', $uniknameRedirectUrl);
 								if(is_array($response) && isset($response['message']) && $response['message'] == 'register' && (!isset($response['url']) || $response['url'] == '')){
-									// echo "2i1";
 									$redirectTo = the_champ_get_login_redirection_url($uniknameRedirectUrl, true);
 								}elseif(isset($response['message']) && $response['message'] == 'linked'){
-									// echo "2i2";
 									$redirectTo = $uniknameRedirectUrl . (strpos($uniknameRedirectUrl, '?') !== false ? '&' : '?') . 'linked=1';
 								}elseif(isset($response['message']) && $response['message'] == 'not linked'){
-									// echo "2i3";
 									$redirectTo = $uniknameRedirectUrl . (strpos($uniknameRedirectUrl, '?') !== false ? '&' : '?') . 'linked=0';
 								}elseif(isset($response['url']) && $response['url'] != ''){
-									// echo "2i4";
 									$redirectTo = $response['url'];
 								}else{
-									// echo "2i5";
 									$redirectTo = the_champ_get_login_redirection_url($uniknameRedirectUrl);
 								}
 								the_champ_close_login_popup($redirectTo);
 							}
+						} else {
+							error_log('Error when calling: ' . $url);
+							error_log('With parameters: ' . print_r($parameters, true));
+							error_log('Response: ' . print_r($profile, true));
 						}
 					}
+				} else {
+					error_log('Error when calling: ' . $url);
+					error_log('With parameters: ' . print_r($parameters, true));
+					error_log('Response: ' . print_r($response, true));
 				}
+			} else {
+				error_log('User\'s state not found in user_meta: ' . $_GET['state']);
 			}
+			
+			// We shouldn't get there, except if an error occurred before
+			
+		} else {
+			error_log('Either "un_key" or "un_secret" or both are not set');
 		}
-	}
+	} // No else
 
 // 	
 // ##     ## ##    ## #### ##    ## ##    ##    ###    ##     ## ########    ######## ##    ## ########  
