@@ -1663,9 +1663,9 @@ function the_champ_addon_update_notification(){
 		global $theChampLoginOptions;
 		if(get_transient('heateor-ss-admin-notice-on-activation')){ ?>
 	        <div class="notice notice-success is-dismissible">
-	            <p><strong><?php printf(__('Thanks for installing Unikname Connect plugin', 'super-socializer'), 'https://docs.unikname.com/integration/connect/apps/wordpress/'); ?></strong></p>
+	            <p><strong><?php printf(__('Thanks for installing Unikname Connect plugin', 'super-socializer'), 'https://help.unikname.com/3-unikname-connect/integration-technology/wordpress/#step-2-setup-the-wordpress-plugin'); ?></strong></p>
 	            <p>
-					<a href="https://docs.unikname.com/integration/connect/apps/wordpress/" target="_blank" class="button button-primary"><?php _e('Configure the Plugin', 'super-socializer'); ?></a>
+					<a href="https://help.unikname.com/3-unikname-connect/integration-technology/wordpress/#step-2-setup-the-wordpress-plugin" target="_blank" class="button button-primary"><?php _e('Configure the Plugin', 'super-socializer'); ?></a>
 				</p>
 	        </div> <?php
 	        // Delete transient, only display this notice once

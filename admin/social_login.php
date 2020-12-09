@@ -154,7 +154,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slun_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get an organization @unikname</a>', 'super-socializer'), 'https://docs.unikname.com/integration/connect/apps/wordpress/') ?>
+							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get an organization @unikname</a>', 'super-socializer'), 'https://help.unikname.com/3-unikname-connect/howto-signup-unconnect-account.html') ?>
 							<!-- <br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -175,7 +175,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slun_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get Unikname Connect Secret</a>', 'super-socializer'), 'https://docs.unikname.com/integration/connect/apps/wordpress/') ?>
+							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get Unikname Connect Secret</a>', 'super-socializer'), 'https://help.unikname.com/3-unikname-connect/howto-signup-unconnect-account.html') ?>
 							<!-- <br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
