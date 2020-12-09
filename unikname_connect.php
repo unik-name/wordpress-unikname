@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Unikname Connect
-Plugin URI: https://docs.unik-name.com/integration/connect/apps/wordpress/
+Plugin URI: https://wordpress.org/plugins/unikname-connect/
 Description: Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce websites.
 Version: 8.3.0-dev
 Author: Unikname
