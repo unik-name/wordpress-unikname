@@ -2,8 +2,8 @@
 Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian
 Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
 Requires at least: 5.0.0
-Tested up to: 5.5
-Stable tag: 8.2.3
+Tested up to: 5.6
+Stable tag: 8.3.0
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -93,26 +93,21 @@ Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wor
 
 == Changelog ==
 
-= 8.2.3 [2020-11-27] =
-
-- **Changed**
-  - Improve error logging when an error occurs with OIDC callback call
-
-= 8.2.2 [2020-11-19] =
-
-- **Fixed**
-  - Broken UI of the button "Link your account with your @unikname id"
-	- Some undefined variables
-
-= 8.2.1 [2020-10-22] =
-
-- **Fixed**
-  - Broken new users' welcome page with French locale
-
-= 8.2.0 [2020-10-02] =
+= 8.3.0 [2020-12-09] =
 
 - **Added**
-  - The visitor's email collecting when he signs in on your site the first time has been totally revamped
-    You can customize colours and a front banner!
+  - New custom colour for the Unikname Connect button
+
+- **Changed**
+  - Rework admin panel UI, with new baseline and button labels
+	- Rework "Link account" UX
+  - Improve "Link account" admin configuration options
+  - Update i10n
+
+- **Fixed**
+  - Missing transparent background on some Unikname logos
+
+- **Removed**
+  - Remove useless Facebook SDK
 
 [Full changelog is also available](https://github.com/unik-name/wordpress-unikname-connect/blob/master/CHANGELOG.txt).

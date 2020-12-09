@@ -1,12 +1,19 @@
-= UNRELEASED =
+= 8.3.0 [2020-12-09] =
 
 - **Added**
   - New custom colour for the Unikname Connect button
 
 - **Changed**
-  - New "Link account" experience
-  - Improve "Link account" configuration options
-  - Rename admin buttons
+  - Rework admin panel UI, with new baseline and button labels
+	- Rework "Link account" UX
+  - Improve "Link account" admin configuration options
+  - Update i10n
+
+- **Fixed**
+  - Missing transparent background on some Unikname logos
+
+- **Removed**
+  - Remove useless Facebook SDK
 
 = 8.2.3 [2020-11-27] =
 
