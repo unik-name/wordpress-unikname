@@ -1,6 +1,6 @@
 <?php
 function unik_name_style_button_function( $old_value, $new_value ) {
-	if ( $old_value['login_color_custom'] != $new_value['login_color_custom'] ) {
+	if ( isset($old_value['login_color_custom']) && isset($new_value['login_color_custom']) && ($old_value['login_color_custom'] != $new_value['login_color_custom']) ) {
 		$listColorOldLoginButton = get_option('_unik_name_color_button_login');
 
 		if(!is_array($listColorOldLoginButton)){
@@ -14,7 +14,7 @@ function unik_name_style_button_function( $old_value, $new_value ) {
 
 	}
 
-	if ( $old_value['register_color_custom'] != $new_value['register_color_custom'] ) {
+	if ( isset($old_value['register_color_custom']) && isset($new_value['register_color_custom']) && ($old_value['register_color_custom'] != $new_value['register_color_custom']) ) {
 		$listColorOldLoginButton = get_option('_unik_name_color_button_login');
 		if(!is_array($listColorOldLoginButton)){
 			$listColorOldLoginButton 	= array();	
@@ -29,7 +29,7 @@ function unik_name_style_button_function( $old_value, $new_value ) {
 add_action( 'update_option_unik_name_style_button', 'unik_name_style_button_function', 10, 2 );
 
 function unik_name_style_email_option_function($old_value, $new_value){
-	if ( $old_value['email_main_color'] != $new_value['email_main_color'] ) {
+	if ( isset($old_value['email_main_color']) && isset($new_value['email_main_color']) && ($old_value['email_main_color'] != $new_value['email_main_color']) ) {
 		$listColorOldLoginButton = get_option('_unik_name_color_button_login');
 		if(!is_array($listColorOldLoginButton)){
 			$listColorOldLoginButton 	= array();	
