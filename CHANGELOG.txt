@@ -1,3 +1,13 @@
+= UNRELEASED =
+
+- **Added**
+  - New custom colour for the Unikname Connect button
+
+- **Changed**
+  - New "Link account" experience
+  - Improve "Link account" configuration options
+  - Rename admin buttons
+
 = 8.2.2 [2020-11-19] =
 
 - **Fixed**
@@ -14,6 +24,9 @@
 - **Added**
   - The visitor's email collecting when he signs in on your site the first time has been totally revamped
     You can customize colours and a front banner!
+
+- **Changed**
+  - Simplify "email" section configuration
 
 = 8.1.1 [2020-09-14] =
 
