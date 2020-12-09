@@ -511,7 +511,7 @@ function the_champ_account_linking(){
 	        '1' => __('with your @unikname','unikname-connect'),
 	    ); 
 	    $buttonLinkDes   = array(
-	        '1' => __('🔐 The next-gen identifier: simple, secure and private. <a href=" https://my.unikname.app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
+	        '1' => __('🔐 The next-gen identifier: simple, secure and private. <a href="https://www.unikname.com/my-unikname-app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen">Read more.</a>','unikname-connect'),
 	        '2' => __('🔐 The next-gen identifier: simple, secure and private.','unikname-connect')
 	    );
 		//
