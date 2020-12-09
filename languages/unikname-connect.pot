@@ -126,8 +126,8 @@ msgstr ""
 
 #: templates/general_options.php:6
 msgid ""
-"is a next-generation authentication solution protecting your business and "
-"your user accounts from hacks and data theft"
+"The plugin that secures your admin accounts and that rewards your website "
+"users for protecting their privacy"
 msgstr ""
 
 #: templates/general_options.php:22

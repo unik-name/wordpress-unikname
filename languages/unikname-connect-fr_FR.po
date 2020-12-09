@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-13 00:13+0000\n"
-"PO-Revision-Date: 2020-10-22 13:11+0000\n"
-"Last-Translator: admin <admin@gmail.com>\n"
+"PO-Revision-Date: 2020-12-09 22:01+0100\n"
+"Last-Translator: Unikname <contact@unikname.com>\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.0; wp-5.2.3"
+"X-Generator: Poedit 2.4.2\n"
+"X-Loco-Version: 2.2.0; wp-5.2.3\n"
 
 #: unikname_connect.php:882
 msgid "Please verify your email address to login."
@@ -61,14 +61,14 @@ msgstr "avec votre @unikname"
 #: templates/settings/advanced_options.php:11
 msgid ""
 "🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
-"unikname."
-"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
-">Read more.</a>"
+"unikname.app/"
+"#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen"
+"\">Read more.</a>"
 msgstr ""
 "🔐 L’identifiant nouvelle génération : simple, sécurisé et privé. <a href=\" "
-"https://my.unikname."
-"app/#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\""
-">En savoir plus.</a>"
+"https://my.unikname.app/"
+"#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen"
+"\">En savoir plus.</a>"
 
 #: helper.php:515 inc/social_login.php:26 inc/social_login.php:40
 #: includes/define-value.php:14 includes/define-value.php:28
@@ -114,14 +114,14 @@ msgstr "S’enregistrer"
 #: templates/settings/style_options.php:28
 msgid ""
 "🔐 The next-gen identifier: simple, secure and private. <a href=\" https://my."
-"unikname."
-"app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\""
-">Read more.</a>"
+"unikname.app/"
+"#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen"
+"\">Read more.</a>"
 msgstr ""
 "🔐 L’identifiant nouvelle génération : simple, sécurisé et privé. <a href=\" "
-"https://my.unikname."
-"app/#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\""
-">En savoir plus.</a>"
+"https://my.unikname.app/"
+"#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen"
+"\">En savoir plus.</a>"
 
 #: inc/social_login.php:168
 msgid "or"
@@ -137,33 +137,35 @@ msgstr ""
 
 #: templates/general_options.php:6
 msgid ""
-"is a next-generation authentication solution protecting your business and "
-"your user accounts from hacks and data theft"
+"The plugin that secures your admin accounts and that rewards your website "
+"users for protecting their privacy"
 msgstr ""
+"Le plugin qui sécurise vos comptes admin et qui récompense les utilisateurs "
+"de votre site web pour protéger leur vie privée"
 
 #: templates/general_options.php:22
 msgid "General"
-msgstr ""
+msgstr "Général"
 
 #: templates/general_options.php:28
 msgid "Style"
-msgstr ""
+msgstr "Style"
 
 #: templates/general_options.php:31
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: templates/general_options.php:34
 msgid "Account linking"
-msgstr ""
+msgstr "Association de compte"
 
 #: templates/general_options.php:37
 msgid "Advanced"
-msgstr ""
+msgstr "Avancé"
 
 #: templates/general_options.php:89
 msgid "Save Changes"
-msgstr ""
+msgstr "Sauvegarder les changements"
 
 #: templates/email_popup.php:15
 msgid "Welcome to "
