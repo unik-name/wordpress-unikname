@@ -3,7 +3,7 @@ Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8h
 Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
 Requires at least: 5.0.0
 Tested up to: 5.6
-Stable tag: 8.3.0
+Stable tag: 8.3.1
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -92,6 +92,11 @@ Yes, we can help you with it. Just go to <a href="https://forum.unikname.com/c/s
 Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wordpress/#configuring-your-service" target="_blank">can be seen on the documentation</a>.
 
 == Changelog ==
+
+= 8.3.1 [2020-12-10] =
+
+- **Removed**
+  - Really remove useless Facebook SDK
 
 = 8.3.0 [2020-12-09] =
 

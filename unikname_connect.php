@@ -3,7 +3,7 @@
 Plugin Name: Unikname Connect
 Plugin URI: https://wordpress.org/plugins/unikname-connect/
 Description: Secure your admin accounts and reward your website users for protecting their privacy. Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce websites.
-Version: 8.3.0
+Version: 8.3.1
 Author: Unikname
 Author URI: https://www.unikname.com
 Text Domain: unikname-connect
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('THE_CHAMP_SS_VERSION', '8.3.0');
+define('THE_CHAMP_SS_VERSION', '8.3.1');
 
 if (!defined('UNIKNAME_CONNECT_SERVER')) {
 	define('UNIKNAME_CONNECT_SERVER', getenv('UNIKNAME_CONNECT_SERVER') ?: 'https://connect.unikname.com');
