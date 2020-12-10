@@ -1234,23 +1234,17 @@ function the_champ_create_admin_menu(){
 	// $counterPage = add_submenu_page('heateor-ss-general-options', 'Super Socializer - Like Buttons', 'Like Buttons', 'manage_options', 'heateor-like-buttons', 'the_champ_like_buttons_page');
 	add_action('admin_print_scripts-' . $page, 'the_champ_admin_scripts');
 	add_action('admin_print_scripts-' . $page, 'the_champ_admin_style');
-	add_action('admin_print_scripts-' . $page, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_scripts-' . $generalOptionsPage, 'the_champ_admin_scripts');
-	// add_action('admin_print_scripts-' . $generalOptionsPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_styles-' . $generalOptionsPage, 'the_champ_admin_style');
 	// add_action('admin_print_scripts-' . $facebookPage, 'the_champ_admin_scripts');
-	// add_action('admin_print_scripts-' . $facebookPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_styles-' . $facebookPage, 'the_champ_admin_style');
 	// add_action('admin_print_scripts-' . $loginPage, 'the_champ_admin_scripts');
-	// add_action('admin_print_scripts-' . $loginPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_styles-' . $loginPage, 'the_champ_admin_style');
 	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_admin_scripts');
-	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_admin_sharing_scripts');
 	// add_action('admin_print_styles-' . $sharingPage, 'the_champ_admin_style');
 	// add_action('admin_print_styles-' . $sharingPage, 'the_champ_admin_sharing_style');
 	// add_action('admin_print_scripts-' . $counterPage, 'the_champ_admin_scripts');
-	// add_action('admin_print_scripts-' . $counterPage, 'the_champ_fb_sdk_script');
 	// add_action('admin_print_scripts-' . $counterPage, 'the_champ_admin_counter_scripts');
 	// add_action('admin_print_styles-' . $counterPage, 'the_champ_admin_style');
 }

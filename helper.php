@@ -167,13 +167,6 @@ function the_champ_admin_scripts(){
 }
 
 /**
- * Include Javascript SDK in admin
- */	
-function the_champ_fb_sdk_script(){
-	wp_enqueue_script('the_champ_fb_sdk_script', plugins_url('js/admin/fb_sdk.js', __FILE__), false, THE_CHAMP_SS_VERSION);
-}
-
-/**
  * Include javascript files in admin sharing page.
  */	
 function the_champ_admin_sharing_scripts(){
