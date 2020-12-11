@@ -89,7 +89,13 @@ Yes, we can help you with it. Just go to <a href="https://forum.unikname.com/c/s
 
 == Screenshots ==
 
-Many screenshots <a href="https://docs.unikname.com/integration/connect/apps/wordpress/#configuring-your-service" target="_blank">can be seen on the documentation</a>.
+== Screenshots ==
+
+1. General configuration: global enabling, secret key ...
+2. Login options: pages where to diplay the Unikname Connect button ...
+3. Style options: UI configuration (colours, labels ...) of the Unikname Connect buttons
+4. Email options: is email of your new users required ...
+5. Account linking options: mainly labels for account linking feature
 
 == Changelog ==
 
