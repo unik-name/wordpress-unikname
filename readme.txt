@@ -7,87 +7,93 @@ Stable tag: 8.3.1
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
-The unique plugin to let you integrate Unikname Connect at your website, the next-generation authentication: simple, secure, private.
+Unikname Connect is the next-gen strong authentication solution with multi-factors that strengthens the security of your WordPress website.
 
 **Note:**
 This plugin is incompatible to "Super Socializer" plugin, from Heateor.
 
 == Description ==
-The unique plugin to let you integrate Unikname Connect at your website, the next-generation authentication: simple, secure, private.
+Unikname Connect is the next-gen strong authentication solution with multi-factors that strengthens the security of your WordPress website.
+Unikname Connect secures the connection of your administrators and/or customers, and enables instant access to your website, through the use of a unique identifier.
+
+https://player.vimeo.com/video/425036469
+
+= For whom? =
+
+- Web agency: Easily manage your website fleet and protect your clients' websites
+- Business: Strengthen your website’s overall security and avoid hacking by securing access to administrator accounts
+- Online shop: Facilitate customer account creation on your platform by offering an ethical and private connection alternative.
+
+= Key Benefits =
+
+- Instant strong authentication that does not require any email or password
+- Strengthening of the website access overall security
+- Untraceable and confidential connection that preserves your data
 
 = Feature list =
-* Social Login from Unikname Connect
-* Enable Unikname Connect interface at WordPress Login, Register pages and comment form
-* Syncs user's basic Unikname profile data with WordPress profile
-* Enable Unikname Connect at WooCommerce checkout page and customer login form
-* Syncs user's basic Unikname profile data with WooCommerce profile
-* Auto-approve comments made by users logged in using Unikname Connect
-* Use user's Unikname profile avatar as profile picture at your website
-* Customizable login/post-registration redirection
-* Widgets and shortcodes for Unikname Connect
-* Let your users link their Unikname accounts to the account at your website
-* Compatible with BuddyPress, bbPress, WooCommerce
-* Multisite Compatible
-* Supports HTTPS enabled websites
+- Strong two-factor authentication
+- Quick installation and configuration
+- HTTPS support
+- Widgets and shortcodes
+- Single Sign-One (SSO) between your different websites
+- Certificate of Trust
+- Reinforced anti-phishing
+- Compatible with BuddyPress, bbPress, WooCommerce
+- Multisite Compatible
 
-Detailed Overview:
+= The next-gen strong authentication =
 
-= Unikname Connect = Enables users to login to your website through their existing @unikname.
+Unikname Connect enables administrators to :
 
-**Benefits**
+- Avoid website hacking through enhanced administrator account security
+- Easily manage multiple websites using a single identifier
+- Strongly log in to their back-office through multi-factor authentication
 
-1. **Rapid signup/login**: When using Unikname Connect for login, users do not need to type anything (most of the users are already logged into their Unikname accounts). It helps in boosting signup/login rate at your blog.
+Unikname Connect lets online customers / users / subscribers:
 
-2. **Profile Data**: User's profile data will be saved in your blog database. This data also includes users' email, enabling you to communicate with them.
+- Easily create an online account using only their Unikname username (_aka_ a @unikname), without entering their password or email address
+- Log in privately, and thus control their digital identity
+- Manage their access from a user-friendly mobile application that allows them to be interconnected with the Unikname network.
+- Be rewarded for every log in they make as users participate in Internet security
 
-3. **Spam Reduction**: Because Unikname Connect authenticates individuals, the likelihood of spammers goes down.
+= Detailed Overview =
 
-= Single sign-on = Enable single sign-on in your WordPress multisite network
-
-= What makes this plugin different and why should I choose this plugin when there are many other social plugins? =
-1. **Free**: Yea, right. It is a free plugin. You need not pay single penny to use the features of this plugin.
-2. **No need to register anywhere**: Unlike other third party Social plugins, you do not need to create an account at third party website.
-3. **Absolutely Simple**: Plugin configuration is kept dead simple. Screenshots are provided with options wherever required.
-4. **Optimal Loading time**: Loading time of Unikname Connect icons is optimal and if you compare with other plugins, you will find it less than that of all those plugins.
-5. We promise to provide **best quality** among other similar plugins. If you find our plugin is lacking some feature, you can email us and we will do our best to include that feature in our plugin as soon as possible.
-6. Our **support team is available** to answer your queries and assist you. You will find us the quickest to respond.
+- Enables users to login to your website through their existing @unikname.
+- Enable Unikname Connect at WordPress Login, Register pages and comment form
+- Enable Unikname Connect at WooCommerce checkout page and customer login form
+- Auto-approve comments made by users logged in using Unikname Connect
+- Customizable login/post-registration redirection
+- Let your users link their Unikname accounts to the account at your website
 
 = Important links =
 * <a target="_blank" href="https://docs.unikname.com/integration/connect/apps/wordpress/#examples-of-integration-with-unikname-connect">Plugin Demo</a>
 * <a href="https://docs.unikname.com/integration/connect/apps/wordpress/#troubleshooting">Support Documentation</a>
 
-You can provide your feedbacks on <a href="https://forum.unikname.com/c/support/15" target="_blank">our Support Forum</a>.
-
-== Installation ==
+== Set up Unikname Connect plugin ==
 
 = Installation =
-* Download the plugin from this page
-* Navigate to **Plugins** > **Add New** > **Upload Plugin** section in your website admin panel
-* Click **Upload**, click **Choose file**, upload the plugin zip and click **Install Now** button
-* Activate the plugin when installation is complete
+In your WordPress admin panel, go to **Plugins** > **Add New** and look for "Unikname Connect" plugin.
+
+Then activate the plugin when installation is complete.
 
 = Configuration =
 
 After installing and activating the plugin, you will see **Unikname Connect** in the left sidebar in your website admin panel.
-You can configure required options in **General** and **Configuration** sections.
-There is **help** available with each option. You can see the help text by clicking the **(?)** icon before each option.
+The, go to our [Help Center to configure the required options in **General** and **Login** sections](https://help.unikname.com/3-unikname-connect/integration-technology/woocommerce/#step-2-setup-the-wordpress-plugin).
 
 == Frequently Asked Questions ==
-= What is this Unikname Connect stuff and why would I need it? =
-Unikname Connect enables your website users to login using their existing Unikname accounts.
 
-**Benefits**
+= Can you help me configure the plugin?= 
 
-1. **Rapid signup/login**: When using Unikname Connect for login, users do not need to type anything (most of the users are already logged into their Unikname accounts). It helps in boosting signup/login rate at your blog.
+Yes, of course! Contact the support team at [support@unikname.com][mailto:support@unikname.com] or go to our <a href="https://forum.unikname.com/c/support/15" target="_blank">Support Forum</a> to interact with our community. 
 
-2. **Profile Data**: User's profile data will be saved in your blog database. This data also includes users' email, enabling you to communicate with them.
+= Do I have to pay right away? =
 
-3. **Spam Reduction**: Because Unikname Connect authenticate individuals, the likelihood of spammers goes down.
+Take advantage of the Discovery offer to test the solution on one of your websites for free! It's the perfect opportunity to get to know Unikname Connect and evaluate its potential. In this context, no online payment is required. 
+If you wish to install the solution on several websites, you will be billed annually according to the number of websites you manage.
 
-= Can you help me set up the plugin at my website? =
-Yes, we can help you with it. Just go to <a href="https://forum.unikname.com/c/support/15" target="_blank">our Support Forum</a>.
-
-== Screenshots ==
+= What are the prerequisites to install the plugin? =
+Before starting Unikname Connect’s integration, make sure that your website is protected by a TLS/SSL security certificate (HTTPS). If it is already the case, you can start the installation steps right away!
 
 == Screenshots ==
 
