@@ -1,6 +1,6 @@
 ﻿=== Unikname Connect for WordPress ===
 Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian
-Tags: unikname, unikname connect, social login, social commenting, social comments, social plugin, profile data, online identity, social profile storage, single sign-on, social media follow, facebook login, twitter login, google login, login
+Tags: single sign-on, two factor authentication, security, 2-factor authentication, 2FA, social login
 Requires at least: 5.0.0
 Tested up to: 5.6
 Stable tag: 8.3.1
@@ -13,8 +13,9 @@ Unikname Connect is the next-gen strong authentication solution with multi-facto
 This plugin is incompatible to "Super Socializer" plugin, from Heateor.
 
 == Description ==
-Unikname Connect is the next-gen strong authentication solution with multi-factors that strengthens the security of your WordPress website.
-Unikname Connect secures the connection of your administrators and/or customers, and enables instant access to your website, through the use of a unique identifier.
+Unikname Connect is the next-gen strong authentication solution with multi-factors that strengthens the security of your WordPress or WooCommerce website.
+
+Unikname Connect secures your connections, these of your administrators and/or customers, and enables instant access to your website, through the use of a personal id: the @unikname.
 
 https://player.vimeo.com/video/425036469
 
@@ -30,7 +31,7 @@ https://player.vimeo.com/video/425036469
 - Strengthening of the website access overall security
 - Untraceable and confidential connection that preserves your data
 
-= Feature list =
+= Features list =
 - Strong two-factor authentication
 - Quick installation and configuration
 - HTTPS support
@@ -65,9 +66,15 @@ Unikname Connect lets online customers / users / subscribers:
 - Customizable login/post-registration redirection
 - Let your users link their Unikname accounts to the account at your website
 
-= Important links =
-* <a target="_blank" href="https://docs.unikname.com/integration/connect/apps/wordpress/#examples-of-integration-with-unikname-connect">Plugin Demo</a>
-* <a href="https://docs.unikname.com/integration/connect/apps/wordpress/#troubleshooting">Support Documentation</a>
+= Examples of integrations =
+
+Here is a short list of public integration where you can find the Unikname Connect button to sign-up/log-in:
+
+- [WPTeam](https://www.wpteam.io/)
+- [La Bande Du Coin](https://www.labandeducoin.com/)
+- [Cryptomaniac](https://www.cryptomaniac.fr/) 
+
+👉 [Check-out also the full list of our public partners](https://www.unikname.com/partners/)
 
 == Set up Unikname Connect plugin ==
 
@@ -79,13 +86,17 @@ Then activate the plugin when installation is complete.
 = Configuration =
 
 After installing and activating the plugin, you will see **Unikname Connect** in the left sidebar in your website admin panel.
-The, go to our [Help Center to configure the required options in **General** and **Login** sections](https://help.unikname.com/3-unikname-connect/integration-technology/woocommerce/#step-2-setup-the-wordpress-plugin).
+The, go to our [Help Center to configure the required options in **General** and **Login** sections](https://help.unikname.com/3-unikname-connect/integration-technology/wordpress/#general).
 
 == Frequently Asked Questions ==
 
-= Can you help me configure the plugin?= 
+= Can you help me to configure the plugin? = 
 
 Yes, of course! Contact the support team at [support@unikname.com][mailto:support@unikname.com] or go to our <a href="https://forum.unikname.com/c/support/15" target="_blank">Support Forum</a> to interact with our community. 
+
+= Where to find support? = 
+
+You can reach our support team at [support@unikname.com][mailto:support@unikname.com] or go to our <a href="https://forum.unikname.com/c/support/15" target="_blank">Support Forum</a> to interact with our community. 
 
 = Do I have to pay right away? =
 
