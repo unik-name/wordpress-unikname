@@ -22,8 +22,9 @@ if ( ! defined( 'UNIKNAME_DIR_URL' ) ) define( 'UNIKNAME_DIR_URL', plugin_dir_ur
 
 require 'helper.php';
 
-$theChampLoginOptions = get_option('the_champ_login');
+$theChampLoginOptions 		= get_option('the_champ_login');
 $unikNameStyleButtonOptions = get_option('unik_name_style_button');
+$unikNameSecurity 			= get_option('unik_name_security');
 require 'includes/define-value.php';
 require 'includes/core-function.php';
 
@@ -1221,25 +1222,26 @@ function the_champ_frontend_styles(){
  * Create plugin menu in admin.
  */
 function the_champ_create_admin_menu(){
-	$page = add_menu_page('Unikname Connect', 'Unikname Connect', 'manage_options', 'heateor-ss-general-options', 'the_champ_social_login_page', plugins_url('images/logo.png', __FILE__));
+
+	$page 				= add_menu_page('Unikname Connect', 'Unikname', 'manage_options', 'unikname-general-options', 'the_champ_social_login_page', plugins_url('images/logo.png', __FILE__));
 	// general options page
-	//$generalOptionsPage = add_submenu_page( 'heateor-ss-general-options', __( "Unikname Connect - General Options", 'super-socializer' ), __( "General Options", 'super-socializer' ), 'manage_options', 'heateor-ss-general-options', 'the_champ_general_options_page' );
+	$settingPage 		= add_submenu_page( 'unikname-general-options', __( "Unikname Connect - Settings", 'unikname-connect' ) , __( "Settings", 'unikname-connect') , 'manage_options', 'unikname-general-options', 'the_champ_social_login_page' );
+	$securityPage 		= add_submenu_page( 'unikname-general-options',  __( "Unikname Connect - Security", 'unikname-connect' ) , __( "Security", 'unikname-connect') , 'manage_options', 'unikname-security', 'the_champ_login_security');
 	// facebook page
 	// $facebookPage = add_submenu_page('heateor-ss-general-options', 'Super Socializer - Social Commenting', 'Social Commenting', 'manage_options', 'heateor-social-commenting', 'the_champ_facebook_page');
 	// social login page
-	//$loginPage = add_submenu_page('heateor-ss-general-options', 'Unikname Connect Configuration', 'Configuration', 'manage_options', 'heateor-social-login', 'the_champ_social_login_page');
 	// social sharing page
 	// $sharingPage = add_submenu_page('heateor-ss-general-options', 'Super Socializer - Social Sharing', 'Social Sharing', 'manage_options', 'heateor-social-sharing', 'the_champ_social_sharing_page');
 	// like buttons page
 	// $counterPage = add_submenu_page('heateor-ss-general-options', 'Super Socializer - Like Buttons', 'Like Buttons', 'manage_options', 'heateor-like-buttons', 'the_champ_like_buttons_page');
 	add_action('admin_print_scripts-' . $page, 'the_champ_admin_scripts');
 	add_action('admin_print_scripts-' . $page, 'the_champ_admin_style');
-	// add_action('admin_print_scripts-' . $generalOptionsPage, 'the_champ_admin_scripts');
-	// add_action('admin_print_styles-' . $generalOptionsPage, 'the_champ_admin_style');
+	add_action('admin_print_scripts-' . $settingPage, 'the_champ_admin_scripts');
+	add_action('admin_print_styles-' . $settingPage, 'the_champ_admin_style');
+	add_action('admin_print_scripts-' . $securityPage, 'the_champ_admin_scripts');
+	add_action('admin_print_styles-' . $securityPage, 'the_champ_admin_style');
 	// add_action('admin_print_scripts-' . $facebookPage, 'the_champ_admin_scripts');
 	// add_action('admin_print_styles-' . $facebookPage, 'the_champ_admin_style');
-	// add_action('admin_print_scripts-' . $loginPage, 'the_champ_admin_scripts');
-	// add_action('admin_print_styles-' . $loginPage, 'the_champ_admin_style');
 	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_admin_scripts');
 	// add_action('admin_print_scripts-' . $sharingPage, 'the_champ_admin_sharing_scripts');
 	// add_action('admin_print_styles-' . $sharingPage, 'the_champ_admin_style');

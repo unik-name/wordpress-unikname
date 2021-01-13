@@ -79,6 +79,15 @@ function the_champ_social_login_page(){
 }
 
 /**
+* Social Login with security
+*/
+function the_champ_login_security(){
+	global $theChampGeneralOptions, $unikNameSecurity;
+	echo the_champ_settings_saved_notification();
+	require 'templates/security_loigin.php';
+}
+
+/**
  * Social Sharing page of plugin in WP admin.
  */
 function the_champ_social_sharing_page(){
@@ -137,6 +146,7 @@ function the_champ_options_init(){
 	register_setting('the_champ_counter_options', 'the_champ_counter', 'the_champ_validate_options');
 	register_setting('the_champ_general_options', 'the_champ_general', 'the_champ_validate_options');
 	register_setting('unik_name_style_button_options', 'unik_name_style_button', 'the_champ_validate_options');
+	register_setting('unik_name_security_options', 'unik_name_security', 'the_champ_validate_options');
 	if((the_champ_social_sharing_enabled() || the_champ_social_counter_enabled() || the_champ_social_commenting_enabled()) && current_user_can('manage_options')){
 		// show option to disable sharing on particular page/post
 		$post_types = get_post_types( array( 'public' => true ), 'names', 'and' );

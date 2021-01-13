@@ -59,6 +59,12 @@
             );
             update_option('unik_name_style_button', $styleDefault);
     	}
-    	
+
+        if( !get_option('unik_name_security') ){
+            $securityDefault = array(
+                'disable_connect_pass'          => '0'
+            );
+            update_option('unik_name_security', $securityDefault);
+        }
     }
 ?>
