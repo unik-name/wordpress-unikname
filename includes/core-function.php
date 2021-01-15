@@ -48,7 +48,7 @@ function unik_name_check_validation_login($user, $password) {
 
 	// Check All Site
 	$unikNameSecurity 			= get_option('unik_name_security');
-	if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1){
+	if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
 		
 		// Disable authentication by password for all users of my website
 		$errors = new WP_Error();
@@ -56,7 +56,7 @@ function unik_name_check_validation_login($user, $password) {
 		return $errors;
 	}
 
-	if( get_the_author_meta('_connection_autorizations', $userID) && get_the_author_meta('_connection_autorizations', $userID) == 1 && ( (isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password'])) )){
+	if( get_the_author_meta('_connection_autorizations', $userID) && get_the_author_meta('_connection_autorizations', $userID) == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
 		// Disable with User
 		$errors = new WP_Error();
 		$errors->add('title_error', __('<strong>ERROR</strong> Connection error', 'unikname-connect'));
@@ -66,7 +66,7 @@ function unik_name_check_validation_login($user, $password) {
 }
 
 add_action('wp_authenticate_user', 'unik_name_check_validation_login', 10, 2);
-
+ 
 add_filter( 'body_class','unik_name_disable_authentication_password_body_classes' );
 add_filter( 'login_body_class','unik_name_disable_authentication_password_body_classes' );
 function unik_name_disable_authentication_password_body_classes( $classes ) {
