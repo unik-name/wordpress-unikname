@@ -17,14 +17,14 @@
 		}
 
 	?>
-		<h3><?php _e("Unikname Connect Settings", "blank"); ?></h3>
+		<h3><?php _e("Unikname Connect Settings", "unikname-connect"); ?></h3>
 		<table class="form-table">
 			<tr>
-			  	<th><label for="connection_autorizations"><?php _e("Connection autorizations", ''); ?></label></th>
+			  	<th><label for="connection_autorizations"><?php _e("Connection autorizations", 'unikname-connect'); ?></label></th>
 				<td>
 					<input type="checkbox" name="connection_autorizations" id="connection_autorizations" <?=(get_the_author_meta('_connection_autorizations', $user->ID) && get_the_author_meta('_connection_autorizations', $user->ID) == 1) ? 'checked="checked"' : ''?> class="regular-text" value="1" <?=$disableButtonCheck?> style="margin-bottom: 5px;"/>
-					<?=__('Prevent any connections to my account with my password','');?>
-					<p class="description"><?=__('Forbid anyone to use your password to log into your account. Only Unikname Connect allows you to connect to it.','');?></p>
+					<?=__('Prevent any connections to my account with my password','unikname-connect');?>
+					<p class="description"><?=__('Forbid anyone to use your password to log into your account. Only Unikname Connect allows you to connect to it.','unikname-connect');?></p>
 				</td>
 			</tr>   
 		</table>
