@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Unikname Connect
+Plugin Name: Unikname Connect - Secure and Rewarded Connections
 Plugin URI: https://wordpress.org/plugins/unikname-connect/
 Description: Secure your admin accounts and reward your website users for protecting their privacy. Integrate the famous Unikname Connect login solution into your Wordpress or WooCommerce websites.
 Version: 8.4.0-dev
@@ -2394,4 +2394,13 @@ function the_champ_frontend_amp_css(){
 	}
 
 	echo $css;
+}
+
+// Add Menu Under Title Plugin
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'unik_name_add_action_links' );
+function unik_name_add_action_links ( $actions ) {
+   $actionLinkUNC[] = '<a href="' . admin_url( 'admin.php?page=unikname-general-options' ) . '">'.__('Settings','unikname-connect').'</a>';
+   $actionLinkUNC[] = '<a href="https://help.unikname.com/3-unikname-connect/integration-technology/wordpress/" target="_blank">'.__('Docs','unikname-connect').'</a>';
+   $actions = array_merge( $actionLinkUNC, $actions );
+   return $actions;
 }
