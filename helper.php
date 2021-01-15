@@ -1050,7 +1050,7 @@ function heateor_ss_is_plugin_active($pluginFile){
  * Add column in the user list to delete social profile data
  */
 function heateor_ss_add_custom_column($columns){
-	$columns['heateor_ss_delete_profile_data'] = 'Delete Social Profile';
+	$columns['heateor_ss_delete_profile_data'] = __('Unikname', 'unikname-connect');
 	return $columns;
 }
 add_filter('manage_users_columns', 'heateor_ss_add_custom_column');
@@ -1063,7 +1063,7 @@ function heateor_ss_delete_profile_column($value, $columnName, $userId){
 		global $wpdb;
 		$socialUser = $wpdb->get_var($wpdb->prepare('SELECT user_id FROM '. $wpdb->prefix .'usermeta WHERE user_id = %d and meta_key LIKE "thechamp%"', $userId));
 		if($socialUser > 0){
-			return '<a href="javascript:void(0)" title="'. __('Click to delete social profile data', 'super-socializer') .'" alt="'. __('Click to delete social profile data', 'super-socializer') .'" onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')">Delete</a>';
+			return '<a href="javascript:void(0)" title="'. __('Click to revoke Unikname Connect access to this account', 'unikname-connect') .'" alt="'. __('Click to revoke Unikname Connect access to this account', 'unikname-connect') .'" onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')">'.__('Revoke','unikname-connect').'</a>';
 		}
 	}
 }
