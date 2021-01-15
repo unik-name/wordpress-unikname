@@ -25,9 +25,10 @@ require 'helper.php';
 $theChampLoginOptions 		= get_option('the_champ_login');
 $unikNameStyleButtonOptions = get_option('unik_name_style_button');
 $unikNameSecurity 			= get_option('unik_name_security');
+
 require 'includes/define-value.php';
 require 'includes/core-function.php';
-
+require 'includes/admin-profile-user.php';
 // End Button
 if(the_champ_social_login_enabled()){
 	if(isset($theChampLoginOptions['providers']) && in_array('twitter', $theChampLoginOptions['providers'])){
