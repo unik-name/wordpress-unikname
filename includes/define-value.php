@@ -62,7 +62,7 @@
 
         if( !get_option('unik_name_security') ){
             $securityDefault = array(
-                'disable_connect_pass'          => '0'
+                'disable_connect_pass'          => ''
             );
             update_option('unik_name_security', $securityDefault);
         }

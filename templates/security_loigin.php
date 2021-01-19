@@ -20,7 +20,7 @@
                     <div class="content-column">
                         <div class="item type-checkbox">
                             <div class="item-checkbox">
-                                <input type="checkbox" id="disable_connect_pass" name="unik_name_security[disable_connect_pass]" <?php echo isset($unikNameSecurity['disable_connect_pass']) ? 'checked = "checked"' : '';?> value="1"/>
+                                <input type="checkbox" id="disable_connect_pass" name="unik_name_security[disable_connect_pass]" <?php echo (isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1) ? 'checked = "checked"' : '';?> value="1"/>
                                 <label for="disable_connect_pass"><?=__('Toggle','unikname-connect')?></label>
                             </div>
                             <label class="name left"><?=__('Prevent password login on this website for all users','unikname-connect')?></label>
