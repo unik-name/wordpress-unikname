@@ -1123,6 +1123,8 @@ function heateor_ss_delete_social_profile(){
 		$userId = intval(trim($_GET['user_id']));
 		global $wpdb;
 		$wpdb->query($wpdb->prepare('DELETE FROM '. $wpdb->prefix .'usermeta WHERE user_id = %d and meta_key LIKE "thechamp%"', $userId));
+		//Delete User Meta Connections to my account with my password
+		$wpdb->query($wpdb->prepare('DELETE FROM '. $wpdb->prefix .'usermeta WHERE user_id = %d and meta_key = "_connection_autorizations"', $userId));
 		die('done');
 	}
 	die;
