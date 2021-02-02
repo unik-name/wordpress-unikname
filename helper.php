@@ -1101,7 +1101,7 @@ function heateor_ss_delete_social_profile_script(){
                         user_id: userId
                     },
                     success: function(data, textStatus, XMLHttpRequest){
-                        if(data == 'done'){
+                        if(data.includes('done')){
                             jQuery(parentElement).html('<?php _e('Deleted', 'super-socializer'); ?>');
                         }else{
                             jQuery(parentElement).html('<?php _e('Something bad happened', 'super-socializer'); ?>');
