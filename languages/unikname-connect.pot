@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-15 06:36+0000\n"
+"POT-Creation-Date: 2021-02-04 12:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -77,7 +77,11 @@ msgstr ""
 msgid "Button title"
 msgstr ""
 
-#: helper.php:1066
+#: helper.php:1070
+msgid "Can not revoke while Connection Autorizations is checked"
+msgstr ""
+
+#: helper.php:1067
 msgid "Click to revoke Unikname Connect access to this account"
 msgstr ""
 
@@ -336,7 +340,7 @@ msgstr ""
 msgid "Registration redirection"
 msgstr ""
 
-#: helper.php:1066
+#: helper.php:1074
 msgid "Revoke"
 msgstr ""
 

@@ -1060,10 +1060,18 @@ add_filter('manage_users_columns', 'heateor_ss_add_custom_column');
  */
 function heateor_ss_delete_profile_column($value, $columnName, $userId){
 	if('heateor_ss_delete_profile_data' == $columnName){
+		the_champ_admin_style();
 		global $wpdb;
 		$socialUser = $wpdb->get_var($wpdb->prepare('SELECT user_id FROM '. $wpdb->prefix .'usermeta WHERE user_id = %d and meta_key LIKE "thechamp%"', $userId));
+		$ConnectAutorizations 	= false;
+		$title 					= __('Click to revoke Unikname Connect access to this account', 'unikname-connect');
+		if(get_the_author_meta('_connection_autorizations', $userId) && get_the_author_meta('_connection_autorizations', $userId) == 1){
+			$ConnectAutorizations = true;
+			$title 				  = __('Can not revoke while Connection Autorizations is checked', 'unikname-connect');
+		}
+		
 		if($socialUser > 0){
-			return '<a href="javascript:void(0)" title="'. __('Click to revoke Unikname Connect access to this account', 'unikname-connect') .'" alt="'. __('Click to revoke Unikname Connect access to this account', 'unikname-connect') .'" onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')">'.__('Revoke','unikname-connect').'</a>';
+			return '<a href="javascript:void(0)" title="'.$title.'" alt="'.$title.'" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')"' : 'class="disable"').'>'.__('Revoke','unikname-connect').'</a>';
 		}
 	}
 }

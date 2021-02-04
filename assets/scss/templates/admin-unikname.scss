@@ -673,3 +673,13 @@
 		}
 	}
 }
+.heateor_ss_delete_profile_data{
+	a{
+		&.disable{
+			color: #afafaf;
+			&:hover{
+				cursor: not-allowed;
+			}
+		}
+	}
+}
