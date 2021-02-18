@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-13 00:13+0000\n"
-"PO-Revision-Date: 2021-01-15 06:44+0000\n"
+"PO-Revision-Date: 2021-02-04 12:47+0000\n"
 "Last-Translator: Unikname <contact@unikname.com>\n"
 "Language-Team: French (France)\n"
 "Language: fr_FR\n"
@@ -76,7 +76,12 @@ msgstr ""
 msgid "Button title"
 msgstr ""
 
-#: helper.php:1066
+#: helper.php:1070
+msgid "Can not revoke while Connection Autorizations is checked"
+msgstr ""
+"Impossible de revoquer quand l’option Autorisations De Connexion est activé"
+
+#: helper.php:1067
 msgid "Click to revoke Unikname Connect access to this account"
 msgstr "Cliquer pour révoquer l'accès par Unikname Connect à ce compte"
 
@@ -342,7 +347,7 @@ msgstr ""
 msgid "Registration redirection"
 msgstr ""
 
-#: helper.php:1066
+#: helper.php:1074
 msgid "Revoke"
 msgstr "Révoquer"
 

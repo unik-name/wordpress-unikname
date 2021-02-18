@@ -515,6 +515,11 @@
         font-style: normal;
         font-size: 15px; }
 
+.heateor_ss_delete_profile_data a.disable {
+  color: #afafaf; }
+  .heateor_ss_delete_profile_data a.disable:hover {
+    cursor: not-allowed; }
+
 .the_champ_outer_login_container {
   text-align: center;
   margin-bottom: 0px;
