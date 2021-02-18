@@ -667,6 +667,13 @@ function the_champ_account_linking(){
 	                        </tr>';
 	                    }
 	                    if(is_array($linkedAccounts) || $primarySocialNetwork){
+	                    	$ConnectAutorizations 	= false;
+	                    	$title 					= __('Click to revoke Unikname Connect access to this account', 'unikname-connect');
+							if(get_the_author_meta('_connection_autorizations', $user_ID) && get_the_author_meta('_connection_autorizations', $user_ID) == 1){
+								$ConnectAutorizations = true;
+								$title 				  = __('Can not revoke while Connection Autorizations is checked', 'unikname-connect');
+							}
+
 	                        $html .= '<tr>
 	                            <td colspan="2">';
 	                            	
@@ -676,13 +683,13 @@ function the_champ_account_linking(){
 	                            		if($primarySocialNetwork && $primarySocialId){
 	                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == get_user_meta($user_ID, 'thechamp_social_id', true);
 		                            		$html .= '<tr>
-		                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input type="button" onclick="theChampUnlink(this, \''. $primarySocialNetwork .'\')" value="'. __('Remove', 'super-socializer') .'" /></td></tr>';
+		                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke"').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
 	                            		}
 	                            		if(is_array($linkedAccounts) && count($linkedAccounts) > 0){
 	                            			foreach($linkedAccounts as $key => $value){
 		                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == $value;
 		                            			$html .= '<tr>
-		                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($key) .'</strong></td><td><input type="button" onclick="theChampUnlink(this, \''. $key .'\')" value="'. __('Remove', 'super-socializer') .'" /></td></tr>';
+		                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($key) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke"').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
 		                            		}
 	                            		}
 	                            		$html .= '</tbody>
@@ -1060,10 +1067,18 @@ add_filter('manage_users_columns', 'heateor_ss_add_custom_column');
  */
 function heateor_ss_delete_profile_column($value, $columnName, $userId){
 	if('heateor_ss_delete_profile_data' == $columnName){
+		the_champ_admin_style();
 		global $wpdb;
 		$socialUser = $wpdb->get_var($wpdb->prepare('SELECT user_id FROM '. $wpdb->prefix .'usermeta WHERE user_id = %d and meta_key LIKE "thechamp%"', $userId));
+		$ConnectAutorizations 	= false;
+		$title 					= __('Click to revoke Unikname Connect access to this account', 'unikname-connect');
+		if(get_the_author_meta('_connection_autorizations', $userId) && get_the_author_meta('_connection_autorizations', $userId) == 1){
+			$ConnectAutorizations = true;
+			$title 				  = __('Can not revoke while Connection Autorizations is checked', 'unikname-connect');
+		}
+		
 		if($socialUser > 0){
-			return '<a href="javascript:void(0)" title="'. __('Click to revoke Unikname Connect access to this account', 'unikname-connect') .'" alt="'. __('Click to revoke Unikname Connect access to this account', 'unikname-connect') .'" onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')">'.__('Revoke','unikname-connect').'</a>';
+			return '<a href="javascript:void(0)" title="'.$title.'" alt="'.$title.'" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')"' : 'class="disable"').'>'.__('Revoke','unikname-connect').'</a>';
 		}
 	}
 }
@@ -1087,7 +1102,7 @@ add_action('admin_enqueue_scripts', 'heateor_ss_include_thickbox');
  */
 function heateor_ss_delete_social_profile_script(){
 	global $parent_file;
-	if($parent_file == 'users.php'){
+	if($parent_file == 'users.php' || is_account_page()){
 		?>
 		<script type="text/javascript">
 			function heateorSsDeleteSocialProfile(elem, userId){
@@ -1110,11 +1125,21 @@ function heateor_ss_delete_social_profile_script(){
                 });
             }
 		</script>
+		<style type="text/css">
+			input.disable.btn-revoke{
+			    border: 0;
+			    color: #afafaf;
+			    background-color: transparent;
+			}
+			input.disable.btn-revoke:hover{
+				cursor: not-allowed;
+			}
+		</style>
 		<?php
 	}
 }
 add_action('admin_head', 'heateor_ss_delete_social_profile_script');
-
+add_action('wp_footer', 'heateor_ss_delete_social_profile_script', 99);
 /**
  * Delete social profile of the user
  */
