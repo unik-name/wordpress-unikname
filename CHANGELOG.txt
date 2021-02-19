@@ -1,3 +1,16 @@
+= 8.4.0 [2021-02-26] - Fort Knox =
+
+- ** Added**
+  - As a user, prevent the use of the password to log in to his/her own account
+  - As an administrator, prevent other users from using their passwords to log in to their accounts
+  - As administrator, prevent ALL users from using their password to log in to their account
+  - New Unikname security settings panel
+  - Official WordPress 5.6 compatibility
+  - Official PHP 8 compatibility
+
+- **Changed**
+  - Several polished and renamed actions
+
 = 8.3.1 [2020-12-10] =
 
 - **Removed**
@@ -10,7 +23,7 @@
 
 - **Changed**
   - Rework admin panel UI, with new baseline and button labels
-	- Rework "Link account" UX
+  - Rework "Link account" UX
   - Improve "Link account" admin configuration options
   - Update i10n
 
@@ -29,7 +42,7 @@
 
 - **Fixed**
   - Broken UI of the button "Link your account with your @unikname id"
-	- Some undefined variables
+  - Some undefined variables
 
 = 8.2.1 [2020-10-22] =
 

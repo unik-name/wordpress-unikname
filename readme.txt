@@ -17,7 +17,7 @@ This plugin is incompatible to "Super Socializer" plugin, from Heateor.
 
 It secures your connections, these of your administrators and/or customers, and enables instant access to your website, through the use of a personal id: the @unikname.
 
-It is easy to use because passwordless.
+It is easy to use thanks too passwordless.
 
 -----------------------------------------------------
 # Description en Français plus bas
@@ -219,6 +219,19 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 == Changelog ==
 
+= 8.4.0 [2021-02-26] - Fort Knox =
+
+- ** Added**
+  - As a user, prevent the use of the password to log in to his/her own account
+  - As an administrator, prevent other users from using their passwords to log in to their accounts
+  - As administrator, prevent ALL users from using their password to log in to their account
+  - New Unikname security settings panel
+  - Official WordPress 5.6 compatibility
+  - Official PHP 8 compatibility
+
+- **Changed**
+  - Several polished and renamed actions
+
 = 8.3.1 [2020-12-10] =
 
 - **Removed**
@@ -231,7 +244,7 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 - **Changed**
   - Rework admin panel UI, with new baseline and button labels
-	- Rework "Link account" UX
+  - Rework "Link account" UX
   - Improve "Link account" admin configuration options
   - Update i10n
 
