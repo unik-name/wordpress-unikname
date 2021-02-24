@@ -667,9 +667,10 @@ function the_champ_account_linking(){
 	                        </tr>';
 	                    }
 	                    if(is_array($linkedAccounts) || $primarySocialNetwork){
+	                    	$unikNameSecurity 		= get_option('unik_name_security');
 	                    	$ConnectAutorizations 	= false;
 	                    	$title 					= __('Click to revoke Unikname Connect access to this account', 'unikname-connect');
-							if(get_the_author_meta('_connection_autorizations', $user_ID) && get_the_author_meta('_connection_autorizations', $user_ID) == 1){
+							if( (is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1) || (get_the_author_meta('_connection_autorizations', $user_ID) && get_the_author_meta('_connection_autorizations', $user_ID) == 1) ){
 								$ConnectAutorizations = true;
 								$title 				  = __('Can not revoke while Connection Autorizations is checked', 'unikname-connect');
 							}
@@ -1069,10 +1070,11 @@ function heateor_ss_delete_profile_column($value, $columnName, $userId){
 	if('heateor_ss_delete_profile_data' == $columnName){
 		the_champ_admin_style();
 		global $wpdb;
-		$socialUser = $wpdb->get_var($wpdb->prepare('SELECT user_id FROM '. $wpdb->prefix .'usermeta WHERE user_id = %d and meta_key LIKE "thechamp%"', $userId));
+		$unikNameSecurity 		= get_option('unik_name_security');
+		$socialUser 			= $wpdb->get_var($wpdb->prepare('SELECT user_id FROM '. $wpdb->prefix .'usermeta WHERE user_id = %d and meta_key LIKE "thechamp%"', $userId));
 		$ConnectAutorizations 	= false;
 		$title 					= __('Click to revoke Unikname Connect access to this account', 'unikname-connect');
-		if(get_the_author_meta('_connection_autorizations', $userId) && get_the_author_meta('_connection_autorizations', $userId) == 1){
+		if( (is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1) || (get_the_author_meta('_connection_autorizations', $userId) && get_the_author_meta('_connection_autorizations', $userId) == 1) ){
 			$ConnectAutorizations = true;
 			$title 				  = __('Can not revoke while Connection Autorizations is checked', 'unikname-connect');
 		}
@@ -1102,7 +1104,7 @@ add_action('admin_enqueue_scripts', 'heateor_ss_include_thickbox');
  */
 function heateor_ss_delete_social_profile_script(){
 	global $parent_file;
-	if($parent_file == 'users.php' || is_account_page()){
+	if($parent_file == 'users.php' || ( class_exists('WooCommerce') && is_account_page()) ){
 		?>
 		<script type="text/javascript">
 			function heateorSsDeleteSocialProfile(elem, userId){
