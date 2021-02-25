@@ -1136,6 +1136,9 @@ function heateor_ss_delete_social_profile_script(){
 			input.disable.btn-revoke:hover{
 				cursor: not-allowed;
 			}
+			input.disable.btn-revoke:focus{
+				outline: none;
+			}
 		</style>
 		<?php
 	}
