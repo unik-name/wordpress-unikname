@@ -684,13 +684,13 @@ function the_champ_account_linking(){
 	                            		if($primarySocialNetwork && $primarySocialId){
 	                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == get_user_meta($user_ID, 'thechamp_social_id', true);
 		                            		$html .= '<tr>
-		                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke"').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
+		                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke" disabled').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
 	                            		}
 	                            		if(is_array($linkedAccounts) && count($linkedAccounts) > 0){
 	                            			foreach($linkedAccounts as $key => $value){
 		                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == $value;
 		                            			$html .= '<tr>
-		                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($key) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke"').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
+		                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($key) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke" disabled').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
 		                            		}
 	                            		}
 	                            		$html .= '</tbody>
@@ -1080,7 +1080,7 @@ function heateor_ss_delete_profile_column($value, $columnName, $userId){
 		}
 		
 		if($socialUser > 0){
-			return '<a href="javascript:void(0)" title="'.$title.'" alt="'.$title.'" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')"' : 'class="disable"').'>'.__('Revoke','unikname-connect').'</a>';
+			return '<a href="javascript:void(0)" title="'.$title.'" alt="'.$title.'" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $userId .')"' : 'class="disable" disabled').'>'.__('Revoke','unikname-connect').'</a>';
 		}
 	}
 }
@@ -1104,7 +1104,7 @@ add_action('admin_enqueue_scripts', 'heateor_ss_include_thickbox');
  */
 function heateor_ss_delete_social_profile_script(){
 	global $parent_file;
-	if($parent_file == 'users.php' || ( class_exists('WooCommerce') && is_account_page()) ){
+	if($parent_file == 'users.php' || $parent_file == 'profile.php' || ( class_exists('WooCommerce') && is_account_page()) ){
 		?>
 		<script type="text/javascript">
 			function heateorSsDeleteSocialProfile(elem, userId){
@@ -1138,6 +1138,9 @@ function heateor_ss_delete_social_profile_script(){
 			}
 			input.disable.btn-revoke:focus{
 				outline: none;
+			}
+			input.disable.btn-revoke:disabled{
+				box-shadow: none;
 			}
 		</style>
 		<?php
