@@ -42,3 +42,73 @@ function unik_name_style_email_option_function($old_value, $new_value){
 	}
 }
 add_action( 'update_option_the_champ_login', 'unik_name_style_email_option_function', 10, 2 );
+
+function unik_name_check_validation_login($user, $password) {
+	$userID = $user->ID;
+
+	// Check All Site
+	$unikNameSecurity 			= get_option('unik_name_security');
+	if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
+		
+		// Disable authentication by password for all users of my website
+		$errors = new WP_Error();
+		$errors->add('title_error', __('<strong>ERROR</strong>: Connection error', 'unikname-connect'));
+		return $errors;
+	}
+
+	if( get_the_author_meta('_connection_autorizations', $userID) && get_the_author_meta('_connection_autorizations', $userID) == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
+		// Disable with User
+		$errors = new WP_Error();
+		$errors->add('title_error', __('<strong>ERROR</strong> Connection error', 'unikname-connect'));
+		return $errors;
+	}
+    return $user;
+}
+
+add_action('wp_authenticate_user', 'unik_name_check_validation_login', 10, 2);
+ 
+add_filter( 'body_class','unik_name_disable_authentication_password_body_classes' );
+add_filter( 'login_body_class','unik_name_disable_authentication_password_body_classes' );
+function unik_name_disable_authentication_password_body_classes( $classes ) {
+ 
+	// Check All Site
+	$unikNameSecurity 			= get_option('unik_name_security'); 
+	if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1){
+		$classes[] = 'disable-authentication-password';
+	}
+
+    return $classes;
+}
+
+function unik_name_disable_form_login_style() { ?>
+	<?php 	// Check All Site
+		$unikNameSecurity 			= get_option('unik_name_security'); 
+		if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1){ ?>
+		    <style type="text/css">
+				.disable-authentication-password #loginform input[name=log], .disable-authentication-password #loginform input[name=pwd]{
+					pointer-events: none;
+					background-color: #e8e8e8;
+				}
+		    </style>
+		    <script type="text/javascript">
+				document.addEventListener("DOMContentLoaded", function(event) {
+					document.getElementById("user_login").disabled = true;
+					document.getElementById("user_pass").disabled = true;
+				});
+		    </script>
+	<?php } // Endif; ?>
+<?php }
+add_action( 'login_enqueue_scripts', 'unik_name_disable_form_login_style' );
+
+add_action( 'wp_footer', 'unik_name_disable_form_login_style_frontend' );
+function unik_name_disable_form_login_style_frontend(){
+	?>
+	    <script type="text/javascript">
+			jQuery( document ).ready(function($){
+			    $('.disable-authentication-password .woocommerce-form input[name=username]').attr("disabled", 'disabled');
+			    $('.disable-authentication-password .woocommerce-form input[name=password]').attr("disabled", 'disabled');
+			    $('.disable-authentication-password .woocommerce-form button[name=login').prop('disabled', true);
+			});
+	    </script>
+	<?php
+}

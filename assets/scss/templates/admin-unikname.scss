@@ -123,6 +123,10 @@
 						@media screen and (max-width: 1200px) {
 							width: 230px;
 						}
+						&.left{
+							width: 350px;
+							margin-left: 15px;
+						}
 					}
 					.item-checkbox {
 						width: max-content;
@@ -665,6 +669,16 @@
 						}
 					}
 				}
+			}
+		}
+	}
+}
+.heateor_ss_delete_profile_data{
+	a{
+		&.disable{
+			color: #afafaf;
+			&:hover{
+				cursor: not-allowed;
 			}
 		}
 	}

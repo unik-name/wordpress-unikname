@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'helvetica';
+  font-family: "helvetica";
   src: url("../fonts/Helvetica.ttf");
   font-weight: bold;
   font-style: normal;
@@ -53,9 +53,9 @@
       .the_champ_outer_login_container .the_champ_login_container ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin:hover {
         cursor: pointer; }
   .the_champ_outer_login_container .the_champ_login_container.button_color_blue ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
-    background-color: #0F2852 !important; }
+    background-color: #0f2852 !important; }
   .the_champ_outer_login_container .the_champ_login_container.button_color_turquoise ul.the_champ_login_ul li i.theChampLogin.theChampUniknameBackground.theChampUniknameLogin {
-    background-color: #2B6BF3 !important; }
+    background-color: #2b6bf3 !important; }
   .the_champ_outer_login_container .the_champ_social_button_description {
     font-size: 13px;
     font-style: italic; }
@@ -171,6 +171,14 @@ form.woocommerce-checkout > .checkout__billing > * {
 
 .the_champ_social_login_title {
   font-size: 13px; }
+
+.disable-authentication-password .woocommerce-form input[name=username], .disable-authentication-password .woocommerce-form input[name=password], .disable-authentication-password #loginform input[name=username], .disable-authentication-password #loginform input[name=password] {
+  pointer-events: none;
+  background-color: #e8e8e8; }
+  .disable-authentication-password .woocommerce-form input[name=username]:hover, .disable-authentication-password .woocommerce-form input[name=password]:hover, .disable-authentication-password #loginform input[name=username]:hover, .disable-authentication-password #loginform input[name=password]:hover {
+    cursor: pointer; }
+.disable-authentication-password .woocommerce-form input[type=submit], .disable-authentication-password #loginform input[type=submit] {
+  pointer-events: none; }
 
 .unik-name-popup-email .unikname-list-content-step {
   margin: auto;
