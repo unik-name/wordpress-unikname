@@ -3,7 +3,7 @@ Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8h
 Tags: passwordless, security, 2FA, login, signup, strong authentication
 Requires at least: 5.0.0
 Tested up to: 5.6
-Stable tag: 8.3.1
+Stable tag: 8.4.0
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -221,7 +221,7 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 = 8.4.0 [2021-02-26] - Fort Knox =
 
-- ** Added**
+- **Added**
   - As a user, prevent the use of the password to log in to his/her own account
   - As an administrator, prevent other users from using their passwords to log in to their accounts
   - As administrator, prevent ALL users from using their password to log in to their account

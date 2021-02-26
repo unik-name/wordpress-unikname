@@ -1,6 +1,6 @@
 = 8.4.0 [2021-02-26] - Fort Knox =
 
-- ** Added**
+- **Added**
   - As a user, prevent the use of the password to log in to his/her own account
   - As an administrator, prevent other users from using their passwords to log in to their accounts
   - As administrator, prevent ALL users from using their password to log in to their account
