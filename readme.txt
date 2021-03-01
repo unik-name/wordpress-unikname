@@ -13,11 +13,9 @@ Unikname Connect is the next-gen strong authentication solution with multi-facto
 This plugin is incompatible to "Super Socializer" plugin, from Heateor.
 
 == Description ==
-[Unikname Connect](https://www.unikname.com/unikname-connect/) is the next-gen strong authentication solution with multi-factors that strengthens the security of your WordPress or WooCommerce website.
+[Unikname Connect](https://www.unikname.com/unikname-connect/) is the next-gen strong authentication solution with multi-factors and without password that strengthens the security of your WordPress or WooCommerce website.
 
-It secures your connections, these of your administrators and/or customers, and enables instant access to your website, through the use of a personal id: the @unikname.
-
-It is easy to use thanks too passwordless.
+It secures your admin and user's connections and enables instant access to your website, through the use of a personal id: the @unikname.
 
 -----------------------------------------------------
 # Description en Français plus bas
@@ -97,11 +95,9 @@ Then, go to our [Help Center to configure the required options in **General** an
 
 == FRANCAIS ==
 
-[Unikname Connect](https://www.unikname.com/unikname-connect/) est la nouvelle génération d’authentification forte multi-facteurs qui renforce la sécurité de votre site WordPress.
+[Unikname Connect](https://www.unikname.com/unikname-connect/) est la nouvelle génération d’authentification forte multi-facteurs et sans mot de passe qui renforce la sécurité de votre site WordPress.
 
 Elle sécurise l’étape de connexion de vos administrateurs et/ou de vos clients, et permet d’accéder instantanément à votre site web, au travers de l’utilisation d’un identifiant unique.
-
-Elle est simple d'utilisation car _passwordless_/sans mot de passe.
 
 == Pour qui ? ==
 
