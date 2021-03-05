@@ -13,7 +13,11 @@ Unikname Connect is the next-gen strong authentication solution with multi-facto
 This plugin is incompatible to "Super Socializer" plugin, from Heateor.
 
 == Description ==
-[Unikname Connect](https://www.unikname.com/unikname-connect/) is the next-gen strong authentication solution with multi-factors and without password that strengthens the security of your WordPress or WooCommerce website.
+Unikname for WordPress is the best plugin to secure your admin or users accounts.
+
+**New with version 8.4: no more passwords on your site!**
+
+It is based on [Unikname Connect](https://www.unikname.com/unikname-connect), the next-gen strong authentication solution with multi-factors and without password that strengthens the security of your WordPress or WooCommerce website.
 
 It secures your admin and user's connections and enables instant access to your website, through the use of a personal id: the @unikname.
 
@@ -36,6 +40,7 @@ https://player.vimeo.com/video/425036469
 - Untraceable and confidential connections that preserve your data
 
 == Features list ==
+- Replace email/password login of your accounts
 - Strong and simple two-factor authentication, but passwordless 💪
 - Quick installation and configuration
 - HTTPS support
@@ -95,9 +100,13 @@ Then, go to our [Help Center to configure the required options in **General** an
 
 == FRANCAIS ==
 
-[Unikname Connect](https://www.unikname.com/unikname-connect/) est la nouvelle génération d’authentification forte multi-facteurs et sans mot de passe qui renforce la sécurité de votre site WordPress.
+Unikname pour WordPress est la meilleure extension pour sécuriser les comptes admins et utilisateurs.
 
-Elle sécurise l’étape de connexion de vos administrateurs et/ou de vos clients, et permet d’accéder instantanément à votre site web, au travers de l’utilisation d’un identifiant unique.
+**Nouveauté de la version 8.4 : fin de mots de passe sur votre site !**
+
+Il est basé sur [Unikname Connect](https://www.unikname.com/unikname-connect/), la nouvelle génération d’authentification forte multi-facteurs et sans mot de passe qui renforce la sécurité de votre site WordPress.
+
+Il sécurise l’étape de connexion de vos administrateurs et/ou de vos clients, et permet d’accéder instantanément à votre site web, au travers de l’utilisation d’un identifiant unique.
 
 == Pour qui ? ==
 
@@ -107,12 +116,13 @@ Elle sécurise l’étape de connexion de vos administrateurs et/ou de vos clien
 
 == Principaux avantages ==
 
-- Authentification forte multi facteurs instantanée qui ne nécessite aucun mail ni mot de passe / _passwordless_
+- Authentification forte multi-facteurs instantanée qui ne nécessite aucun mail ni mot de passe / _passwordless_
 - Renforcement de la sécurité globale de l’accès au site web
 - Connexions intraçables et confidentielles qui préservent vos données
 
 == Fonctionnalités ==
 
+- Remplace l'email et le mot de passe de vos comptes
 - Authentification forte à double facteurs, mais sans mot de passe
 - Installation et configuration rapide
 - Prise en charge HTTPS
