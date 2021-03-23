@@ -114,11 +114,33 @@ var unikNameJS = (function ($, window, undefined) {
         });         
   
     }
+
+    function unikname_security_option(){
+        $('#disable_connect_pass').click( function(){
+            if( $(this).is(':checked') && $('#roles_disable_connect_pass').is(':checked')){
+                $('#roles_disable_connect_pass').attr("checked",false);
+                $('.roles_user_disable_container').addClass('disable');
+            }
+        });
+
+        $('#roles_disable_connect_pass').click( function(){
+            if( $(this).is(':checked')){
+                if($('#disable_connect_pass').is(':checked')){
+                    $('#disable_connect_pass').attr("checked",false);
+                }
+                $('.roles_user_disable_container').removeClass('disable');
+            }else{
+                $('.roles_user_disable_container').addClass('disable');
+            }
+        });
+    }
+
     return {
         init: function () {
             unik_name_basic_configuration();
             unik_name_login_option();
             unik_name_style_option();
+            unikname_security_option();
         }
     };
 }(jQuery, window));

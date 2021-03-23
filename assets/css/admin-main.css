@@ -97,6 +97,8 @@
       position: relative; }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .item label.name {
         font-size: 15px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item label.name span {
+          color: #e00002; }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox > label {
         display: inline-block;
         line-height: 20px;
@@ -408,6 +410,55 @@
         height: 38px; }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-color-picker.unikname-custom-color {
         display: none; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox {
+        display: inline-flex;
+        flex-wrap: wrap;
+        background-color: #f3f3f3;
+        padding: 15px 20px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox.roles_user_disable_container {
+          position: relative; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox.roles_user_disable_container.disable:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 999;
+            background-color: #f3f3f3a8;
+            top: 0;
+            left: 0; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox.roles_user_disable_container.disable:hover {
+            cursor: not-allowed; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox {
+          width: 33%;
+          margin-bottom: 7px;
+          margin-top: 7px;
+          position: relative; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox .checkmark {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            border: 1px solid #d7dbf1; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox .checkmark:after {
+              content: "";
+              position: absolute;
+              display: none;
+              top: 6px;
+              left: 6px;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: #172547; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+              display: block; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox label {
+            padding-left: 30px; }
     .unik-name-admin-container .unik-content-admin .unik-content-tab .button-custom-style {
       margin-top: 10px; }
     .unik-name-admin-container .unik-content-admin .unik-content-tab .column-2 {
@@ -486,6 +537,14 @@
         .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview.right {
           margin-left: auto;
           margin-right: 0; }
+  .unik-name-admin-container .group-item-unikname {
+    background-color: #f3f3f3;
+    padding: 20px 30px;
+    margin-top: 30px;
+    border: 1px solid #eaeaea;
+    border-radius: 10px; }
+    .unik-name-admin-container .group-item-unikname input[type="text"], .unik-name-admin-container .group-item-unikname input[type="password"] {
+      width: 100%; }
 
 .super-socializer-linking-container table.form-table tbody tr td {
   border: 0px; }

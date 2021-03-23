@@ -48,12 +48,27 @@ function unik_name_check_validation_login($user, $password) {
 
 	// Check All Site
 	$unikNameSecurity 			= get_option('unik_name_security');
+
 	if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
 		
 		// Disable authentication by password for all users of my website
 		$errors = new WP_Error();
 		$errors->add('title_error', __('<strong>ERROR</strong>: Connection error', 'unikname-connect'));
 		return $errors;
+	}
+
+	// Check Login With User Role
+	if(is_array($unikNameSecurity) && isset($unikNameSecurity['roles_disable_connect_pass']) && $unikNameSecurity['roles_disable_connect_pass'] == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
+		$roleDisable 	= array();
+		if(isset($unikNameSecurity['roles_user_disable']) && is_array($unikNameSecurity['roles_user_disable'])){
+			$roleDisable 	= $unikNameSecurity['roles_user_disable'];
+		}
+		$roleLogin 	= 	$user->roles['0'];
+		if(in_array($roleLogin, $roleDisable)){
+			$errors = new WP_Error();
+			$errors->add('title_error', __('<strong>ERROR</strong>: Connection error', 'unikname-connect'));
+			return $errors;
+		}
 	}
 
 	if( get_the_author_meta('_connection_autorizations', $userID) && get_the_author_meta('_connection_autorizations', $userID) == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
