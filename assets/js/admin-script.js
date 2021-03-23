@@ -10,7 +10,27 @@ var unikNameJS = (function ($, window, undefined) {
                 $('.unikname_disable_reg_options').css('display','none');
             }
         });
+
+        // Check Enable Unikname
+        $('input[name="the_champ_login[enable]"]').click(function() {
+            unikname_check_enable();
+        });
+
+        $('input[name="the_champ_login[un_key]"]').change(function() {
+            unikname_check_enable();
+        });
+
+        $('input[name="the_champ_login[un_secret]"]').change(function() {
+            unikname_check_enable();
+        });
     }
+
+    function unikname_check_enable(){
+        if( ( $('input[name="the_champ_login[un_key]"]').val() == '' || $('input[name="the_champ_login[un_secret]"]').val() == '' ) && $('input[name="the_champ_login[enable]"]').is(':checked') ){
+            $('input[name="the_champ_login[enable]"]').attr("checked",false);
+        }
+    }
+
     function unik_name_login_option(){
         $('input[name="the_champ_login[login_redirection]"]').change(function() {
             if(this.value == 'custom'){
@@ -124,7 +144,7 @@ var unikNameJS = (function ($, window, undefined) {
         });
 
         $('#roles_disable_connect_pass').click( function(){
-            if( $(this).is(':checked')){
+            if( c(this).is(':checked')){
                 if($('#disable_connect_pass').is(':checked')){
                     $('#disable_connect_pass').attr("checked",false);
                 }
@@ -134,6 +154,7 @@ var unikNameJS = (function ($, window, undefined) {
             }
         });
     }
+
 
     return {
         init: function () {
