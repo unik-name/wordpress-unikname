@@ -701,6 +701,25 @@
 		input[type="text"], input[type="password"]{
 			width: 100%;
 		}
+		.title-group{
+			position: relative;
+			max-width: 415px;
+			width: 100%;
+			min-height: 30px;
+			border-bottom: 2px solid #162547;
+			z-index: 999;
+			margin-bottom: 10px;
+			h2{
+				width: max-content;
+				position: absolute;
+				background-color: #f3f3f3;
+				padding-right: 3px;
+				font-size: 25px;
+				padding-top: 14px;
+				padding-bottom: 20px;
+				margin: 0;
+			}
+		}
 	}
 }
 // LINK ACCOUNT
