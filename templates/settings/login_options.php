@@ -96,46 +96,47 @@
 </div>
 <div class="column-2">
 	<div class="content-column">
-		<div class="group-item-unikname">
-			<div class="title-group">
-				<h2><?=__('WooCommerce pages','unikname-connect')?></h2>
-			</div>
-			<div class="item type-checkbox">
-				<label class="name"><?=__('Enable before WooCommerce Customer Login Form','unikname-connect')?></label>
-				<div class="item-checkbox">
-					<input type="checkbox" id="woo-before-form-login" name="the_champ_login[enable_before_wc]" <?php echo isset($theChampLoginOptions['enable_before_wc']) ? 'checked = "checked"' : '';?> value="1"/>
-					<label for="woo-before-form-login"><?=__('Toggle','unikname-connect')?></label>
+		<?php if( class_exists('WooCommerce') ) : ?>
+			<div class="group-item-unikname">
+				<div class="title-group">
+					<h2><?=__('WooCommerce pages','unikname-connect')?></h2>
+				</div>
+				<div class="item type-checkbox">
+					<label class="name"><?=__('Enable before WooCommerce Customer Login Form','unikname-connect')?></label>
+					<div class="item-checkbox">
+						<input type="checkbox" id="woo-before-form-login" name="the_champ_login[enable_before_wc]" <?php echo isset($theChampLoginOptions['enable_before_wc']) ? 'checked = "checked"' : '';?> value="1"/>
+						<label for="woo-before-form-login"><?=__('Toggle','unikname-connect')?></label>
+					</div>
+				</div>
+				<div class="item type-checkbox">
+					<label class="name"><?=__('Enable after WooCommerce Customer Login Form','unikname-connect')?></label>
+					<div class="item-checkbox">
+						<input type="checkbox" id="woo-after-form-login" name="the_champ_login[enable_after_wc]" <?php echo isset($theChampLoginOptions['enable_after_wc']) ? 'checked = "checked"' : '';?> value="1"/>
+						<label for="woo-after-form-login"><?=__('Toggle','unikname-connect')?></label>
+					</div>
+				</div>
+				<div class="item type-checkbox">
+					<label class="name"><?=__('Enable at WooCommerce Customer Login Form','unikname-connect')?></label>
+					<div class="item-checkbox">
+						<input type="checkbox" id="woo-login-form" name="the_champ_login[enable_form_login_wc]" <?php echo isset($theChampLoginOptions['enable_form_login_wc']) ? 'checked = "checked"' : '';?> value="1"/>
+						<label for="woo-login-form"><?=__('Toggle','unikname-connect')?></label>
+					</div>
+				</div>
+				<div class="item type-checkbox">
+					<label class="name"><?=__('Enable at WooCommerce Customer Register Form','unikname-connect')?></label>
+					<div class="item-checkbox">
+						<input type="checkbox" id="woo_enable_register_wc" name="the_champ_login[enable_register_wc]" <?php echo isset($theChampLoginOptions['enable_register_wc']) ? 'checked = "checked"' : '';?> value="1"/>
+						<label for="woo_enable_register_wc"><?=__('Toggle','unikname-connect')?></label>
+					</div>
+				</div>
+				<div class="item type-checkbox">
+					<label class="name"><?=__('Enable at WooCommerce checkout page','unikname-connect')?></label>
+					<div class="item-checkbox">
+						<input type="checkbox" id="woo_enable_wc_checkout" name="the_champ_login[enable_wc_checkout]" <?php echo isset($theChampLoginOptions['enable_wc_checkout']) ? 'checked = "checked"' : '';?> value="1"/>
+						<label for="woo_enable_wc_checkout"><?=__('Toggle','unikname-connect')?></label>
+					</div>
 				</div>
 			</div>
-			<div class="item type-checkbox">
-				<label class="name"><?=__('Enable after WooCommerce Customer Login Form','unikname-connect')?></label>
-				<div class="item-checkbox">
-					<input type="checkbox" id="woo-after-form-login" name="the_champ_login[enable_after_wc]" <?php echo isset($theChampLoginOptions['enable_after_wc']) ? 'checked = "checked"' : '';?> value="1"/>
-					<label for="woo-after-form-login"><?=__('Toggle','unikname-connect')?></label>
-				</div>
-			</div>
-			<div class="item type-checkbox">
-				<label class="name"><?=__('Enable at WooCommerce Customer Login Form','unikname-connect')?></label>
-				<div class="item-checkbox">
-					<input type="checkbox" id="woo-login-form" name="the_champ_login[enable_form_login_wc]" <?php echo isset($theChampLoginOptions['enable_form_login_wc']) ? 'checked = "checked"' : '';?> value="1"/>
-					<label for="woo-login-form"><?=__('Toggle','unikname-connect')?></label>
-				</div>
-			</div>
-			<div class="item type-checkbox">
-				<label class="name"><?=__('Enable at WooCommerce Customer Register Form','unikname-connect')?></label>
-				<div class="item-checkbox">
-					<input type="checkbox" id="woo_enable_register_wc" name="the_champ_login[enable_register_wc]" <?php echo isset($theChampLoginOptions['enable_register_wc']) ? 'checked = "checked"' : '';?> value="1"/>
-					<label for="woo_enable_register_wc"><?=__('Toggle','unikname-connect')?></label>
-				</div>
-			</div>
-			<div class="item type-checkbox">
-				<label class="name"><?=__('Enable at WooCommerce checkout page','unikname-connect')?></label>
-				<div class="item-checkbox">
-					<input type="checkbox" id="woo_enable_wc_checkout" name="the_champ_login[enable_wc_checkout]" <?php echo isset($theChampLoginOptions['enable_wc_checkout']) ? 'checked = "checked"' : '';?> value="1"/>
-					<label for="woo_enable_wc_checkout"><?=__('Toggle','unikname-connect')?></label>
-				</div>
-			</div>
-		</div>
-
+		<?php endif; ?>
 	</div>
 </div>

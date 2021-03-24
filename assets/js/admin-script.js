@@ -144,7 +144,7 @@ var unikNameJS = (function ($, window, undefined) {
         });
 
         $('#roles_disable_connect_pass').click( function(){
-            if( c(this).is(':checked')){
+            if( $(this).is(':checked')){
                 if($('#disable_connect_pass').is(':checked')){
                     $('#disable_connect_pass').attr("checked",false);
                 }
