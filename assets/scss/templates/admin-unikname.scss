@@ -591,7 +591,7 @@
 				}
 			}
 			.button-custom-style {
-				margin-top: 10px;
+				margin-top: 20px;
 			}
 			.column-2 {
 				flex-basis: 50%;
@@ -603,38 +603,36 @@
 				}
 			}
 		}
-		.unik-style-button-container {
+		.unikname-group-item{
 			border: 1px solid #e6dfdf;
 			border-radius: 5px;
 			background-color: #f3f3f3;
-			padding: 10px 30px;
+			padding: 15px 30px;
 			margin: 30px 15px;
-			h5 {
-				font-size: 22px;
+			&.margin-left-30{
+				margin-left: 30px;
+			}
+			&.margin-right-30{
+				margin-right: 30px;
+			}
+			.title-group{
 				position: relative;
-				margin-top: 10px;
-				font-weight: 400;
-				font-style: italic;
-				margin-bottom: 25px;
-				&:before {
-					content: "";
+				max-width: 415px;
+				width: 100%;
+				min-height: 30px;
+				border-bottom: 2px solid #162547;
+				z-index: 999;
+				margin-bottom: 15px;
+				h5{
+					width: max-content;
 					position: absolute;
-					height: 2px;
-					width: calc(100% - 120px);
-					z-index: 9;
-					background-color: #000000;
-					bottom: -1px;
-					right: 0;
-				}
-				&.title-register {
-					&:before {
-						width: calc(100% - 150px);
-					}
-				}
-				&.account-link {
-					&:before {
-						width: calc(100% - 226px);
-					}
+					background-color: #f3f3f3;
+					padding-right: 3px;
+					font-size: 22px;
+					padding-top: 14px;
+					padding-bottom: 20px;
+					margin: 0;
+					font-style: italic;
 				}
 			}
 			.unikname-button-preview-container {
@@ -642,6 +640,7 @@
 				border: 1px #0f2951 dashed;
 				padding: 10px;
 				position: relative;
+				margin-top: 35px;
 				.button-preview {
 					text-align: center;
 					max-width: 260px;
@@ -693,11 +692,11 @@
 		}
 	}
 	.group-item-unikname{
+		border: 1px solid #e6dfdf;
+		border-radius: 5px;
 		background-color: #f3f3f3;
-		padding: 20px 30px;
+		padding: 15px 30px;
 		margin-top: 30px;
-		border: 1px solid #eaeaea;
-		border-radius: 10px;
 		input[type="text"], input[type="password"]{
 			width: 100%;
 		}
@@ -708,16 +707,17 @@
 			min-height: 30px;
 			border-bottom: 2px solid #162547;
 			z-index: 999;
-			margin-bottom: 10px;
-			h2{
+			margin-bottom: 15px;
+			h5{
 				width: max-content;
 				position: absolute;
 				background-color: #f3f3f3;
 				padding-right: 3px;
-				font-size: 25px;
+				font-size: 22px;
 				padding-top: 14px;
 				padding-bottom: 20px;
 				margin: 0;
+				font-style: italic;
 			}
 		}
 	}

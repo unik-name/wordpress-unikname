@@ -45,14 +45,14 @@
     	if( !get_option('unik_name_style_button') ){
             $styleDefault = array(
                 'login_color'                   => 'blue',
-                'login_border_radius'           => '30',
-                'login_button_alignment'        => 'left',
+                'login_border_radius'           => '6',
+                'login_button_alignment'        => 'center',
                 'login_button_title'            => '1',
                 'login_button_label'            => '1',
                 'login_button_description'      => '1',
                 'register_color'                => 'blue',
-                'register_border_radius'        => '30',
-                'register_button_alignment'     => 'left',
+                'register_border_radius'        => '6',
+                'register_button_alignment'     => 'center',
                 'register_button_title'         => '1',
                 'register_button_label'         => '1',
                 'register_button_description'   => '1',
