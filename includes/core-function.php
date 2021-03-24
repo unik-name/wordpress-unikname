@@ -100,9 +100,13 @@ function unik_name_disable_form_login_style() { ?>
 		$unikNameSecurity 			= get_option('unik_name_security'); 
 		if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1){ ?>
 		    <style type="text/css">
+		    	.disable-authentication-password #loginform > p,.disable-authentication-password #loginform .user-pass-wrap,.disable-authentication-password #loginform .waiel-style-or,.disable-authentication-password #nav{
+		    		display: none;
+		    	}
 				.disable-authentication-password #loginform input[name=log], .disable-authentication-password #loginform input[name=pwd]{
 					pointer-events: none;
 					background-color: #e8e8e8;
+					display: none;
 				}
 		    </style>
 		    <script type="text/javascript">

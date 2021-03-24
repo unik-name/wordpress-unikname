@@ -174,11 +174,16 @@ form.woocommerce-checkout > .checkout__billing > * {
 
 .disable-authentication-password .woocommerce-form input[name=username], .disable-authentication-password .woocommerce-form input[name=password], .disable-authentication-password #loginform input[name=username], .disable-authentication-password #loginform input[name=password] {
   pointer-events: none;
-  background-color: #e8e8e8; }
+  background-color: #e8e8e8;
+  display: none; }
   .disable-authentication-password .woocommerce-form input[name=username]:hover, .disable-authentication-password .woocommerce-form input[name=password]:hover, .disable-authentication-password #loginform input[name=username]:hover, .disable-authentication-password #loginform input[name=password]:hover {
     cursor: pointer; }
 .disable-authentication-password .woocommerce-form input[type=submit], .disable-authentication-password #loginform input[type=submit] {
   pointer-events: none; }
+.disable-authentication-password .woocommerce-form .woocommerce-form-row, .disable-authentication-password .woocommerce-form .form-row, .disable-authentication-password .woocommerce-form .woocommerce-LostPassword, .disable-authentication-password #loginform .woocommerce-form-row, .disable-authentication-password #loginform .form-row, .disable-authentication-password #loginform .woocommerce-LostPassword {
+  display: none; }
+.disable-authentication-password .waiel-style-or {
+  display: none; }
 
 .unik-name-popup-email .unikname-list-content-step {
   margin: auto;
