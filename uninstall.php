@@ -20,7 +20,9 @@ if(isset($theChampGeneralOptions['delete_options'])){
 		'widget_thechampverticalsharing',
 		'widget_thechamphorizontalcounter',
 		'widget_thechampverticalcounter',
-		'heateor_ss_fb_access_token'
+		'heateor_ss_fb_access_token',
+		'unik_name_style_button',
+		'unik_name_security',
 	);
 	// For Multisite
 	if(function_exists('is_multisite') && is_multisite()){
