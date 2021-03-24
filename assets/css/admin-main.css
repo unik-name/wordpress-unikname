@@ -519,7 +519,8 @@
           padding: 10px 15px 10px 10px; }
           .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview .button-unikname-connect img {
             width: 30px;
-            margin: auto; }
+            margin: auto;
+            max-height: 28px; }
           .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview .button-unikname-connect label {
             font-size: 16px;
             line-height: 28px;
