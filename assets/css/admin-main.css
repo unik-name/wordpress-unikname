@@ -429,7 +429,7 @@
           .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox.roles_user_disable_container.disable:hover {
             cursor: not-allowed; }
         .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox {
-          width: 33%;
+          width: 50%;
           margin-bottom: 7px;
           margin-top: 7px;
           position: relative; }

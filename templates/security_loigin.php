@@ -48,7 +48,7 @@
                                         <label for="<?php echo $key; ?>">
                                             <input type="checkbox" id="<?php echo $key; ?>" name="unik_name_security[roles_user_disable][]" value="<?php echo $key; ?>" <?php echo (in_array($key, $listRoleCurrent)) ? 'checked = "checked"' : '';?> >
                                             <span class="checkmark"></span>
-                                            <?php echo $value['name']; ?>
+                                            <?php echo translate_user_role( $value['name'] ); ?>
                                         </label>
                                     </div>
                                 <?php endforeach; ?>
