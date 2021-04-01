@@ -27,7 +27,7 @@ var unikNameJS = (function ($, window, undefined) {
 
     function unikname_check_enable(){
         if( ( $('input[name="the_champ_login[un_key]"]').val() == '' || $('input[name="the_champ_login[un_secret]"]').val() == '' ) && $('input[name="the_champ_login[enable]"]').is(':checked') ){
-            $('input[name="the_champ_login[enable]"]').attr("checked",false);
+            $('input[name="the_champ_login[enable]"]').prop("checked",false);
         }
     }
 
@@ -138,7 +138,7 @@ var unikNameJS = (function ($, window, undefined) {
     function unikname_security_option(){
         $('#disable_connect_pass').click( function(){
             if( $(this).is(':checked') && $('#roles_disable_connect_pass').is(':checked')){
-                $('#roles_disable_connect_pass').attr("checked",false);
+                $('#roles_disable_connect_pass').prop("checked",false);
                 $('.roles_user_disable_container').addClass('disable');
             }
         });
@@ -146,7 +146,7 @@ var unikNameJS = (function ($, window, undefined) {
         $('#roles_disable_connect_pass').click( function(){
             if( $(this).is(':checked')){
                 if($('#disable_connect_pass').is(':checked')){
-                    $('#disable_connect_pass').attr("checked",false);
+                    $('#disable_connect_pass').prop("checked",false);
                 }
                 $('.roles_user_disable_container').removeClass('disable');
             }else{
