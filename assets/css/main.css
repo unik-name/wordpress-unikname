@@ -169,9 +169,6 @@ form.woocommerce-checkout > .checkout__billing > * {
   -ms-flex-positive: unset;
   flex-grow: unset; }
 
-.the_champ_social_login_title {
-  font-size: 13px; }
-
 .disable-authentication-password .woocommerce-form input[name=username], .disable-authentication-password .woocommerce-form input[name=password], .disable-authentication-password #loginform input[name=username], .disable-authentication-password #loginform input[name=password] {
   pointer-events: none;
   background-color: #e8e8e8;

@@ -439,18 +439,20 @@
             left: 0;
             height: 20px;
             width: 20px;
-            border-radius: 50%;
-            border: 1px solid #d7dbf1; }
+            border: 1px solid #adadad; }
             .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox .checkmark:after {
               content: "";
               position: absolute;
               display: none;
-              top: 6px;
-              left: 6px;
-              width: 8px;
-              height: 8px;
-              border-radius: 50%;
-              background: #172547; }
+              left: 7px;
+              top: 0px;
+              width: 5px;
+              height: 12px;
+              border: solid #162547;
+              border-width: 0 3px 3px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
           .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox input[type="checkbox"] {
             position: absolute;
             opacity: 0;
@@ -765,9 +767,6 @@ form.woocommerce-checkout > .checkout__billing > * {
   -webkit-box-flex: unset;
   -ms-flex-positive: unset;
   flex-grow: unset; }
-
-.the_champ_social_login_title {
-  font-size: 13px; }
 
 .disable-authentication-password .woocommerce-form input[name=username], .disable-authentication-password .woocommerce-form input[name=password], .disable-authentication-password #loginform input[name=username], .disable-authentication-password #loginform input[name=password] {
   pointer-events: none;
