@@ -45,43 +45,41 @@ add_action( 'update_option_the_champ_login', 'unik_name_style_email_option_funct
 
 function unik_name_check_validation_login($user, $password) {
 	$userID = $user->ID;
+	$unikNameSecurity 		= array();
+	if(get_option('unik_name_security')){ $unikNameSecurity = get_option('unik_name_security'); }
 
-	// Check All Site
-	$unikNameSecurity 			= get_option('unik_name_security');
-
-	if(is_array($unikNameSecurity) && isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
-		
-		// Disable authentication by password for all users of my website
-		$errors = new WP_Error();
+	if( (isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password'])) ){
+		$errors				= new WP_Error();
 		$errors->add('title_error', __('<strong>ERROR</strong>: Connection error', 'unikname-connect'));
-		return $errors;
+		// Disable authentication by password for all users of my website
+		if( isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1){
+			return $errors;
+		}
+		// Check Login With User Role
+		if( unik_name_check_login_with_user_role($user, $unikNameSecurity) ){ return $errors; }
+		// Disable with User
+		if( get_the_author_meta('_connection_autorizations', $userID) == 1 ){
+			return $errors;
+		}
 	}
-
-	// Check Login With User Role
-	if(is_array($unikNameSecurity) && isset($unikNameSecurity['roles_disable_connect_pass']) && $unikNameSecurity['roles_disable_connect_pass'] == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
+	return $user;
+}
+add_action('wp_authenticate_user', 'unik_name_check_validation_login', 10, 2);
+ 
+function unik_name_check_login_with_user_role($user, $unikNameSecurity){
+	if( isset($unikNameSecurity['roles_disable_connect_pass']) && $unikNameSecurity['roles_disable_connect_pass'] == 1 ){
 		$roleDisable 	= array();
 		if(isset($unikNameSecurity['roles_user_disable']) && is_array($unikNameSecurity['roles_user_disable'])){
 			$roleDisable 	= $unikNameSecurity['roles_user_disable'];
 		}
 		$roleLogin 	= 	$user->roles['0'];
 		if(in_array($roleLogin, $roleDisable)){
-			$errors = new WP_Error();
-			$errors->add('title_error', __('<strong>ERROR</strong>: Connection error', 'unikname-connect'));
-			return $errors;
-		}
+			return true;
+		}	
 	}
-
-	if( get_the_author_meta('_connection_autorizations', $userID) && get_the_author_meta('_connection_autorizations', $userID) == 1 && ((isset($_POST['pwd']) && isset($_POST['log'])) || (isset($_POST['username']) && isset($_POST['password']))) ){
-		// Disable with User
-		$errors = new WP_Error();
-		$errors->add('title_error', __('<strong>ERROR</strong> Connection error', 'unikname-connect'));
-		return $errors;
-	}
-    return $user;
+	return false;	
 }
 
-add_action('wp_authenticate_user', 'unik_name_check_validation_login', 10, 2);
- 
 add_filter( 'body_class','unik_name_disable_authentication_password_body_classes' );
 add_filter( 'login_body_class','unik_name_disable_authentication_password_body_classes' );
 function unik_name_disable_authentication_password_body_classes( $classes ) {
