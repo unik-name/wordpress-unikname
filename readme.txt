@@ -225,6 +225,22 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 == Changelog ==
 
+= 8.5.0 [2021-04-12] =
+
+- **Added**
+  - As an administrator, prevent users from using their password to log in to their account **per WP role**
+	- Hide login/password inputs from the wp-login page when "preventing all users from using their password" is enabled
+	- Full French translation
+	- More links to the documentation to help the set up of the plugin
+  - Official WordPress 5.7 compatibility
+
+- **Changed**
+	- WooCommerce settings are visible only if WooCommerce plugin is installed
+	- New default settings for new plugin installations - no impact for existing installations of the plugin
+	- You must provide Unikname Connect site id and secret to be able to enable Unikname Connect
+	- Polished and renamed actions
+	- Reorganize "Unikname => General" and "Unikname => Login" panels
+
 = 8.4.0 [2021-02-26] - Fort Knox =
 
 - **Added**
@@ -237,27 +253,5 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 - **Changed**
   - Several polished and renamed actions
-
-= 8.3.1 [2020-12-10] =
-
-- **Removed**
-  - Really remove useless Facebook SDK
-
-= 8.3.0 [2020-12-09] =
-
-- **Added**
-  - New custom colour for the Unikname Connect button
-
-- **Changed**
-  - Rework admin panel UI, with new baseline and button labels
-  - Rework "Link account" UX
-  - Improve "Link account" admin configuration options
-  - Update i10n
-
-- **Fixed**
-  - Missing transparent background on some Unikname logos
-
-- **Removed**
-  - Remove useless Facebook SDK
 
 [Full changelog is also available](https://github.com/unik-name/wordpress-unikname-connect/blob/master/CHANGELOG.txt).
