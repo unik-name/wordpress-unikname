@@ -30,8 +30,10 @@
     );
 ?>
 <div class="column-2">
-	<div class="unik-style-button-container">
-		<h5><?=__('Login button','unikname-connect')?></h5>
+	<div class="unikname-group-item margin-left-30">
+		<div class="title-group">
+			<h5><?=__('Login button','unikname-connect')?></h5>
+		</div>
 		<div class="unikname-button-preview-container ">
 			<div class="button-preview <?php echo isset($unikNameStyleButtonOptions['login_button_alignment']) ? $unikNameStyleButtonOptions['login_button_alignment'] : 'left';?>" id="unikname_button_login">
 				<h6><?php echo isset($unikNameStyleButtonOptions['login_button_title']) ? $buttonLoginTitle[$unikNameStyleButtonOptions['login_button_title']] : $buttonLoginTitle['1'];?></h6>
@@ -61,7 +63,7 @@
 		<style type="text/css">
 			#unikname_button_login .button-unikname-connect{
 				background-color: <?php echo  $bgRegister; ?>;
-				border-radius: <?php echo isset($unikNameStyleButtonOptions['login_border_radius']) ? $unikNameStyleButtonOptions['login_border_radius'].'px' : '30px' ?>;
+				border-radius: <?php echo isset($unikNameStyleButtonOptions['login_border_radius']) ? $unikNameStyleButtonOptions['login_border_radius'].'px' : '6px' ?>;
 			}
 		</style>
 		<div class="button-custom-style">
@@ -146,8 +148,10 @@
 	</div>
 </div>
 <div class="column-2">
-	<div class="unik-style-button-container">
-		<h5 class="title-register"><?=__('Register button','unikname-connect')?></h5>
+	<div class="unikname-group-item margin-right-30">
+		<div class="title-group">
+			<h5><?=__('Register button','unikname-connect')?></h5>
+		</div>
 		<div class="unikname-button-preview-container">
 			<div class="button-preview <?php echo isset($unikNameStyleButtonOptions['login_button_alignment']) ? $unikNameStyleButtonOptions['register_button_alignment'] : 'left';?>" id="unikname_button_register">
 				<h6><?php echo isset($unikNameStyleButtonOptions['register_button_title']) ? $buttonRegisterTitle[$unikNameStyleButtonOptions['register_button_title']] : $buttonRegisterTitle['1'];?></h6>
@@ -177,7 +181,7 @@
 		<style type="text/css">
 			#unikname_button_register .button-unikname-connect{
 				background-color: <?php echo $bgRegister;?>;
-				border-radius: <?php echo isset($unikNameStyleButtonOptions['register_border_radius']) ? $unikNameStyleButtonOptions['register_border_radius'].'px' : '30px' ?>;
+				border-radius: <?php echo isset($unikNameStyleButtonOptions['register_border_radius']) ? $unikNameStyleButtonOptions['register_border_radius'].'px' : '6px' ?>;
 			}
 		</style>
 		<div class="button-custom-style">

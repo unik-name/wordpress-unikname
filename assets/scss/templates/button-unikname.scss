@@ -240,14 +240,12 @@ form.woocommerce-checkout > .checkout__billing > *{
 	-ms-flex-positive: unset;
 	flex-grow: unset;
 }
-.the_champ_social_login_title{
-	font-size: 13px;
-}
 .disable-authentication-password{
 	.woocommerce-form, #loginform{
 		input[name=username], input[name=password]{
 			pointer-events: none;
 			background-color: #e8e8e8;
+			display: none;
 			&:hover{
 				cursor: pointer;
 			}
@@ -255,5 +253,11 @@ form.woocommerce-checkout > .checkout__billing > *{
 		input[type=submit]{
 			pointer-events: none;
 		}
+		.woocommerce-form-row, .form-row, .woocommerce-LostPassword{
+			display: none;
+		}
+	}
+	.waiel-style-or{
+		display: none;
 	}
 }

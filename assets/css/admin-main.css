@@ -97,6 +97,8 @@
       position: relative; }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .item label.name {
         font-size: 15px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item label.name span {
+          color: #e00002; }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-checkbox > label {
         display: inline-block;
         line-height: 20px;
@@ -408,8 +410,59 @@
         height: 38px; }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-color-picker.unikname-custom-color {
         display: none; }
+      .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox {
+        display: inline-flex;
+        flex-wrap: wrap;
+        background-color: #f3f3f3;
+        padding: 15px 20px; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox.roles_user_disable_container {
+          position: relative; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox.roles_user_disable_container.disable:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 999;
+            background-color: #f3f3f3a8;
+            top: 0;
+            left: 0; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox.roles_user_disable_container.disable:hover {
+            cursor: not-allowed; }
+        .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox {
+          width: 50%;
+          margin-bottom: 7px;
+          margin-top: 7px;
+          position: relative; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox .checkmark {
+            position: absolute;
+            top: 0px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            border: 1px solid #adadad; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox .checkmark:after {
+              content: "";
+              position: absolute;
+              display: none;
+              left: 7px;
+              top: 0px;
+              width: 5px;
+              height: 12px;
+              border: solid #162547;
+              border-width: 0 3px 3px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer; }
+            .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox input[type="checkbox"]:checked ~ .checkmark:after {
+              display: block; }
+          .unik-name-admin-container .unik-content-admin .unik-content-tab .item.type-multi-checkbox .item-checkbox label {
+            padding-left: 30px; }
     .unik-name-admin-container .unik-content-admin .unik-content-tab .button-custom-style {
-      margin-top: 10px; }
+      margin-top: 20px; }
     .unik-name-admin-container .unik-content-admin .unik-content-tab .column-2 {
       flex-basis: 50%; }
       @media screen and (max-width: 1024px) {
@@ -417,75 +470,105 @@
           flex-basis: 100%; } }
       .unik-name-admin-container .unik-content-admin .unik-content-tab .column-2 .content-column {
         padding: 30px; }
-  .unik-name-admin-container .unik-content-admin .unik-style-button-container {
+  .unik-name-admin-container .unik-content-admin .unikname-group-item {
     border: 1px solid #e6dfdf;
     border-radius: 5px;
     background-color: #f3f3f3;
-    padding: 10px 30px;
+    padding: 15px 30px;
     margin: 30px 15px; }
-    .unik-name-admin-container .unik-content-admin .unik-style-button-container h5 {
-      font-size: 22px;
+    .unik-name-admin-container .unik-content-admin .unikname-group-item.margin-left-30 {
+      margin-left: 30px; }
+    .unik-name-admin-container .unik-content-admin .unikname-group-item.margin-right-30 {
+      margin-right: 30px; }
+    .unik-name-admin-container .unik-content-admin .unikname-group-item .title-group {
       position: relative;
-      margin-top: 10px;
-      font-weight: 400;
-      font-style: italic;
-      margin-bottom: 25px; }
-      .unik-name-admin-container .unik-content-admin .unik-style-button-container h5:before {
-        content: "";
+      max-width: 415px;
+      width: 100%;
+      min-height: 30px;
+      border-bottom: 2px solid #162547;
+      z-index: 999;
+      margin-bottom: 15px; }
+      .unik-name-admin-container .unik-content-admin .unikname-group-item .title-group h5 {
+        width: max-content;
         position: absolute;
-        height: 2px;
-        width: calc(100% - 120px);
-        z-index: 9;
-        background-color: #000000;
-        bottom: -1px;
-        right: 0; }
-      .unik-name-admin-container .unik-content-admin .unik-style-button-container h5.title-register:before {
-        width: calc(100% - 150px); }
-      .unik-name-admin-container .unik-content-admin .unik-style-button-container h5.account-link:before {
-        width: calc(100% - 226px); }
-    .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container {
+        background-color: #f3f3f3;
+        padding-right: 3px;
+        font-size: 22px;
+        padding-top: 14px;
+        padding-bottom: 20px;
+        margin: 0;
+        font-style: italic; }
+    .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container {
       width: calc(100% - 20px);
       border: 1px #0f2951 dashed;
       padding: 10px;
-      position: relative; }
-      .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview {
+      position: relative;
+      margin-top: 35px; }
+      .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview {
         text-align: center;
         max-width: 260px; }
-        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview h6 {
+        .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview h6 {
           margin: 0px;
           text-align: center;
           font-size: 15px;
           font-weight: normal;
           margin-bottom: 5px; }
-        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview .button-unikname-connect {
+        .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview .button-unikname-connect {
           background-color: #0f2852;
           border-radius: 30px;
           display: flex;
           flex-wrap: wrap;
           padding: 10px 15px 10px 10px; }
-          .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview .button-unikname-connect img {
+          .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview .button-unikname-connect img {
             width: 30px;
-            margin: auto; }
-          .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview .button-unikname-connect label {
+            margin: auto;
+            max-height: 28px; }
+          .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview .button-unikname-connect label {
             font-size: 16px;
             line-height: 28px;
             padding: 0;
             margin: 0;
             color: #fff;
             margin: auto; }
-        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview p {
+        .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview p {
           margin: 0px;
           margin-top: 5px;
           font-size: 13px; }
-        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview.left {
+        .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview.left {
           margin-left: 0;
           margin-right: auto; }
-        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview.center {
+        .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview.center {
           margin-left: auto;
           margin-right: auto; }
-        .unik-name-admin-container .unik-content-admin .unik-style-button-container .unikname-button-preview-container .button-preview.right {
+        .unik-name-admin-container .unik-content-admin .unikname-group-item .unikname-button-preview-container .button-preview.right {
           margin-left: auto;
           margin-right: 0; }
+  .unik-name-admin-container .group-item-unikname {
+    border: 1px solid #e6dfdf;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    padding: 15px 30px;
+    margin-top: 30px; }
+    .unik-name-admin-container .group-item-unikname input[type="text"], .unik-name-admin-container .group-item-unikname input[type="password"] {
+      width: 100%; }
+    .unik-name-admin-container .group-item-unikname .title-group {
+      position: relative;
+      max-width: 415px;
+      width: 100%;
+      min-height: 30px;
+      border-bottom: 2px solid #162547;
+      z-index: 999;
+      margin-bottom: 15px; }
+      .unik-name-admin-container .group-item-unikname .title-group h5 {
+        width: max-content;
+        position: absolute;
+        background-color: #f3f3f3;
+        padding-right: 3px;
+        font-size: 22px;
+        padding-top: 14px;
+        padding-bottom: 20px;
+        margin: 0;
+        font-style: italic; }
 
 .super-socializer-linking-container table.form-table tbody tr td {
   border: 0px; }
@@ -685,15 +768,17 @@ form.woocommerce-checkout > .checkout__billing > * {
   -ms-flex-positive: unset;
   flex-grow: unset; }
 
-.the_champ_social_login_title {
-  font-size: 13px; }
-
 .disable-authentication-password .woocommerce-form input[name=username], .disable-authentication-password .woocommerce-form input[name=password], .disable-authentication-password #loginform input[name=username], .disable-authentication-password #loginform input[name=password] {
   pointer-events: none;
-  background-color: #e8e8e8; }
+  background-color: #e8e8e8;
+  display: none; }
   .disable-authentication-password .woocommerce-form input[name=username]:hover, .disable-authentication-password .woocommerce-form input[name=password]:hover, .disable-authentication-password #loginform input[name=username]:hover, .disable-authentication-password #loginform input[name=password]:hover {
     cursor: pointer; }
 .disable-authentication-password .woocommerce-form input[type=submit], .disable-authentication-password #loginform input[type=submit] {
   pointer-events: none; }
+.disable-authentication-password .woocommerce-form .woocommerce-form-row, .disable-authentication-password .woocommerce-form .form-row, .disable-authentication-password .woocommerce-form .woocommerce-LostPassword, .disable-authentication-password #loginform .woocommerce-form-row, .disable-authentication-password #loginform .form-row, .disable-authentication-password #loginform .woocommerce-LostPassword {
+  display: none; }
+.disable-authentication-password .waiel-style-or {
+  display: none; }
 
 /*# sourceMappingURL=admin-main.css.map */

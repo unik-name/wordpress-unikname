@@ -1374,9 +1374,8 @@ function the_champ_replace_array_value($array, $value, $replacement){
 function the_champ_save_default_options(){
 	// general options
 	add_option('the_champ_general', array(
-	   'footer_script' => '1',
-	   'delete_options' => '1',
-	   'custom_css' => '',
+	   'footer_script' 		=> '1',
+	   'custom_css' 		=> '',
 	));
 
 	// login options
@@ -1384,21 +1383,18 @@ function the_champ_save_default_options(){
 	   'title' => __('We recommend the next-generation authentication: simple, secure, private', 'super-socializer'),
 	   'email_error_message' => __('Email you entered is already registered or invalid', 'super-socializer'),
 	   'avatar' => 1,
-	   'email_required' => 1,
-	   'password_email' => 1,
-	   'new_user_admin_email' => 1,
 	   'email_popup_text' => __('Please enter a valid email address. You might be required to verify it', 'super-socializer'),
-	   'enableAtLogin' => 1,
-	   'enableAtRegister' => 1,
-	   'enableAtComment' => 1,
 	   'scl_title' => __('Link your social account to login to your account at this website', 'super-socializer'),
-	   'link_account' => 1,
+	   'link_account' 			=> 1,
 	   'gdpr_placement' => 'above',
 	   'privacy_policy_url' => '',
 	   'privacy_policy_optin_text' => 'I have read and agree to Terms and Conditions of website and agree to my personal data being stored and used as per Privacy Policy',
 	   'ppu_placeholder' => 'Privacy Policy',
 	   'tc_placeholder' => 'Terms and Conditions',
-	   'tc_url' => ''
+	   'tc_url' => '',
+	   'email_main_color'				=> '#0F2852',
+	   'email_button_style'				=> 'standard',
+	   'email_button_border_radius'		=> '6'
 	));
 
 	// social commenting options
