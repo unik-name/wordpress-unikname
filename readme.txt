@@ -2,7 +2,7 @@
 Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian
 Tags: passwordless, security, 2FA, login, signup, strong authentication
 Requires at least: 5.0.0
-Tested up to: 5.6
+Tested up to: 5.7
 Stable tag: 8.4.0
 Requires PHP: 5.6.20
 License: GPLv2 or later
