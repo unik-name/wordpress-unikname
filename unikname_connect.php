@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: Unikname Connect - Secure and Rewarded Connections
+Plugin Name: Unikname - Secure your users and admin accounts
 Plugin URI: https://wordpress.org/plugins/unikname-connect/
-Description: Secure your admin accounts and reward your website users for protecting their privacy
+Description: Secure your users and admin accounts with the Unikname Connect authentication solution
 Version: 8.5.0-dev
 Author: Unikname
 Author URI: https://www.unikname.com

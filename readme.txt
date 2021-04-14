@@ -64,7 +64,6 @@ Unikname Connect lets online customers / users / subscribers:
 - Easily create an online account using only their Unikname username (_aka_ a @unikname), without entering their password or email address
 - Log in privately, and thus control their digital identity
 - Manage their access from a user-friendly mobile application that allows them to be interconnected with the Unikname network.
-- Be rewarded for every log in they make as users participate in Internet security
 
 == Detailed Overview ==
 
