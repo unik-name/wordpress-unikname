@@ -84,7 +84,7 @@ function the_champ_social_login_page(){
 function the_champ_login_security(){
 	global $theChampGeneralOptions, $unikNameSecurity;
 	echo the_champ_settings_saved_notification();
-	require 'templates/security_loigin.php';
+	require 'templates/security_login.php';
 }
 
 /**

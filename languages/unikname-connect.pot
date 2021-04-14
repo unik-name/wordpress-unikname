@@ -206,7 +206,7 @@ msgstr ""
 msgid "Finish"
 msgstr ""
 
-#: templates/security_loigin.php:27
+#: templates/security_login.php:27
 msgid ""
 "Forbid anyone to use passwords to log into your web site. Only connections "
 "with Unikname Connect are allowed."
@@ -273,7 +273,7 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: templates/general_options.php:5 templates/security_loigin.php:5
+#: templates/general_options.php:5 templates/security_login.php:5
 msgid "Logo Unik Name"
 msgstr ""
 
@@ -305,7 +305,7 @@ msgstr ""
 msgid "Prevent any connections to my account with my password"
 msgstr ""
 
-#: templates/security_loigin.php:26
+#: templates/security_login.php:26
 msgid "Prevent password login on this website for all users"
 msgstr ""
 
@@ -348,13 +348,13 @@ msgstr ""
 msgid "Same page where user logged in"
 msgstr ""
 
-#: templates/general_options.php:89 templates/security_loigin.php:33
+#: templates/general_options.php:89 templates/security_login.php:33
 msgid "Save Changes"
 msgstr ""
 
 #. Description of the plugin
 msgid ""
-"Secure your admin accounts and reward your website users for protecting "
+"Secure your users andadmin accounts and reward your website users for protecting "
 "their privacy. Integrate the famous Unikname Connect login solution into "
 "your Wordpress or WooCommerce websites."
 msgstr ""
@@ -397,7 +397,7 @@ msgstr ""
 msgid "Style"
 msgstr ""
 
-#: templates/general_options.php:6 templates/security_loigin.php:6
+#: templates/general_options.php:6 templates/security_login.php:6
 msgid ""
 "The plugin that secures your admin accounts and that rewards your website "
 "users for protecting their privacy"
@@ -411,7 +411,7 @@ msgstr ""
 msgid "This email is used to communicate with you"
 msgstr ""
 
-#: templates/security_loigin.php:24 templates/settings/advanced_options.php:53
+#: templates/security_login.php:24 templates/settings/advanced_options.php:53
 #: templates/settings/advanced_options.php:60
 #: templates/settings/basic_configuration.php:7
 #: templates/settings/basic_configuration.php:14

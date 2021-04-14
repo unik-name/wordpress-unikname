@@ -206,7 +206,7 @@ msgstr ""
 msgid "Finish"
 msgstr "Terminer"
 
-#: templates/security_loigin.php:27
+#: templates/security_login.php:27
 msgid ""
 "Forbid anyone to use passwords to log into your web site. Only connections "
 "with Unikname Connect are allowed."
@@ -277,7 +277,7 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: templates/general_options.php:5 templates/security_loigin.php:5
+#: templates/general_options.php:5 templates/security_login.php:5
 msgid "Logo Unik Name"
 msgstr ""
 
@@ -310,7 +310,7 @@ msgstr "Veuillez vérifier votre adresse e-mail pour vous connecter."
 msgid "Prevent any connections to my account with my password"
 msgstr "Empêcher les connexions à mon compte avec mon mot de passe"
 
-#: templates/security_loigin.php:26
+#: templates/security_login.php:26
 msgid "Prevent password login on this website for all users"
 msgstr ""
 "Empêcher les connexions avec mot de passe sur ce site pour tous les "
@@ -355,7 +355,7 @@ msgstr "Révoquer"
 msgid "Same page where user logged in"
 msgstr ""
 
-#: templates/general_options.php:89 templates/security_loigin.php:33
+#: templates/general_options.php:89 templates/security_login.php:33
 msgid "Save Changes"
 msgstr "Sauvegarder les changements"
 
@@ -407,7 +407,7 @@ msgstr ""
 msgid "Style"
 msgstr "Style"
 
-#: templates/general_options.php:6 templates/security_loigin.php:6
+#: templates/general_options.php:6 templates/security_login.php:6
 msgid ""
 "The plugin that secures your admin accounts and that rewards your website "
 "users for protecting their privacy"
@@ -423,7 +423,7 @@ msgstr "Le nom d’utilisateur est obligatoire"
 msgid "This email is used to communicate with you"
 msgstr "Cet email est utilisé pour échanger avec vous"
 
-#: templates/security_loigin.php:24 templates/settings/advanced_options.php:53
+#: templates/security_login.php:24 templates/settings/advanced_options.php:53
 #: templates/settings/advanced_options.php:60
 #: templates/settings/basic_configuration.php:7
 #: templates/settings/basic_configuration.php:14
