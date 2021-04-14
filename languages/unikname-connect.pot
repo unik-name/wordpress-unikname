@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-04 12:44+0000\n"
+"POT-Creation-Date: 2021-04-14 16:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,16 +15,12 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.2.0; wp-5.3.2"
 
-#: includes/core-function.php:62
-msgid "<strong>ERROR</strong> Connection error"
-msgstr ""
-
-#: includes/core-function.php:55
+#: includes/core-function.php:53
 msgid "<strong>ERROR</strong>: Connection error"
 msgstr ""
 
-#: templates/settings/login_options.php:74
-#: templates/settings/login_options.php:98
+#: templates/settings/login_options.php:56
+#: templates/settings/login_options.php:80
 msgid "Account dashboard"
 msgstr ""
 
@@ -32,7 +28,7 @@ msgstr ""
 msgid "Account linking"
 msgstr ""
 
-#: templates/settings/advanced_options.php:17
+#: templates/settings/advanced_options.php:18
 msgid "Account linking options"
 msgstr ""
 
@@ -40,14 +36,14 @@ msgstr ""
 msgid "Advanced"
 msgstr ""
 
-#: templates/settings/style_options.php:98
-#: templates/settings/style_options.php:214
+#: templates/settings/style_options.php:100
+#: templates/settings/style_options.php:218
 msgid "Alignment"
 msgstr ""
 
+#: templates/settings/style_options.php:94
+#: templates/settings/style_options.php:212
 #: templates/settings/email_options.php:74
-#: templates/settings/style_options.php:92
-#: templates/settings/style_options.php:208
 msgid "Border radius"
 msgstr ""
 
@@ -55,15 +51,15 @@ msgstr ""
 msgid "Button color"
 msgstr ""
 
-#: templates/settings/advanced_options.php:40
-#: templates/settings/style_options.php:135
-#: templates/settings/style_options.php:251
+#: templates/settings/style_options.php:137
+#: templates/settings/style_options.php:255
+#: templates/settings/advanced_options.php:42
 msgid "Button description"
 msgstr ""
 
-#: templates/settings/advanced_options.php:30
-#: templates/settings/style_options.php:125
-#: templates/settings/style_options.php:241
+#: templates/settings/style_options.php:127
+#: templates/settings/style_options.php:245
+#: templates/settings/advanced_options.php:32
 msgid "Button label"
 msgstr ""
 
@@ -71,22 +67,22 @@ msgstr ""
 msgid "Button style"
 msgstr ""
 
-#: templates/settings/advanced_options.php:20
-#: templates/settings/style_options.php:115
-#: templates/settings/style_options.php:231
+#: templates/settings/style_options.php:117
+#: templates/settings/style_options.php:235
+#: templates/settings/advanced_options.php:22
 msgid "Button title"
 msgstr ""
 
-#: helper.php:1070
+#: helper.php:675 helper.php:1079
 msgid "Can not revoke while Connection Autorizations is checked"
 msgstr ""
 
-#: helper.php:1067
+#: helper.php:672 helper.php:1076
 msgid "Click to revoke Unikname Connect access to this account"
 msgstr ""
 
-#: templates/settings/style_options.php:69
-#: templates/settings/style_options.php:185
+#: templates/settings/style_options.php:71
+#: templates/settings/style_options.php:189
 msgid "Color"
 msgstr ""
 
@@ -102,14 +98,15 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: inc/social_login.php:18 inc/social_login.php:32 includes/define-value.php:6
-#: includes/define-value.php:20 templates/settings/style_options.php:7
+#: includes/define-value.php:6 includes/define-value.php:20
+#: inc/social_login.php:18 inc/social_login.php:32
+#: templates/settings/style_options.php:7
 #: templates/settings/style_options.php:21
 msgid "Continue"
 msgstr ""
 
-#: templates/settings/style_options.php:86
-#: templates/settings/style_options.php:202
+#: templates/settings/style_options.php:88
+#: templates/settings/style_options.php:206
 msgid "Custom Color"
 msgstr ""
 
@@ -117,8 +114,8 @@ msgstr ""
 msgid "Custom CSS"
 msgstr ""
 
-#: templates/settings/login_options.php:78
-#: templates/settings/login_options.php:102
+#: templates/settings/login_options.php:60
+#: templates/settings/login_options.php:84
 msgid "Custom Url"
 msgstr ""
 
@@ -126,11 +123,11 @@ msgstr ""
 msgid "Delete all the options on plugin deletion"
 msgstr ""
 
-#: templates/settings/basic_configuration.php:11
+#: templates/settings/login_options.php:33
 msgid "Disable user registration via Unikname Connect"
 msgstr ""
 
-#: unikname_connect.php:2403
+#: unikname_connect.php:2400
 msgid "Docs"
 msgstr ""
 
@@ -158,39 +155,39 @@ msgstr ""
 msgid "Email required"
 msgstr ""
 
-#: templates/settings/login_options.php:32
+#: templates/settings/login_options.php:109
 msgid "Enable after WooCommerce Customer Login Form"
 msgstr ""
 
-#: templates/settings/login_options.php:18
+#: templates/settings/login_options.php:21
 msgid "Enable at comment form"
 msgstr ""
 
-#: templates/settings/login_options.php:4
+#: templates/settings/login_options.php:7
 msgid "Enable at login page"
 msgstr ""
 
-#: templates/settings/login_options.php:11
+#: templates/settings/login_options.php:14
 msgid "Enable at register page"
 msgstr ""
 
-#: templates/settings/login_options.php:57
+#: templates/settings/login_options.php:130
 msgid "Enable at WooCommerce checkout page"
 msgstr ""
 
-#: templates/settings/login_options.php:39
+#: templates/settings/login_options.php:116
 msgid "Enable at WooCommerce Customer Login Form"
 msgstr ""
 
-#: templates/settings/login_options.php:50
+#: templates/settings/login_options.php:123
 msgid "Enable at WooCommerce Customer Register Form"
 msgstr ""
 
-#: templates/settings/advanced_options.php:50
+#: templates/settings/advanced_options.php:53
 msgid "Enable at WooCommerce my account page (link account)"
 msgstr ""
 
-#: templates/settings/login_options.php:25
+#: templates/settings/login_options.php:102
 msgid "Enable before WooCommerce Customer Login Form"
 msgstr ""
 
@@ -218,12 +215,18 @@ msgid ""
 "Connect allows you to connect to it."
 msgstr ""
 
+#: templates/security_login.php:35
+msgid ""
+"Forbid only users with these roles to log into your web site. Only "
+"connections with Unikname Connect are allowed for them."
+msgstr ""
+
 #: templates/general_options.php:22
 msgid "General"
 msgstr ""
 
-#: templates/settings/login_options.php:70
-#: templates/settings/login_options.php:94
+#: templates/settings/login_options.php:52
+#: templates/settings/login_options.php:76
 msgid "Homepage"
 msgstr ""
 
@@ -235,7 +238,7 @@ msgstr ""
 msgid "https://www.unikname.com"
 msgstr ""
 
-#: templates/settings/style_options.php:155
+#: templates/settings/style_options.php:159
 msgid "icon unik name"
 msgstr ""
 
@@ -247,7 +250,7 @@ msgstr ""
 msgid "Let’s go!"
 msgstr ""
 
-#: templates/settings/advanced_options.php:57
+#: templates/settings/advanced_options.php:61
 msgid ""
 "Link social account to already existing account, if email address matches"
 msgstr ""
@@ -256,16 +259,16 @@ msgstr ""
 msgid "Load all Javascript files in single file"
 msgstr ""
 
-#: inc/social_login.php:16 includes/define-value.php:4
+#: includes/define-value.php:4 inc/social_login.php:16
 #: templates/general_options.php:25 templates/settings/style_options.php:5
 msgid "Login"
 msgstr ""
 
-#: templates/settings/style_options.php:34
+#: templates/settings/style_options.php:35
 msgid "Login button"
 msgstr ""
 
-#: templates/settings/login_options.php:88
+#: templates/settings/login_options.php:70
 msgid "Login redirection"
 msgstr ""
 
@@ -273,7 +276,7 @@ msgstr ""
 msgid "Logo"
 msgstr ""
 
-#: templates/general_options.php:5 templates/security_login.php:5
+#: templates/security_login.php:5 templates/general_options.php:5
 msgid "Logo Unik Name"
 msgstr ""
 
@@ -281,7 +284,7 @@ msgstr ""
 msgid "Next"
 msgstr ""
 
-#: unikname_connect.php:884
+#: unikname_connect.php:885
 msgid "Notification"
 msgstr ""
 
@@ -289,15 +292,19 @@ msgstr ""
 msgid "or"
 msgstr ""
 
+#: templates/settings/login_options.php:30
+msgid "Other login configurations"
+msgstr ""
+
 #: templates/settings/email_options.php:67
 msgid "Outline"
 msgstr ""
 
-#: unikname_connect.php:907
+#: unikname_connect.php:908
 msgid "Please check your email inbox to complete the registration."
 msgstr ""
 
-#: unikname_connect.php:880
+#: unikname_connect.php:881
 msgid "Please verify your email address to login."
 msgstr ""
 
@@ -309,13 +316,17 @@ msgstr ""
 msgid "Prevent password login on this website for all users"
 msgstr ""
 
-#: templates/settings/style_options.php:142
-#: templates/settings/style_options.php:258
+#: templates/security_login.php:34
+msgid "Prevent password login on this website only for these roles:"
+msgstr ""
+
+#: templates/settings/style_options.php:144
+#: templates/settings/style_options.php:262
 msgid "Read more"
 msgstr ""
 
-#: templates/settings/style_options.php:142
-#: templates/settings/style_options.php:258
+#: templates/settings/style_options.php:144
+#: templates/settings/style_options.php:262
 msgid "Read more link: "
 msgstr ""
 
@@ -323,43 +334,42 @@ msgstr ""
 msgid "Redacted user "
 msgstr ""
 
-#: templates/settings/basic_configuration.php:18
+#: templates/settings/login_options.php:40
 msgid "Redirection url"
 msgstr ""
 
-#: inc/social_login.php:31 includes/define-value.php:19
+#: includes/define-value.php:19 inc/social_login.php:31
 #: templates/settings/style_options.php:20
 msgid "Register"
 msgstr ""
 
-#: templates/settings/style_options.php:150
+#: templates/settings/style_options.php:153
 msgid "Register button"
 msgstr ""
 
-#: templates/settings/login_options.php:64
+#: templates/settings/login_options.php:46
 msgid "Registration redirection"
 msgstr ""
 
-#: helper.php:1074
+#: helper.php:687 helper.php:693 helper.php:1083
 msgid "Revoke"
 msgstr ""
 
-#: templates/settings/login_options.php:90
+#: templates/settings/login_options.php:72
 msgid "Same page where user logged in"
 msgstr ""
 
-#: templates/general_options.php:89 templates/security_login.php:33
+#: templates/security_login.php:61 templates/general_options.php:89
 msgid "Save Changes"
 msgstr ""
 
 #. Description of the plugin
 msgid ""
-"Secure your users andadmin accounts and reward your website users for protecting "
-"their privacy. Integrate the famous Unikname Connect login solution into "
-"your Wordpress or WooCommerce websites."
+"Secure your user and admin accounts with the Unikname Connect authentication "
+"solution"
 msgstr ""
 
-#: unikname_connect.php:1230
+#: unikname_connect.php:1231
 msgid "Security"
 msgstr ""
 
@@ -371,20 +381,20 @@ msgstr ""
 msgid "Send post-registration email to user to set account password"
 msgstr ""
 
-#: unikname_connect.php:904
+#: unikname_connect.php:905
 msgid "Set up your account"
 msgstr ""
 
-#: unikname_connect.php:1229 unikname_connect.php:2402
+#: unikname_connect.php:1230 unikname_connect.php:2399
 msgid "Settings"
 msgstr ""
 
-#: inc/social_login.php:17 includes/define-value.php:5
+#: includes/define-value.php:5 inc/social_login.php:17
 #: templates/settings/style_options.php:6
 msgid "Sign in"
 msgstr ""
 
-#: inc/social_login.php:30 includes/define-value.php:18
+#: includes/define-value.php:18 inc/social_login.php:30
 #: templates/settings/style_options.php:19
 msgid "Sign up"
 msgstr ""
@@ -397,13 +407,25 @@ msgstr ""
 msgid "Style"
 msgstr ""
 
-#: templates/general_options.php:6 templates/security_login.php:6
-msgid ""
-"The plugin that secures your admin accounts and that rewards your website "
-"users for protecting their privacy"
+#: templates/security_login.php:6 templates/general_options.php:6
+msgid "The best plugin to secure your user and admin accounts"
 msgstr ""
 
-#: unikname_connect.php:909
+#: templates/settings/basic_configuration.php:15
+msgid ""
+"The Unikname Connect site identifier. You can find it in your <a "
+"href=\"https://account.connect.unikname.com\" target=\"_blank\">Unikname "
+"Connect Dashboard</a>."
+msgstr ""
+
+#: templates/settings/basic_configuration.php:22
+msgid ""
+"The Unikname Connect site secret. You can find it in your <a href=\"https:"
+"//account.connect.unikname.com\" target=\"_blank\">Unikname Connect "
+"Dashboard</a>."
+msgstr ""
+
+#: unikname_connect.php:910
 msgid "The username is required."
 msgstr ""
 
@@ -411,62 +433,63 @@ msgstr ""
 msgid "This email is used to communicate with you"
 msgstr ""
 
-#: templates/security_login.php:24 templates/settings/advanced_options.php:53
-#: templates/settings/advanced_options.php:60
+#: templates/security_login.php:24 templates/security_login.php:32
 #: templates/settings/basic_configuration.php:7
-#: templates/settings/basic_configuration.php:14
+#: templates/settings/general_options.php:7
+#: templates/settings/general_options.php:14
+#: templates/settings/general_options.php:21
 #: templates/settings/email_options.php:7
 #: templates/settings/email_options.php:14
 #: templates/settings/email_options.php:21
 #: templates/settings/email_options.php:30
-#: templates/settings/general_options.php:7
-#: templates/settings/general_options.php:14
-#: templates/settings/general_options.php:21
-#: templates/settings/login_options.php:7
-#: templates/settings/login_options.php:14
-#: templates/settings/login_options.php:21
-#: templates/settings/login_options.php:28
-#: templates/settings/login_options.php:35
-#: templates/settings/login_options.php:42
-#: templates/settings/login_options.php:53
-#: templates/settings/login_options.php:60
+#: templates/settings/advanced_options.php:56
+#: templates/settings/advanced_options.php:64
+#: templates/settings/login_options.php:10
+#: templates/settings/login_options.php:17
+#: templates/settings/login_options.php:24
+#: templates/settings/login_options.php:36
+#: templates/settings/login_options.php:105
+#: templates/settings/login_options.php:112
+#: templates/settings/login_options.php:119
+#: templates/settings/login_options.php:126
+#: templates/settings/login_options.php:133
 msgid "Toggle"
 msgstr ""
 
 #. Author of the plugin
-#: helper.php:1053
+#: helper.php:1061
 msgid "Unikname"
 msgstr ""
 
 #. Name of the plugin
-msgid "Unikname Connect - Secure and Rewarded Connections"
+msgid "Unikname - Secure your user and admin accounts"
 msgstr ""
 
-#: unikname_connect.php:1230
+#: unikname_connect.php:1231
 msgid "Unikname Connect - Security"
 msgstr ""
 
-#: unikname_connect.php:1229
+#: unikname_connect.php:1230
 msgid "Unikname Connect - Settings"
 msgstr ""
 
-#: templates/settings/basic_configuration.php:24
-msgid "Unikname Connect @unikname"
-msgstr ""
-
-#: templates/settings/basic_configuration.php:30
-msgid "Unikname Connect Secret"
+#: templates/settings/basic_configuration.php:19
+msgid "Unikname Connect Secret <span>*</span>"
 msgstr ""
 
 #: includes/admin-profile-user.php:20
 msgid "Unikname Connect Settings"
 msgstr ""
 
+#: templates/settings/basic_configuration.php:12
+msgid "Unikname Connect Site Id <span>*</span>"
+msgstr ""
+
 #: templates/email_popup.php:43
 msgid "Username"
 msgstr ""
 
-#: unikname_connect.php:908
+#: unikname_connect.php:909
 msgid "Username already exists."
 msgstr ""
 
@@ -474,8 +497,9 @@ msgstr ""
 msgid "Welcome to "
 msgstr ""
 
-#: inc/social_login.php:22 inc/social_login.php:36 includes/define-value.php:10
-#: includes/define-value.php:24 templates/settings/style_options.php:11
+#: includes/define-value.php:10 includes/define-value.php:24
+#: inc/social_login.php:22 inc/social_login.php:36
+#: templates/settings/style_options.php:11
 #: templates/settings/style_options.php:25
 msgid "With your @unikname"
 msgstr ""
@@ -483,6 +507,14 @@ msgstr ""
 #: helper.php:514 includes/define-value.php:36
 #: templates/settings/advanced_options.php:8
 msgid "with your @unikname"
+msgstr ""
+
+#: templates/settings/login_options.php:99
+msgid "WooCommerce pages"
+msgstr ""
+
+#: templates/settings/login_options.php:4
+msgid "WordPress pages"
 msgstr ""
 
 #: templates/email_popup.php:17
@@ -493,7 +525,7 @@ msgstr ""
 msgid "Your email"
 msgstr ""
 
-#: unikname_connect.php:880
+#: unikname_connect.php:881
 msgid "Your email has been verified. Now you can login to your account"
 msgstr ""
 
@@ -506,17 +538,17 @@ msgstr ""
 msgid "🔐 Link your @unikname to login to your account at this website"
 msgstr ""
 
-#: helper.php:518 inc/social_login.php:26 inc/social_login.php:40
-#: includes/define-value.php:14 includes/define-value.php:28
-#: includes/define-value.php:40 templates/settings/advanced_options.php:12
+#: helper.php:518 includes/define-value.php:14 includes/define-value.php:28
+#: includes/define-value.php:40 inc/social_login.php:26 inc/social_login.php:40
 #: templates/settings/style_options.php:15
 #: templates/settings/style_options.php:29
+#: templates/settings/advanced_options.php:12
 msgid "🔐 The next-gen identifier: simple, secure and private."
 msgstr ""
 
-#: helper.php:517 inc/social_login.php:25 includes/define-value.php:13
-#: includes/define-value.php:39 templates/settings/advanced_options.php:11
-#: templates/settings/style_options.php:14
+#: helper.php:517 includes/define-value.php:13 includes/define-value.php:39
+#: inc/social_login.php:25 templates/settings/style_options.php:14
+#: templates/settings/advanced_options.php:11
 msgid ""
 "🔐 The next-gen identifier: simple, secure and private. <a href=\"https://www."
 "unikname.com/my-unikname-"
@@ -524,7 +556,7 @@ msgid ""
 ">Read more.</a>"
 msgstr ""
 
-#: inc/social_login.php:39 includes/define-value.php:27
+#: includes/define-value.php:27 inc/social_login.php:39
 #: templates/settings/style_options.php:28
 msgid ""
 "🔐 The next-gen identifier: simple, secure and private. <a href=\"https://www."
