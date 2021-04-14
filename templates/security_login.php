@@ -3,7 +3,7 @@
         <div class="left">
             <div class="content-left">
                 <img src="<?=UNIKNAME_DIR_URL.'assets/images/logo-unikname.png'?>" alt="<?=__('Logo Unik Name','unikname-connect')?>">
-                <h3><?=__('The best plugin to secure your admin accounts','unikname-connect')?></h3>
+                <h3><?=__('The best plugin to secure your user and admin accounts','unikname-connect')?></h3>
             </div>
         </div>
         <div class="right">
