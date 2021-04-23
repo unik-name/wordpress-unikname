@@ -2,6 +2,9 @@
 
 Installation, configuration, screenshots 👉 https://docs.unikname.com/integration/connect/apps/wordpress/
 
+## Notes
+
+This project follows the [Keep a changelog](https://keepachangelog.com) standard.
 ## License
 
 This code is licensed under the [GNU General Public License v2.0 or later](LICENSE).
