@@ -44,7 +44,7 @@ class TheChampLoginWidget extends WP_Widget {
 			echo "</div><div style='float:left; margin-left:10px'>";
 			echo str_replace('-', ' ', $userInfo -> user_login);
 			do_action('the_champ_login_widget_hook', $userInfo -> user_login);
-			echo '<br/><a href="' . wp_logout_url(esc_url(home_url())) . '">' .__('Log Out', 'super-socializer') . '</a></div></div>';
+			echo '<br/><a href="' . wp_logout_url(esc_url(home_url())) . '">' .__('Log Out', 'unikname-connect') . '</a></div></div>';
 		}
 		echo '<div style="clear:both"></div>';
 		if( !empty( $instance['after_widget_content'] ) ){ 
@@ -68,7 +68,7 @@ class TheChampLoginWidget extends WP_Widget {
 	/** Widget options in admin panel */ 
 	public function form( $instance ) { 
 		/* Set up default widget settings. */ 
-		$defaults = array( 'title' => __('Login with your Social Account', 'super-socializer'), 'title_after' => '', 'before_widget_content' => '', 'after_widget_content' => '' );  
+		$defaults = array( 'title' => __('Login with your Social Account', 'unikname-connect'), 'title_after' => '', 'before_widget_content' => '', 'after_widget_content' => '' );  
 
 		foreach( $instance as $key => $value ) {  
 			if ( is_string( $value ) ) {
@@ -788,7 +788,7 @@ class TheChampFollowWidget extends WP_Widget {
 	public function __construct() { 
 		parent::__construct( 
 			'TheChampFollow', //unique id 
-			__('Super Socializer - Follow Icons', 'super-socializer'), //title displayed at admin panel
+			__('Super Socializer - Follow Icons', 'unikname-connect'), //title displayed at admin panel
 			array(  
 				'description' => __( 'These icons link to your Social Media accounts', 'super-socializer' )) 
 			); 

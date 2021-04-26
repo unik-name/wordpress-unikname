@@ -5,7 +5,7 @@
 function the_champ_settings_saved_notification(){
 	if(isset($_GET['settings-updated']) && sanitize_text_field($_GET['settings-updated']) == 'true'){
 		return '<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible below-h2"> 
-<p><strong>' . __('Settings saved', 'super-socializer') . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __('Dismiss this notice', 'super-socializer') . '</span></button></div>';
+<p><strong>' . __('Settings saved', 'super-socializer') . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __('Dismiss this notice', 'unikname-connect') . '</span></button></div>';
 	}
 }
 
@@ -165,7 +165,7 @@ add_action('admin_init', 'the_champ_options_init');
  */	
 function the_champ_admin_scripts(){
 	?>
-	<script>var theChampWebsiteUrl = '<?php echo esc_url(home_url()) ?>', theChampHelpBubbleTitle = "<?php echo __('Click to show help', 'super-socializer') ?>", theChampHelpBubbleCollapseTitle = "<?php echo __('Click to hide help', 'super-socializer') ?>" </script>
+	<script>var theChampWebsiteUrl = '<?php echo esc_url(home_url()) ?>', theChampHelpBubbleTitle = "<?php echo __('Click to show help', 'super-socializer') ?>", theChampHelpBubbleCollapseTitle = "<?php echo __('Click to hide help', 'unikname-connect') ?>" </script>
 	<?php
 	wp_enqueue_script('the_champ_admin_script', plugins_url('js/admin/admin.js', __FILE__), array('jquery', 'jquery-ui-tabs'), THE_CHAMP_SS_VERSION);
 
@@ -262,9 +262,9 @@ function the_champ_update_css( $replace_color_option, $logo_color_option, $css_f
  */
 function the_champ_add_settings_link($links){
 	if(is_array($links)){
-	    $addonsLink = '<br/><a href="https://www.heateor.com/add-ons" target="_blank">' . __('Add-Ons', 'super-socializer') . '</a>';
-	    $supportLink = '<a href="http://support.heateor.com" target="_blank">' . __('Support Documentation', 'super-socializer') . '</a>';
-	    $settingsLink = '<a href="admin.php?page=heateor-ss-general-options">' . __('Settings', 'super-socializer') . '</a>';
+	    $addonsLink = '<br/><a href="https://www.heateor.com/add-ons" target="_blank">' . __('Add-Ons', 'unikname-connect') . '</a>';
+	    $supportLink = '<a href="http://support.heateor.com" target="_blank">' . __('Support Documentation', 'unikname-connect') . '</a>';
+	    $settingsLink = '<a href="admin.php?page=heateor-ss-general-options">' . __('Settings', 'unikname-connect') . '</a>';
 	    // place it before other links
 		array_unshift( $links, $settingsLink );
 		$links[] = $addonsLink;
@@ -582,11 +582,11 @@ function the_champ_account_linking(){
                         if(isset($_GET['linked'])){
                         	if(intval($_GET['linked']) == 1){
 	                        	$html .= '<tr>
-	                        		<td colspan="2" style="color: green">' . __('Account linked successfully', 'super-socializer') . '</td>
+	                        		<td colspan="2" style="color: green">' . __('Account linked successfully', 'unikname-connect') . '</td>
 	                        	</tr>';
                         	}elseif(intval($_GET['linked']) == 0){
 	                        	$html .= '<tr>
-	                        		<td colspan="2" style="color: red">' . __('Account already exists or linked', 'super-socializer') . '</td>
+	                        		<td colspan="2" style="color: red">' . __('Account already exists or linked', 'unikname-connect') . '</td>
 	                        	</tr>';
                         	}
                         }
@@ -684,13 +684,13 @@ function the_champ_account_linking(){
 	                            		if($primarySocialNetwork && $primarySocialId){
 	                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == get_user_meta($user_ID, 'thechamp_social_id', true);
 		                            		$html .= '<tr>
-		                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke" disabled').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
+		                            		<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'unikname-connect') . ' <strong>'. ucfirst($primarySocialNetwork) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke" disabled').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
 	                            		}
 	                            		if(is_array($linkedAccounts) && count($linkedAccounts) > 0){
 	                            			foreach($linkedAccounts as $key => $value){
 		                            			$current = get_user_meta($user_ID, 'thechamp_current_id', true) == $value;
 		                            			$html .= '<tr>
-		                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'super-socializer') . ' <strong>'. ucfirst($key) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke" disabled').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
+		                            			<td style="padding: 0">'. ($current ? '<strong>'. __('Currently', 'super-socializer') . ' </strong>' : '') . __('Connected with', 'unikname-connect') . ' <strong>'. ucfirst($key) .'</strong></td><td><input title="'.$title.'" alt="'.$title.'" type="button" '.(!$ConnectAutorizations ? 'onclick="javascript:heateorSsDeleteSocialProfile(this, '. $user_ID .')"' : 'class="disable btn-revoke" disabled').' value="'. __('Revoke','unikname-connect') .'" /></td></tr>';
 		                            		}
 	                            		}
 	                            		$html .= '</tbody>
@@ -762,7 +762,7 @@ function the_champ_add_linking_tab() {
 			global $bp, $user_ID;
 			if($user_ID){
 				bp_core_new_subnav_item( array(
-						'name' => __('Social Account Linking', 'super-socializer'),
+						'name' => __('Social Account Linking', 'unikname-connect'),
 						'slug' => 'account-linking',
 						'parent_url' => trailingslashit( bp_loggedin_user_domain() . 'profile' ),
 						'parent_slug' => 'profile',
@@ -1034,7 +1034,7 @@ function heateor_ss_login_error_message($error){
 	global $heateorSsLoginAttempt;
 	//check if unverified user has attempted to login
 	if($heateorSsLoginAttempt == 1){
-		$error = __('Please verify your email address to login.', 'super-socializer');
+		$error = __('Please verify your email address to login.', 'unikname-connect');
 	}
 	return $error;
 }

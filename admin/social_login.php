@@ -2,7 +2,7 @@
 <div id="fb-root"></div>
 	<div>
 		<?php
-		// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+		// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 		?>
 	</div>
 	<div class="metabox-holder">
@@ -154,7 +154,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slun_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get an organization @unikname</a>', 'super-socializer'), 'https://help.unikname.com/3-unikname-connect/howto-signup-unconnect-account.html') ?>
+							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get an organization @unikname</a>', 'unikname-connect'), 'https://help.unikname.com/3-unikname-connect/howto-signup-unconnect-account.html') ?>
 							<!-- <br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -175,7 +175,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slun_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get Unikname Connect Secret</a>', 'super-socializer'), 'https://help.unikname.com/3-unikname-connect/howto-signup-unconnect-account.html') ?>
+							<?php echo sprintf(__('Required for Unikname Connect to work. Please <a href="%s" target="_blank">follow the documentation to get Unikname Connect Secret</a>', 'unikname-connect'), 'https://help.unikname.com/3-unikname-connect/howto-signup-unconnect-account.html') ?>
 							<!-- <br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -196,7 +196,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slfb_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Facebook Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
+							<?php echo sprintf(__('Required for Facebook Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App ID', 'unikname-connect'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -217,7 +217,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slfb_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Facebook Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App Secret', 'super-socializer'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
+							<?php echo sprintf(__('Required for Facebook Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App Secret', 'unikname-connect'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -238,7 +238,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sltw_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Twitter Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Twitter API Key', 'super-socializer'), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/') ?>
+							<?php echo sprintf(__('Required for Twitter Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Twitter API Key', 'unikname-connect'), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Website</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -263,7 +263,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sltw_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Twitter Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Twitter API Secret', 'super-socializer'), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/') ?>
+							<?php echo sprintf(__('Required for Twitter Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Twitter API Secret', 'unikname-connect'), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Website</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -288,7 +288,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slli_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for LinkedIn Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get LinkedIn Client ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-linkedin-api-key/') ?>
+							<?php echo sprintf(__('Required for LinkedIn Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get LinkedIn Client ID', 'unikname-connect'), 'http://support.heateor.com/how-to-get-linkedin-api-key/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Redirect URLs</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -309,7 +309,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slli_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for LinkedIn Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get LinkedIn Client Secret', 'super-socializer'), 'http://support.heateor.com/how-to-get-linkedin-api-key/') ?>
+							<?php echo sprintf(__('Required for LinkedIn Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get LinkedIn Client Secret', 'unikname-connect'), 'http://support.heateor.com/how-to-get-linkedin-api-key/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Redirect URLs</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -330,7 +330,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slgp_id_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Google Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Google Client ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-google-plus-client-id/') ?>
+							<?php echo sprintf(__('Required for Google Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Google Client ID', 'unikname-connect'), 'http://support.heateor.com/how-to-get-google-plus-client-id/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>AUTHORIZED REDIRECT URI</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -351,7 +351,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slgp_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Google Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Google Client Secret', 'super-socializer'), 'http://support.heateor.com/how-to-get-google-plus-client-id/') ?>
+							<?php echo sprintf(__('Required for Google Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Google Client Secret', 'unikname-connect'), 'http://support.heateor.com/how-to-get-google-plus-client-id/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>AUTHORIZED REDIRECT URI</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -372,7 +372,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slvk_id_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Vkontakte Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Vkontakte Application ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-vkontakte-application-id/') ?>
+							<?php echo sprintf(__('Required for Vkontakte Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Vkontakte Application ID', 'unikname-connect'), 'http://support.heateor.com/how-to-get-vkontakte-application-id/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site address</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -393,7 +393,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slvk_secure_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Vkontakte Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Vkontakte Application ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-vkontakte-application-id/') ?>
+							<?php echo sprintf(__('Required for Vkontakte Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Vkontakte Application ID', 'unikname-connect'), 'http://support.heateor.com/how-to-get-vkontakte-application-id/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Site address</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -414,7 +414,7 @@
 						<tr class="the_champ_help_content" id="the_champ_slinsta_id_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Instagram Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Instagram Client ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-instagram-client-id/') ?>
+							<?php echo sprintf(__('Required for Instagram Social Login to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Instagram Client ID', 'unikname-connect'), 'http://support.heateor.com/how-to-get-instagram-client-id/') ?>
 							<br/>
 							<span style="color: #14ACDF"><?php _e('Paste following url in <strong>Website URL</strong> option mentioned at the link', 'super-socializer'); ?></span>
 							<br/>
@@ -435,7 +435,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sl_steam_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Steam Social Login to work. Get it at <a href="%s" target="_blank">this link</a>', 'super-socializer'), 'https://steamcommunity.com/dev/apikey'); ?><br/>
+							<?php echo sprintf(__('Required for Steam Social Login to work. Get it at <a href="%s" target="_blank">this link</a>', 'unikname-connect'), 'https://steamcommunity.com/dev/apikey'); ?><br/>
 							<span style="color: #14ACDF"><?php _e('Save following <strong>domain</strong> to get the key', 'super-socializer'); ?></span><br/>
 							<strong style="color: #14ACDF"><?php echo esc_url(home_url()); ?></strong>
 							</div>
@@ -1212,7 +1212,7 @@
 		</p>
 		<p>
 			<?php
-			// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+			// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 			?>
 		</p>
 		</form>

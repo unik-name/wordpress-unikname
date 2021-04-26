@@ -4,7 +4,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 <div id="fb-root"></div>
 <div>
 	<?php
-	// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+	// echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 	?>
 </div>
 <div class="metabox-holder columns-2" id="post-body">
@@ -93,7 +93,7 @@ defined('ABSPATH') or die("Cheating........Uh!!");
 				</p>
 				<div>
 					<?php
-					echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+					echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 					?>
 				</div>
 				</div>

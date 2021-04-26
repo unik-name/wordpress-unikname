@@ -933,7 +933,7 @@ add_action('wp_ajax_nopriv_unikname_check_email_exist', 'unikname_check_email_ex
  * Send verification email to user.
  */
 function the_champ_send_verification_email($receiverEmail, $verificationKey){
-	$subject = "[".wp_specialchars_decode(trim(get_option('blogname')), ENT_QUOTES)."] " . __('Email Verification', 'super-socializer');
+	$subject = "[".wp_specialchars_decode(trim(get_option('blogname')), ENT_QUOTES)."] " . __('Email Verification', 'unikname-connect');
 	$url = esc_url(home_url())."?SuperSocializerKey=".$verificationKey;
 	$message = __("Please click on the following link or paste it in browser to verify your email", 'super-socializer') . "\r\n" . $url;
 	wp_mail($receiverEmail, $subject, $message);

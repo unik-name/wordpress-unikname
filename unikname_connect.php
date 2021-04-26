@@ -689,10 +689,10 @@ function the_champ_connect(){
 				?>
 				<div style="width: 500px; margin: 0 auto">
 					<ol>
-					<li><?php echo sprintf(__('Enter exactly the following url in <strong>Website</strong> option in your Twitter app (see step 3 %s)', 'super-socializer'), '<a target="_blank" href="http://support.heateor.com/how-to-get-twitter-api-key-and-secret/">here</a>') ?><br/>
+					<li><?php echo sprintf(__('Enter exactly the following url in <strong>Website</strong> option in your Twitter app (see step 3 %s)', 'unikname-connect'), '<a target="_blank" href="http://support.heateor.com/how-to-get-twitter-api-key-and-secret/">here</a>') ?><br/>
 					<?php echo esc_url(home_url()) ?>
 					</li>
-					<li><?php echo sprintf(__('Enter exactly the following url in <strong>Callback URLs</strong> option in your Twitter app (see step 3 %s)', 'super-socializer'), '<a target="_blank" href="http://support.heateor.com/how-to-get-twitter-api-key-and-secret/">here</a>') ?><br/>
+					<li><?php echo sprintf(__('Enter exactly the following url in <strong>Callback URLs</strong> option in your Twitter app (see step 3 %s)', 'unikname-connect'), '<a target="_blank" href="http://support.heateor.com/how-to-get-twitter-api-key-and-secret/">here</a>') ?><br/>
 					<?php echo esc_url(home_url()); ?>
 					</li>
 					<li><?php _e('Make sure cURL is enabled at your website server. You may need to contact the server administrator of your website to verify this', 'super-socializer') ?></li>
@@ -966,7 +966,7 @@ function the_champ_frontend_scripts(){
 					<?php
 				}
 				?>
-				<script type="text/javascript">var theChampFBCommentUrl = '<?php echo $commentUrl ?>'; var theChampFBCommentColor = '<?php echo (isset($theChampFacebookOptions['comment_color']) && $theChampFacebookOptions['comment_color'] != '') ? $theChampFacebookOptions["comment_color"] : ''; ?>'; var theChampFBCommentNumPosts = '<?php echo (isset($theChampFacebookOptions['comment_numposts']) && $theChampFacebookOptions['comment_numposts'] != '') ? $theChampFacebookOptions["comment_numposts"] : ''; ?>'; var theChampFBCommentWidth = '<?php echo (isset($theChampFacebookOptions['comment_width']) && $theChampFacebookOptions['comment_width'] != '') ? $theChampFacebookOptions["comment_width"] : '100%'; ?>'; var theChampFBCommentOrderby = '<?php echo (isset($theChampFacebookOptions['comment_orderby']) && $theChampFacebookOptions['comment_orderby'] != '') ? $theChampFacebookOptions["comment_orderby"] : ''; ?>'; var theChampCommentingTabs = "<?php echo isset($theChampFacebookOptions['commenting_order']) ? $theChampFacebookOptions['commenting_order'] : ''; ?>", theChampGpCommentsUrl = '<?php echo isset($theChampFacebookOptions['gpcomments_url']) && $theChampFacebookOptions['gpcomments_url'] != '' ? $theChampFacebookOptions['gpcomments_url'] : $commentUrl; ?>', theChampDisqusShortname = '<?php echo isset($theChampFacebookOptions['dq_shortname']) ? $theChampFacebookOptions['dq_shortname'] : ''; ?>', theChampScEnabledTabs = '<?php echo implode(',', $enabledTabs) ?>', theChampScLabel = '<?php echo $theChampFacebookOptions['commenting_label'] != '' ? htmlspecialchars(wp_specialchars_decode($theChampFacebookOptions['commenting_label'], ENT_QUOTES), ENT_QUOTES) : __('Leave a reply', 'super-socializer'); ?>', theChampScTabLabels = <?php echo json_encode($labels) ?>, theChampGpCommentsWidth = <?php echo isset($theChampFacebookOptions['gpcomments_width']) && $theChampFacebookOptions['gpcomments_width'] != '' ? $theChampFacebookOptions['gpcomments_width'] : 0; ?>, theChampCommentingId = '<?php echo isset($theChampFacebookOptions['commenting_id']) && $theChampFacebookOptions['commenting_id'] != '' ? $theChampFacebookOptions['commenting_id'] : 'respond' ?>'</script>
+				<script type="text/javascript">var theChampFBCommentUrl = '<?php echo $commentUrl ?>'; var theChampFBCommentColor = '<?php echo (isset($theChampFacebookOptions['comment_color']) && $theChampFacebookOptions['comment_color'] != '') ? $theChampFacebookOptions["comment_color"] : ''; ?>'; var theChampFBCommentNumPosts = '<?php echo (isset($theChampFacebookOptions['comment_numposts']) && $theChampFacebookOptions['comment_numposts'] != '') ? $theChampFacebookOptions["comment_numposts"] : ''; ?>'; var theChampFBCommentWidth = '<?php echo (isset($theChampFacebookOptions['comment_width']) && $theChampFacebookOptions['comment_width'] != '') ? $theChampFacebookOptions["comment_width"] : '100%'; ?>'; var theChampFBCommentOrderby = '<?php echo (isset($theChampFacebookOptions['comment_orderby']) && $theChampFacebookOptions['comment_orderby'] != '') ? $theChampFacebookOptions["comment_orderby"] : ''; ?>'; var theChampCommentingTabs = "<?php echo isset($theChampFacebookOptions['commenting_order']) ? $theChampFacebookOptions['commenting_order'] : ''; ?>", theChampGpCommentsUrl = '<?php echo isset($theChampFacebookOptions['gpcomments_url']) && $theChampFacebookOptions['gpcomments_url'] != '' ? $theChampFacebookOptions['gpcomments_url'] : $commentUrl; ?>', theChampDisqusShortname = '<?php echo isset($theChampFacebookOptions['dq_shortname']) ? $theChampFacebookOptions['dq_shortname'] : ''; ?>', theChampScEnabledTabs = '<?php echo implode(',', $enabledTabs) ?>', theChampScLabel = '<?php echo $theChampFacebookOptions['commenting_label'] != '' ? htmlspecialchars(wp_specialchars_decode($theChampFacebookOptions['commenting_label'], ENT_QUOTES), ENT_QUOTES) : __('Leave a reply', 'unikname-connect'); ?>', theChampScTabLabels = <?php echo json_encode($labels) ?>, theChampGpCommentsWidth = <?php echo isset($theChampFacebookOptions['gpcomments_width']) && $theChampFacebookOptions['gpcomments_width'] != '' ? $theChampFacebookOptions['gpcomments_width'] : 0; ?>, theChampCommentingId = '<?php echo isset($theChampFacebookOptions['commenting_id']) && $theChampFacebookOptions['commenting_id'] != '' ? $theChampFacebookOptions['commenting_id'] : 'respond' ?>'</script>
 				<?php
 			}
 		}
@@ -979,7 +979,7 @@ function the_champ_frontend_scripts(){
 			$fb_key = $theChampLoginOptions['fb_key'];
 		}
 		?>
-		<script> var theChampSharingAjaxUrl = '<?php echo get_admin_url() ?>admin-ajax.php', heateorSsFbMessengerAPI = '<?php echo heateor_ss_check_if_mobile() ? "fb-messenger://share/?link=%encoded_post_url%" : "https://www.facebook.com/dialog/send?app_id=". $fb_key ."&display=popup&link=%encoded_post_url%&redirect_uri=%encoded_post_url%"; ?>',heateorSsWhatsappShareAPI = '<?php echo heateor_ss_whatsapp_share_api(); ?>', heateorSsUrlCountFetched = [], heateorSsSharesText = '<?php echo htmlspecialchars(__('Shares', 'super-socializer'), ENT_QUOTES); ?>', heateorSsShareText = '<?php echo htmlspecialchars(__('Share', 'super-socializer'), ENT_QUOTES); ?>', theChampPluginIconPath = '<?php echo plugins_url('images/logo.png', __FILE__) ?>', theChampHorizontalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['hor_enable']) && ( isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares']) ) ? 1 : 0 ?>, theChampVerticalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['vertical_enable']) && ( isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']) ) ? 1 : 0 ?>, theChampSharingOffset = <?php echo (isset($theChampSharingOptions['alignment']) && $theChampSharingOptions['alignment'] != '' && isset($theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset']) && $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] != '' ? $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] : 0) ?>, theChampCounterOffset = <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] != '' && isset($theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset']) && $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] != '' ? $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] : 0) ?>, theChampMobileStickySharingEnabled = <?php echo isset($theChampSharingOptions['vertical_enable']) && isset($theChampSharingOptions['bottom_mobile_sharing']) && $theChampSharingOptions['horizontal_screen_width'] != '' ? 1 : 0; ?>, heateorSsCopyLinkMessage = "<?php echo htmlspecialchars(__('Link copied.', 'super-socializer'), ENT_QUOTES); ?>";
+		<script> var theChampSharingAjaxUrl = '<?php echo get_admin_url() ?>admin-ajax.php', heateorSsFbMessengerAPI = '<?php echo heateor_ss_check_if_mobile() ? "fb-messenger://share/?link=%encoded_post_url%" : "https://www.facebook.com/dialog/send?app_id=". $fb_key ."&display=popup&link=%encoded_post_url%&redirect_uri=%encoded_post_url%"; ?>',heateorSsWhatsappShareAPI = '<?php echo heateor_ss_whatsapp_share_api(); ?>', heateorSsUrlCountFetched = [], heateorSsSharesText = '<?php echo htmlspecialchars(__('Shares', 'super-socializer'), ENT_QUOTES); ?>', heateorSsShareText = '<?php echo htmlspecialchars(__('Share', 'super-socializer'), ENT_QUOTES); ?>', theChampPluginIconPath = '<?php echo plugins_url('images/logo.png', __FILE__) ?>', theChampHorizontalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['hor_enable']) && ( isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares']) ) ? 1 : 0 ?>, theChampVerticalSharingCountEnable = <?php echo isset($theChampSharingOptions['enable']) && isset($theChampSharingOptions['vertical_enable']) && ( isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']) ) ? 1 : 0 ?>, theChampSharingOffset = <?php echo (isset($theChampSharingOptions['alignment']) && $theChampSharingOptions['alignment'] != '' && isset($theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset']) && $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] != '' ? $theChampSharingOptions[$theChampSharingOptions['alignment'].'_offset'] : 0) ?>, theChampCounterOffset = <?php echo (isset($theChampCounterOptions['alignment']) && $theChampCounterOptions['alignment'] != '' && isset($theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset']) && $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] != '' ? $theChampCounterOptions[$theChampCounterOptions['alignment'].'_offset'] : 0) ?>, theChampMobileStickySharingEnabled = <?php echo isset($theChampSharingOptions['vertical_enable']) && isset($theChampSharingOptions['bottom_mobile_sharing']) && $theChampSharingOptions['horizontal_screen_width'] != '' ? 1 : 0; ?>, heateorSsCopyLinkMessage = "<?php echo htmlspecialchars(__('Link copied.', 'unikname-connect'), ENT_QUOTES); ?>";
 		<?php
 		if(isset($theChampSharingOptions['horizontal_re_providers']) && (isset($theChampSharingOptions['horizontal_more']) || in_array('Copy_Link', $theChampSharingOptions['horizontal_re_providers']))){
 			$postId = 0;
@@ -1380,11 +1380,11 @@ function the_champ_save_default_options(){
 
 	// login options
 	add_option('the_champ_login', array(
-	   'title' => __('We recommend the next-generation authentication: simple, secure, private', 'super-socializer'),
-	   'email_error_message' => __('Email you entered is already registered or invalid', 'super-socializer'),
+	   'title' => __('We recommend the next-generation authentication: simple, secure, private', 'unikname-connect'),
+	   'email_error_message' => __('Email you entered is already registered or invalid', 'unikname-connect'),
 	   'avatar' => 1,
-	   'email_popup_text' => __('Please enter a valid email address. You might be required to verify it', 'super-socializer'),
-	   'scl_title' => __('Link your social account to login to your account at this website', 'super-socializer'),
+	   'email_popup_text' => __('Please enter a valid email address. You might be required to verify it', 'unikname-connect'),
+	   'scl_title' => __('Link your social account to login to your account at this website', 'unikname-connect'),
 	   'link_account' 			=> 1,
 	   'gdpr_placement' => 'above',
 	   'privacy_policy_url' => '',
@@ -1635,7 +1635,7 @@ function the_champ_addon_update_notification(){
 		global $theChampLoginOptions;
 		if(get_transient('heateor-ss-admin-notice-on-activation')){ ?>
 	        <div class="notice notice-success is-dismissible">
-	            <p><strong><?php printf(__('Thanks for installing Unikname Connect plugin', 'super-socializer'), 'https://help.unikname.com/3-unikname-connect/integration-technology/wordpress/#step-2-setup-the-wordpress-plugin'); ?></strong></p>
+	            <p><strong><?php printf(__('Thanks for installing Unikname Connect plugin', 'unikname-connect'), 'https://help.unikname.com/3-unikname-connect/integration-technology/wordpress/#step-2-setup-the-wordpress-plugin'); ?></strong></p>
 	            <p>
 					<a href="https://help.unikname.com/3-unikname-connect/integration-technology/wordpress/#step-2-setup-the-wordpress-plugin" target="_blank" class="button button-primary"><?php _e('Configure the Plugin', 'super-socializer'); ?></a>
 				</p>
@@ -1695,7 +1695,7 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error">
 				<h3>Super Socializer</h3>
-				<p><?php echo sprintf(__('To continue using Steam login save Steam API key <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-optionsn'); ?></p>
+				<p><?php echo sprintf(__('To continue using Steam login save Steam API key <a href="%s">here</a>', 'unikname-connect'), 'admin.php?page=heateor-ss-general-optionsn'); ?></p>
 			</div>
 			<?php
 		}
@@ -1710,7 +1710,7 @@ function the_champ_addon_update_notification(){
 			?>
 			<div class="error">
 				<h3>Super Socializer</h3>
-				<p><?php echo sprintf(__('To continue using Social Login, save the secret keys <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options'); ?></p>
+				<p><?php echo sprintf(__('To continue using Social Login, save the secret keys <a href="%s">here</a>', 'unikname-connect'), 'admin.php?page=heateor-ss-general-options'); ?></p>
 			</div>
 			<?php
 		}
@@ -1734,7 +1734,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_fb_redirection_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Add %s in "Valid OAuth redirect URIs" option in your Facebook app settings for Facebook login to work. For more details, check step 9 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url() . '/?OIDCCallback=Facebook', 'http://support.heateor.com/how-to-get-facebook-app-id/'); ?><input type="button" onclick="heateorSsFbRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('Add %s in "Valid OAuth redirect URIs" option in your Facebook app settings for Facebook login to work. For more details, check step 9 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url() . '/?OIDCCallback=Facebook', 'http://support.heateor.com/how-to-get-facebook-app-id/'); ?><input type="button" onclick="heateorSsFbRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'unikname-connect') ?>" /></p>
 				</div>
 				<?php
 			}
@@ -1759,7 +1759,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_twitter_callback_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Add %s in "Callback URLs" option in your Twitter app settings for Twitter login to work. For more details, check step 4 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/'); ?><input type="button" onclick="heateorSsTwitterCbNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('Add %s in "Callback URLs" option in your Twitter app settings for Twitter login to work. For more details, check step 4 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/'); ?><input type="button" onclick="heateorSsTwitterCbNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'unikname-connect') ?>" /></p>
 				</div>
 				<?php
 			}
@@ -1784,7 +1784,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_linkedin_redirection_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Add %s in "Authorized Redirect URLs" option in your Linkedin app settings for Linkedin login to work. For more details, check step 4 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-linkedin-api-key/'); ?><input type="button" onclick="heateorSsLinkedinRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('Add %s in "Authorized Redirect URLs" option in your Linkedin app settings for Linkedin login to work. For more details, check step 4 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-linkedin-api-key/'); ?><input type="button" onclick="heateorSsLinkedinRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'unikname-connect') ?>" /></p>
 				</div>
 				<?php
 			}
@@ -1809,7 +1809,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_google_redirection_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Add %s in "Authorized redirect URIs" option in your Google client settings for Google login to work. For more details, check step 11 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-google-plus-client-id/'); ?><input type="button" onclick="heateorSsGoogleRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('Add %s in "Authorized redirect URIs" option in your Google client settings for Google login to work. For more details, check step 11 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-google-plus-client-id/'); ?><input type="button" onclick="heateorSsGoogleRedirectionNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'unikname-connect') ?>" /></p>
 				</div>
 				<?php
 			}
@@ -1820,7 +1820,7 @@ function the_champ_addon_update_notification(){
 				?>
 				<div class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Save the url of privacy policy page of your website <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options#tabs-3'); ?></p>
+					<p><?php echo sprintf(__('Save the url of privacy policy page of your website <a href="%s">here</a>', 'unikname-connect'), 'admin.php?page=heateor-ss-general-options#tabs-3'); ?></p>
 				</div>
 				<?php
 			}
@@ -1842,7 +1842,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_gdpr_notification" class="update-nag">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('This plugin is GDPR compliant. You need to update the privacy policy of your website regarding the personal data this plugin saves, as mentioned <a href="%s" target="_blank">here</a>', 'super-socializer'), 'http://support.heateor.com/gdpr-and-our-plugins'); ?><input type="button" onclick="heateorSsGDPRNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('This plugin is GDPR compliant. You need to update the privacy policy of your website regarding the personal data this plugin saves, as mentioned <a href="%s" target="_blank">here</a>', 'super-socializer'), 'http://support.heateor.com/gdpr-and-our-plugins'); ?><input type="button" onclick="heateorSsGDPRNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'unikname-connect') ?>" /></p>
 				</div>
 				<?php
 			}*/
@@ -1897,7 +1897,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_twitter_new_callback_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('Replace url saved in "Callback URLs" option in your Twitter app settings from %s for Twitter login to work. For more details, check step 4 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/'); ?><input type="button" onclick="heateorSsTwitterNewCbNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('Replace url saved in "Callback URLs" option in your Twitter app settings from %s for Twitter login to work. For more details, check step 4 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url(), 'http://support.heateor.com/how-to-get-twitter-api-key-and-secret/'); ?><input type="button" onclick="heateorSsTwitterNewCbNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'unikname-connect') ?>" /></p>
 				</div>
 				<?php
 			}
@@ -1922,7 +1922,7 @@ function the_champ_addon_update_notification(){
 				</script>
 				<div id="heateor_ss_linkedin_redirect_url_notification" class="error">
 					<h3>Super Socializer</h3>
-					<p><?php echo sprintf(__('If you cannot get Linkedin login to work after updating the plugin, replace url saved in "Redirect URLs" option in your Linkedin app settings with %s. For more details, check step 6 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url().'/?OIDCCallback=Linkedin', 'http://support.heateor.com/how-to-get-linkedin-api-key/'); ?><input type="button" onclick="heateorSsLinkedinNewRuNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Dismiss', 'super-socializer') ?>" /></p>
+					<p><?php echo sprintf(__('If you cannot get Linkedin login to work after updating the plugin, replace url saved in "Redirect URLs" option in your Linkedin app settings with %s. For more details, check step 6 <a href="%s" target="_blank">here</a>', 'super-socializer'), home_url().'/?OIDCCallback=Linkedin', 'http://support.heateor.com/how-to-get-linkedin-api-key/'); ?><input type="button" onclick="heateorSsLinkedinNewRuNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Dismiss', 'unikname-connect') ?>" /></p>
 				</div>
 				<?php
 			}
@@ -1948,7 +1948,7 @@ function the_champ_addon_update_notification(){
 				<div id="heateor_ss_fb_count_notification" class="error">
 					<h3>Super Socializer</h3>
 					<p>
-						<?php echo sprintf(__('Save Facebook App ID and Secret keys in "Standard Interface" and/or "Floating Interface" section(s) at <a href="%s">Super Socializer > Social Sharing</a> page to fix the issue with Facebook share count. After that, clear share counts cache from "Miscellaneous" section', 'super-socializer'), 'admin.php?page=heateor-social-sharing#tabs-2'); ?>
+						<?php echo sprintf(__('Save Facebook App ID and Secret keys in "Standard Interface" and/or "Floating Interface" section(s) at <a href="%s">Super Socializer > Social Sharing</a> page to fix the issue with Facebook share count. After that, clear share counts cache from "Miscellaneous" section', 'unikname-connect'), 'admin.php?page=heateor-social-sharing#tabs-2'); ?>
 						<p><input type="button" onclick="heateorSsFBCountNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Dismiss', 'super-socializer') ?>" /></p>
 					</p>
 				</div>
@@ -1975,7 +1975,7 @@ function the_champ_addon_update_notification(){
 			</script>
 			<div id="heateor_ss_browser_notification" class="update-nag">
 				<h3>Super Socializer</h3>
-				<p><?php echo sprintf(__('Your website visitors will see a popup notification (only once) if their browsers block any of the features of the plugin so that they can change their browser settings to unblock these. You can turn it OFF by disabling "Show popup notification to users if their browsers block the plugin features" option <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options'); ?><input type="button" onclick="heateorSsBrowserNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'super-socializer') ?>" /></p>
+				<p><?php echo sprintf(__('Your website visitors will see a popup notification (only once) if their browsers block any of the features of the plugin so that they can change their browser settings to unblock these. You can turn it OFF by disabling "Show popup notification to users if their browsers block the plugin features" option <a href="%s">here</a>', 'super-socializer'), 'admin.php?page=heateor-ss-general-options'); ?><input type="button" onclick="heateorSsBrowserNotificationRead()" style="margin-left: 5px;" class="button button-primary" value="<?php _e('Okay', 'unikname-connect') ?>" /></p>
 			</div>
 			<?php
 		}
@@ -2098,7 +2098,7 @@ function the_champ_update_db_check(){
 		if(version_compare("7.12", $currentVersion) > 0){
 			global $theChampSharingOptions, $theChampCounterOptions, $theChampLoginOptions;
 
-			$theChampLoginOptions['scl_title'] = __('Link your social account to login to your account at this website', 'super-socializer');
+			$theChampLoginOptions['scl_title'] = __('Link your social account to login to your account at this website', 'unikname-connect');
 			update_option('the_champ_login', $theChampLoginOptions);
 
 			if(isset($theChampSharingOptions['horizontal_re_providers'])){
@@ -2174,7 +2174,7 @@ function the_champ_update_db_check(){
 		if(version_compare("7.8.13", $currentVersion) > 0){
 			global $theChampGeneralOptions;
 			$theChampGeneralOptions['browser_msg_enable'] = '1';
-			$theChampGeneralOptions['browser_msg'] = __('Your browser is blocking some features of this website. Please follow the instructions at {support_url} to unblock these.', 'super-socializer');
+			$theChampGeneralOptions['browser_msg'] = __('Your browser is blocking some features of this website. Please follow the instructions at {support_url} to unblock these.', 'unikname-connect');
 			update_option('the_champ_general', $theChampGeneralOptions);
 		}
 

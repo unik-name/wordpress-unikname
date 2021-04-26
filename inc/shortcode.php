@@ -211,7 +211,7 @@ function the_champ_login_shortcode($params){
 			$html .= "</div><div style='float:left; margin-left:10px'>";
 			$html .= str_replace('-', ' ', $userInfo -> user_login);
 			//do_action('the_champ_login_widget_hook', $userInfo -> user_login);
-			$html .= '<br/><a href="' . wp_logout_url(esc_url(home_url())) . '">' .__('Log Out', 'super-socializer') . '</a></div></div>';
+			$html .= '<br/><a href="' . wp_logout_url(esc_url(home_url())) . '">' .__('Log Out', 'unikname-connect') . '</a></div></div>';
 		}else{
 			$html = '<div ';
 			// style 
@@ -292,6 +292,6 @@ function the_champ_social_linking_shortcode($params){
 		$html .= '</div>';
 		return $html;
 	}
-	return '<h3>' . __('Enable Social Login from "Basic Configuration" section at "Super Socializer > Social Login" page in admin panel', 'super-socializer') . '</h3>';
+	return '<h3>' . __('Enable Social Login from "Basic Configuration" section at "Super Socializer > Social Login" page in admin panel', 'unikname-connect') . '</h3>';
 }
 add_shortcode('TheChamp-Social-Linking', 'the_champ_social_linking_shortcode');

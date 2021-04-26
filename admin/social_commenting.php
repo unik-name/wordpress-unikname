@@ -2,7 +2,7 @@
 <div id="fb-root"></div>
 <div>
 	<?php
-	echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+	echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 	?>
 </div>
 <div class="metabox-holder columns-2" id="post-body">
@@ -311,7 +311,7 @@
 								<tr class="the_champ_help_content" id="the_champ_fb_comment_lang_help_cont">
 									<td colspan="2">
 									<div>
-									<?php echo sprintf(__('Enter the code of the language you want to use to display commenting. You can find the language codes at <a href="%s" target="_blank">this link</a>. Leave it empty for default language(English)', 'super-socializer'), 'https://fbdevwiki.com/wiki/Locales#Complete_List_.28as_of_2012-06-10.29') ?>
+									<?php echo sprintf(__('Enter the code of the language you want to use to display commenting. You can find the language codes at <a href="%s" target="_blank">this link</a>. Leave it empty for default language(English)', 'unikname-connect'), 'https://fbdevwiki.com/wiki/Locales#Complete_List_.28as_of_2012-06-10.29') ?>
 									</div>
 									</td>
 								</tr>
@@ -401,7 +401,7 @@
 		</p>
 		<div>
 			<?php
-			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 			?>
 		</div>
 	</form>

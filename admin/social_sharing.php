@@ -2,7 +2,7 @@
 <div id="fb-root"></div>
 <div>
 	<?php
-	echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+	echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 	?>
 </div>
 <div class="metabox-holder columns-2" style="padding-bottom:8px" id="post-body">
@@ -46,7 +46,7 @@
 		}
 		?>
 		<div id="setting-error-settings_updated" class="error settings-error notice is-dismissible below-h2" <?php echo !(isset($theChampLoginOptions['enable']) && $theChampLoginOptions['fb_key'] && $theChampLoginOptions['fb_secret'] && in_array('facebook', $theChampLoginOptions['providers'])) && (((in_array('facebook', $theChampSharingOptions['vertical_re_providers']) && (isset($theChampSharingOptions['vertical_counts']) || isset($theChampSharingOptions['vertical_total_shares']))) || (in_array('facebook', $theChampSharingOptions['horizontal_re_providers']) && (isset($theChampSharingOptions['horizontal_counts']) || isset($theChampSharingOptions['horizontal_total_shares'])))) && (!$theChampSharingOptions['fb_key'] || !$theChampSharingOptions['fb_secret'])) ? '' : 'style = "display: none"';?>> 
-			<?php echo '<p><strong>' . __('Save Facebook App Id and Secret in the "Miscellaneous" section for Facebook share count to work', 'super-socializer') . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __('Dismiss this notice', 'super-socializer') . '</span></button>'; ?>
+			<?php echo '<p><strong>' . __('Save Facebook App Id and Secret in the "Miscellaneous" section for Facebook share count to work', 'super-socializer') . '</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __('Dismiss this notice', 'unikname-connect') . '</span></button>'; ?>
 		</div>
 
 		<div class="menu_div" id="tabs" <?php echo isset($theChampSharingOptions['enable']) ? '' : 'style="display:none"' ?>>
@@ -1591,7 +1591,7 @@
 						<tr class="the_champ_help_content" id="the_champ_fb_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Facebook share count to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App ID', 'super-socializer'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
+							<?php echo sprintf(__('Required for Facebook share count to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App ID', 'unikname-connect'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
 							</div>
 							</td>
 						</tr>
@@ -1608,7 +1608,7 @@
 						<tr class="the_champ_help_content" id="the_champ_fb_secret_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Required for Facebook share count to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App Secret', 'super-socializer'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
+							<?php echo sprintf(__('Required for Facebook share count to work. Please follow the documentation at <a href="%s" target="_blank">this link</a> to get Facebook App Secret', 'unikname-connect'), 'http://support.heateor.com/how-to-get-facebook-app-id/') ?>
 							</div>
 							</td>
 						</tr>
@@ -1733,7 +1733,7 @@
 						<tr class="the_champ_help_content" id="the_champ_share_count_cache_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Frequent cache refreshing results in slower loading of pages with share counts enabled. Leave empty to disable cache. More info <a href="%s" target="_blank">here</a>', 'super-socializer'), 'http://support.heateor.com/why-is-share-count-not-getting-updated'); ?>
+							<?php echo sprintf(__('Frequent cache refreshing results in slower loading of pages with share counts enabled. Leave empty to disable cache. More info <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'http://support.heateor.com/why-is-share-count-not-getting-updated'); ?>
 							</div>
 							</td>
 						</tr>
@@ -1964,7 +1964,7 @@
 		</p>
 		<div>
 			<?php
-			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 			?>
 		</div>
 	</form>

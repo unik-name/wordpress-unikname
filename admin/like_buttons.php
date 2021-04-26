@@ -3,7 +3,7 @@
 <div id="fb-root"></div>
 <div>
 	<?php
-	echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+	echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 	?>
 </div>
 <div class="metabox-holder columns-2" id="post-body">
@@ -620,7 +620,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sc_bitly_login_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Login to your bit.ly account and navigate to <a href="%s" target="_blank">this link</a> to get bit.ly username', 'super-socializer'), 'https://bitly.com/a/your_api_key') ?>
+							<?php echo sprintf(__('Login to your bit.ly account and navigate to <a href="%s" target="_blank">this link</a> to get bit.ly username', 'unikname-connect'), 'https://bitly.com/a/your_api_key') ?>
 							<img width="550" src="<?php echo plugins_url('../images/snaps/ss_bitly_username.png', __FILE__); ?>" />
 							</div>
 							</td>
@@ -638,7 +638,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sc_bitly_key_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Login to your bit.ly account and navigate to <a href="%s" target="_blank">this link</a> to get your API key', 'super-socializer'), 'https://bitly.com/a/your_api_key') ?>
+							<?php echo sprintf(__('Login to your bit.ly account and navigate to <a href="%s" target="_blank">this link</a> to get your API key', 'unikname-connect'), 'https://bitly.com/a/your_api_key') ?>
 							<img width="550" src="<?php echo plugins_url('../images/snaps/ss_bitly_apikey.png', __FILE__); ?>" />
 							</div>
 							</td>
@@ -681,7 +681,7 @@
 						<tr class="the_champ_help_content" id="the_champ_sc_language_help_cont">
 							<td colspan="2">
 							<div>
-							<?php echo sprintf(__('Enter the code of the language you want to use to render counters. You can find the language codes at <a href="%s" target="_blank">this link</a>. Leave it empty for default language(English)', 'super-socializer'), 'https://fbdevwiki.com/wiki/Locales#Complete_List_.28as_of_2012-06-10.29') ?>
+							<?php echo sprintf(__('Enter the code of the language you want to use to render counters. You can find the language codes at <a href="%s" target="_blank">this link</a>. Leave it empty for default language(English)', 'unikname-connect'), 'https://fbdevwiki.com/wiki/Locales#Complete_List_.28as_of_2012-06-10.29') ?>
 							</div>
 							</td>
 						</tr>
@@ -800,7 +800,7 @@
 		</p>
 		<div>
 			<?php
-			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'super-socializer'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
+			echo sprintf(__('You can appreciate the effort put in this free plugin by rating it <a href="%s" target="_blank">here</a>', 'unikname-connect'), 'https://wordpress.org/support/view/plugin-reviews/super-socializer');
 			?>
 		</div>
 		</form>
