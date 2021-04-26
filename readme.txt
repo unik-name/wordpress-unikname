@@ -1,4 +1,4 @@
-﻿=== Unikname - Authentication (2FA) Passwordless Login ===
+=== Unikname - Authentication (2FA) Passwordless Login ===
 Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian
 Tags: passwordless, security, 2FA, login, signup, strong authentication
 Requires at least: 5.0.0
