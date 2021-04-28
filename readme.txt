@@ -3,7 +3,7 @@ Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8h
 Tags: passwordless, security, 2FA, login, signup, strong authentication
 Requires at least: 5.0.0
 Tested up to: 5.7
-Stable tag: 8.5.0
+Stable tag: 8.5.1
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -223,6 +223,11 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 5. Account linking options: mainly labels for account linking feature
 
 == Changelog ==
+
+= 8.5.1 [2021-04-30] =
+
+- **Added**
+	- Missing French translations
 
 = 8.5.0 [2021-04-12] =
 
