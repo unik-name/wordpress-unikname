@@ -12,14 +12,14 @@
 				<label class="name"><?=__('Unikname Connect Site Id <span>*</span>','unikname-connect')?></label>
 				<div class="item-text">
 					<input type="text" name="the_champ_login[un_key]" value="<?php echo isset($theChampLoginOptions['un_key']) ? $theChampLoginOptions['un_key'] : '' ?>"/>
-					<p><?=__('The Unikname Connect site identifier. You can find it in your <a href="https://account.connect.unikname.com" target="_blank">Unikname Connect Dashboard</a>.','unikname-connect')?></p>
+					<p><?=__('The Unikname Connect site identifier. You can find it in your <a href="https://account.connect.unikname.com#mtm_campaign=AccountCreation&mtm_source=wp" target="_blank">Unikname Connect Dashboard</a>.','unikname-connect')?></p>
 				</div>
 			</div>
 			<div class="item type-text">
 				<label class="name"><?=__('Unikname Connect Secret <span>*</span>','unikname-connect')?></label>
 				<div class="item-text">
 					<input type="password" name="the_champ_login[un_secret]" value="<?php echo isset($theChampLoginOptions['un_secret']) ? $theChampLoginOptions['un_secret'] : '' ?>" />
-					<p><?=__('The Unikname Connect site secret. You can find it in your <a href="https://account.connect.unikname.com" target="_blank">Unikname Connect Dashboard</a>.','unikname-connect')?></p>
+					<p><?=__('The Unikname Connect site secret. You can find it in your <a href="https://account.connect.unikname.com#mtm_campaign=AccountCreation&mtm_source=wp" target="_blank">Unikname Connect Dashboard</a>.','unikname-connect')?></p>
 				</div>
 			</div>
 		</div>

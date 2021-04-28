@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-14 16:17+0000\n"
+"POT-Creation-Date: 2021-04-26 13:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -19,9 +19,17 @@ msgstr ""
 msgid "<strong>ERROR</strong>: Connection error"
 msgstr ""
 
+#: helper.php:589
+msgid "Account already exists or linked"
+msgstr ""
+
 #: templates/settings/login_options.php:56
 #: templates/settings/login_options.php:80
 msgid "Account dashboard"
+msgstr ""
+
+#: helper.php:585
+msgid "Account linked successfully"
 msgstr ""
 
 #: templates/general_options.php:34
@@ -30,6 +38,10 @@ msgstr ""
 
 #: templates/settings/advanced_options.php:18
 msgid "Account linking options"
+msgstr ""
+
+#: helper.php:265
+msgid "Add-Ons"
 msgstr ""
 
 #: templates/general_options.php:37
@@ -77,6 +89,10 @@ msgstr ""
 msgid "Can not revoke while Connection Autorizations is checked"
 msgstr ""
 
+#: helper.php:168
+msgid "Click to hide help"
+msgstr ""
+
 #: helper.php:672 helper.php:1076
 msgid "Click to revoke Unikname Connect access to this account"
 msgstr ""
@@ -88,6 +104,10 @@ msgstr ""
 
 #: templates/email_popup.php:35 templates/email_popup.php:36
 msgid "Confirm your email"
+msgstr ""
+
+#: helper.php:687 helper.php:693
+msgid "Connected with"
 msgstr ""
 
 #: includes/admin-profile-user.php:23
@@ -127,6 +147,14 @@ msgstr ""
 msgid "Disable user registration via Unikname Connect"
 msgstr ""
 
+#: unikname_connect.php:1925
+msgid "Dismiss"
+msgstr ""
+
+#: helper.php:8 admin/social_sharing.php:49
+msgid "Dismiss this notice"
+msgstr ""
+
 #: unikname_connect.php:2400
 msgid "Docs"
 msgstr ""
@@ -153,6 +181,14 @@ msgstr ""
 
 #: templates/settings/email_options.php:4
 msgid "Email required"
+msgstr ""
+
+#: inc/social_login.php:936
+msgid "Email Verification"
+msgstr ""
+
+#: unikname_connect.php:1384
+msgid "Email you entered is already registered or invalid"
 msgstr ""
 
 #: templates/settings/login_options.php:109
@@ -195,8 +231,44 @@ msgstr ""
 msgid "Enable email verification"
 msgstr ""
 
+#: inc/shortcode.php:295
+msgid ""
+"Enable Social Login from \"Basic Configuration\" section at \"Super "
+"Socializer > Social Login\" page in admin panel"
+msgstr ""
+
 #: templates/settings/basic_configuration.php:4
 msgid "Enable Unikname Connect"
+msgstr ""
+
+#: unikname_connect.php:695
+#, php-format
+msgid ""
+"Enter exactly the following url in <strong>Callback URLs</strong> option in "
+"your Twitter app (see step 3 %s)"
+msgstr ""
+
+#: unikname_connect.php:692
+#, php-format
+msgid ""
+"Enter exactly the following url in <strong>Website</strong> option in your "
+"Twitter app (see step 3 %s)"
+msgstr ""
+
+#: admin/social_commenting.php:314
+#, php-format
+msgid ""
+"Enter the code of the language you want to use to display commenting. You "
+"can find the language codes at <a href=\"%s\" target=\"_blank\">this link</a>"
+". Leave it empty for default language(English)"
+msgstr ""
+
+#: admin/like_buttons.php:684
+#, php-format
+msgid ""
+"Enter the code of the language you want to use to render counters. You can "
+"find the language codes at <a href=\"%s\" target=\"_blank\">this link</a>. "
+"Leave it empty for default language(English)"
 msgstr ""
 
 #: templates/email_popup.php:50
@@ -219,6 +291,14 @@ msgstr ""
 msgid ""
 "Forbid only users with these roles to log into your web site. Only "
 "connections with Unikname Connect are allowed for them."
+msgstr ""
+
+#: admin/social_sharing.php:1736
+#, php-format
+msgid ""
+"Frequent cache refreshing results in slower loading of pages with share "
+"counts enabled. Leave empty to disable cache. More info <a href=\"%s\" "
+"target=\"_blank\">here</a>"
 msgstr ""
 
 #: templates/general_options.php:22
@@ -246,8 +326,16 @@ msgstr ""
 msgid "Include Javascript in website footer"
 msgstr ""
 
+#: unikname_connect.php:969
+msgid "Leave a reply"
+msgstr ""
+
 #: templates/email_popup.php:18
 msgid "Let’s go!"
+msgstr ""
+
+#: unikname_connect.php:982
+msgid "Link copied."
 msgstr ""
 
 #: templates/settings/advanced_options.php:61
@@ -255,8 +343,16 @@ msgid ""
 "Link social account to already existing account, if email address matches"
 msgstr ""
 
+#: unikname_connect.php:1387 unikname_connect.php:2101
+msgid "Link your social account to login to your account at this website"
+msgstr ""
+
 #: templates/settings/general_options.php:11
 msgid "Load all Javascript files in single file"
+msgstr ""
+
+#: inc/widget.php:47 inc/shortcode.php:214
+msgid "Log Out"
 msgstr ""
 
 #: includes/define-value.php:4 inc/social_login.php:16
@@ -270,6 +366,24 @@ msgstr ""
 
 #: templates/settings/login_options.php:70
 msgid "Login redirection"
+msgstr ""
+
+#: admin/like_buttons.php:623
+#, php-format
+msgid ""
+"Login to your bit.ly account and navigate to <a href=\"%s\" "
+"target=\"_blank\">this link</a> to get bit.ly username"
+msgstr ""
+
+#: admin/like_buttons.php:641
+#, php-format
+msgid ""
+"Login to your bit.ly account and navigate to <a href=\"%s\" "
+"target=\"_blank\">this link</a> to get your API key"
+msgstr ""
+
+#: inc/widget.php:71
+msgid "Login with your Social Account"
 msgstr ""
 
 #: templates/settings/email_options.php:39
@@ -288,6 +402,12 @@ msgstr ""
 msgid "Notification"
 msgstr ""
 
+#: unikname_connect.php:1737 unikname_connect.php:1762
+#: unikname_connect.php:1787 unikname_connect.php:1812
+#: unikname_connect.php:1900
+msgid "Okay"
+msgstr ""
+
 #: inc/social_login.php:168
 msgid "or"
 msgstr ""
@@ -304,7 +424,11 @@ msgstr ""
 msgid "Please check your email inbox to complete the registration."
 msgstr ""
 
-#: unikname_connect.php:881
+#: unikname_connect.php:1386
+msgid "Please enter a valid email address. You might be required to verify it"
+msgstr ""
+
+#: unikname_connect.php:881 helper.php:1037
 msgid "Please verify your email address to login."
 msgstr ""
 
@@ -351,6 +475,114 @@ msgstr ""
 msgid "Registration redirection"
 msgstr ""
 
+#: admin/social_sharing.php:1594
+#, php-format
+msgid ""
+"Required for Facebook share count to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Facebook App ID"
+msgstr ""
+
+#: admin/social_sharing.php:1611
+#, php-format
+msgid ""
+"Required for Facebook share count to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Facebook App Secret"
+msgstr ""
+
+#: admin/social_login.php:199
+#, php-format
+msgid ""
+"Required for Facebook Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Facebook App ID"
+msgstr ""
+
+#: admin/social_login.php:220
+#, php-format
+msgid ""
+"Required for Facebook Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Facebook App Secret"
+msgstr ""
+
+#: admin/social_login.php:333
+#, php-format
+msgid ""
+"Required for Google Social Login to work. Please follow the documentation at "
+"<a href=\"%s\" target=\"_blank\">this link</a> to get Google Client ID"
+msgstr ""
+
+#: admin/social_login.php:354
+#, php-format
+msgid ""
+"Required for Google Social Login to work. Please follow the documentation at "
+"<a href=\"%s\" target=\"_blank\">this link</a> to get Google Client Secret"
+msgstr ""
+
+#: admin/social_login.php:417
+#, php-format
+msgid ""
+"Required for Instagram Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Instagram Client ID"
+msgstr ""
+
+#: admin/social_login.php:291
+#, php-format
+msgid ""
+"Required for LinkedIn Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get LinkedIn Client ID"
+msgstr ""
+
+#: admin/social_login.php:312
+#, php-format
+msgid ""
+"Required for LinkedIn Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get LinkedIn Client "
+"Secret"
+msgstr ""
+
+#: admin/social_login.php:438
+#, php-format
+msgid ""
+"Required for Steam Social Login to work. Get it at <a href=\"%s\" "
+"target=\"_blank\">this link</a>"
+msgstr ""
+
+#: admin/social_login.php:241
+#, php-format
+msgid ""
+"Required for Twitter Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Twitter API Key"
+msgstr ""
+
+#: admin/social_login.php:266
+#, php-format
+msgid ""
+"Required for Twitter Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Twitter API Secret"
+msgstr ""
+
+#: admin/social_login.php:157
+#, php-format
+msgid ""
+"Required for Unikname Connect to work. Please <a href=\"%s\" "
+"target=\"_blank\">follow the documentation to get an organization "
+"@unikname</a>"
+msgstr ""
+
+#: admin/social_login.php:178
+#, php-format
+msgid ""
+"Required for Unikname Connect to work. Please <a href=\"%s\" "
+"target=\"_blank\">follow the documentation to get Unikname Connect Secret</a>"
+msgstr ""
+
+#: admin/social_login.php:375 admin/social_login.php:396
+#, php-format
+msgid ""
+"Required for Vkontakte Social Login to work. Please follow the documentation "
+"at <a href=\"%s\" target=\"_blank\">this link</a> to get Vkontakte "
+"Application ID"
+msgstr ""
+
 #: helper.php:687 helper.php:693 helper.php:1083
 msgid "Revoke"
 msgstr ""
@@ -361,6 +593,15 @@ msgstr ""
 
 #: templates/security_login.php:61 templates/general_options.php:89
 msgid "Save Changes"
+msgstr ""
+
+#: unikname_connect.php:1951
+#, php-format
+msgid ""
+"Save Facebook App ID and Secret keys in \"Standard Interface\" and/or "
+"\"Floating Interface\" section(s) at <a href=\"%s\">Super Socializer > "
+"Social Sharing</a> page to fix the issue with Facebook share count. After "
+"that, clear share counts cache from \"Miscellaneous\" section"
 msgstr ""
 
 #. Description of the plugin
@@ -385,7 +626,7 @@ msgstr ""
 msgid "Set up your account"
 msgstr ""
 
-#: unikname_connect.php:1230 unikname_connect.php:2399
+#: unikname_connect.php:1230 unikname_connect.php:2399 helper.php:267
 msgid "Settings"
 msgstr ""
 
@@ -399,12 +640,29 @@ msgstr ""
 msgid "Sign up"
 msgstr ""
 
+#: helper.php:765
+msgid "Social Account Linking"
+msgstr ""
+
 #: templates/settings/email_options.php:63
 msgid "Standard"
 msgstr ""
 
 #: templates/general_options.php:28
 msgid "Style"
+msgstr ""
+
+#. unique id
+#: inc/widget.php:791
+msgid "Super Socializer - Follow Icons"
+msgstr ""
+
+#: helper.php:266
+msgid "Support Documentation"
+msgstr ""
+
+#: unikname_connect.php:1638
+msgid "Thanks for installing Unikname Connect plugin"
 msgstr ""
 
 #: templates/security_login.php:6 templates/general_options.php:6
@@ -414,14 +672,14 @@ msgstr ""
 #: templates/settings/basic_configuration.php:15
 msgid ""
 "The Unikname Connect site identifier. You can find it in your <a "
-"href=\"https://account.connect.unikname.com\" target=\"_blank\">Unikname "
+"href=\"https://account.connect.unikname.com#mtm_campaign=AccountCreation&mtm_source=wp\" target=\"_blank\">Unikname "
 "Connect Dashboard</a>."
 msgstr ""
 
 #: templates/settings/basic_configuration.php:22
 msgid ""
 "The Unikname Connect site secret. You can find it in your <a href=\"https:"
-"//account.connect.unikname.com\" target=\"_blank\">Unikname Connect "
+"//account.connect.unikname.com#mtm_campaign=AccountCreation&mtm_source=wp\" target=\"_blank\">Unikname Connect "
 "Dashboard</a>."
 msgstr ""
 
@@ -431,6 +689,18 @@ msgstr ""
 
 #: templates/email_popup.php:27
 msgid "This email is used to communicate with you"
+msgstr ""
+
+#: unikname_connect.php:1713
+#, php-format
+msgid ""
+"To continue using Social Login, save the secret keys <a href=\"%s\">here</a>"
+msgstr ""
+
+#: unikname_connect.php:1698
+#, php-format
+msgid ""
+"To continue using Steam login save Steam API key <a href=\"%s\">here</a>"
 msgstr ""
 
 #: templates/security_login.php:24 templates/security_login.php:32
@@ -493,6 +763,11 @@ msgstr ""
 msgid "Username already exists."
 msgstr ""
 
+#: unikname_connect.php:1383
+msgid ""
+"We recommend the next-generation authentication: simple, secure, private"
+msgstr ""
+
 #: templates/email_popup.php:15
 msgid "Welcome to "
 msgstr ""
@@ -517,8 +792,24 @@ msgstr ""
 msgid "WordPress pages"
 msgstr ""
 
+#: admin/social_sharing.php:5 admin/social_sharing.php:1967
+#: admin/like_buttons.php:6 admin/like_buttons.php:803
+#: admin/social_commenting.php:5 admin/social_commenting.php:404
+#: admin/general_options.php:96
+#, php-format
+msgid ""
+"You can appreciate the effort put in this free plugin by rating it <a "
+"href=\"%s\" target=\"_blank\">here</a>"
+msgstr ""
+
 #: templates/email_popup.php:17
 msgid "Your account must be set up before using it."
+msgstr ""
+
+#: unikname_connect.php:2177
+msgid ""
+"Your browser is blocking some features of this website. Please follow the "
+"instructions at {support_url} to unblock these."
 msgstr ""
 
 #: templates/email_popup.php:31 templates/email_popup.php:32
