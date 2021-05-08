@@ -1,3 +1,13 @@
+<?php
+    $disable        = '';
+    $userID         = get_current_user_id();
+    $userMeta       = get_userdata($userID);
+    $userRoles      = $userMeta->roles;
+    $linkedAccounts = get_user_meta($userID, 'thechamp_linked_accounts', true);
+    if($linkedAccounts == ''){
+        $disable = 'disabled';
+    }
+?>
 <div class="wrap unik-name-admin-container"> 
     <div class="unik-top-header">
         <div class="left">
@@ -20,16 +30,16 @@
                     <div class="content-column">
                         <div class="item type-checkbox">
                             <div class="item-checkbox">
-                                <input type="checkbox" id="disable_connect_pass" name="unik_name_security[disable_connect_pass]" <?php echo (isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1) ? 'checked = "checked"' : '';?> value="1"/>
-                                <label for="disable_connect_pass"><?=__('Toggle','unikname-connect')?></label>
+                                <input <?=$disable?> type="checkbox" id="disable_connect_pass" name="unik_name_security[disable_connect_pass]" <?php echo (isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1) ? 'checked = "checked"' : '';?> value="1"/>
+                                <label for="disable_connect_pass" class="<?=$disable?>"><?=__('Toggle','unikname-connect')?></label>
                             </div>
                             <label class="name left"><?=__('Prevent password login on this website for all users','unikname-connect')?></label>
                             <p><?=__('Forbid anyone to use passwords to log into your web site. Only connections with Unikname Connect are allowed.','unikname-connect')?></p>
                         </div>
                         <div class="item type-checkbox">
                             <div class="item-checkbox">
-                                <input type="checkbox" id="roles_disable_connect_pass" name="unik_name_security[roles_disable_connect_pass]" <?php echo (isset($unikNameSecurity['roles_disable_connect_pass']) && $unikNameSecurity['roles_disable_connect_pass'] == 1) ? 'checked = "checked"' : '';?> value="1"/>
-                                <label for="roles_disable_connect_pass"><?=__('Toggle','unikname-connect')?></label>
+                                <input <?=$disable?> type="checkbox" id="roles_disable_connect_pass" name="unik_name_security[roles_disable_connect_pass]" <?php echo (isset($unikNameSecurity['roles_disable_connect_pass']) && $unikNameSecurity['roles_disable_connect_pass'] == 1) ? 'checked = "checked"' : '';?> value="1"/>
+                                <label for="roles_disable_connect_pass" class="<?=$disable?>"><?=__('Toggle','unikname-connect')?></label>
                             </div>
                             <label class="name left"><?=__('Prevent password login on this website only for these roles:','unikname-connect')?></label>
                             <p><?=__('Forbid only users with these roles to log into your web site. Only connections with Unikname Connect are allowed for them.','unikname-connect')?></p>
