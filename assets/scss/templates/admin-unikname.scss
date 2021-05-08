@@ -603,6 +603,19 @@
 				.content-column {
 					padding: 30px;
 				}
+				&.padding-top{
+					padding-top: 93px;
+					@media screen and (max-width: 1024px) {
+						padding-top: 0px;
+						margin-bottom: 30px;
+						.group-item-unikname{
+							margin-left: 30px;
+						}
+					}
+					.group-item-unikname{
+						margin-right: 30px;
+					}
+				}
 			}
 		}
 		.unikname-group-item{

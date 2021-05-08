@@ -27,4 +27,14 @@
 		<input id="the_champ_sl_same_tab" name="the_champ_login[same_tab_login]" type="hidden" value="1" />
 	</div>
 </div>
-<div class="column-2"></div>
+<div class="column-2 padding-top">
+	<div class="group-item-unikname">
+		<div class="item type-text">
+			<label class="name"><?=__('The Unikname Connect verification key','unikname-connect')?></label>
+			<div class="item-text">
+				<input type="text" name="the_champ_login[verification_key]" value="<?php echo isset($theChampLoginOptions['verification_key']) ? $theChampLoginOptions['verification_key'] : '' ?>"/>
+				<p><?=__('The Unikname Connect site verification key. <a href="https://help.unikname.com/6-wp-wordpress/howto-verify-url-domain.html?mtm_campaign=AccountCreation&mtm_source=wp#generate-the-verification-package" target="_blank">Get it by verifying the ownership of this site</a>.','unikname-connect')?></p>
+			</div>
+		</div>
+	</div>
+</div>

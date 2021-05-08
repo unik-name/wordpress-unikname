@@ -129,3 +129,13 @@ function unik_name_disable_form_login_style_frontend(){
 	    </script>
 	<?php
 }
+add_action('wp_head', 'unikname_add_meta_verification_key');
+function unikname_add_meta_verification_key(){
+	global $theChampLoginOptions;
+	if(isset($theChampLoginOptions['verification_key'])){
+		$keyMeta 	= preg_replace('/\s+/', '', $theChampLoginOptions['verification_key']);
+		if($keyMeta != ''){
+			echo '<meta name="uns-url-checker-verification" content="'.$keyMeta.'"/>';
+		}
+	}
+}
