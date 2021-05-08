@@ -139,3 +139,33 @@ function unikname_add_meta_verification_key(){
 		}
 	}
 }
+
+add_action( 'admin_notices', 'unikname_admin_notice_about_account_linking', 9);
+function unikname_admin_notice_about_account_linking() {
+	global $pagenow;
+	if(is_user_logged_in()){
+		$userID 		= get_current_user_id();
+		$userMeta 		= get_userdata($userID);
+		$userRoles 		= $userMeta->roles;
+
+		// Check role is administrator
+		if ( in_array( 'administrator', $userRoles, true ) ) {
+			$linkedAccounts = get_user_meta($userID, 'thechamp_linked_accounts', true);
+			if($linkedAccounts){
+				$linkedAccounts = maybe_unserialize($linkedAccounts);
+			}
+			if(!is_array($linkedAccounts) && $pagenow != 'profile.php'){
+				$class 		= 'notice notice-info';
+			    $message 	= __( 'This site is secured by Unikname Connect. 🔐 <a href="#" alt="Login with your private @unikname title="Login with your private @unikname" onclick="theChampInitiateLogin(this)"> Link your @unikname</a> to login to your account at this website.', 'unikname-connect');
+			 
+			    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ),  $message  );
+			    
+			    ?>
+				    <div class="action-link-account" style="display: none;">
+				    	<?php echo the_champ_account_linking(); ?>
+				    </div>
+			    <?php
+			}
+		}
+	}
+}
