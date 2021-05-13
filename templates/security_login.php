@@ -30,7 +30,7 @@
                     <div class="content-column">
                         <div class="item type-checkbox">
                             <div class="item-checkbox">
-                                <input <?=$disable?> type="checkbox" id="disable_connect_pass" name="unik_name_security[disable_connect_pass]" <?php echo (isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1) ? 'checked = "checked"' : '';?> value="1"/>
+                                <input <?=$disable?> type="checkbox" id="disable_connect_pass" name="unik_name_security[disable_connect_pass]" <?php echo (isset($unikNameSecurity['disable_connect_pass']) && $unikNameSecurity['disable_connect_pass'] == 1) ? 'checked' : '';?> value="1"/>
                                 <label for="disable_connect_pass" class="<?=$disable?>"><?=__('Toggle','unikname-connect')?></label>
                             </div>
                             <label class="name left"><?=__('Prevent password login on this website for all users','unikname-connect')?></label>
@@ -38,7 +38,7 @@
                         </div>
                         <div class="item type-checkbox">
                             <div class="item-checkbox">
-                                <input <?=$disable?> type="checkbox" id="roles_disable_connect_pass" name="unik_name_security[roles_disable_connect_pass]" <?php echo (isset($unikNameSecurity['roles_disable_connect_pass']) && $unikNameSecurity['roles_disable_connect_pass'] == 1) ? 'checked = "checked"' : '';?> value="1"/>
+                                <input <?=$disable?> type="checkbox" id="roles_disable_connect_pass" name="unik_name_security[roles_disable_connect_pass]" <?php echo (isset($unikNameSecurity['roles_disable_connect_pass']) && $unikNameSecurity['roles_disable_connect_pass'] == 1) ? 'checked' : '';?> value="1"/>
                                 <label for="roles_disable_connect_pass" class="<?=$disable?>"><?=__('Toggle','unikname-connect')?></label>
                             </div>
                             <label class="name left"><?=__('Prevent password login on this website only for these roles:','unikname-connect')?></label>
@@ -56,7 +56,7 @@
                                 <?php foreach ( $wp_roles->roles as $key=>$value ): ?>
                                     <div class="item-checkbox">
                                         <label for="<?php echo $key; ?>">
-                                            <input type="checkbox" id="<?php echo $key; ?>" name="unik_name_security[roles_user_disable][]" value="<?php echo $key; ?>" <?php echo (in_array($key, $listRoleCurrent)) ? 'checked = "checked"' : '';?> >
+                                            <input type="checkbox" id="<?php echo $key; ?>" name="unik_name_security[roles_user_disable][]" value="<?php echo $key; ?>" <?php echo (in_array($key, $listRoleCurrent)) ? 'checked' : '';?> >
                                             <span class="checkmark"></span>
                                             <?php echo translate_user_role( $value['name'] ); ?>
                                         </label>
