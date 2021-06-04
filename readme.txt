@@ -224,6 +224,15 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 == Changelog ==
 
+= 8.6.0 [2021-06-05] =
+
+- **Added**
+	- An easy way to configure the site verification key instead of using an external plugin
+	- An information banner for administrators to help them to configure their site account with their @unikname
+
+- **Fixed**
+  - Some broken screens with Safari browser
+
 = 8.5.1 [2021-04-30] =
 
 - **Added**
@@ -244,18 +253,5 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 	- You must provide Unikname Connect site id and secret to be able to enable Unikname Connect
 	- Polished and renamed actions
 	- Reorganize "Unikname => General" and "Unikname => Login" panels
-
-= 8.4.0 [2021-02-26] - Fort Knox =
-
-- **Added**
-  - As a user, prevent the use of the password to log in to his/her own account
-  - As an administrator, prevent other users from using their passwords to log in to their accounts
-  - As administrator, prevent ALL users from using their password to log in to their account
-  - New Unikname security settings panel
-  - Official WordPress 5.6 compatibility
-  - Official PHP 8 compatibility
-
-- **Changed**
-  - Several polished and renamed actions
 
 [Full changelog is also available](https://github.com/unik-name/wordpress-unikname-connect/blob/master/CHANGELOG.txt).

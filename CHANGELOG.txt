@@ -1,3 +1,12 @@
+= 8.6.0 [2021-06-05] =
+
+- **Added**
+	- An easy way to configure the site verification key instead of using an external plugin
+	- An information banner for administrators to help them to configure their site account with their @unikname
+
+- **Fixed**
+  - Some broken screens with Safari browser
+
 = 8.5.1 [2021-04-30] =
 
 - **Added**
