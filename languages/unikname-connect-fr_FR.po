@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Unikname Connect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-13 00:13+0000\n"
-"PO-Revision-Date: 2021-04-28 21:30+0000\n"
+"PO-Revision-Date: 2021-06-04 15:45+0000\n"
 "Last-Translator: \n"
 "Language-Team: Français\n"
 "Language: fr_FR\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.5.2; wp-5.7.1"
+"X-Loco-Version: 2.5.2; wp-5.7.2"
 
 #: includes/core-function.php:53
 msgid "<strong>ERROR</strong>: Connection error"
@@ -157,7 +157,7 @@ msgstr "Rejeter cette notification"
 
 #: unikname_connect.php:2400
 msgid "Docs"
-msgstr ""
+msgstr "Docs"
 
 #: templates/general_options.php:31
 msgid "Email"
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Finish"
 msgstr "Terminer"
 
-#: templates/security_login.php:27
+#: templates/security_login.php:37
 msgid ""
 "Forbid anyone to use passwords to log into your web site. Only connections "
 "with Unikname Connect are allowed."
@@ -291,7 +291,7 @@ msgstr ""
 "Interdit à quiconque d'utiliser votre mot de passe pour se connecter à votre "
 "compte. Unikname Connect seul permet de vous y connecter."
 
-#: templates/security_login.php:35
+#: templates/security_login.php:45
 msgid ""
 "Forbid only users with these roles to log into your web site. Only "
 "connections with Unikname Connect are allowed for them."
@@ -399,7 +399,7 @@ msgstr "Se connecter avec votre compte social"
 msgid "Logo"
 msgstr ""
 
-#: templates/security_login.php:5 templates/general_options.php:5
+#: templates/security_login.php:15 templates/general_options.php:5
 msgid "Logo Unik Name"
 msgstr ""
 
@@ -449,13 +449,13 @@ msgstr "S'il vous plaît, vérifiez votre adresse email pour vous connecter."
 msgid "Prevent any connections to my account with my password"
 msgstr "Empêcher les connexions à mon compte avec mon mot de passe"
 
-#: templates/security_login.php:26
+#: templates/security_login.php:36
 msgid "Prevent password login on this website for all users"
 msgstr ""
 "Empêcher les connexions avec mot de passe sur ce site pour tous les "
 "utilisateurs"
 
-#: templates/security_login.php:34
+#: templates/security_login.php:44
 msgid "Prevent password login on this website only for these roles:"
 msgstr "Empêcher les connexions avec mot de passe sur ce site pour ces rôles :"
 
@@ -606,7 +606,7 @@ msgstr "Révoquer"
 msgid "Same page where user logged in"
 msgstr "Même page que là où l'utilisateur se connecte"
 
-#: templates/security_login.php:61 templates/general_options.php:89
+#: templates/security_login.php:71 templates/general_options.php:89
 msgid "Save Changes"
 msgstr "Sauvegarder les changements"
 
@@ -684,7 +684,7 @@ msgstr "Documentation de support"
 msgid "Thanks for installing Unikname Connect plugin"
 msgstr "Merci d'avoir installer l'extension Unikname Connect"
 
-#: templates/security_login.php:6 templates/general_options.php:6
+#: templates/security_login.php:16 templates/general_options.php:6
 msgid "The best plugin to secure your user and admin accounts"
 msgstr ""
 "La meilleure extension de sécurisation des comptes utilisateurs et "
@@ -713,6 +713,24 @@ msgstr ""
 "com#mtm_campaign=AccountCreation&mtm_source=wp\" target=\"_blank\">votre "
 "espace d'administration Unikname Connect</a>."
 
+#: templates/settings/basic_configuration.php:36
+msgid ""
+"The Unikname Connect site verification key. <a href=\"https://help.unikname."
+"com/6-wp-wordpress/howto-verify-url-domain.html?"
+"mtm_campaign=AccountCreation&mtm_source=wp#generate-the-verification-"
+"package\" target=\"_blank\">Get it by verifying the ownership of this "
+"site</a>."
+msgstr ""
+"La clé de vérification de site Unikname Connect. <a href=\"https://help."
+"unikname.com/6-wp-wordpress/howto-verify-url-domain.html?"
+"mtm_campaign=AccountCreation&mtm_source=wp#generate-the-verification-"
+"package\" target=\"_blank\">Obtenez-la pour vérifier la propriété de ce "
+"site</a>."
+
+#: templates/settings/basic_configuration.php:33
+msgid "The Unikname Connect verification key"
+msgstr "La clé de vérification Unikname Connect"
+
 #: unikname_connect.php:910
 msgid "The username is required."
 msgstr "Le nom d'utilisateur est obligatoire."
@@ -720,6 +738,18 @@ msgstr "Le nom d'utilisateur est obligatoire."
 #: templates/email_popup.php:27
 msgid "This email is used to communicate with you"
 msgstr "Cet email est utilisé pour échanger avec vous"
+
+#: includes/core-function.php:159
+msgid ""
+"This site is secured by Unikname Connect. 🔐 <a href=\"#\" alt=\"Login with "
+"your private @unikname\" title=\"Login with your private @unikname\" "
+"onclick=\"theChampInitiateLogin(this)\">Link your @unikname</a> to login to "
+"your account at this website."
+msgstr ""
+"Ce site est sécurisé par Unikname Connect. 🔐 <a href=\"#\" alt=\"Connectez-"
+"vous avec votre @unikname personnel\" title=\"Connectez-vous avec votre "
+"@unikname personnel\" onclick=\"theChampInitiateLogin(this)\">Associez votre "
+"@unikname</a> pour vous connecter à votre compte sur ce site web."
 
 #: unikname_connect.php:1713
 #, php-format
@@ -733,7 +763,7 @@ msgid ""
 "To continue using Steam login save Steam API key <a href=\"%s\">here</a>"
 msgstr ""
 
-#: templates/security_login.php:24 templates/security_login.php:32
+#: templates/security_login.php:34 templates/security_login.php:42
 #: templates/settings/basic_configuration.php:7
 #: templates/settings/general_options.php:7
 #: templates/settings/general_options.php:14

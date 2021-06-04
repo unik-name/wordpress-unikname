@@ -156,7 +156,7 @@ function unikname_admin_notice_about_account_linking() {
 			}
 			if(!is_array($linkedAccounts) && $pagenow != 'profile.php'){
 				$class 		= 'notice notice-info';
-			    $message 	= __( 'This site is secured by Unikname Connect. 🔐 <a href="#" alt="Login with your private @unikname title="Login with your private @unikname" onclick="theChampInitiateLogin(this)"> Link your @unikname</a> to login to your account at this website.', 'unikname-connect');
+			    $message 	= __( 'This site is secured by Unikname Connect. 🔐 <a href="#" alt="Login with your private @unikname" title="Login with your private @unikname" onclick="theChampInitiateLogin(this)">Link your @unikname</a> to login to your account at this website.', 'unikname-connect');
 			 
 			    printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ),  $message  );
 			    
