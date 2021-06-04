@@ -149,6 +149,22 @@
 							display: block;
 							border-radius: 100px;
 							position: relative;
+							&.disabled{
+								&:hover{
+									cursor: not-allowed;
+								}
+								&:before{
+									content: "";
+									width: 100%;
+									height: 100%;
+									position: absolute;
+									background-color: #f3f3f3a8;
+									top: 0;
+									left: 0;
+									border-radius: 30px;
+									z-index: 99999;
+								}
+							}
 						}
 
 						label:after {
@@ -602,6 +618,19 @@
 				}
 				.content-column {
 					padding: 30px;
+				}
+				&.padding-top{
+					padding-top: 93px;
+					@media screen and (max-width: 1024px) {
+						padding-top: 0px;
+						margin-bottom: 30px;
+						.group-item-unikname{
+							margin-left: 30px;
+						}
+					}
+					.group-item-unikname{
+						margin-right: 30px;
+					}
 				}
 			}
 		}
