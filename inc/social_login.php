@@ -283,6 +283,10 @@ function the_champ_create_username($profileData){
 			$username = $user_name[0];
 		}
 		$firstName = str_replace("_", " ", $user_name[0]);
+	}elseif(!empty($profileData['unikname_id'])){
+		$username = $profileData['unikname_id'];
+	}elseif(!empty($profileData['unik_id'])){
+		$username = $profileData['unik_id'];
 	}else{
 		$userNameTemp = __('Redacted user ','unikname-connect').'('.substr($profileData['id'],0,5).')';
 		$username = !$username ? $userNameTemp : $username;
@@ -622,6 +626,8 @@ function the_champ_sanitize_profile_data($profileData, $provider){
 		$temp['link'] ='';
 		$temp['avatar'] = '';
 		$temp['large_avatar'] = '';
+		$temp['unikname_id'] = isset($profileData['unikname_id']) ? sanitize_text_field($profileData['unikname_id']) : '';
+		$temp['unik_id'] = isset($profileData['unik_id']) ? sanitize_text_field($profileData['unik_id']) : '';
 	}
 	if($provider != 'steam'){
 		$temp['avatar'] = str_replace( 'http://', '//', $temp['avatar'] );
