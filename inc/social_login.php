@@ -228,6 +228,19 @@ if(isset($theChampLoginOptions['enable_wc_checkout']) && $theChampLoginOptions['
 if(isset($theChampLoginOptions['link_my_account_fe']) && $theChampLoginOptions['link_my_account_fe'] == 1 && isset($theChampLoginOptions['enable']) && $theChampLoginOptions['enable'] == 1){
 	add_action( 'woocommerce_before_edit_account_form', 'unikname_link_account_with_unikname' );
 }
+
+/**
+ * Render Unikname Connect on WC checkout page if user not logged in
+ * TODO EXTERNALIZE
+ */
+add_action('woocommerce_before_checkout_form', 'unikname_login_wc_checkout');
+function unikname_login_wc_checkout()
+{
+	if (!is_user_logged_in()) {
+		unikname_login_button_icon_or_after();
+	}
+}
+
 /**
  * Login user to Wordpress.
  */
