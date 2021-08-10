@@ -185,8 +185,8 @@ function the_champ_connect(){
 								if(isset($_GET['heateorMSEnabled'])){
 									update_user_meta($uniknameAuthState, 'heateor_ss_unikname_mc_sub', 1);
 								}
-								$uniknameScope = 'openid';
-								wp_redirect(UNIKNAME_CONNECT_SERVER.'/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?OIDCCallback=UniknameConnect') . '&state='. $uniknameAuthState .'&scope=' . $uniknameScope);
+								$uniknameScope = 'openid profile unik_id unikname_id';
+								wp_redirect(UNIKNAME_CONNECT_SERVER.'/oidc/authorize?response_type=code&client_id=' . $theChampLoginOptions['un_key'] . '&redirect_uri=' . urlencode(home_url() . '/?OIDCCallback=UniknameConnect') . '&state='. $uniknameAuthState .'&scope=' . urlencode($uniknameScope));
 					die;
 			}
 			if(isset($_GET['code']) && isset($_GET['state']) && ($uniknameRedirectUrl = get_user_meta(esc_attr(trim($_GET['state'])), 'heateor_ss_unikname_auth_state', true))){
