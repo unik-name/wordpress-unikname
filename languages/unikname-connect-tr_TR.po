@@ -1,0 +1,915 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Unikname Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-04 14:33+0000\n"
+"PO-Revision-Date: 2021-09-07 15:23+0300\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Loco-Version: 2.2.0; wp-5.3.2\n"
+"Last-Translator: @mtaylan <mtaylan@gmail.com>\n"
+
+#: includes/core-function.php:53
+msgid "<strong>ERROR</strong>: Connection error"
+msgstr "<strong>HATA</strong> Bağlantı hatası"
+
+#: helper.php:589
+msgid "Account already exists or linked"
+msgstr "Hesap zaten mevcut yada bağlantılı"
+
+#: templates/settings/login_options.php:56 
+#: templates/settings/login_options.php:80
+msgid "Account dashboard"
+msgstr "Hesap Kontrol Paneli"
+
+#: helper.php:585
+msgid "Account linked successfully"
+msgstr "Hesap başarı ile ilişkilendirildi"
+
+#: templates/general_options.php:34
+msgid "Account linking"
+msgstr "Hesap ilişkilendirme"
+
+#: templates/settings/advanced_options.php:18
+msgid "Account linking options"
+msgstr "Hesap ilişkilendirme seçenekleri"
+
+#: helper.php:265
+msgid "Add-Ons"
+msgstr "Eklentiler"
+
+#: templates/general_options.php:37
+msgid "Advanced"
+msgstr "Gelişmiş"
+
+#: templates/settings/style_options.php:100 
+#: templates/settings/style_options.php:218
+msgid "Alignment"
+msgstr "Hizalama"
+
+#: templates/settings/style_options.php:94 
+#: templates/settings/style_options.php:212
+#: templates/settings/email_options.php:74
+msgid "Border radius"
+msgstr "Kenar yarıçapı"
+
+#: templates/settings/email_options.php:55
+msgid "Button color"
+msgstr "Buton rengi"
+
+#: templates/settings/style_options.php:137 
+#: templates/settings/style_options.php:255
+#: templates/settings/advanced_options.php:42
+msgid "Button description"
+msgstr "Buton açıklaması"
+
+#: templates/settings/style_options.php:127 
+#: templates/settings/style_options.php:245
+#: templates/settings/advanced_options.php:32
+msgid "Button label"
+msgstr "Buton etiketi"
+
+#: templates/settings/email_options.php:61
+msgid "Button style"
+msgstr "Buton stili"
+
+#: templates/settings/style_options.php:117 
+#: templates/settings/style_options.php:235
+#: templates/settings/advanced_options.php:22
+msgid "Button title"
+msgstr "Buton başlığı"
+
+#: helper.php:675 helper.php:1079
+msgid "Can not revoke while Connection Autorizations is checked"
+msgstr "Bağlantı Yetkilendirmeleri işaretliyken iptal edilemez"
+
+#: helper.php:168
+msgid "Click to hide help"
+msgstr "Yardımı gizlemek için tıklayın"
+
+#: helper.php:672 helper.php:1076
+msgid "Click to revoke Unikname Connect access to this account"
+msgstr "Bu hesaba Unikname Connect erişimini iptal etmek için tıklayın"
+
+#: templates/settings/style_options.php:71 
+#: templates/settings/style_options.php:189
+msgid "Color"
+msgstr "Renk"
+
+#: templates/email_popup.php:35 templates/email_popup.php:36
+msgid "Confirm your email"
+msgstr "E-postanızı onaylayın"
+
+#: helper.php:687 helper.php:693
+msgid "Connected with"
+msgstr "Bağlantı"
+
+#: includes/admin-profile-user.php:23
+msgid "Connection autorizations"
+msgstr "Bağlantı yetkileri"
+
+#: templates/email_popup.php:25
+msgid "Contact"
+msgstr "İletişim"
+
+#: includes/define-value.php:6 includes/define-value.php:20 
+#: inc/social_login.php:18 inc/social_login.php:32
+#: templates/settings/style_options.php:7 
+#: templates/settings/style_options.php:21
+msgid "Continue"
+msgstr "Devam et"
+
+#: templates/settings/style_options.php:88 
+#: templates/settings/style_options.php:206
+msgid "Custom Color"
+msgstr "Özel Renk"
+
+#: templates/settings/general_options.php:25
+msgid "Custom CSS"
+msgstr "Özel CSS"
+
+#: templates/settings/login_options.php:60 
+#: templates/settings/login_options.php:84
+msgid "Custom Url"
+msgstr "Özel URL"
+
+#: templates/settings/general_options.php:18
+msgid "Delete all the options on plugin deletion"
+msgstr "Eklenti silinince, ilgili tüm seçenekleri de sil"
+
+#: templates/settings/login_options.php:33
+msgid "Disable user registration via Unikname Connect"
+msgstr "Unikname Connect aracılığıyla kullanıcı kaydını devre dışı bırakın"
+
+#: unikname_connect.php:1925
+msgid "Dismiss"
+msgstr "Yoksay"
+
+#: helper.php:8 admin/social_sharing.php:49
+msgid "Dismiss this notice"
+msgstr "Bu bildirimi kapat"
+
+#: unikname_connect.php:2400
+msgid "Docs"
+msgstr "Dökümanlar"
+
+#: templates/general_options.php:31
+msgid "Email"
+msgstr "E-posta"
+
+#: templates/email_popup.php:110
+msgid "Email addresses do not match!"
+msgstr "E-posta adresleri uyuşmuyor!"
+
+#: templates/email_popup.php:126
+msgid "Email already exists."
+msgstr "Bu E-posta zaten var."
+
+#: templates/email_popup.php:108
+msgid "Email field is required!"
+msgstr "E-posta alanı zorunludur!"
+
+#: templates/email_popup.php:106
+msgid "Email is not in the correct format!"
+msgstr "E-posta formatı doğru değil!"
+
+#: templates/settings/email_options.php:4
+msgid "Email required"
+msgstr "E-posta gerekli"
+
+#: inc/social_login.php:936
+msgid "Email Verification"
+msgstr "E-posta doğrulama"
+
+#: unikname_connect.php:1384
+msgid "Email you entered is already registered or invalid"
+msgstr "Girdiğiniz e-posta zaten kayıtlı veya geçersiz"
+
+#: templates/settings/login_options.php:109
+msgid "Enable after WooCommerce Customer Login Form"
+msgstr "WooCommerce Müşteri Giriş Formundan sonra etkinleştir"
+
+#: templates/settings/login_options.php:21
+msgid "Enable at comment form"
+msgstr "Yorum formunda etkinleştir"
+
+#: templates/settings/login_options.php:7
+msgid "Enable at login page"
+msgstr "Giriş sayfasında etkinleştirin"
+
+#: templates/settings/login_options.php:14
+msgid "Enable at register page"
+msgstr "Kayıt sayfasında etkinleştirin"
+
+#: templates/settings/login_options.php:130
+msgid "Enable at WooCommerce checkout page"
+msgstr "WooCommerce Ödeme sayfasında etkinleştir"
+
+#: templates/settings/login_options.php:116
+msgid "Enable at WooCommerce Customer Login Form"
+msgstr "WooCommerce Müşteri Giriş Sayfasında etkinleştirin"
+
+#: templates/settings/login_options.php:123
+msgid "Enable at WooCommerce Customer Register Form"
+msgstr "WooCommerce Müşteri Kayıt Formunda etkinleştirin"
+
+#: templates/settings/advanced_options.php:53
+msgid "Enable at WooCommerce my account page (link account)"
+msgstr "WooCommerce Hesabım Sayfasında etkinleştirin (hesabı ilişkilendir)"
+
+#: templates/settings/login_options.php:102
+msgid "Enable before WooCommerce Customer Login Form"
+msgstr "WooCommerce Müşteri Giriş Formundan önce etkinleştirin"
+
+#: templates/settings/email_options.php:27
+msgid "Enable email verification"
+msgstr "E-posta doğrulamayı etkinleştirin"
+
+#: inc/shortcode.php:295
+msgid ""
+"Enable Social Login from \"Basic Configuration\" section at \"Super Socializer > Social Login\" page in admin "
+"panel"
+msgstr ""
+"Sosyal ağlardan giriş \"Basic Configuration\" bölümü \"Super Socializer > Social Login\" admin panel sayfasında"
+
+#: templates/settings/basic_configuration.php:4
+msgid "Enable Unikname Connect"
+msgstr "Unikname Connect'i etkinleştirin"
+
+#: unikname_connect.php:695
+#, php-format
+msgid ""
+"Enter exactly the following url in <strong>Callback URLs</strong> option in your Twitter app (see step 3 %s)"
+msgstr ""
+"Aşağıdaki URL'yi tam olarak Twitter uygulamasındaki<strong>Callback URLs</strong> opsiyonuna giriniz (adım 3 %s "
+"bakınız)"
+
+#: unikname_connect.php:692
+#, php-format
+msgid "Enter exactly the following url in <strong>Website</strong> option in your Twitter app (see step 3 %s)"
+msgstr ""
+"Aşağıdaki URL'yi tam olarak Twitter uygulamasındaki<strong>Website</strong> opsiyonuna giriniz (adım 3 %s "
+"bakınız)"
+
+#: admin/social_commenting.php:314
+#, php-format
+msgid ""
+"Enter the code of the language you want to use to display commenting. You can find the language codes at <a "
+"href=\"%s\" target=\"_blank\">this link</a>. Leave it empty for default language(English)"
+msgstr ""
+"Yorumları görüntülemek için kullanmak istediğiniz dilin kodunu girin. Dil kodlarını görmek için <a href=\"%s\" "
+"target=\"_blank\">link</a>. Varsayılan dili kullanmak için boş bırakın(İngilizce)"
+
+#: admin/like_buttons.php:684
+#, php-format
+msgid ""
+"Enter the code of the language you want to use to render counters. You can find the language codes at <a href="
+"\"%s\" target=\"_blank\">this link</a>. Leave it empty for default language(English)"
+msgstr ""
+"Sayaçları oluşturmak için kullanmak istediğiniz dilin kodunu girin. Dil kodlarını görmek için <a href=\"%s\" "
+"target=\"_blank\">link</a>. Varsayılan dili kullanmak için boş bırakın(İngilizce)"
+
+#: templates/email_popup.php:50
+msgid "Finish"
+msgstr "Bitir"
+
+#: templates/security_login.php:37
+msgid ""
+"Forbid anyone to use passwords to log into your web site. Only connections with Unikname Connect are allowed."
+msgstr ""
+"Herhangi birinin web sitenize giriş yapmak için parola kullanmasını yasaklayın. Yalnızca Unikname Connect ile "
+"bağlantılara izin verilir."
+
+#: includes/admin-profile-user.php:27
+msgid ""
+"Forbid anyone to use your password to log into your account. Only Unikname Connect allows you to connect to it."
+msgstr ""
+"Herhangi birinin hesabınızda oturum açmak için şifrenizi kullanmasını yasaklayın. Yalnızca Unikname Connect ona "
+"bağlanmanıza izin verir."
+
+#: templates/security_login.php:45
+msgid ""
+"Forbid only users with these roles to log into your web site. Only connections with Unikname Connect are "
+"allowed for them."
+msgstr ""
+"Sadece şu yetkilere sahip kullanıcıların şifre ile giriş yapmasını yasaklayın. Yalnızca Unikname Connect ile "
+"bağlanmalarına izin verin."
+
+#: admin/social_sharing.php:1736
+#, php-format
+msgid ""
+"Frequent cache refreshing results in slower loading of pages with share counts enabled. Leave empty to disable "
+"cache. More info <a href=\"%s\" target=\"_blank\">here</a>"
+msgstr ""
+"Sık önbellek yenileme, paylaşım sayıları etkinleştirilmiş sayfaların daha yavaş yüklenmesine neden olur. "
+"Önbelleği devre dışı bırakmak için boş bırakın. .daha fazla bilgi için <a href=\"%s\" target=\"_blank\">link</a>"
+
+#: templates/general_options.php:22
+msgid "General"
+msgstr "Genel"
+
+#: templates/settings/login_options.php:52 
+#: templates/settings/login_options.php:76
+msgid "Homepage"
+msgstr "Ana Sayfa"
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/unikname-connect/"
+msgstr "https://wordpress.org/plugins/unikname-connect/"
+
+#. Author URI of the plugin
+#: templates/settings/style_options.php:159
+msgid "icon unik name"
+msgstr "unik name simgesi"
+
+#: templates/settings/general_options.php:4
+msgid "Include Javascript in website footer"
+msgstr "Javascript'i web sitesi altbilgisine dahil et"
+
+#: unikname_connect.php:969
+msgid "Leave a reply"
+msgstr "Cevap bırakın"
+
+#: templates/email_popup.php:18
+msgid "Let’s go!"
+msgstr "Hadi başlayalım!"
+
+#: unikname_connect.php:982
+msgid "Link copied."
+msgstr "Link kopyalandı."
+
+#: templates/settings/advanced_options.php:61
+msgid "Link social account to already existing account, if email address matches"
+msgstr "E-posta adresi ile eşleşiyorsa, sosyal medya hesabını mevcut hesaba bağlayın"
+
+#: unikname_connect.php:1387 unikname_connect.php:2101
+msgid "Link your social account to login to your account at this website"
+msgstr "Bu web sitesinde hesabınıza giriş yapmak için sosyal hesabınızı bağlayın"
+
+#: templates/settings/general_options.php:11
+msgid "Load all Javascript files in single file"
+msgstr "Tüm Javascript dosyalarını tek dosyaya yükle"
+
+#: inc/widget.php:47 inc/shortcode.php:214
+msgid "Log Out"
+msgstr "Çıkış"
+
+#: includes/define-value.php:4 inc/social_login.php:16 
+#: templates/general_options.php:25 templates/settings/style_options.php:5
+msgid "Login"
+msgstr "Giriş"
+
+#: templates/settings/style_options.php:35
+msgid "Login button"
+msgstr "Giriş Butonu"
+
+#: templates/settings/login_options.php:70
+msgid "Login redirection"
+msgstr "Giriş yönlendirme"
+
+#: admin/like_buttons.php:623
+#, php-format
+msgid ""
+"Login to your bit.ly account and navigate to <a href=\"%s\" target=\"_blank\">this link</a> to get bit.ly "
+"username"
+msgstr ""
+"Bit.ly hesabınıza giriş yapın ve <a href=\"%s\" target=\"_blank\">bu linkten</a> bit.ly kullanıcı adınızı alın"
+
+#: admin/like_buttons.php:641
+#, php-format
+msgid ""
+"Login to your bit.ly account and navigate to <a href=\"%s\" target=\"_blank\">this link</a> to get your API key"
+msgstr "Bit.ly hesabınıza giriş yapın ve <a href=\"%s\" target=\"_blank\">bu linkten</a> API anahtarınızı alın"
+
+#: inc/widget.php:71
+msgid "Login with your Social Account"
+msgstr "Sosyal hesabınız ile Giriş yapın"
+
+#: templates/settings/email_options.php:39
+msgid "Logo"
+msgstr "Logo"
+
+#: templates/security_login.php:15 templates/general_options.php:5
+msgid "Logo Unik Name"
+msgstr "Unik Name Logosu"
+
+#: templates/email_popup.php:21 templates/email_popup.php:39
+msgid "Next"
+msgstr "Sonraki"
+
+#: unikname_connect.php:885
+msgid "Notification"
+msgstr "Bildirim"
+
+#: unikname_connect.php:1737 unikname_connect.php:1762 
+#: unikname_connect.php:1787 unikname_connect.php:1812
+#: unikname_connect.php:1900
+msgid "Okay"
+msgstr "Tamam"
+
+#: inc/social_login.php:168
+msgid "or"
+msgstr "veya"
+
+#: templates/settings/login_options.php:30
+msgid "Other login configurations"
+msgstr "Diğer Giriş konfigürasyonları"
+
+#: templates/settings/email_options.php:67
+msgid "Outline"
+msgstr "Taslak"
+
+#: unikname_connect.php:908
+msgid "Please check your email inbox to complete the registration."
+msgstr "Kaydı tamamlamak için lütfen e-posta gelen kutunuzu kontrol edin."
+
+#: unikname_connect.php:1386
+msgid "Please enter a valid email address. You might be required to verify it"
+msgstr "Lütfen geçerli bir E-posta adresi girin. Bunu doğrulamanız gerekebilir"
+
+#: unikname_connect.php:881 helper.php:1037
+msgid "Please verify your email address to login."
+msgstr "Lütfen oturum açmak için e-posta adresinizi doğrulayın."
+
+#: includes/admin-profile-user.php:26
+msgid "Prevent any connections to my account with my password"
+msgstr "Şifre ile hesabıma herhangi bir bağlantı yapılmasını engelle"
+
+#: templates/security_login.php:36
+msgid "Prevent password login on this website for all users"
+msgstr "Bu web sitesine tüm kullanıcılar için şifre ile girişi engelle"
+
+#: templates/security_login.php:44
+msgid "Prevent password login on this website only for these roles:"
+msgstr "Bu web sitesine sadece şu yetkilere sahip kullanıcılar için şifre ile girişi engelle:"
+
+#: templates/settings/style_options.php:144 
+#: templates/settings/style_options.php:262
+msgid "Read more"
+msgstr "Devamını oku"
+
+#: templates/settings/style_options.php:144 
+#: templates/settings/style_options.php:262
+msgid "Read more link: "
+msgstr "Devamını oku linki: "
+
+#: inc/social_login.php:287
+msgid "Redacted user "
+msgstr "Düzeltilmiş kullanıcı "
+
+#: templates/settings/login_options.php:40
+msgid "Redirection url"
+msgstr "Yönlendirme URL'si"
+
+#: includes/define-value.php:19 inc/social_login.php:31 
+#: templates/settings/style_options.php:20
+msgid "Register"
+msgstr "Kayıt ol"
+
+#: templates/settings/style_options.php:153
+msgid "Register button"
+msgstr "Kayıt ol butonu"
+
+#: templates/settings/login_options.php:46
+msgid "Registration redirection"
+msgstr "Kayıt için yönlendirme"
+
+#: admin/social_sharing.php:1594
+#, php-format
+msgid ""
+"Required for Facebook share count to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Facebook App ID"
+msgstr ""
+"Facebook paylaşım sayacının çalışması için gereklidir. Facebook App ID almak için <a href=\"%s\" target=\"_blank"
+"\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_sharing.php:1611
+#, php-format
+msgid ""
+"Required for Facebook share count to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Facebook App Secret"
+msgstr ""
+"Facebook paylaşım sayacının çalışması için gereklidir. Facebook App Secret almak için <a href=\"%s\" target="
+"\"_blank\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:199
+#, php-format
+msgid ""
+"Required for Facebook Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Facebook App ID"
+msgstr ""
+"Facebook Sosyal Girişinin çalışması için gereklidir. Facebook App ID almak için <a href=\"%s\" target=\"_blank"
+"\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:220
+#, php-format
+msgid ""
+"Required for Facebook Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Facebook App Secret"
+msgstr ""
+"Facebook Sosyal Girişinin çalışması için gereklidir. Facebook App Secret almak için <a href=\"%s\" target="
+"\"_blank\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:333
+#, php-format
+msgid ""
+"Required for Google Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Google Client ID"
+msgstr ""
+"Google Sosyal Girişinin çalışması için gereklidir. Google Client ID almak için <a href=\"%s\" target=\"_blank"
+"\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:354
+#, php-format
+msgid ""
+"Required for Google Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Google Client Secret"
+msgstr ""
+"Google Sosyal Girişinin çalışması için gereklidir. Google Client Secret almak için <a href=\"%s\" target="
+"\"_blank\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:417
+#, php-format
+msgid ""
+"Required for Instagram Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Instagram Client ID"
+msgstr ""
+"Instagram Sosyal Girişinin çalışması için gereklidir. Instagram Client ID almak için <a href=\"%s\" target="
+"\"_blank\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:291
+#, php-format
+msgid ""
+"Required for LinkedIn Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get LinkedIn Client ID"
+msgstr ""
+"LinkedIn Sosyal Girişinin çalışması için gereklidir. LinkedIn Client ID almak için <a href=\"%s\" target="
+"\"_blank\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:312
+#, php-format
+msgid ""
+"Required for LinkedIn Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get LinkedIn Client Secret"
+msgstr ""
+"LinkedIn Sosyal Girişinin çalışması için gereklidir. LinkedIn Client Secret almak için <a href=\"%s\" target="
+"\"_blank\">bu linkteki</a> belgeleri takip ediniz"
+
+#: admin/social_login.php:438
+#, php-format
+msgid "Required for Steam Social Login to work. Get it at <a href=\"%s\" target=\"_blank\">this link</a>"
+msgstr ""
+"Steam Sosyal Girişinin çalışması için gereklidir. Almak için <a href=\"%s\" target=\"_blank\">bu linki</a> "
+"kullanabilirsiniz"
+
+#: admin/social_login.php:241
+#, php-format
+msgid ""
+"Required for Twitter Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Twitter API Key"
+msgstr ""
+"Twitter Sosyal Girişinin çalışması için gereklidir. Twitter API key almak için <a href=\"%s\" target=\"_blank"
+"\">bu linki</a> kullanabilirsiniz"
+
+#: admin/social_login.php:266
+#, php-format
+msgid ""
+"Required for Twitter Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Twitter API Secret"
+msgstr ""
+"Twitter Sosyal Girişinin çalışması için gereklidir. Twitter API Secret almak için <a href=\"%s\" target=\"_blank"
+"\">bu linki</a> kullanabilirsiniz"
+
+#: admin/social_login.php:157
+#, php-format
+msgid ""
+"Required for Unikname Connect to work. Please <a href=\"%s\" target=\"_blank\">follow the documentation to get "
+"an organization @unikname</a>"
+msgstr ""
+"Unikname Connect'in çalışması için gereklidir. Lütfen <a href=\"%s\" target=\"_blank\">organizasyonunuza "
+"@unikname almak için linkteki belgeleri takip ediniz</a>"
+
+#: admin/social_login.php:178
+#, php-format
+msgid ""
+"Required for Unikname Connect to work. Please <a href=\"%s\" target=\"_blank\">follow the documentation to get "
+"Unikname Connect Secret</a>"
+msgstr ""
+"Unikname Connect'in çalışması için gereklidir. Lütfen <a href=\"%s\" target=\"_blank\">Unikname Connect Secret "
+"almak için linkteki belgeleri takip ediniz</a>"
+
+#: admin/social_login.php:375 admin/social_login.php:396
+#, php-format
+msgid ""
+"Required for Vkontakte Social Login to work. Please follow the documentation at <a href=\"%s\" target=\"_blank"
+"\">this link</a> to get Vkontakte Application ID"
+msgstr ""
+"Vkontakte Sosyal Girişinin çalışması için gereklidir. Vkontakte Application ID almak için <a href=\"%s\" target="
+"\"_blank\">bu linkteki</a> belgeleri takip ediniz"
+
+#: helper.php:687 helper.php:693 helper.php:1083
+msgid "Revoke"
+msgstr "İptal"
+
+#: templates/settings/login_options.php:72
+msgid "Same page where user logged in"
+msgstr "Kullanıcının oturum açtığı sayfayla aynı sayfa"
+
+#: templates/security_login.php:71 templates/general_options.php:89
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: unikname_connect.php:1951
+#, php-format
+msgid ""
+"Save Facebook App ID and Secret keys in \"Standard Interface\" and/or \"Floating Interface\" section(s) at <a "
+"href=\"%s\">Super Socializer > Social Sharing</a> page to fix the issue with Facebook share count. After that, "
+"clear share counts cache from \"Miscellaneous\" section"
+msgstr ""
+"Facebook App ID and Secret keyleri \"Standard Interface\" ve/veya \"Floating Interface\" bölüm(leri)nde <a href="
+"\"%s\">Super Socializer > Social Sharing</a> kaydedip, Facebook paylaşım sayacı hatasını giderin. Daha sonra, "
+"paylaşım sayacı önbelleğini \"Miscellaneous\" bölümünden temizleyin"
+
+#. Description of the plugin
+msgid "Secure your user and admin accounts with the Unikname Connect authentication solution"
+msgstr "Kullanıcı ve Yönetici hesaplarınızı Unikname Connect kimlik doğrulama çözümü ile güvence altına alın"
+
+#: unikname_connect.php:1231
+msgid "Security"
+msgstr "Güvenlik"
+
+#: templates/settings/email_options.php:18
+msgid "Send new user registration notification email to admin"
+msgstr "Yeni kullanıcı kaydı bildirim e-postasını yöneticiye gönder"
+
+#: templates/settings/email_options.php:11
+msgid "Send post-registration email to user to set account password"
+msgstr ""
+"Hesap şifresini ayarlamak için kullanıcıya kayıt sonrası e-posta gönderin"
+
+#: unikname_connect.php:905
+msgid "Set up your account"
+msgstr "Hesabınızı kurun"
+
+#: unikname_connect.php:1230 unikname_connect.php:2399 helper.php:267
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: includes/define-value.php:5 inc/social_login.php:17 
+#: templates/settings/style_options.php:6
+msgid "Sign in"
+msgstr "Oturum Açın"
+
+#: includes/define-value.php:18 inc/social_login.php:30 
+#: templates/settings/style_options.php:19
+msgid "Sign up"
+msgstr "Kayıt Olun"
+
+#: helper.php:765
+msgid "Social Account Linking"
+msgstr "Sosyal Hesap Bağlantıları"
+
+#: templates/settings/email_options.php:63
+msgid "Standard"
+msgstr "Standart"
+
+#: templates/general_options.php:28
+msgid "Style"
+msgstr "Stil"
+
+#. unique id
+#: inc/widget.php:791
+msgid "Super Socializer - Follow Icons"
+msgstr "Super Socializer - Takip İkonları"
+
+#: helper.php:266
+msgid "Support Documentation"
+msgstr "Destek Belgeleri"
+
+#: unikname_connect.php:1638
+msgid "Thanks for installing Unikname Connect plugin"
+msgstr "Unikname Connect eklentisini kurduğunuz için Teşekkürler"
+
+#: templates/security_login.php:16 templates/general_options.php:6
+msgid "The best plugin to secure your user and admin accounts"
+msgstr "Kullanıcı ve yönetici hesaplarını güvence altına almak için en iyi eklenti"
+
+#: templates/settings/basic_configuration.php:15
+msgid ""
+"The Unikname Connect site identifier. You can find it in your <a href=\"https://account.connect.unikname."
+"com#mtm_campaign=AccountCreation&mtm_source=wp\" target=\"_blank\">Unikname Connect Dashboard</a>."
+msgstr ""
+"Unikname Connect site tanımlayıcı. Görmek için <a href=\"https://account.connect.unikname."
+"com#mtm_campaign=AccountCreation&mtm_source=wp\" target=\"_blank\">Unikname Connect Dashboard'a bağlanın</a>."
+
+#: templates/settings/basic_configuration.php:22
+msgid ""
+"The Unikname Connect site secret. You can find it in your <a href=\"https://account.connect.unikname."
+"com#mtm_campaign=AccountCreation&mtm_source=wp\" target=\"_blank\">Unikname Connect Dashboard</a>."
+msgstr ""
+"Unikname Connect site secret. Görmek için <a href=\"https://account.connect.unikname."
+"com#mtm_campaign=AccountCreation&mtm_source=wp\" target=\"_blank\">Unikname Connect Dashboard'a bağlanın</a>."
+
+#: templates/settings/basic_configuration.php:36
+msgid ""
+"The Unikname Connect site verification key. <a href=\"https://help.unikname.com/6-wp-wordpress/howto-verify-url-"
+"domain.html?mtm_campaign=AccountCreation&mtm_source=wp#generate-the-verification-package\" target=\"_blank"
+"\">Get it by verifying the ownership of this site</a>."
+msgstr ""
+"Unikname Connect site doğrulama anahtarı. <a href=\"https://help.unikname.com/6-wp-wordpress/howto-verify-url-"
+"domain.html?mtm_campaign=AccountCreation&mtm_source=wp#generate-the-verification-package\" target=\"_blank\">Bu "
+"sitenin sahibini doğrulayarak alabilirsiniz</a>."
+
+#: templates/settings/basic_configuration.php:33
+msgid "The Unikname Connect verification key"
+msgstr "Unikname Connect Doğrulama Anahtarı"
+
+#: unikname_connect.php:910
+msgid "The username is required."
+msgstr "Kullanıcı adı gereklidir."
+
+#: templates/email_popup.php:27
+msgid "This email is used to communicate with you"
+msgstr "Bu e-posta sizinle iletişim kurmak için kullanılır"
+
+#: includes/core-function.php:159
+msgid ""
+"This site is secured by Unikname Connect. 🔐 <a href=\"#\" alt=\"Login with your private @unikname\" title="
+"\"Login with your private @unikname\" onclick=\"theChampInitiateLogin(this)\">Link your @unikname</a> to login "
+"to your account at this website."
+msgstr ""
+"Bu websitesi Unikname Connect ile korunmaktadır. 🔐 <a href=\"#\" alt=\"@unikname adınız ile giriş yapın.\" "
+"title=\"@unikname adınız ile giriş yapın.\" onclick=\"theChampInitiateLogin(this)\">@unikname adınızı</a> bu "
+"websitesindeki hesabınıza giriş yapmak için kullanın."
+
+#: unikname_connect.php:1713
+#, php-format
+msgid "To continue using Social Login, save the secret keys <a href=\"%s\">here</a>"
+msgstr ""
+"Sosyal hesaplarınız ile giriş yapmaya devam etmek için, secret keyinizi <a href=\"%s\">buraya kaydedin</a>"
+
+#: unikname_connect.php:1698
+#, php-format
+msgid "To continue using Steam login save Steam API key <a href=\"%s\">here</a>"
+msgstr "Steam hesabınız ile giriş yapmaya devam etmek için, Steam API keyinizi <a href=\"%s\">buraya kaydedin</a>"
+
+#: templates/security_login.php:34 templates/security_login.php:42 
+#: templates/settings/basic_configuration.php:7
+#: templates/settings/general_options.php:7 
+#: templates/settings/general_options.php:14
+#: templates/settings/general_options.php:21 
+#: templates/settings/email_options.php:7
+#: templates/settings/email_options.php:14 
+#: templates/settings/email_options.php:21
+#: templates/settings/email_options.php:30 
+#: templates/settings/advanced_options.php:56
+#: templates/settings/advanced_options.php:64 
+#: templates/settings/login_options.php:10
+#: templates/settings/login_options.php:17 
+#: templates/settings/login_options.php:24
+#: templates/settings/login_options.php:36 
+#: templates/settings/login_options.php:105
+#: templates/settings/login_options.php:112 
+#: templates/settings/login_options.php:119
+#: templates/settings/login_options.php:126 
+#: templates/settings/login_options.php:133
+msgid "Toggle"
+msgstr "Değiştir"
+
+#. Author of the plugin
+#: helper.php:1061
+msgid "Unikname"
+msgstr "Unikname"
+
+#. Name of the plugin
+msgid "Unikname - Secure your user and admin accounts"
+msgstr "Unikname - Kullanıcı ve yönetici hesaplarınızı güvenceye alın"
+
+#: unikname_connect.php:1231
+msgid "Unikname Connect - Security"
+msgstr "Unikname Connect - Güvenlik"
+
+#: unikname_connect.php:1230
+msgid "Unikname Connect - Settings"
+msgstr "Unikname Connect - Ayarlar"
+
+#: templates/settings/basic_configuration.php:19
+msgid "Unikname Connect Secret <span>*</span>"
+msgstr "Unikname Connect Secret <span>*</span>"
+
+#: includes/admin-profile-user.php:20
+msgid "Unikname Connect Settings"
+msgstr "Unikname Connect Ayarları"
+
+#: templates/settings/basic_configuration.php:12
+msgid "Unikname Connect Site Id <span>*</span>"
+msgstr "Unikname Connect Site Id <span>*</span>"
+
+#: templates/email_popup.php:43
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: unikname_connect.php:909
+msgid "Username already exists."
+msgstr "Kullanıcı Adı zaten var."
+
+#: unikname_connect.php:1383
+msgid "We recommend the next-generation authentication: simple, secure, private"
+msgstr "Yeni nesil kimlik doğrulamasını tavsiye ediyoruz: basit, güvenli, özel"
+
+#: templates/email_popup.php:15
+msgid "Welcome to "
+msgstr "Hoşgeldiniz "
+
+#: includes/define-value.php:10 includes/define-value.php:24 
+#: inc/social_login.php:22 inc/social_login.php:36
+#: templates/settings/style_options.php:11 
+#: templates/settings/style_options.php:25
+msgid "With your @unikname"
+msgstr "@unikname adınız ile"
+
+#: helper.php:514 includes/define-value.php:36 
+#: templates/settings/advanced_options.php:8
+msgid "with your @unikname"
+msgstr "@unikname adınız ile"
+
+#: templates/settings/login_options.php:99
+msgid "WooCommerce pages"
+msgstr "WooCommerce sayfaları"
+
+#: templates/settings/login_options.php:4
+msgid "WordPress pages"
+msgstr "WordPress sayfaları"
+
+#: admin/social_sharing.php:5 admin/social_sharing.php:1967 
+#: admin/like_buttons.php:6 admin/like_buttons.php:803
+#: admin/social_commenting.php:5 admin/social_commenting.php:404 
+#: admin/general_options.php:96
+#, php-format
+msgid ""
+"You can appreciate the effort put in this free plugin by rating it <a href=\"%s\" target=\"_blank\">here</a>"
+msgstr ""
+"Bu ücretsiz eklentiyi değerlendirerek gösterilen çabayı takdir <a href=\"%s\" target=\"_blank\">edebilirsiniz</"
+"a>"
+
+#: templates/email_popup.php:17
+msgid "Your account must be set up before using it."
+msgstr "Kullanmadan önce hesabınızın kurulmuş olması gerekir."
+
+#: unikname_connect.php:2177
+msgid ""
+"Your browser is blocking some features of this website. Please follow the instructions at {support_url} to "
+"unblock these."
+msgstr ""
+"Tarayıcınız bu web sitesinin bazı özelliklerini engelliyor. Lütfen engellemeleri kaldırmak için bu sitedeki "
+"{support_url} yönergeleri takip edin."
+
+#: templates/email_popup.php:31 templates/email_popup.php:32
+msgid "Your email"
+msgstr "E-postanız"
+
+#: unikname_connect.php:881
+msgid "Your email has been verified. Now you can login to your account"
+msgstr "Email adresiniz onaylandı. Artık hesabınıza giriş yapabilirsiniz"
+
+#: templates/email_popup.php:46 templates/email_popup.php:47
+msgid "Your username"
+msgstr "Kullanıcı adınız"
+
+#: helper.php:511 includes/define-value.php:33 
+#: templates/settings/advanced_options.php:5
+msgid "🔐 Link your @unikname to login to your account at this website"
+msgstr "🔐 Bu web sitesinde hesabınıza giriş yapmak için @unikname adınız ile ilişkilendirin"
+
+#: helper.php:518 includes/define-value.php:14 includes/define-value.php:28 
+#: includes/define-value.php:40 inc/social_login.php:26 inc/social_login.php:40 
+#: templates/settings/style_options.php:15
+#: templates/settings/style_options.php:29 
+#: templates/settings/advanced_options.php:12
+msgid "🔐 The next-gen identifier: simple, secure and private."
+msgstr "🔐 Yeni nesil tanımlayıcı: basit, güvenli ve özel."
+
+#: helper.php:517 includes/define-value.php:13 includes/define-value.php:39 
+#: inc/social_login.php:25
+#: templates/settings/style_options.php:14 
+#: templates/settings/advanced_options.php:11
+msgid ""
+"🔐 The next-gen identifier: simple, secure and private. <a href=\"https://www.unikname.com/my-unikname-app/"
+"#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\">Read more.</a>"
+msgstr ""
+"🔐 Yeni nesil tanımlayıcı: basit, güvenli ve özel. <a href=\"https://www.unikname.com/my-unikname-app/"
+"#pk_campaign=installation&pk_source=login&pk_medium=punch&pk_content=nextgen\">Daha fazla bilgi</a>"
+
+#: includes/define-value.php:27 inc/social_login.php:39
+#: templates/settings/style_options.php:28
+msgid ""
+"🔐 The next-gen identifier: simple, secure and private. <a href=\"https://www.unikname.com/my-unikname-app/"
+"#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\">Read more.</a>"
+msgstr ""
+"🔐 Yeni nesil tanımlayıcı: basit, güvenli ve özel. <a href=\"https://www.unikname.com/my-unikname-app/"
+"#pk_campaign=installation&pk_source=signup&pk_medium=punch&pk_content=nextgen\">Daha fazla bilgi</a>"
