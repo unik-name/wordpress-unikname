@@ -147,16 +147,6 @@ function the_champ_options_init(){
 	register_setting('the_champ_general_options', 'the_champ_general', 'the_champ_validate_options');
 	register_setting('unik_name_style_button_options', 'unik_name_style_button', 'the_champ_validate_options');
 	register_setting('unik_name_security_options', 'unik_name_security', 'the_champ_validate_options');
-	if((the_champ_social_sharing_enabled() || the_champ_social_counter_enabled() || the_champ_social_commenting_enabled()) && current_user_can('manage_options')){
-		// show option to disable sharing on particular page/post
-		$post_types = get_post_types( array( 'public' => true ), 'names', 'and' );
-		$post_types = array_unique( array_merge( $post_types, array( 'post', 'page' ) ) );
-		foreach($post_types as $type){
-			add_meta_box('the_champ_meta', 'Super Socializer', 'the_champ_sharing_meta_setup', $type);
-		}
-		// save sharing meta on post/page save
-		add_action('save_post', 'the_champ_save_sharing_meta');
-	}
 }
 add_action('admin_init', 'the_champ_options_init');
 
@@ -801,116 +791,6 @@ function the_champ_first_letter_uppercase($word){
 	return ucfirst($word);
 }
 
-/**
- * Show sharing meta options
- */
-function the_champ_sharing_meta_setup(){
-	global $post;
-	$postType = $post->post_type;
-	$sharingMeta = get_post_meta($post->ID, '_the_champ_meta', true);
-	?>
-	<p>
-		<label for="the_champ_sharing">
-			<input type="checkbox" name="_the_champ_meta[sharing]" id="the_champ_sharing" value="1" <?php checked('1', @$sharingMeta['sharing']); ?> />
-			<?php _e('Disable Standard Social Sharing on this '.$postType, 'super-socializer') ?>
-		</label>
-		<br/>
-		<label for="the_champ_vertical_sharing">
-			<input type="checkbox" name="_the_champ_meta[vertical_sharing]" id="the_champ_vertical_sharing" value="1" <?php checked('1', @$sharingMeta['vertical_sharing']); ?> />
-			<?php _e('Disable Floating Social Sharing on this '.$postType, 'super-socializer') ?>
-		</label>
-		<br/>
-		<label for="the_champ_counter">
-			<input type="checkbox" name="_the_champ_meta[counter]" id="the_champ_counter" value="1" <?php checked('1', @$sharingMeta['counter']); ?> />
-			<?php _e('Disable Standard like buttons on this '.$postType, 'super-socializer') ?>
-		</label>
-		<br/>
-		<label for="the_champ_vertical_counter">
-			<input type="checkbox" name="_the_champ_meta[vertical_counter]" id="the_champ_vertical_counter" value="1" <?php checked('1', @$sharingMeta['vertical_counter']); ?> />
-			<?php _e('Disable Floating like buttons on this '.$postType, 'super-socializer') ?>
-		</label>
-		<br/>
-		<label for="the_champ_fb_comments">
-			<input type="checkbox" name="_the_champ_meta[fb_comments]" id="the_champ_fb_comments" value="1" <?php checked('1', @$sharingMeta['fb_comments']); ?> />
-			<?php _e('Disable Social Commenting on this '.$postType, 'super-socializer') ?>
-		</label>
-		<?php
-		if(the_champ_social_sharing_enabled()){
-			global $theChampSharingOptions;
-			$validNetworks = array('facebook', 'twitter', 'linkedin', 'buffer', 'reddit', 'pinterest', 'vkontakte', 'Odnoklassniki', 'Fintel');
-			if(isset($theChampSharingOptions['hor_enable']) && isset($theChampSharingOptions['horizontal_counts']) && isset($theChampSharingOptions['horizontal_re_providers']) && count($theChampSharingOptions['horizontal_re_providers']) > 0){
-				?>
-				<p>
-				<strong style="font-weight:bold"><?php _e('Standard Sharing Interface', 'super-socializer') ?></strong>
-				<?php
-				foreach(array_intersect($theChampSharingOptions['horizontal_re_providers'], $validNetworks) as $sharingProvider){
-					?>
-					<br/>
-					<label for="the_champ_<?php echo $sharingProvider ?>_horizontal_sharing_count">
-						<span style="width: 242px; float:left"><?php _e('Starting share count for ' . ucfirst(str_replace('_', ' ', $sharingProvider)), 'super-socializer') ?></span>
-						<input type="text" name="_the_champ_meta[<?php echo $sharingProvider ?>_horizontal_count]" id="the_champ_<?php echo $sharingProvider ?>_horizontal_sharing_count" value="<?php echo isset($sharingMeta[$sharingProvider.'_horizontal_count']) && $sharingMeta[$sharingProvider.'_horizontal_count'] > 0 ? $sharingMeta[$sharingProvider.'_horizontal_count'] : '' ?>" />
-					</label>
-					<?php
-				}
-				?>
-				</p>
-				<?php
-			}
-			
-			if(isset($theChampSharingOptions['vertical_enable']) && isset($theChampSharingOptions['vertical_counts']) && isset($theChampSharingOptions['vertical_re_providers']) && count($theChampSharingOptions['vertical_re_providers']) > 0){
-				?>
-				<p>
-				<strong style="font-weight:bold"><?php _e('Floating Sharing Interface', 'super-socializer') ?></strong>
-				<?php
-				foreach(array_intersect($theChampSharingOptions['vertical_re_providers'], $validNetworks) as $sharingProvider){
-					?>
-					<br/>
-					<label for="the_champ_<?php echo $sharingProvider ?>_vertical_sharing_count">
-						<span style="width: 242px; float:left"><?php _e('Starting share count for ' . ucfirst(str_replace('_', ' ', $sharingProvider)), 'super-socializer') ?></span>
-						<input type="text" name="_the_champ_meta[<?php echo $sharingProvider ?>_vertical_count]" id="the_champ_<?php echo $sharingProvider ?>_vertical_sharing_count" value="<?php echo isset($sharingMeta[$sharingProvider.'_vertical_count']) && $sharingMeta[$sharingProvider.'_vertical_count'] > 0 ? $sharingMeta[$sharingProvider.'_vertical_count'] : '' ?>" />
-					</label>
-					<?php
-				}
-				?>
-				</p>
-				<?php
-			}
-		}
-		?>
-	</p>
-	<?php
-    echo '<input type="hidden" name="the_champ_meta_nonce" value="' . wp_create_nonce(__FILE__) . '" />';
-}
-
-/**
- * Save sharing meta fields.
- */
-function the_champ_save_sharing_meta($postId){
-    // make sure data came from our meta box
-    if(!isset($_POST['the_champ_meta_nonce']) || !wp_verify_nonce( $_POST['the_champ_meta_nonce'], __FILE__ )){
-		return $postId;
- 	}
-    // check user permissions
-    if($_POST['post_type'] == 'page'){
-        if(!current_user_can('edit_page', $postId)){
-			return $postId;
-    	}
-	}else{
-        if(!current_user_can('edit_post', $postId)){
-			return $postId;
-    	}
-	}
-    if(isset($_POST['_the_champ_meta'])){
-		$newData = $_POST['_the_champ_meta'];
-		foreach($newData as $k => $v){
-			$newData[$k] = intval(sanitize_text_field(trim($v)));
-		}
-	}else{
-		$newData = array('sharing' => 0, 'vertical_sharing' => 0, 'counter' => 0, 'vertical_counter' => 0, 'fb_comments' => 0);
-	}
-	update_post_meta($postId, '_the_champ_meta', $newData);
-    return $postId;
-}
 
 /**
  * Override sanitize_user function to allow cyrillic usernames
