@@ -2,8 +2,8 @@
 Contributors: Space Elephant, Unikname, dlecan, Heateor, farhan8heateor, jatin8heateor, the_champ, Hungarian
 Tags: passwordless, security, 2FA, login, signup, strong authentication
 Requires at least: 5.0.0
-Tested up to: 5.7
-Stable tag: 8.5.1
+Tested up to: 5.8.1
+Stable tag: 8.6.1
 Requires PHP: 5.6.20
 License: GPLv2 or later
 
@@ -224,6 +224,11 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 == Changelog ==
 
+= 8.6.1 [2021-09-24] =
+
+- **Fixed**
+  - Broken posts/articles WordPress editor with PHP8
+
 = 8.6.0 [2021-06-05] =
 
 - **Added**
@@ -232,26 +237,5 @@ Avant de débuter l’intégration d’Unikname Connect, vous devez vérifier qu
 
 - **Fixed**
   - Some broken screens with Safari browser
-
-= 8.5.1 [2021-04-30] =
-
-- **Added**
-	- Missing French translations
-
-= 8.5.0 [2021-04-12] =
-
-- **Added**
-  - As an administrator, prevent users from using their password to log in to their account **per WP role**
-	- Hide login/password inputs from the wp-login page when "preventing all users from using their password" is enabled
-	- Full French translation
-	- More links to the documentation to help the set up of the plugin
-  - Official WordPress 5.7 compatibility
-
-- **Changed**
-	- WooCommerce settings are visible only if WooCommerce plugin is installed
-	- New default settings for new plugin installations - no impact for existing installations of the plugin
-	- You must provide Unikname Connect site id and secret to be able to enable Unikname Connect
-	- Polished and renamed actions
-	- Reorganize "Unikname => General" and "Unikname => Login" panels
 
 [Full changelog is also available](https://github.com/unik-name/wordpress-unikname-connect/blob/master/CHANGELOG.txt).

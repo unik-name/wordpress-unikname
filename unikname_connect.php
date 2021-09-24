@@ -3,7 +3,7 @@
 Plugin Name: Unikname - Secure your user and admin accounts
 Plugin URI: https://wordpress.org/plugins/unikname-connect/
 Description: Secure your user and admin accounts with the Unikname Connect authentication solution
-Version: 8.6.0
+Version: 8.6.1
 Author: Unikname
 Author URI: https://www.unikname.com
 Text Domain: unikname-connect
@@ -11,7 +11,7 @@ Domain Path: /languages
 License: GPL2+
 */
 defined('ABSPATH') or die("Cheating........Uh!!");
-define('UNIKNAME_VERSION', '8.6.0');
+define('UNIKNAME_VERSION', '8.6.1');
 define('THE_CHAMP_SS_VERSION', UNIKNAME_VERSION);
 
 if (!defined('UNIKNAME_CONNECT_SERVER')) {
